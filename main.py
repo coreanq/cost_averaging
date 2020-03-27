@@ -8,7 +8,7 @@ from urllib.parse import urlencode
 
 import requests
 
-with open("access_key.json", "r") as json_file:
+with open("access_info.json", "r") as json_file:
     access_info = json.loads(json_file.read())
 
 access_key = access_info["access_key"]
