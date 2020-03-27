@@ -1,0 +1,45 @@
+{  
+    "version": "2.0.0",  
+    "echoCommand": true,
+    "tasks" : [
+        {
+            "label": "makercc",
+            "type": "shell",
+            "command": [
+                "pyrcc5"
+            ],
+            "args": [
+                "resource.qrc",
+                "-o",
+                "resource_rc.py"
+            ],
+            "presentation": {
+                "reveal": "never",
+                "echo" : true,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "makeui",
+            "type": "shell",
+            "command": [
+                "pyuic5"
+            ],
+
+            "args": [
+                "-x",
+                "mainwindow.ui",
+                "-o",
+                "mainwindow_ui.py"
+            ],
+        
+            "presentation": {
+                "reveal": "never",
+                "echo" : true,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            }
+        }
+    ]
+}
