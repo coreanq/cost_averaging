@@ -31,6 +31,8 @@ class UpbitRebalancing(QObject):
     sigCryptoBalanceChanged = pyqtSignal(str)
     sigFiatBalanceChanged = pyqtSignal(str)
 
+    sigStyleSheetChanged = pyqtSignal(str)
+
     def __init__(self):
         super().__init__()
         self.fsm = QStateMachine()
@@ -43,12 +45,6 @@ class UpbitRebalancing(QObject):
 
         self.crypto_market_name = 'KRW-XRP'
         self.account_info = []
-        self.fiat_balance = 0
-        self.crypto_balance = 0
-
-        self.fiat_percent = 0
-        self.crypto_percent = 0
-
 
         self.init()
         self.createState()
@@ -122,53 +118,59 @@ class UpbitRebalancing(QObject):
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
-        response = requests.get(server_url + "/v1/accounts", headers=headers)
+        try:
+            response = requests.get(server_url + "/v1/accounts", headers=headers)
+        except requests.exceptions.SSLError:
+            print("ssl error")
+            self.sigError.emit()
+            return
+        else:
+            self.account_info = response.json()
+            self.checkAccountInfo()
+            # print(json.dumps(response.json(), indent=2, sort_keys=True))
+            # print(type(self.account_info))
 
-        self.account_info = response.json()
-        # print(json.dumps(response.json(), indent=2, sort_keys=True))
-        # print(type(self.account_info))
-
-        self.checkAccountInfo()
 
     def checkAccountInfo(self):
         account_info = self.account_info
+
+        crypto_balance = 0
+        fiat_balance = 0
 
         for item in account_info:
             currency_key = 'currency'
             balance_key = 'balance'
             if( item[currency_key] == 'KRW'):
-                self.fiat_balance = round( float(item[balance_key]), 2 )
+                fiat_balance = round( float(item[balance_key]), 2 )
             if( item[currency_key] == 'XRP' ):
                 #낮은게 좋으므로 매수 호가 기준으로 삼음
-                self.crypto_balance = round( float(item[balance_key]) * self.current_price, 2 ) 
+                crypto_balance = round( float(item[balance_key]) * self.current_price, 2 ) 
 
-        if( self.fiat_balance == 0 or self.crypto_balance == 0 ):
+        if( fiat_balance == 0 or crypto_balance == 0 ):
             return 
 
 
-        balance_sum = self.fiat_balance + self.crypto_balance
-        fiat_percent = round(self.fiat_balance/balance_sum * 100, 2)
-        crypto_percent = round(self.crypto_balance/balance_sum * 100, 2) 
-        self.fiat_percent = fiat_percent
-        self.crypto_percent = crypto_percent
+        balance_sum = fiat_balance + crypto_balance
+        fiat_percent = round(fiat_balance/balance_sum * 100, 2)
+        crypto_percent = round(crypto_balance/balance_sum * 100, 2) 
 
         self.sigCryptoPercentChanged.emit( str(crypto_percent) + "%" )
         self.sigFiatPercentChanged.emit( str(fiat_percent) + "%" )
 
-        self.sigCryptoBalanceChanged.emit('{:,.1f}'.format(self.crypto_balance) )
-        self.sigFiatBalanceChanged.emit( '{:,.1f}'.format(self.fiat_balance) )
+        self.sigCryptoBalanceChanged.emit('{:,.1f}'.format(crypto_balance) )
+        self.sigFiatBalanceChanged.emit( '{:,.1f}'.format(fiat_balance) )
 
         if( abs(fiat_percent - crypto_percent) > 2 ):
             if( fiat_percent > crypto_percent ):
 
                 # 현금 비중이 높은 경우 
-                order_balance = round((self.fiat_balance - self.crypto_balance) / 2) 
+                order_balance = round((fiat_balance - crypto_balance) / 2) 
                 #buy
                 self.rebalancing('bid', order_balance)
             else:
                 # 암호화폐 비중이 높은 경우
                 #sell
-                order_balance = round((self.crypto_balance - self.fiat_balance) /2 )
+                order_balance = round((crypto_balance - fiat_balance) /2 )
                 self.rebalancing('ask', order_balance )
 
             print( 'fiat: {} %, crypto {} %, rebalance amount {}'.format(
@@ -223,43 +225,53 @@ class UpbitRebalancing(QObject):
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
-        response = requests.post(server_url + "/v1/orders", params=query, headers=headers)
-        print(json.dumps( response.json(), indent=2, sort_keys=True) )
+        try:
+            response = requests.post(server_url + "/v1/orders", params=query, headers=headers)
+        except requests.exceptions.SSLError:
+            print("ssl error")
+            self.sigError.emit()
+            return
+        else:
+            print(json.dumps( response.json(), indent=2, sort_keys=True) )
         pass
-
 
 
     def getOrderbook(self, market_name):
         url =  server_url + "/v1/orderbook"
         querystring = {"markets": market_name }
-        response = requests.request("GET", url, params=querystring)
-        output_list = response.json()
 
-        for item in output_list:
-            orderbook_key = 'orderbook_units'
-            bid_price_key = 'bid_price'
-            ask_price_key = 'ask_price'
-            if( len(item[orderbook_key]) == 15 ):
-                # 1 매수호가 낮은 가격이 좋으므로 매수 1호가 기준으로 현재 가격 결정함
-                self.current_price = item[orderbook_key][0][bid_price_key]
-                # 2 매수호가
-                bid_price = item[orderbook_key][1][bid_price_key]
-                # 현재가는 좀 낮아 보이는게 나으므로 매수호가로 처리함
-                self.current_bid_price = bid_price 
+        try:
+            response = requests.request("GET", url, params=querystring)
+        except requests.exceptions.SSLError:
+            print("ssl error")
+            self.sigError.emit()
+            return
+        else:
+            output_list = response.json()
 
-                # 1 매도호가
-                ask_price = item[orderbook_key][0][ask_price_key]
-                # 2 매도호가
-                ask_price = item[orderbook_key][1][ask_price_key]
-                self.current_ask_price = ask_price
-                self.sigInitOk.emit()
-            else:
-                self.sigError.emit()
+            for item in output_list:
+                orderbook_key = 'orderbook_units'
+                bid_price_key = 'bid_price'
+                ask_price_key = 'ask_price'
+                if( len(item[orderbook_key]) == 15 ):
+                    # 1 매수호가 낮은 가격이 좋으므로 매수 1호가 기준으로 현재 가격 결정함
+                    self.current_price = item[orderbook_key][0][bid_price_key]
+                    # 2 매수호가
+                    bid_price = item[orderbook_key][1][bid_price_key]
+                    # 현재가는 좀 낮아 보이는게 나으므로 매수호가로 처리함
+                    self.current_bid_price = bid_price 
 
-            pass
-        # print(json.dumps( response.json(), indent=2, sort_keys=True) )
+                    # 1 매도호가
+                    ask_price = item[orderbook_key][0][ask_price_key]
+                    # 2 매도호가
+                    ask_price = item[orderbook_key][1][ask_price_key]
+                    self.current_ask_price = ask_price
+                    self.sigInitOk.emit()
+                else:
+                    self.sigError.emit()
 
-
+                pass
+            # print(json.dumps( response.json(), indent=2, sort_keys=True) )
 
         
     def createState(self):
@@ -300,11 +312,20 @@ class UpbitRebalancing(QObject):
         print(util.whoami())
         self.timerRequestOrderbook.start()
         self.timerRequestAccountInfo.stop()
-
+        self.sigStyleSheetChanged.emit(
+            " QMainWindow {"
+                        " background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ff0000, stop: 1 #ffff00); "
+                        "}" 
+            )
     @pyqtSlot()
     def standbyStateEntered(self):
         print(util.whoami())
         self.timerRequestAccountInfo.start()
+        self.sigStyleSheetChanged.emit(
+            " QMainWindow {"
+                       " background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #007f00, stop: 1 #aaffaa); "
+                        "}" 
+            )
 
     @pyqtSlot()
     def finalStateEntered(self):
@@ -330,6 +351,9 @@ if __name__ == "__main__":
 
     def onFiatPercentChanged(valueStr):
         ui.progressBar.setValue(int(float(valueStr[:-1])))
+    
+    def onStyleSheetChanged(styleSheetStr):
+        myApp.setStyleSheet(styleSheetStr)
 
 
     obj.sigCryptoBalanceChanged.connect(ui.lblCryptoBalance.setText)
@@ -339,6 +363,8 @@ if __name__ == "__main__":
     obj.sigFiatPercentChanged.connect(ui.lblFiatPercent.setText)
 
     obj.sigFiatPercentChanged.connect(onFiatPercentChanged)
+
+    obj.sigStyleSheetChanged.connect(onStyleSheetChanged)
 
     ui.lblCryptoBalance.setHidden(True)
     ui.lblFiatBalance.setHidden(True)
