@@ -151,11 +151,11 @@ class UpbitRebalancing(QObject):
         self.fiat_percent = fiat_percent
         self.crypto_percent = crypto_percent
 
-        self.sigCryptoPercentChanged.emit( str(crypto_percent) )
-        self.sigFiatPercentChanged.emit( str(fiat_percent) )
+        self.sigCryptoPercentChanged.emit( str(crypto_percent) + "%" )
+        self.sigFiatPercentChanged.emit( str(fiat_percent) + "%" )
 
-        self.sigCryptoBalanceChanged.emit( str(self.crypto_balance) + "%" )
-        self.sigFiatBalanceChanged.emit( str(self.fiat_balance) + "%" )
+        self.sigCryptoBalanceChanged.emit( str(self.crypto_balance) )
+        self.sigFiatBalanceChanged.emit( str(self.fiat_balance) )
 
         if( abs(fiat_percent - crypto_percent) > 2 ):
             if( fiat_percent > crypto_percent ):
