@@ -24,6 +24,11 @@ class UpbitRebalancing(QObject):
     sigInitOk = pyqtSignal()
     sigError = pyqtSignal()
     sigStateStop = pyqtSignal()
+    sigCryptoPercentChanged = pyqtSignal(str)
+    sigFiatPercentChanged = pyqtSignal(str)
+
+    sigCryptoBalanceChanged = pyqtSignal(str)
+    sigFiatBalanceChanged = pyqtSignal(str)
 
     def __init__(self):
         super().__init__()
@@ -39,6 +44,9 @@ class UpbitRebalancing(QObject):
         self.account_info = []
         self.fiat_balance = 0
         self.crypto_balance = 0
+
+        self.fiat_percent = 0
+        self.crypto_percent = 0
 
 
         self.init()
@@ -66,10 +74,10 @@ class UpbitRebalancing(QObject):
         분당 600회, 초당 10회 (종목, 캔들, 체결, 티커, 호가별)
         '''
     def init(self):
-        self.timerRequestOrderbook.setInterval(200)
+        self.timerRequestOrderbook.setInterval(500)
         self.timerRequestOrderbook.timeout.connect(self.onTimerRequestOrderbookTimeout) 
 
-        self.timerRequestAccountInfo.setInterval(1000)
+        self.timerRequestAccountInfo.setInterval(2000)
         self.timerRequestAccountInfo.timeout.connect(self.onTimerRequestAccountInfoTimeout) 
 
     @pyqtSlot()
@@ -140,13 +148,18 @@ class UpbitRebalancing(QObject):
         balance_sum = self.fiat_balance + self.crypto_balance
         fiat_percent = round(self.fiat_balance/balance_sum * 100, 2)
         crypto_percent = round(self.crypto_balance/balance_sum * 100, 2) 
-        print( 'fiat: {} %, crypto {} %'.format(
-            fiat_percent
-            ,crypto_percent
-        ))
+        self.fiat_percent = fiat_percent
+        self.crypto_percent = crypto_percent
+
+        self.sigCryptoPercentChanged.emit( str(crypto_percent) )
+        self.sigFiatPercentChanged.emit( str(fiat_percent) )
+
+        self.sigCryptoBalanceChanged.emit( str(self.crypto_balance) + "%" )
+        self.sigFiatBalanceChanged.emit( str(self.fiat_balance) + "%" )
 
         if( abs(fiat_percent - crypto_percent) > 2 ):
             if( fiat_percent > crypto_percent ):
+
                 # 현금 비중이 높은 경우 
                 order_balance = round((self.fiat_balance - self.crypto_balance) / 2) 
                 #buy
@@ -157,10 +170,18 @@ class UpbitRebalancing(QObject):
                 order_balance = round((self.crypto_balance - self.fiat_balance) /2 )
                 self.rebalancing('ask', order_balance )
 
+            print( 'fiat: {} %, crypto {} %, rebalance amount {}'.format(
+                fiat_percent
+                ,crypto_percent
+                ,order_balance
+            ))
+
+
+
     def rebalancing(self, side, order_balance):
         print(util.whoami() )
         query = ''
-        volume = 2.5
+        volume = 2.5 # for test
         if( side == 'bid' ):
             # 암호화폐 매수 매도호가 기준 
             volume = round(order_balance / self.current_ask_price, 2)
@@ -181,6 +202,8 @@ class UpbitRebalancing(QObject):
                 'price': str(self.current_bid_price),
                 'ord_type': 'limit',
             }
+
+        print(query)
 
         query_string = urlencode(query).encode()
 
@@ -296,8 +319,13 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(form)
 
-    # ui.lineCmd.textChanged.connect(objKiwoom.onLineCmdTextChanged)
-    # ui.btnRun.clicked.connect(objKiwoom.onBtnRunClicked)
+
+    obj.sigCryptoBalanceChanged.connect(ui.lblCryptoBalance.setText)
+    obj.sigCryptoPercentChanged.connect(ui.lblCryptoPercent.setText)
+
+    obj.sigFiatBalanceChanged.connect(ui.lblFiatBalance.setText)
+    obj.sigFiatPercentChanged.connect(ui.lblFiatPercent.setText)
+
     form.show()
 
     # obj.getAccountInfo()
