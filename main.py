@@ -118,8 +118,10 @@ class UpbitRebalancing(QObject):
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
+        url = server_url + "/v1/accounts" 
+
         try:
-            response = requests.get(server_url + "/v1/accounts", headers=headers)
+            response = requests.get(url, headers=headers)
         except requests.exceptions.SSLError:
             print("ssl error")
             self.sigError.emit()
@@ -225,8 +227,9 @@ class UpbitRebalancing(QObject):
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
+        url = server_url + "/v1/orders"
         try:
-            response = requests.post(server_url + "/v1/orders", params=query, headers=headers)
+            response = requests.post( url, params=query, headers=headers)
         except requests.exceptions.SSLError:
             print("ssl error")
             self.sigError.emit()
@@ -237,11 +240,11 @@ class UpbitRebalancing(QObject):
 
 
     def getOrderbook(self, market_name):
-        url =  server_url + "/v1/orderbook"
-        querystring = {"markets": market_name }
+        url = server_url + "/v1/orderbook"
+        query = {"markets": market_name }
 
         try:
-            response = requests.request("GET", url, params=querystring)
+            response = requests.get( url, params= query)
         except requests.exceptions.SSLError:
             print("ssl error")
             self.sigError.emit()
