@@ -6,7 +6,8 @@ import util
 
 from urllib.parse import urlencode
 import requests
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtWidgets
+from PyQt5.QtCore import Qt
 from PyQt5.QtCore import QObject, pyqtSlot, pyqtSignal, QUrl, QEvent
 from PyQt5.QtCore import QStateMachine, QState, QTimer, QFinalState
 from PyQt5.QtWidgets import QApplication
@@ -154,8 +155,8 @@ class UpbitRebalancing(QObject):
         self.sigCryptoPercentChanged.emit( str(crypto_percent) + "%" )
         self.sigFiatPercentChanged.emit( str(fiat_percent) + "%" )
 
-        self.sigCryptoBalanceChanged.emit( str(self.crypto_balance) )
-        self.sigFiatBalanceChanged.emit( str(self.fiat_balance) )
+        self.sigCryptoBalanceChanged.emit('{:,.1f}'.format(self.crypto_balance) )
+        self.sigFiatBalanceChanged.emit( '{:,.1f}'.format(self.fiat_balance) )
 
         if( abs(fiat_percent - crypto_percent) > 2 ):
             if( fiat_percent > crypto_percent ):
@@ -319,12 +320,32 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(form)
 
+    def onChkShowBalanceStateChanged(btnChkState):
+        if( btnChkState == Qt.Checked ):
+            ui.lblCryptoBalance.setHidden(False)
+            ui.lblFiatBalance.setHidden(False)
+        else:
+            ui.lblCryptoBalance.setHidden(True)
+            ui.lblFiatBalance.setHidden(True)
+
+    def onFiatPercentChanged(valueStr):
+        ui.progressBar.setValue(int(float(valueStr[:-1])))
+
 
     obj.sigCryptoBalanceChanged.connect(ui.lblCryptoBalance.setText)
     obj.sigCryptoPercentChanged.connect(ui.lblCryptoPercent.setText)
 
     obj.sigFiatBalanceChanged.connect(ui.lblFiatBalance.setText)
     obj.sigFiatPercentChanged.connect(ui.lblFiatPercent.setText)
+
+    obj.sigFiatPercentChanged.connect(onFiatPercentChanged)
+
+    ui.lblCryptoBalance.setHidden(True)
+    ui.lblFiatBalance.setHidden(True)
+
+
+
+    ui.chkShowBalance.stateChanged.connect( onChkShowBalanceStateChanged )
 
     form.show()
 
