@@ -300,8 +300,7 @@ class UpbitRebalancing(QObject):
 
     def getDayCandle(self, market_code, max_count):
         url = server_url + "/v1/candles/days"
-        # query = {"markets": market_code, "count": str(max_count) }
-        query = {"markets": market_code }
+        query = {"market": market_code, "count": str(max_count) }
 
         try:
             response = requests.get( url, params= query)
