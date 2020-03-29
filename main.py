@@ -170,10 +170,9 @@ class UpbitRebalancing(QObject):
 
         if( abs(fiat_percent - crypto_percent) > 2 ):
             if( fiat_percent > crypto_percent ):
-
                 # 현금 비중이 높은 경우 
-                order_balance = round((fiat_balance - crypto_balance) / 2) 
                 #buy
+                order_balance = round((fiat_balance - crypto_balance) / 2) 
                 self.rebalancing('bid', order_balance)
             else:
                 # 암호화폐 비중이 높은 경우
@@ -187,8 +186,6 @@ class UpbitRebalancing(QObject):
                 ,order_balance
             ))
 
-
-
     def rebalancing(self, side, order_balance):
         print(util.whoami() )
         query = ''
@@ -197,17 +194,17 @@ class UpbitRebalancing(QObject):
             # 암호화폐 매수 매도호가 기준 
             volume = round(order_balance / self.current_ask_price, 2)
             query = {
-                'market': 'KRW-XRP',
+                'market': self.market_code,
                 'side': 'bid',
                 'volume': volume,
                 'price': str(self.current_ask_price),
                 'ord_type': 'limit',
             }
         else:
-            # 암호화폐 매도므로 매수호가 기준
+            # 암호화폐 매도 매수호가 기준
             volume = round(order_balance / self.current_bid_price, 2)
             query = {
-                'market': 'KRW-XRP',
+                'market': self.market_code,
                 'side': 'ask',
                 'volume': volume,
                 'price': str(self.current_bid_price),
@@ -239,19 +236,18 @@ class UpbitRebalancing(QObject):
         except requests.exceptions.SSLError:
             print("ssl error")
             self.sigError.emit()
-            return
+            return []
         except:
             print("except")
             self.sigError.emit()
-            return
+            return []
         else:
-            if( response.status_code == 200):
-                output_list = response.json()
-            else:
-                output_list = []
+            if( response.status_code != 200):
                 print("error return: \n{}\n{}".format(query, response.text ) )
-                self.sigError.emit()
+                self.sigerror.emit()
                 return []
+            else:
+                output_list = response.json()
                 print(json.dumps( response.json(), indent=2, sort_keys=True) )
         pass
 
@@ -304,7 +300,8 @@ class UpbitRebalancing(QObject):
 
     def getDayCandle(self, market_code, max_count):
         url = server_url + "/v1/candles/days"
-        query = {"markets": market_code, "count": str(max_count) }
+        # query = {"markets": market_code, "count": str(max_count) }
+        query = {"markets": market_code }
 
         try:
             response = requests.get( url, params= query)
@@ -439,6 +436,6 @@ if __name__ == "__main__":
     # obj.getAccountInfo()
     # obj.getOrderbook(["KRW-XRP"])
     # obj.getOrderbook(["KRW-BTC","KRW-XRP"])
-    # obj.getDayCandle("KRW-XRP", 100)
+    obj.getDayCandle("KRW-XRP", 10)
 
     sys.exit(myApp.exec_())
