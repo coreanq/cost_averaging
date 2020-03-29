@@ -43,7 +43,7 @@ class UpbitRebalancing(QObject):
         self.current_ask_price = 0         
         self.current_bid_price = 0 # 현재 가격의 경우 매수호가 2로 정함 (1부터 시작 )
 
-        self.crypto_market_name = 'KRW-XRP'
+        self.market_code = 'KRW-XRP'
         self.account_info = []
 
         self.init()
@@ -79,12 +79,28 @@ class UpbitRebalancing(QObject):
 
     @pyqtSlot()
     def onTimerRequestOrderbookTimeout(self):
-        self.getOrderbook(self.crypto_market_name)
+        self.getOrderbook(self.market_code)
         pass
 
     @pyqtSlot()
     def onTimerRequestAccountInfoTimeout(self):
-        self.getAccountInfo()
+        account_info = self.getAccountInfo()
+        crypto_balance = 0
+        fiat_balance = 0
+        if( len(account_info) != 0 ) :
+            for item in account_info:
+                currency_key = 'currency'
+                balance_key = 'balance'
+
+                if( item[currency_key] == 'KRW'):
+                    fiat_balance = round( float(item[balance_key]), 2 )
+                if( item[currency_key] == 'XRP' ):
+                    #낮은게 좋으므로 매수 호가 기준으로 삼음
+                    crypto_balance = round( float(item[balance_key]) * self.current_price, 2 ) 
+
+                self.checkAccountInfo(fiat_balance, crypto_balance)
+            # print(json.dumps(response.json(), indent=2, sort_keys=True))
+            # print(type(self.account_info))
         pass
 
 
@@ -125,32 +141,19 @@ class UpbitRebalancing(QObject):
         except requests.exceptions.SSLError:
             print("ssl error")
             self.sigError.emit()
-            return
+            return []
+        except:
+            print("except")
+            self.sigError.emit()
+            return []
         else:
-            self.account_info = response.json()
-            self.checkAccountInfo()
-            # print(json.dumps(response.json(), indent=2, sort_keys=True))
-            # print(type(self.account_info))
+            return response.json()
 
 
-    def checkAccountInfo(self):
-        account_info = self.account_info
-
-        crypto_balance = 0
-        fiat_balance = 0
-
-        for item in account_info:
-            currency_key = 'currency'
-            balance_key = 'balance'
-            if( item[currency_key] == 'KRW'):
-                fiat_balance = round( float(item[balance_key]), 2 )
-            if( item[currency_key] == 'XRP' ):
-                #낮은게 좋으므로 매수 호가 기준으로 삼음
-                crypto_balance = round( float(item[balance_key]) * self.current_price, 2 ) 
+    def checkAccountInfo(self, fiat_balance, crypto_balance):
 
         if( fiat_balance == 0 or crypto_balance == 0 ):
             return 
-
 
         balance_sum = fiat_balance + crypto_balance
         fiat_percent = round(fiat_balance/balance_sum * 100, 2)
@@ -234,19 +237,27 @@ class UpbitRebalancing(QObject):
             print("ssl error")
             self.sigError.emit()
             return
+        except:
+            print("except")
+            self.sigError.emit()
+            return
         else:
             print(json.dumps( response.json(), indent=2, sort_keys=True) )
         pass
 
 
-    def getOrderbook(self, market_name):
+    def getOrderbook(self, market_code):
         url = server_url + "/v1/orderbook"
-        query = {"markets": market_name }
+        query = {"markets": market_code }
 
         try:
             response = requests.get( url, params= query)
         except requests.exceptions.SSLError:
             print("ssl error")
+            self.sigError.emit()
+            return
+        except:
+            print("except")
             self.sigError.emit()
             return
         else:
