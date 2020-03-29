@@ -13,13 +13,6 @@ from PyQt5.QtCore import QStateMachine, QState, QTimer, QFinalState
 from PyQt5.QtWidgets import QApplication
 from mainwindow_ui import Ui_MainWindow
 
-with open("access_info.json", "r") as json_file:
-    access_info = json.loads(json_file.read())
-
-access_key = access_info["access_key"]
-secret_key = access_info["secret_key"]
-server_url = "https://api.upbit.com"
-
 
 class UpbitRebalancing(QObject):
     sigInitOk = pyqtSignal()
@@ -33,12 +26,12 @@ class UpbitRebalancing(QObject):
 
     sigStyleSheetChanged = pyqtSignal(str)
 
-    def __init__(self):
+    def __init__(self, secret_key, access_key, server_url):
         super().__init__()
-        self.fsm = QStateMachine()
-        self.timerRequestOrderbook = QTimer()
-        self.timerRequestAccountInfo = QTimer()
-        self.currentTime = datetime.datetime.now()
+
+        self.access_key = access_key 
+        self.secret_key = secret_key 
+        self.server_url = server_url
 
         self.current_ask_price = 0         
         self.current_bid_price = 0 # 현재 가격의 경우 매수호가 2로 정함 (1부터 시작 )
@@ -46,10 +39,13 @@ class UpbitRebalancing(QObject):
         self.market_code = 'KRW-XRP'
         self.account_info = []
 
+        self.fsm = QStateMachine()
+        self.timerRequestOrderbook = QTimer()
+        self.timerRequestAccountInfo = QTimer()
+        self.currentTime = datetime.datetime.now()
+
         self.init()
         self.createState()
-
-
 
 
         '''
@@ -70,6 +66,7 @@ class UpbitRebalancing(QObject):
         2) REST API 요청 수 제한
         분당 600회, 초당 10회 (종목, 캔들, 체결, 티커, 호가별)
         '''
+
     def init(self):
         self.timerRequestOrderbook.setInterval(500)
         self.timerRequestOrderbook.timeout.connect(self.onTimerRequestOrderbookTimeout) 
@@ -147,7 +144,13 @@ class UpbitRebalancing(QObject):
             self.sigError.emit()
             return []
         else:
-            return response.json()
+            if( response.status_code != 200):
+                print("error return")
+                self.sigError.emit()
+                return []
+            else:
+                output_list = response.json()
+                return output_list
 
 
     def checkAccountInfo(self, fiat_balance, crypto_balance):
@@ -242,7 +245,14 @@ class UpbitRebalancing(QObject):
             self.sigError.emit()
             return
         else:
-            print(json.dumps( response.json(), indent=2, sort_keys=True) )
+            if( response.status_code == 200):
+                output_list = response.json()
+            else:
+                output_list = []
+                print("error return: \n{}\n{}".format(query, response.text ) )
+                self.sigError.emit()
+                return []
+                print(json.dumps( response.json(), indent=2, sort_keys=True) )
         pass
 
 
@@ -255,37 +265,66 @@ class UpbitRebalancing(QObject):
         except requests.exceptions.SSLError:
             print("ssl error")
             self.sigError.emit()
-            return
+            return []
         except:
             print("except")
             self.sigError.emit()
-            return
+            return []
         else:
-            output_list = response.json()
+            if( response.status_code != 200):
+                print("error return: \n{}\n{}".format(query, response.text ) )
+                self.sigerror.emit()
+                return []
+            else:
+                output_list = response.json()
 
-            for item in output_list:
-                orderbook_key = 'orderbook_units'
-                bid_price_key = 'bid_price'
-                ask_price_key = 'ask_price'
-                if( len(item[orderbook_key]) == 15 ):
-                    # 1 매수호가 낮은 가격이 좋으므로 매수 1호가 기준으로 현재 가격 결정함
-                    self.current_price = item[orderbook_key][0][bid_price_key]
-                    # 2 매수호가
-                    bid_price = item[orderbook_key][1][bid_price_key]
-                    # 현재가는 좀 낮아 보이는게 나으므로 매수호가로 처리함
-                    self.current_bid_price = bid_price 
+                for item in output_list:
+                    orderbook_key = 'orderbook_units'
+                    bid_price_key = 'bid_price'
+                    ask_price_key = 'ask_price'
+                    if( len(item[orderbook_key]) == 15 ):
+                        # 1 매수호가 낮은 가격이 좋으므로 매수 1호가 기준으로 현재 가격 결정함
+                        self.current_price = item[orderbook_key][0][bid_price_key]
+                        # 2 매수호가
+                        bid_price = item[orderbook_key][1][bid_price_key]
+                        # 현재가는 좀 낮아 보이는게 나으므로 매수호가로 처리함
+                        self.current_bid_price = bid_price 
 
-                    # 1 매도호가
-                    ask_price = item[orderbook_key][0][ask_price_key]
-                    # 2 매도호가
-                    ask_price = item[orderbook_key][1][ask_price_key]
-                    self.current_ask_price = ask_price
-                    self.sigInitOk.emit()
-                else:
-                    self.sigError.emit()
+                        # 1 매도호가
+                        ask_price = item[orderbook_key][0][ask_price_key]
+                        # 2 매도호가
+                        ask_price = item[orderbook_key][1][ask_price_key]
+                        self.current_ask_price = ask_price
+                        self.sigInitOk.emit()
+                    else:
+                        self.sigError.emit()
 
-                pass
-            # print(json.dumps( response.json(), indent=2, sort_keys=True) )
+                    pass
+                # print(json.dumps( response.json(), indent=2, sort_keys=True) )
+
+    def getDayCandle(self, market_code, max_count):
+        url = server_url + "/v1/candles/days"
+        query = {"markets": market_code, "count": str(max_count) }
+
+        try:
+            response = requests.get( url, params= query)
+        except requests.exceptions.SSLError:
+            print("ssl error")
+            self.sigError.emit()
+            return []
+        except:
+            print("except")
+            self.sigError.emit()
+            return []
+        else:
+            if( response.status_code != 200):
+                print("error return: \n{}\n{}".format(query, response.text ) )
+                self.sigError.emit()
+                return []
+            else:
+                output_list = response.json()
+                return output_list
+
 
         
     def createState(self):
@@ -348,8 +387,16 @@ class UpbitRebalancing(QObject):
 if __name__ == "__main__":
     # putenv 는 current process 에 영향을 못끼치므로 environ 에서 직접 세팅 
     # print(os.environ['QML_IMPORT_TRACE'])
+
+    with open("access_info.json", "r") as json_file:
+        access_info = json.loads(json_file.read())
+
+    access_key = access_info["access_key"]
+    secret_key = access_info["secret_key"]
+    server_url = "https://api.upbit.com"
+
     myApp = QtWidgets.QApplication(sys.argv)
-    obj = UpbitRebalancing()
+    obj = UpbitRebalancing(secret_key, access_key, server_url)
 
     form = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
@@ -392,5 +439,6 @@ if __name__ == "__main__":
     # obj.getAccountInfo()
     # obj.getOrderbook(["KRW-XRP"])
     # obj.getOrderbook(["KRW-BTC","KRW-XRP"])
+    # obj.getDayCandle("KRW-XRP", 100)
 
     sys.exit(myApp.exec_())
