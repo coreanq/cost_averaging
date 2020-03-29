@@ -244,7 +244,7 @@ class UpbitRebalancing(QObject):
         else:
             if( response.status_code != 200):
                 print("error return: \n{}\n{}".format(query, response.text ) )
-                self.sigerror.emit()
+                self.sigError.emit()
                 return []
             else:
                 output_list = response.json()
