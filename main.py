@@ -124,11 +124,11 @@ class UpbitRebalancing(QObject):
     '''
     def getAccountInfo(self):
         payload = {
-            'access_key': access_key,
+            'access_key': self.access_key,
             'nonce': str(uuid.uuid4()),
         }
 
-        jwt_token = jwt.encode(payload, secret_key).decode('utf-8')
+        jwt_token = jwt.encode(payload, self.secret_key).decode('utf-8')
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
