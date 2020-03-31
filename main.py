@@ -23,6 +23,7 @@ class UpbitRebalancing(QObject):
 
     sigCryptoBalanceChanged = pyqtSignal(str)
     sigFiatBalanceChanged = pyqtSignal(str)
+    sigCurrentBalanceChanged = pyqtSignal(float, float)
 
     sigStyleSheetChanged = pyqtSignal(str)
 
@@ -93,7 +94,7 @@ class UpbitRebalancing(QObject):
                     fiat_balance = round( float(item[balance_key]), 2 )
                 if( item[currency_key] == 'XRP' ):
                     #낮은게 좋으므로 매수 호가 기준으로 삼음
-                    crypto_balance = round( float(item[balance_key]) * self.current_price, 2 ) 
+                    crypto_balance = round( float(item[balance_key]),  2 ) 
 
                 self.checkAccountInfo(fiat_balance, crypto_balance)
             # print(json.dumps(response.json(), indent=2, sort_keys=True))
@@ -158,15 +159,17 @@ class UpbitRebalancing(QObject):
         if( fiat_balance == 0 or crypto_balance == 0 ):
             return 
 
-        balance_sum = fiat_balance + crypto_balance
+        balance_sum = fiat_balance + crypto_balance * self.current_price
         fiat_percent = round(fiat_balance/balance_sum * 100, 2)
-        crypto_percent = round(crypto_balance/balance_sum * 100, 2) 
+        crypto_percent = round( (crypto_balance * self.current_price )/balance_sum * 100, 2) 
 
         self.sigCryptoPercentChanged.emit( str(crypto_percent) + "%" )
         self.sigFiatPercentChanged.emit( str(fiat_percent) + "%" )
 
         self.sigCryptoBalanceChanged.emit('{:,.1f}'.format(crypto_balance) )
         self.sigFiatBalanceChanged.emit( '{:,.1f}'.format(fiat_balance) )
+
+        self.sigCurrentBalanceChanged.emit(fiat_balance, crypto_balance)
 
         if( abs(fiat_percent - crypto_percent) > 2 ):
             if( fiat_percent > crypto_percent ):
@@ -402,16 +405,30 @@ if __name__ == "__main__":
         if( btnChkState == Qt.Checked ):
             ui.lblCryptoBalance.setHidden(False)
             ui.lblFiatBalance.setHidden(False)
+            ui.lblOriBalance.setHidden(False)
         else:
             ui.lblCryptoBalance.setHidden(True)
             ui.lblFiatBalance.setHidden(True)
-
-    def onFiatPercentChanged(valueStr):
-        ui.progressBar.setValue(int(float(valueStr[:-1])))
+            ui.lblOriBalance.setHidden(True)
     
-    def onStyleSheetChanged(styleSheetStr):
-        myApp.setStyleSheet(styleSheetStr)
+    def onStyleSheetChanged(strStyleSheet):
+        myApp.setStyleSheet(strStyleSheet)
 
+    fOriginalFiatBalance = access_info["original_fiat_balance"]
+    fOriginalCryptoPrice = access_info["original_crypto_price"] 
+    fOriginalCryptoBalance = access_info["original_crypto_balance"]
+
+    def onCurrentCurrentBalanceChanged(fFiatBalance, fCryptoBalance):
+        fCurrentFiatBalance = round( fFiatBalance, 3)
+        fCurrentCryptoBalance = round( fCryptoBalance, 3)
+
+        fCurrentTotal = fCurrentFiatBalance + fCurrentCryptoBalance * fOriginalCryptoPrice
+        fOriginalTotal = fOriginalFiatBalance + fOriginalCryptoBalance * fOriginalCryptoPrice
+
+        result =  str ( round((fCurrentTotal / fOriginalTotal ) * 100, 2 )  - 100 )
+        ui.lblOriPercent.setText( result + '%' )
+        ui.lblOriBalance.setText( str( fOriginalTotal ))
+        pass
 
     obj.sigCryptoBalanceChanged.connect(ui.lblCryptoBalance.setText)
     obj.sigCryptoPercentChanged.connect(ui.lblCryptoPercent.setText)
@@ -419,14 +436,13 @@ if __name__ == "__main__":
     obj.sigFiatBalanceChanged.connect(ui.lblFiatBalance.setText)
     obj.sigFiatPercentChanged.connect(ui.lblFiatPercent.setText)
 
-    obj.sigFiatPercentChanged.connect(onFiatPercentChanged)
+    obj.sigCurrentBalanceChanged.connect(onCurrentCurrentBalanceChanged)
 
     obj.sigStyleSheetChanged.connect(onStyleSheetChanged)
 
     ui.lblCryptoBalance.setHidden(True)
     ui.lblFiatBalance.setHidden(True)
-
-
+    ui.lblOriBalance.setHidden(True)
 
     ui.chkShowBalance.stateChanged.connect( onChkShowBalanceStateChanged )
 
