@@ -180,7 +180,7 @@ class UpbitRebalancing(QObject):
             else:
                 # 암호화폐 비중이 높은 경우
                 #sell
-                order_balance = round((crypto_balance - fiat_balance) /2 )
+                order_balance = round((crypto_balance * self.current_price - fiat_balance) /2 )
                 self.rebalancing('ask', order_balance )
 
             print( 'fiat: {} %, crypto {} %, rebalance amount {}'.format(
