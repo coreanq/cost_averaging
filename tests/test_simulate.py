@@ -24,12 +24,12 @@ def test_rebalance_simulate(UpbitObj):
     fiat_balance = 10000000
     crypto_balance = 0
 
-    for current_crypto_price in range(100, 10, -1):
+    for current_crypto_price in range(1000, 100, -1):
         result_list = UpbitObj.checkAssetInfo(fiat_balance, current_crypto_price, crypto_balance)
-        assert "type" in result_list
+        assert "order_type" in result_list
 
 
-        trade_type = result_list['type']
+        trade_type = result_list['order_type']
         order_balance = result_list['order_balance']
 
         # buy
@@ -49,17 +49,17 @@ def test_rebalance_simulate(UpbitObj):
 
     print( "shannon remain fiat {}, crypto price 100 {} total {}".format( 
         round(fiat_balance)
-        ,round(100 * crypto_balance)
-        ,round(100 * crypto_balance + fiat_balance)
+        ,round(1000 * crypto_balance)
+        ,round(1000 * crypto_balance + fiat_balance)
         )
     )
 
-    for current_crypto_price in range(10, 100, 1):
+    for current_crypto_price in range(100, 1000, 1):
         result_list = UpbitObj.checkAssetInfo(fiat_balance, current_crypto_price, crypto_balance)
-        assert "type" in result_list
+        assert "order_type" in result_list
 
 
-        trade_type = result_list['type']
+        trade_type = result_list['order_type']
         order_balance = result_list['order_balance']
 
         # buy
@@ -81,30 +81,10 @@ def test_rebalance_simulate(UpbitObj):
         pass
     print( "shannon remain fiat {}, crypto price 100 {} total {}".format( 
         round(fiat_balance)
-        ,round(100 * crypto_balance)
-        ,round(100 * crypto_balance + fiat_balance)
+        ,round(1000 * crypto_balance)
+        ,round(1000 * crypto_balance + fiat_balance)
         )
     )
 
 
     pass
-
-
-def test_makeDayCandle(UpbitObj):
-# @pytest.mark.skip(reason="no test make json file purpose")
-    str_date_time_from = '2018-01-05T01:00:00'
-    date_time_format = "%Y-%m-%dT%H:%M:%S"
-    date_time_from =  datetime.datetime.strptime(str_date_time_from, date_time_format)
-    # print(date_time_from)
-
-    result = UpbitObj.getDayCandle(count, 200)
-
-    if( "error" in result ):
-        assert 0
-    else:
-        assert( len(result) == count )
-
-        with open("xrp_day_caldles.json", "w") as json_file:
-            json.dump(result, json_file)
-
-

@@ -48,10 +48,10 @@ class UpbitWrapper():
         fiat_percent = round(fiat_balance/balance_sum * 100, 2)
         crypto_percent = round( (crypto_balance * current_crypto_price )/balance_sum * 100, 2) 
 
-        # print( 'crypto price: {}, fiat: {} {} %, crypto {} {} %'.format(
-        #     current_crypto_price
-        #     ,fiat_balance
+        # print( 'fiat: {}[{} %], crypto price: {} amount: {} [{} %]'.format(
+        #     fiat_balance
         #     ,fiat_percent
+        #     ,current_crypto_price
         #     ,crypto_balance
         #     ,crypto_percent
         # ))
@@ -122,10 +122,12 @@ class UpbitWrapper():
 
 
 
-    def makeOrder(self, order_type, order_price, order_balance):
-        print(util.whoami() )
+    def makeOrder(self, order_type, order_price, order_balance, test = True):
         query = ''
-        volume = 2.5 # for test
+        volume = 0 # for test
+        if( order_type == 'none'):
+            return None
+
         if( order_type == 'bid' ):
             # 암호화폐 매수,매도호가 기준 
             volume = round(order_balance / order_price, 2)
@@ -168,7 +170,11 @@ class UpbitWrapper():
 
         url = self.server_url + "/v1/orders"
         try:
+            pass
+            if( test == True ):
+                query = ''
             response = requests.post( url, params=query, headers=headers)
+            pass
         except requests.exceptions.SSLError:
             print("ssl error")
             return None 
@@ -177,7 +183,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                print("error return: \n{}\n{}".format(query, response.text ) )
+                print("\n\nerror return: \n{}\n{}".format(query, response.text ) )
                 return None 
             else:
                 output_list = response.json()

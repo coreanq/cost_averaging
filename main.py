@@ -133,7 +133,7 @@ class UpbitRebalancing(QObject):
             elif( order_type == 'ask' ):
                 order_price = self.current_bid_price
 
-            # self.upbitIf.makeOrder(order_type, order_price, order_balance)
+            self.upbitIf.makeOrder(order_type, order_price, order_balance)
         pass
         
     def createState(self):

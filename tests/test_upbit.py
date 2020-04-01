@@ -39,7 +39,7 @@ def test_getOrderbook(UpbitObj ):
         print(result)
         assert 1
 
-def test_getDayCandle(UpbitObj ):
+def test_getDayCandle(UpbitObj):
     count = 2
     result = UpbitObj.getDayCandle(count)
 
@@ -49,6 +49,34 @@ def test_getDayCandle(UpbitObj ):
         assert( len(result) == count )
         result = json.dumps(result, indent=2)
         print(result)
+
+def test_makeOrder(UpbitObj):
+
+    current_crypto_price = 100
+    result = UpbitObj.checkAssetInfo(1000, current_crypto_price, 0)
+
+    assert result != None
+    assert 'order_type' in result
+
+    result = UpbitObj.makeOrder(result['order_type'], current_crypto_price, result['order_balance'], test = True )
+
+
+    current_crypto_price = 100
+    result = UpbitObj.checkAssetInfo(1000, current_crypto_price, 20)
+
+    assert result != None
+    assert 'order_type' in result
+
+    result = UpbitObj.makeOrder(result['order_type'], current_crypto_price, result['order_balance'], test = True )
+
+
+
+    result = UpbitObj.checkAssetInfo(1000, current_crypto_price, 10)
+
+    assert result != None
+    assert 'order_type' in result
+
+    result = UpbitObj.makeOrder(result['order_type'], current_crypto_price, result['order_balance'], test = True )
 
 def test_makeDayCandle(UpbitObj):
 # @pytest.mark.skip(reason="no test make json file purpose")
