@@ -25,8 +25,44 @@ class UpbitWrapper(QObject):
 
         self.market_code =  market_code
         self.account_info = []
+        self.rebalance_start_percent = 2
 
     
+    def checkAssetInfo(self, fiat_balance, current_crypto_price, crypto_balance):
+
+        if( fiat_balance == 0 or current_crypto_price == 0 ):
+            return {} 
+
+        balance_sum = fiat_balance + crypto_balance * current_crypto_price
+        fiat_percent = round(fiat_balance/balance_sum * 100, 2)
+        crypto_percent = round( (crypto_balance * current_crypto_price )/balance_sum * 100, 2) 
+
+        print( 'fiat: {} %, crypto {} %'.format(
+            fiat_percent
+            ,crypto_percent
+        ))
+
+        if( abs(fiat_percent - crypto_percent) > self.rebalance_start_percent ):
+            if( fiat_percent > crypto_percent ):
+                # 현금 비중이 높은 경우 
+                #buy
+                order_balance = round((fiat_balance - crypto_balance) )  / 2 
+                return { "type": 'bid', "order_balance": order_balance }
+            else:
+                # 암호화폐 비중이 높은 경우
+                #sell
+                order_balance = round((crypto_balance - fiat_balance) ) / 2 
+                return { "type": 'ask', "order_balance": order_balance }
+
+            print( 'fiat: {} %, crypto {} %, rebalance amount {}'.format(
+                fiat_percent
+                ,crypto_percent
+                ,order_balance / 2
+            ))
+        else:
+            return {"type": "none", "order_balance": 0} 
+
+
     '''
     [
         {
@@ -85,7 +121,7 @@ class UpbitWrapper(QObject):
         query = ''
         volume = 2.5 # for test
         if( side == 'bid' ):
-            # 암호화폐 매수 매도호가 기준 
+            # 암호화폐 매수,매도호가 기준 
             volume = round(order_balance / self.current_ask_price, 2)
             query = {
                 'market': self.market_code,
@@ -95,7 +131,7 @@ class UpbitWrapper(QObject):
                 'ord_type': 'limit',
             }
         else:
-            # 암호화폐 매도 매수호가 기준
+            # 암호화폐 매도,매수호가 기준
             volume = round(order_balance / self.current_bid_price, 2)
             query = {
                 'market': self.market_code,
