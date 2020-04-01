@@ -124,9 +124,6 @@ class UpbitRebalancing(QObject):
 
             self.sigCurrentBalanceChanged.emit(fiat_balance, crypto_balance)
 
-            if( order_type == 'none' ):
-                return
-
             order_price = 0
             if( order_type == 'bid' ):
                 order_price = self.current_ask_price

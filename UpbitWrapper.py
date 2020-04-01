@@ -125,7 +125,7 @@ class UpbitWrapper():
     def makeOrder(self, order_type, order_price, order_balance, test = True):
         query = ''
         volume = 0 # for test
-        if( order_type == 'none'):
+        if( order_type == 'none' or order_price == 0 or order_price == 0):
             return None
 
         if( order_type == 'bid' ):
