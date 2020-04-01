@@ -57,7 +57,13 @@ def test_makeDayCandle(UpbitObj):
     date_time_from =  datetime.datetime.strptime(str_date_time_from, date_time_format)
     # print(date_time_from)
 
+
+    output = []
+
     result = UpbitObj.getDayCandle(count, 200)
+
+    for item in result:
+        item['']
 
     if( "error" in result ):
         assert 0
