@@ -1,5 +1,6 @@
 import pytest
 import json
+import datetime
 
 
 @pytest.fixture
@@ -48,3 +49,22 @@ def test_getDayCandle(UpbitObj ):
         assert( len(result) == count )
         result = json.dumps(result, indent=2)
         print(result)
+
+def test_makeDayCandle(UpbitObj):
+# @pytest.mark.skip(reason="no test make json file purpose")
+    str_date_time_from = '2018-01-05T01:00:00'
+    date_time_format = "%Y-%m-%dT%H:%M:%S"
+    date_time_from =  datetime.datetime.strptime(str_date_time_from, date_time_format)
+    # print(date_time_from)
+
+    result = UpbitObj.getDayCandle(count, 200)
+
+    if( "error" in result ):
+        assert 0
+    else:
+        assert( len(result) == count )
+
+        with open("xrp_day_caldles.json", "w") as json_file:
+            json.dump(result, json_file)
+
+
