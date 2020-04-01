@@ -6,18 +6,27 @@ import util
 
 from urllib.parse import urlencode
 import requests
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt
-from PyQt5.QtCore import QObject, pyqtSlot, pyqtSignal, QUrl, QEvent
-from PyQt5.QtCore import QStateMachine, QState, QTimer, QFinalState
-from PyQt5.QtWidgets import QApplication
-from mainwindow_ui import Ui_MainWindow
 
+'''
+20200327
+EXCHANGE API
+[주문]
+초당 8회, 분당 200회
 
-class UpbitWrapper(QObject):
+[주문 외 API]
+초당 30회, 분당 900회
 
+[Exchange API 추가 안내 사항]
+
+QUOTATION API
+1) Websocket 연결 요청 수 제한
+초당 5회, 분당 100회
+
+2) REST API 요청 수 제한
+분당 600회, 초당 10회 (종목, 캔들, 체결, 티커, 호가별)
+'''
+class UpbitWrapper():
     def __init__(self, secret_key, access_key, server_url, market_code):
-        super().__init__()
 
         self.access_key = access_key 
         self.secret_key = secret_key 
@@ -33,7 +42,7 @@ class UpbitWrapper(QObject):
     def checkAssetInfo(self, fiat_balance, current_crypto_price, crypto_balance):
 
         if( fiat_balance == 0 or current_crypto_price == 0 ):
-            return {} 
+            return None
 
         balance_sum = fiat_balance + crypto_balance * current_crypto_price
         fiat_percent = round(fiat_balance/balance_sum * 100, 2)
@@ -52,15 +61,15 @@ class UpbitWrapper(QObject):
                 # 현금 비중이 높은 경우 
                 #buy
                 order_balance = round((fiat_balance - crypto_balance * current_crypto_price) )  / 2 
-                return { "type": 'bid', "order_balance": order_balance }
+                return { "order_type": 'bid', "order_balance": order_balance }
             else:
                 # 암호화폐 비중이 높은 경우
                 #sell
                 order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
-                return { "type": 'ask', "order_balance": order_balance }
+                return { "order_type": 'ask', "order_balance": order_balance }
 
         else:
-            return {"type": "none", "order_balance": 0} 
+            return {"order_type": "none", "order_balance": 0} 
 
 
     '''
@@ -99,45 +108,42 @@ class UpbitWrapper(QObject):
             response = requests.get(url, headers=headers)
         except requests.exceptions.SSLError:
             print("ssl error")
-            self.sigError.emit()
-            return []
+            return None 
         except:
             print("except")
-            self.sigError.emit()
-            return []
+            return None 
         else:
             if( response.status_code != 200):
                 print("error return")
-                self.sigError.emit()
-                return []
+                return None 
             else:
                 output_list = response.json()
                 return output_list
 
 
 
-    def rebalancing(self, side, order_balance):
+    def makeOrder(self, order_type, order_price, order_balance):
         print(util.whoami() )
         query = ''
         volume = 2.5 # for test
-        if( side == 'bid' ):
+        if( order_type == 'bid' ):
             # 암호화폐 매수,매도호가 기준 
-            volume = round(order_balance / self.current_ask_price, 2)
+            volume = round(order_balance / order_price, 2)
             query = {
                 'market': self.market_code,
                 'side': 'bid',
                 'volume': volume,
-                'price': str(self.current_ask_price),
+                'price': str(order_price),
                 'ord_type': 'limit',
             }
         else:
             # 암호화폐 매도,매수호가 기준
-            volume = round(order_balance / self.current_bid_price, 2)
+            volume = round(order_balance / order_price, 2)
             query = {
                 'market': self.market_code,
                 'side': 'ask',
                 'volume': volume,
-                'price': str(self.current_bid_price),
+                'price': str(order_price),
                 'ord_type': 'limit',
             }
 
@@ -150,32 +156,29 @@ class UpbitWrapper(QObject):
         query_hash = m.hexdigest()
 
         payload = {
-            'access_key': access_key,
+            'access_key': self.access_key,
             'nonce': str(uuid.uuid4()),
             'query_hash': query_hash,
             'query_hash_alg': 'SHA512',
         }
 
-        jwt_token = jwt.encode(payload, secret_key).decode('utf-8')
+        jwt_token = jwt.encode(payload, self.secret_key).decode('utf-8')
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
-        url = server_url + "/v1/orders"
+        url = self.server_url + "/v1/orders"
         try:
             response = requests.post( url, params=query, headers=headers)
         except requests.exceptions.SSLError:
             print("ssl error")
-            self.sigError.emit()
-            return []
+            return None 
         except:
             print("except")
-            self.sigError.emit()
-            return []
+            return None 
         else:
             if( response.status_code != 200):
                 print("error return: \n{}\n{}".format(query, response.text ) )
-                self.sigError.emit()
-                return []
+                return None 
             else:
                 output_list = response.json()
                 print(json.dumps( response.json(), indent=2, sort_keys=True) )
@@ -190,22 +193,20 @@ class UpbitWrapper(QObject):
             response = requests.get( url, params= query)
         except requests.exceptions.SSLError:
             print("ssl error")
-            self.sigError.emit()
-            return []
+            return None
         except:
             print("except")
-            self.sigError.emit()
-            return []
+            return None 
         else:
             if( response.status_code != 200):
                 print("error return: \n{}\n{}".format(query, response.text ) )
-                self.sigerror.emit()
-                return []
+                return None 
             else:
                 output_list = response.json()
                 # print(json.dumps( output_list, indent=2, sort_keys=True) )
                 return output_list
 
+    # 최대 200 개까지 가능 
     def getDayCandle(self, max_count):
         url = self.server_url + "/v1/candles/days"
         query = {"market": self.market_code, "count": str(max_count) }
@@ -214,17 +215,15 @@ class UpbitWrapper(QObject):
             response = requests.get( url, params= query)
         except requests.exceptions.SSLError:
             print("ssl error")
-            self.sigError.emit()
-            return []
+            return None
         except:
             print("except")
-            self.sigError.emit()
-            return []
+            return None
         else:
             if( response.status_code != 200):
                 print("error return: \n{}\n{}".format(query, response.text ) )
                 self.sigError.emit()
-                return []
+                return None 
             else:
                 output_list = response.json()
                 return output_list
