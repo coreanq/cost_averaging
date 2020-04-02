@@ -48,26 +48,26 @@ class UpbitWrapper():
         fiat_percent = round(fiat_balance/balance_sum * 100, 2)
         crypto_percent = round( (crypto_balance * current_crypto_price )/balance_sum * 100, 2) 
 
-        print( 'fiat: {}[{} %], crypto price: {} amount: {} [{} %]'.format(
-            fiat_balance
-            ,fiat_percent
-            ,current_crypto_price
-            ,crypto_balance
-            ,crypto_percent
-        ))
-
         order_balance = 0
         if( abs(fiat_percent - crypto_percent) > self.rebalance_start_percent ):
+
+            print( '{} fiat: {}[{} %], crypto price: {} amount: {} [{} %]'.format(
+                'buy ' if( fiat_percent > crypto_percent ) else 'sell'
+                ,round(fiat_balance, 2)
+                ,round(fiat_percent, 2)
+                ,round(current_crypto_price, 2)
+                ,round(crypto_balance, 2)
+                ,round(crypto_percent, 2)
+            ))
+
             if( fiat_percent > crypto_percent ):
                 # 현금 비중이 높은 경우 
                 #buy
-                print('buy')
                 order_balance = round((fiat_balance - crypto_balance * current_crypto_price) )  / 2 
                 return { "order_type": 'bid', "order_balance": order_balance }
             else:
                 # 암호화폐 비중이 높은 경우
                 #sell
-                print('sell')
                 order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
                 return { "order_type": 'ask', "order_balance": order_balance }
 

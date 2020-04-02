@@ -80,6 +80,12 @@ def test_rebalance_xrp_simulate(UpbitObj):
         price_histroy_info.append( item_list['trade_price'] )
 
 
+    # 시작가 설정 
+    while( True ):
+        if( price_histroy_info[0] <= 2100 ):
+            break
+        price_histroy_info.pop(0)
+
     # open - high - low - close
     while (len(price_histroy_info ) > 1 ):
         iStartPrice = price_histroy_info[0]
