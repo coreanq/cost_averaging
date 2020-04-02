@@ -86,6 +86,8 @@ class UpbitWrapper():
 
 
         for current_crypto_price in range(iStartPrice, iEndPrice, iStep):
+            if( self.isValidPrice(current_crypto_price) == False ):
+                continue
             result_list = self.checkAssetInfo(fiat_balance, current_crypto_price, crypto_balance)
             assert "order_type" in result_list
 

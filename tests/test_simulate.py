@@ -19,7 +19,7 @@ def MarketCode():
     return "KRW-XRP"
 
 
-def test_rebalance_simulate(UpbitObj):
+def test_rebalance_normal_simulate(UpbitObj):
 
     fiat_balance = 10000000
     crypto_balance = 0
@@ -62,3 +62,37 @@ def test_rebalance_simulate(UpbitObj):
 
 
     pass
+
+def test_rebalance_xrp_simulate(UpbitObj):
+
+    price_list = []
+    with open("xrp_day_candles.json", "r") as json_file:
+        price_list = json.load(json_file)
+
+    fiat_balance = 10000000
+    crypto_balance = 0
+
+    price_histroy_info = []
+    for item_list in reversed(price_list):
+        price_histroy_info.append( item_list['opening_price'] )
+        price_histroy_info.append( item_list['high_price'] )
+        price_histroy_info.append( item_list['low_price'] )
+        price_histroy_info.append( item_list['trade_price'] )
+
+
+    # open - high - low - close
+    while (len(price_histroy_info ) > 1 ):
+        iStartPrice = price_histroy_info[0]
+        iEndPrice = price_histroy_info[1]
+
+        result = UpbitObj.simulateReblance(fiat_balance, crypto_balance, int(iStartPrice), int(iEndPrice) )
+        fiat_balance = result['fiat_balance']
+        crypto_balance = result['crypto_balance']
+
+    print( "shannon remain fiat {}, crypto {}\n".format( 
+        round( fiat_balance )
+        ,round( crypto_balance )
+        )
+    )
+    pass
+
