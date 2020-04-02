@@ -108,7 +108,7 @@ def test_makeDayCandle(UpbitObj):
         output_list.pop(-1)
         
     # print(result)
-    with open("xrp_day_caldles.json", "w") as json_file:
+    with open("xrp_day_candles.json", "w") as json_file:
         json.dump(output_list, json_file, indent= 2)
 
 
