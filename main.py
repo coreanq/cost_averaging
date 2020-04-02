@@ -131,8 +131,6 @@ class UpbitRebalancing(QObject):
                 order_price = self.current_ask_price
             elif( order_type == 'ask' ):
                 order_price = self.current_bid_price
-                # 매도는 안하도록 함
-                order_price = 0
 
             self.upbitIf.makeOrder(order_type, order_price, order_balance)
         pass

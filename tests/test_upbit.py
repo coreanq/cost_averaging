@@ -80,7 +80,7 @@ def test_makeOrder(UpbitObj):
 
 def test_makeDayCandle(UpbitObj):
 # @pytest.mark.skip(reason="no test make json file purpose")
-    str_date_time_target = '2018-01-03T01:00:00'
+    str_date_time_target = '2017-01-03T01:00:00'
     date_time_format = "%Y-%m-%dT%H:%M:%S"
 
     date_time_target =  datetime.datetime.strptime(str_date_time_target, date_time_format)
@@ -94,7 +94,8 @@ def test_makeDayCandle(UpbitObj):
 
     while (isCompleted == False):
         result = UpbitObj.getDayCandle(str_date_time_target)
-        assert result != None
+        if( result == None ):
+            break
 
         for item in result :
             str_candle_date_time = item['candle_date_time_kst']
