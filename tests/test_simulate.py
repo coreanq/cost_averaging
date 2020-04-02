@@ -88,11 +88,15 @@ def test_rebalance_xrp_simulate(UpbitObj):
         result = UpbitObj.simulateReblance(fiat_balance, crypto_balance, int(iStartPrice), int(iEndPrice) )
         fiat_balance = result['fiat_balance']
         crypto_balance = result['crypto_balance']
+        price_histroy_info.pop(0)
 
-    print( "shannon remain fiat {}, crypto {}\n".format( 
+    print( "shannon remain fiat {}, crypto {}, price total {}\n".format( 
         round( fiat_balance )
         ,round( crypto_balance )
+        ,round(iEndPrice * crypto_balance + fiat_balance)
         )
     )
+
+
     pass
 
