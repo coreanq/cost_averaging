@@ -80,25 +80,35 @@ def test_makeOrder(UpbitObj):
 
 def test_makeDayCandle(UpbitObj):
 # @pytest.mark.skip(reason="no test make json file purpose")
-    str_date_time_from = '2018-01-05T01:00:00'
+    str_date_time_target = '2018-01-03T01:00:00'
     date_time_format = "%Y-%m-%dT%H:%M:%S"
-    date_time_from =  datetime.datetime.strptime(str_date_time_from, date_time_format)
-    # print(date_time_from)
+
+    date_time_target =  datetime.datetime.strptime(str_date_time_target, date_time_format)
+
+    str_date_time_target = ''
+
+    output_list = []
 
 
-    output = []
+    isCompleted = False
 
-    result = UpbitObj.getDayCandle(count, 200)
+    while (isCompleted == False):
+        result = UpbitObj.getDayCandle(str_date_time_target)
+        assert result != None
 
-    for item in result:
-        item['']
-
-    if( "error" in result ):
-        assert 0
-    else:
-        assert( len(result) == count )
-
-        with open("xrp_day_caldles.json", "w") as json_file:
-            json.dump(result, json_file)
+        for item in result :
+            str_candle_date_time = item['candle_date_time_kst']
+            candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
+            if( date_time_target <= candle_date_time ):
+                output_list.append(item)
+            else:
+                isCompleted = True
+                break
+        str_date_time_target = output_list[-1]['candle_date_time_kst'].replace('T', ' ' )
+        output_list.pop(-1)
+        
+    # print(result)
+    with open("xrp_day_caldles.json", "w") as json_file:
+        json.dump(output_list, json_file, indent= 2)
 
 

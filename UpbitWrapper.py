@@ -252,9 +252,9 @@ class UpbitWrapper():
                 return output_list
 
     # 최대 200 개까지 가능 
-    def getDayCandle(self, max_count):
+    def getDayCandle(self, last_date_time_to ):
         url = self.server_url + "/v1/candles/days"
-        query = {"market": self.market_code, "count": str(max_count) }
+        query = {"market": self.market_code, "count": 200, "to": last_date_time_to }
 
         try:
             response = requests.get( url, params= query)
@@ -269,8 +269,15 @@ class UpbitWrapper():
                 print("error return: \n{}\n{}".format(query, response.text ) )
                 return None 
             else:
+                result = []
                 output_list = response.json()
-                return output_list
+                del_key = ['timestamp', 'candle_acc_trade_price', 'candle_acc_trade_volume', 'prev_closing_price', 'change_price', 'change_rate', 'candle_date_time_utc']
+
+                for item in output_list:
+                    list( map(item.pop, del_key) )
+                    result.append( item )
+
+                return result
 
     def isValidPrice(self, price):
             '''
