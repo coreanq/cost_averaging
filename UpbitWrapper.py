@@ -34,7 +34,7 @@ class UpbitWrapper():
 
         self.market_code =  market_code
         self.account_info = []
-        self.rebalance_start_percent = 2 
+        self.rebalance_start_percent = 1 
 
     def setRebalance_percent(self, iPercent):
         self.rebalance_start_percent = iPercent
@@ -70,6 +70,45 @@ class UpbitWrapper():
 
         else:
             return {"order_type": "none", "order_balance": 0} 
+
+    def simulateReblance(self, iFiatBalance, iCryptoBalance, iStartPrice, iEndPrice ):
+        fiat_balance = iFiatBalance
+        crypto_balance = iCryptoBalance 
+
+        iStartPrice = iStartPrice
+        iEndPrice = iEndPrice
+        iStep = 0
+
+        if ( iStartPrice > iEndPrice ):
+            iStep = -1
+        else:
+            iStep = 1
+
+
+        for current_crypto_price in range(iStartPrice, iEndPrice, iStep):
+            result_list = self.checkAssetInfo(fiat_balance, current_crypto_price, crypto_balance)
+            assert "order_type" in result_list
+
+
+            order_type = result_list['order_type']
+            order_balance = result_list['order_balance']
+
+            # buy
+            if( order_type == 'bid' ):
+                order_balance = order_balance * 0.9995 # 수수료
+                crypto_balance += round(order_balance / current_crypto_price, 2)
+                fiat_balance -= order_balance
+                pass
+            elif ( order_type == 'ask' ):
+                order_balance = order_balance * 0.9995 # 수수료
+                crypto_balance -= round(order_balance / current_crypto_price, 2)
+                fiat_balance += order_balance
+                pass
+            else:
+                continue
+            pass
+        
+        return {"fiat_balance": fiat_balance, "crypto_balance": crypto_balance}
 
 
     def getAccountInfo(self):
