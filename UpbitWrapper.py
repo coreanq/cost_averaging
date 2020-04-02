@@ -72,27 +72,27 @@ class UpbitWrapper():
             return {"order_type": "none", "order_balance": 0} 
 
 
-    '''
-    [
-        {
-            "avg_buy_price": "0",
-            "avg_buy_price_modified": true,
-            "balance": "2.27593723",
-            "currency": "KRW",
-            "locked": "0.0",
-            "unit_currency": "KRW"
-        },
-        {
-            "avg_buy_price": "217.4",
-            "avg_buy_price_modified": false,
-            "balance": "1.13438041",
-            "currency": "XRP",
-            "locked": "0.0",
-            "unit_currency": "KRW"
-        }
-    ]
-    '''
     def getAccountInfo(self):
+        '''
+        [
+            {
+                "avg_buy_price": "0",
+                "avg_buy_price_modified": true,
+                "balance": "2.27593723",
+                "currency": "KRW",
+                "locked": "0.0",
+                "unit_currency": "KRW"
+            },
+            {
+                "avg_buy_price": "217.4",
+                "avg_buy_price_modified": false,
+                "balance": "1.13438041",
+                "currency": "XRP",
+                "locked": "0.0",
+                "unit_currency": "KRW"
+            }
+        ]
+        '''
         payload = {
             'access_key': self.access_key,
             'nonce': str(uuid.uuid4()),
@@ -228,9 +228,50 @@ class UpbitWrapper():
         else:
             if( response.status_code != 200):
                 print("error return: \n{}\n{}".format(query, response.text ) )
-                self.sigError.emit()
                 return None 
             else:
                 output_list = response.json()
                 return output_list
 
+    def isValidPrice(self, price):
+            '''
+            원화 마켓 주문 가격 단위
+            원화 마켓은 호가 별 주문 가격의 단위가 다릅니다. 아래 표를 참고하여 해당 단위로 주문하여 주세요.
+            https://docs.upbit.com/v1.0/docs/%EC%9B%90%ED%99%94-%EB%A7%88%EC%BC%93-%EC%A3%BC%EB%AC%B8-%EA%B0%80%EA%B2%A9-%EB%8B%A8%EC%9C%84
+            ~10         : 0.01
+            ~100        : 0.1
+            ~1,000      : 1
+            ~10,000     : 5
+            ~100,000    : 10
+            ~500,000    : 50
+            ~1,000,000  : 100
+            ~2,000,000  : 500
+            +2,000,000  : 1,000
+            '''
+            if price <= 10:
+                if (price*100) != int(price*100):
+                    return False
+            elif price <= 100:
+                if (price*10) != int(price*10):
+                    return False
+            elif price <= 1000:
+                if price != int(price):
+                    return False
+            elif price <= 10000:
+                if (price % 5) != 0:
+                    return False
+            elif price <= 100000:
+                if (price % 10) != 0:
+                    return False
+            elif price <= 500000:
+                if (price % 50) != 0:
+                    return False
+            elif price <= 1000000:
+                if (price % 100) != 0:
+                    return False
+            elif price <= 2000000:
+                if (price % 500) != 0:
+                    return False
+            elif (price % 1000) != 0:
+                return False
+            return True
