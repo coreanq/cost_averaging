@@ -66,55 +66,59 @@ def test_rebalance_normal_simulate(UpbitObj):
 def test_rebalance_xrp_simulate(UpbitObj):
 
     price_list = []
-    # target_file_name =  'xrp_day_candles_down.json'
-    # target_file_name =  'xrp_day_candles_up.json'
-    target_file_name =  'xrp_day_candles_all.json'
 
-    with open(target_file_name, "r") as json_file:
-        price_list = json.load(json_file)
+    target_file_name_list = ['xrp_day_candles_up.json', 'xrp_day_candles_down.json',  'xrp_day_candles_all.json']
 
 
-    init_fiat_balance = 10000000
-    start_price = price_list[-1]['opening_price']
-    end_price = price_list[0]['trade_price']
-    rebalance_percent_list = [2, 5, 10, 20, 30, 40 , 50, 60 , 70, 80, 90, 99 ]
+    for target_file_name in target_file_name_list:
+        with open(target_file_name, "r") as json_file:
+            price_list = json.load(json_file)
 
-    price_histroy_info = []
-    for rebalance_percent in rebalance_percent_list:
 
-        UpbitObj.setRebalance_percent(rebalance_percent)
-        fiat_balance = 10000000
-        crypto_balance = 0
+        init_fiat_balance = 10000000
+        start_price = price_list[-1]['opening_price']
+        end_price = price_list[0]['trade_price']
 
-        price_histroy_info.clear()
-        for item_list in reversed(price_list):
-            price_histroy_info.append( item_list['opening_price'] )
-            price_histroy_info.append( item_list['high_price'] )
-            price_histroy_info.append( item_list['low_price'] )
-            price_histroy_info.append( item_list['trade_price'] )
+        # 90 차이면 5% 95% 로 19배 차이임 
+        rebalance_percent_list = [1, 2, 5, 10, 20, 30, 40 , 50 ]
 
-        # open - high - low - close
-        while (len(price_histroy_info ) > 1 ):
-            iStartPrice = price_histroy_info[0]
-            iEndPrice = price_histroy_info[1]
+        price_histroy_info = []
+        for rebalance_percent in rebalance_percent_list:
 
-            result = UpbitObj.simulateReblance(fiat_balance, crypto_balance, int(iStartPrice), int(iEndPrice) )
-            fiat_balance = result['fiat_balance']
-            crypto_balance = result['crypto_balance']
-            price_histroy_info.pop(0)
+            UpbitObj.setRebalance_percent(rebalance_percent)
+            fiat_balance = 10000000
+            crypto_balance = 0
 
-        print( "shannon demon result {}, rebalance percent: {}:\n init_fiat_balance {}, start {}, end: {}, remain fiat {}, crypto_balance {}, cyrpto_total {}, price total {}\n".format( 
-            target_file_name
-            ,rebalance_percent
-            ,round( init_fiat_balance)
-            ,round( start_price)
-            ,round( end_price)
-            ,round( fiat_balance )
-            ,round( crypto_balance )
-            ,round( crypto_balance * end_price )
-            ,round( iEndPrice * crypto_balance + fiat_balance )
+            price_histroy_info.clear()
+            for item_list in reversed(price_list):
+                price_histroy_info.append( item_list['opening_price'] )
+                price_histroy_info.append( item_list['high_price'] )
+                price_histroy_info.append( item_list['low_price'] )
+                price_histroy_info.append( item_list['trade_price'] )
+
+            # open - high - low - close
+            while (len(price_histroy_info ) > 1 ):
+                iStartPrice = price_histroy_info[0]
+                iEndPrice = price_histroy_info[1]
+
+                result = UpbitObj.simulateReblance(fiat_balance, crypto_balance, int(iStartPrice), int(iEndPrice) )
+                fiat_balance = result['fiat_balance']
+                crypto_balance = result['crypto_balance']
+                price_histroy_info.pop(0)
+
+            print( "shannon demon result {}, rebalance percent: {}:\n init_fiat_balance {}, start {}, end: {}, remain fiat {}, crypto_balance {}, cyrpto_total {}, price total {}\n".format( 
+                target_file_name
+                ,rebalance_percent
+                ,round( init_fiat_balance)
+                ,round( start_price)
+                ,round( end_price)
+                ,round( fiat_balance )
+                ,round( crypto_balance )
+                ,round( crypto_balance * end_price )
+                ,round( iEndPrice * crypto_balance + fiat_balance )
+                )
             )
-        )
+        print("\n\n\n")
 
     pass
 
