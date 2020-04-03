@@ -29,7 +29,11 @@ class UpbitRebalancing(QObject):
 
     sigStyleSheetChanged = pyqtSignal(str)
 
-    def __init__(self, secret_key, access_key, server_url, external_wallet_amount):
+    def __init__(self, 
+        secret_key, access_key, server_url, 
+        original_crypto_price,
+        external_wallet_amount
+        ):
         super().__init__()
 
         self.fsm = QStateMachine()
@@ -41,6 +45,7 @@ class UpbitRebalancing(QObject):
         self.createState()
 
         self.upbitIf = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, 'KRW-XRP')
+        self.upbitIf.setOriginalCryptoPrice(original_crypto_price)
 
         self.current_price = 0
         self.current_ask_price = 0
@@ -204,8 +209,13 @@ if __name__ == "__main__":
     server_url = "https://api.upbit.com"
     external_wallet_amount = access_info['external_wallet_amount']
 
+    fOriginalFiatBalance = access_info["original_fiat_balance"]
+    fOriginalCryptoPrice = access_info["original_crypto_price"] 
+    fOriginalCryptoBalance = access_info["original_crypto_balance"]
+
+
     myApp = QtWidgets.QApplication(sys.argv)
-    obj = UpbitRebalancing(secret_key, access_key, server_url, external_wallet_amount)
+    obj = UpbitRebalancing(secret_key, access_key, server_url, int(fOriginalCryptoPrice), external_wallet_amount)
 
     form = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
@@ -223,10 +233,6 @@ if __name__ == "__main__":
     
     def onStyleSheetChanged(strStyleSheet):
         myApp.setStyleSheet(strStyleSheet)
-
-    fOriginalFiatBalance = access_info["original_fiat_balance"]
-    fOriginalCryptoPrice = access_info["original_crypto_price"] 
-    fOriginalCryptoBalance = access_info["original_crypto_balance"]
 
     def onCurrentCurrentBalanceChanged(fFiatBalance, fCryptoBalance):
         fCurrentFiatBalance = round( fFiatBalance, 3)
