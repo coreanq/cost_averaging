@@ -68,10 +68,8 @@ class UpbitWrapper():
             else:
                 # 암호화폐 비중이 높은 경우
                 #sell
-                if( fiat_percent  < crypto_percent ):
-                    order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
-                else:
-                    order_balance = 0
+                # order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
+                order_balance = 0
                 return { "order_type": 'ask', "order_balance": order_balance }
 
         else:
