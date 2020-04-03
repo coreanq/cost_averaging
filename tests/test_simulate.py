@@ -67,7 +67,11 @@ def test_rebalance_xrp_simulate(UpbitObj):
 
     price_list = []
 
-    target_file_name_list = ['xrp_day_candles_up.json', 'xrp_day_candles_down.json',  'xrp_day_candles_all.json']
+    target_file_name_list = [
+        'xrp_day_candles_up.json', 
+        'xrp_day_candles_down.json',  
+        'xrp_day_candles_down_part.json',  
+        'xrp_day_candles_all.json']
 
 
     for target_file_name in target_file_name_list:
@@ -80,7 +84,7 @@ def test_rebalance_xrp_simulate(UpbitObj):
         end_price = price_list[0]['trade_price']
 
         # 90 차이면 5% 95% 로 19배 차이임 
-        rebalance_percent_list = [1, 2, 5, 10, 20, 30, 40 , 50 ]
+        rebalance_percent_list = [2, 5, 10]
 
         price_histroy_info = []
         for rebalance_percent in rebalance_percent_list:
