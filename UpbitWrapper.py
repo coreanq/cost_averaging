@@ -35,10 +35,6 @@ class UpbitWrapper():
         self.market_code =  market_code
         self.account_info = []
         self.rebalance_start_percent = 5 
-        self.original_crypto_price = 0
-
-    def setOriginalCryptoPrice(self, price):
-        self.original_crypto_price = price
 
     def setRebalance_percent(self, iPercent):
         self.rebalance_start_percent = iPercent
@@ -72,12 +68,7 @@ class UpbitWrapper():
             else:
                 # 암호화폐 비중이 높은 경우
                 #sell
-
-                # 현재가가 기준가보다 낮은 경우 수익 극대화를 위해 매도  
-                if( current_crypto_price < self.original_crypto_price ):
-                    order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
-                else:
-                    order_balance = 0
+                order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
                 return { "order_type": 'ask', "order_balance": order_balance }
 
         else:

@@ -31,7 +31,6 @@ class UpbitRebalancing(QObject):
 
     def __init__(self, 
         secret_key, access_key, server_url, 
-        original_crypto_price,
         external_wallet_amount
         ):
         super().__init__()
@@ -45,8 +44,6 @@ class UpbitRebalancing(QObject):
         self.createState()
 
         self.upbitIf = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, 'KRW-XRP')
-        self.upbitIf.setOriginalCryptoPrice(original_crypto_price)
-
         self.current_price = 0
         self.current_ask_price = 0
         self.current_bid_price = 0
@@ -209,15 +206,14 @@ if __name__ == "__main__":
     access_key = access_info["access_key"]
     secret_key = access_info["secret_key"]
     server_url = "https://api.upbit.com"
+
+
+    # 외부 개인지갑 암호화폐 보유 갯수 
     external_wallet_amount = access_info['external_wallet_amount']
-
     fOriginalFiatBalance = access_info["original_fiat_balance"]
-    fOriginalCryptoPrice = access_info["original_crypto_price"] 
-    fOriginalCryptoBalance = access_info["original_crypto_balance"]
-
 
     myApp = QtWidgets.QApplication(sys.argv)
-    obj = UpbitRebalancing(secret_key, access_key, server_url, int(fOriginalCryptoPrice), external_wallet_amount)
+    obj = UpbitRebalancing(secret_key, access_key, server_url, external_wallet_amount)
 
     form = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
@@ -236,16 +232,17 @@ if __name__ == "__main__":
     def onStyleSheetChanged(strStyleSheet):
         myApp.setStyleSheet(strStyleSheet)
 
+
+    # 기존 투입 자산 대비 현재 얼마나 가치를 가지고 있나 측정 
+    # access_info 의 original_fiat_balance 의 경우 추가 금액을 입금할 경우 그 금액만큼 수동으로 늘려준다 
+    # 기존 투입 금액의 반보다 현재 보유한 fiatbalance 가 크다면 수익이고 아니면 손해지만 crypto balance 가 늘어난 상태임 
     def onCurrentCurrentBalanceChanged(fFiatBalance, fCryptoBalance):
         fCurrentFiatBalance = round( fFiatBalance, 3)
         fCurrentCryptoBalance = round( fCryptoBalance, 3)
 
-        fCurrentTotal = fCurrentFiatBalance + fCurrentCryptoBalance * fOriginalCryptoPrice
-        fOriginalTotal = fOriginalFiatBalance + fOriginalCryptoBalance * fOriginalCryptoPrice
-
-        result =  str( round((fCurrentTotal / fOriginalTotal ) * 100, 2 )  - 100 )
+        result =  str( round((fCurrentFiatBalance / (fOriginalFiatBalance / 2) ) * 100, 2 ) )
         ui.lblOriPercent.setText( result + '%' )
-        ui.lblOriBalance.setText( str( fOriginalTotal ))
+        ui.lblOriBalance.setText( '{:,.1f}'.format( fOriginalFiatBalance ))
         pass
 
     obj.sigCryptoBalanceChanged.connect(ui.lblCryptoBalance.setText)
