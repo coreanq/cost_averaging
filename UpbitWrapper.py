@@ -40,7 +40,7 @@ class UpbitWrapper():
         self.rebalance_start_percent = iPercent
     
     def checkAssetInfo(self, fiat_balance, current_crypto_price, crypto_balance):
-
+        # 암호화폐 자산과 현금 자산의 비중을 살펴 리밸런싱 기준 퍼센티지 넘게 차이나는 경우  암호화폐 매수/매도를 결정함 
         if( fiat_balance == 0 or current_crypto_price == 0 ):
             return None
 
@@ -117,6 +117,7 @@ class UpbitWrapper():
 
 
     def getAccountInfo(self):
+        #  전체 계좌 조회 
         '''
         [
             {
@@ -142,7 +143,7 @@ class UpbitWrapper():
             'nonce': str(uuid.uuid4()),
         }
 
-        jwt_token = jwt.encode(payload, self.secret_key).decode('utf-8')
+        jwt_token = jwt.encode(payload, self.secret_key)
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
@@ -173,7 +174,7 @@ class UpbitWrapper():
             return None
 
         if( order_type == 'bid' ):
-            # 암호화폐 매수,매도호가 기준 
+            # 암호화폐 지정가 limit 매수,매도호가 기준 
             volume = round(order_balance / order_price, 2)
             query = {
                 'market': self.market_code,
@@ -183,7 +184,7 @@ class UpbitWrapper():
                 'ord_type': 'limit',
             }
         else:
-            # 암호화폐 매도,매수호가 기준
+            # 암호화폐 지정가 limit 매도,매수호가 기준
             volume = round(order_balance / order_price, 2)
             query = {
                 'market': self.market_code,
@@ -208,7 +209,7 @@ class UpbitWrapper():
             'query_hash_alg': 'SHA512',
         }
 
-        jwt_token = jwt.encode(payload, self.secret_key).decode('utf-8')
+        jwt_token = jwt.encode(payload, self.secret_key)
         authorize_token = 'Bearer {}'.format(jwt_token)
         headers = {"Authorization": authorize_token}
 
@@ -236,6 +237,7 @@ class UpbitWrapper():
 
 
     def getOrderbook(self):
+        # 시세 조회, 호가 조회 
         url = self.server_url + "/v1/orderbook"
         query = {"markets": self.market_code }
 

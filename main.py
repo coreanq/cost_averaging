@@ -65,7 +65,9 @@ class UpbitRebalancing(QObject):
             orderbook_key = 'orderbook_units'
             bid_price_key = 'bid_price'
             ask_price_key = 'ask_price'
+            # 매수/매도 호가가 15호가 정보로 정확히 온경우 
             if( len(item[orderbook_key]) == 15 ):
+                # print(item[orderbook_key])
                 # 1 매수호가 낮은 가격이 좋으므로 매수 1호가 기준으로 현재 가격 결정함
                 self.current_price = item[orderbook_key][0][bid_price_key]
                 # 2 매수호가
@@ -132,7 +134,7 @@ class UpbitRebalancing(QObject):
                 # 매도는 안하도록 함
                 order_price = 0
 
-            self.upbitIf.makeOrder(order_type, order_price, order_balance)
+            self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
         pass
         
     def createState(self):
@@ -196,7 +198,7 @@ if __name__ == "__main__":
     # putenv 는 current process 에 영향을 못끼치므로 environ 에서 직접 세팅 
     # print(os.environ['QML_IMPORT_TRACE'])
 
-    with open("access_info.json", "r") as json_file:
+    with open("auth/access_info.json", "r") as json_file:
         access_info = json.loads(json_file.read())
 
     access_key = access_info["access_key"]
