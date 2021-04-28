@@ -34,7 +34,11 @@ class UpbitWrapper():
 
         self.market_code =  market_code
         self.account_info = []
-        self.rebalance_start_percent = 2 
+        self.rebalance_start_percent = 5 
+        self.original_crypto_price = 0
+
+    def setOriginalCryptoPrice(self, price):
+        self.original_crypto_price = price
 
     def setRebalance_percent(self, iPercent):
         self.rebalance_start_percent = iPercent
@@ -51,14 +55,14 @@ class UpbitWrapper():
         order_balance = 0
         if( abs(fiat_percent - crypto_percent) > self.rebalance_start_percent ):
 
-            print( '{} fiat: {}[{} %], crypto price: {} amount: {} [{} %]'.format(
-                'buy ' if( fiat_percent > crypto_percent ) else 'sell'
-                ,round(fiat_balance, 2)
-                ,round(fiat_percent, 2)
-                ,round(current_crypto_price, 2)
-                ,round(crypto_balance, 2)
-                ,round(crypto_percent, 2)
-            ))
+            # print( '{} fiat: {}[{} %], crypto price: {} amount: {} [{} %]'.format(
+            #     'buy ' if( fiat_percent > crypto_percent ) else 'sell'
+            #     ,round(fiat_balance, 2)
+            #     ,round(fiat_percent, 2)
+            #     ,round(current_crypto_price, 2)
+            #     ,round(crypto_balance, 2)
+            #     ,round(crypto_percent, 2)
+            # ))
 
             if( fiat_percent > crypto_percent ):
                 # 현금 비중이 높은 경우 
@@ -68,7 +72,12 @@ class UpbitWrapper():
             else:
                 # 암호화폐 비중이 높은 경우
                 #sell
-                order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
+
+                # 현재가가 기준가보다 낮은 경우 수익 극대화를 위해 매도  
+                if( current_crypto_price < self.original_crypto_price ):
+                    order_balance = round((crypto_balance * current_crypto_price - fiat_balance ) ) / 2 
+                else:
+                    order_balance = 0
                 return { "order_type": 'ask', "order_balance": order_balance }
 
         else:

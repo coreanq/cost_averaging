@@ -1,4 +1,8 @@
 {
     "access_key": "",
-    "secret_key": ""
+    "secret_key": "",
+    "original_fiat_balance" : 0,
+    "original_crypto_price" : 0,
+    "original_crypto_balance" : 0,
+    "external_wallet_amount" : 0
 }

@@ -1,0 +1,810 @@
+[
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2018-01-07T09:00:00",
+    "opening_price": 4130.0,
+    "high_price": 4465.0,
+    "low_price": 4080.0,
+    "trade_price": 4380.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2018-01-06T09:00:00",
+    "opening_price": 4065.0,
+    "high_price": 4320.0,
+    "low_price": 3785.0,
+    "trade_price": 4130.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2018-01-05T09:00:00",
+    "opening_price": 4205.0,
+    "high_price": 4835.0,
+    "low_price": 3670.0,
+    "trade_price": 4060.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2018-01-04T09:00:00",
+    "opening_price": 3735.0,
+    "high_price": 4925.0,
+    "low_price": 3730.0,
+    "trade_price": 4215.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2018-01-03T09:00:00",
+    "opening_price": 3000.0,
+    "high_price": 3980.0,
+    "low_price": 2925.0,
+    "trade_price": 3735.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2018-01-02T09:00:00",
+    "opening_price": 2890.0,
+    "high_price": 3075.0,
+    "low_price": 2715.0,
+    "trade_price": 3000.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2018-01-01T09:00:00",
+    "opening_price": 2750.0,
+    "high_price": 2975.0,
+    "low_price": 2555.0,
+    "trade_price": 2885.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-31T09:00:00",
+    "opening_price": 2720.0,
+    "high_price": 2965.0,
+    "low_price": 2395.0,
+    "trade_price": 2745.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-30T09:00:00",
+    "opening_price": 2570.0,
+    "high_price": 3750.0,
+    "low_price": 2465.0,
+    "trade_price": 2725.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-29T09:00:00",
+    "opening_price": 1705.0,
+    "high_price": 2645.0,
+    "low_price": 1605.0,
+    "trade_price": 2570.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-28T09:00:00",
+    "opening_price": 1725.0,
+    "high_price": 1865.0,
+    "low_price": 1470.0,
+    "trade_price": 1705.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-27T09:00:00",
+    "opening_price": 1500.0,
+    "high_price": 1830.0,
+    "low_price": 1465.0,
+    "trade_price": 1720.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-26T09:00:00",
+    "opening_price": 1425.0,
+    "high_price": 1555.0,
+    "low_price": 1380.0,
+    "trade_price": 1505.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-25T09:00:00",
+    "opening_price": 1405.0,
+    "high_price": 1430.0,
+    "low_price": 1350.0,
+    "trade_price": 1425.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-24T09:00:00",
+    "opening_price": 1470.0,
+    "high_price": 1470.0,
+    "low_price": 1250.0,
+    "trade_price": 1405.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-23T09:00:00",
+    "opening_price": 1460.0,
+    "high_price": 1540.0,
+    "low_price": 1280.0,
+    "trade_price": 1470.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-22T09:00:00",
+    "opening_price": 1605.0,
+    "high_price": 1820.0,
+    "low_price": 982.0,
+    "trade_price": 1460.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-21T09:00:00",
+    "opening_price": 996.0,
+    "high_price": 1680.0,
+    "low_price": 960.0,
+    "trade_price": 1605.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-20T09:00:00",
+    "opening_price": 940.0,
+    "high_price": 996.0,
+    "low_price": 871.0,
+    "trade_price": 995.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-19T09:00:00",
+    "opening_price": 879.0,
+    "high_price": 1080.0,
+    "low_price": 780.0,
+    "trade_price": 940.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-18T09:00:00",
+    "opening_price": 816.0,
+    "high_price": 943.0,
+    "low_price": 786.0,
+    "trade_price": 879.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-17T09:00:00",
+    "opening_price": 849.0,
+    "high_price": 871.0,
+    "low_price": 785.0,
+    "trade_price": 816.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-16T09:00:00",
+    "opening_price": 844.0,
+    "high_price": 926.0,
+    "low_price": 824.0,
+    "trade_price": 849.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-15T09:00:00",
+    "opening_price": 943.0,
+    "high_price": 945.0,
+    "low_price": 755.0,
+    "trade_price": 844.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-14T09:00:00",
+    "opening_price": 523.0,
+    "high_price": 994.0,
+    "low_price": 511.0,
+    "trade_price": 940.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-13T09:00:00",
+    "opening_price": 435.0,
+    "high_price": 583.0,
+    "low_price": 382.0,
+    "trade_price": 523.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-12T09:00:00",
+    "opening_price": 288.0,
+    "high_price": 566.0,
+    "low_price": 276.0,
+    "trade_price": 435.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-11T09:00:00",
+    "opening_price": 268.0,
+    "high_price": 288.0,
+    "low_price": 267.0,
+    "trade_price": 288.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-10T09:00:00",
+    "opening_price": 284.0,
+    "high_price": 286.0,
+    "low_price": 240.0,
+    "trade_price": 269.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-09T09:00:00",
+    "opening_price": 298.0,
+    "high_price": 309.0,
+    "low_price": 270.0,
+    "trade_price": 284.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-08T09:00:00",
+    "opening_price": 287.0,
+    "high_price": 411.0,
+    "low_price": 271.0,
+    "trade_price": 298.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-07T09:00:00",
+    "opening_price": 289.0,
+    "high_price": 297.0,
+    "low_price": 267.0,
+    "trade_price": 287.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-06T09:00:00",
+    "opening_price": 292.0,
+    "high_price": 300.0,
+    "low_price": 281.0,
+    "trade_price": 290.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-05T09:00:00",
+    "opening_price": 289.0,
+    "high_price": 300.0,
+    "low_price": 287.0,
+    "trade_price": 292.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-04T09:00:00",
+    "opening_price": 287.0,
+    "high_price": 293.0,
+    "low_price": 285.0,
+    "trade_price": 289.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-03T09:00:00",
+    "opening_price": 290.0,
+    "high_price": 296.0,
+    "low_price": 283.0,
+    "trade_price": 287.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-02T09:00:00",
+    "opening_price": 287.0,
+    "high_price": 296.0,
+    "low_price": 274.0,
+    "trade_price": 290.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-12-01T09:00:00",
+    "opening_price": 281.0,
+    "high_price": 292.0,
+    "low_price": 267.0,
+    "trade_price": 287.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-30T09:00:00",
+    "opening_price": 266.0,
+    "high_price": 300.0,
+    "low_price": 250.0,
+    "trade_price": 282.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-29T09:00:00",
+    "opening_price": 341.0,
+    "high_price": 341.0,
+    "low_price": 258.0,
+    "trade_price": 266.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-28T09:00:00",
+    "opening_price": 288.0,
+    "high_price": 346.0,
+    "low_price": 284.0,
+    "trade_price": 339.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-27T09:00:00",
+    "opening_price": 274.0,
+    "high_price": 290.0,
+    "low_price": 273.0,
+    "trade_price": 288.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-26T09:00:00",
+    "opening_price": 279.0,
+    "high_price": 280.0,
+    "low_price": 272.0,
+    "trade_price": 274.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-25T09:00:00",
+    "opening_price": 267.0,
+    "high_price": 282.0,
+    "low_price": 264.0,
+    "trade_price": 279.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-24T09:00:00",
+    "opening_price": 268.0,
+    "high_price": 273.0,
+    "low_price": 259.0,
+    "trade_price": 267.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-23T09:00:00",
+    "opening_price": 262.0,
+    "high_price": 279.0,
+    "low_price": 260.0,
+    "trade_price": 268.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-22T09:00:00",
+    "opening_price": 255.0,
+    "high_price": 274.0,
+    "low_price": 255.0,
+    "trade_price": 262.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-21T09:00:00",
+    "opening_price": 262.0,
+    "high_price": 268.0,
+    "low_price": 248.0,
+    "trade_price": 254.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-20T09:00:00",
+    "opening_price": 253.0,
+    "high_price": 268.0,
+    "low_price": 253.0,
+    "trade_price": 262.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-19T09:00:00",
+    "opening_price": 251.0,
+    "high_price": 265.0,
+    "low_price": 249.0,
+    "trade_price": 253.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-18T09:00:00",
+    "opening_price": 248.0,
+    "high_price": 256.0,
+    "low_price": 243.0,
+    "trade_price": 251.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-17T09:00:00",
+    "opening_price": 253.0,
+    "high_price": 272.0,
+    "low_price": 242.0,
+    "trade_price": 249.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-16T09:00:00",
+    "opening_price": 239.0,
+    "high_price": 345.0,
+    "low_price": 234.0,
+    "trade_price": 254.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-15T09:00:00",
+    "opening_price": 237.0,
+    "high_price": 241.0,
+    "low_price": 234.0,
+    "trade_price": 239.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-14T09:00:00",
+    "opening_price": 232.0,
+    "high_price": 248.0,
+    "low_price": 230.0,
+    "trade_price": 237.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-13T09:00:00",
+    "opening_price": 234.0,
+    "high_price": 260.0,
+    "low_price": 227.0,
+    "trade_price": 231.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-12T09:00:00",
+    "opening_price": 239.0,
+    "high_price": 241.0,
+    "low_price": 225.0,
+    "trade_price": 234.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-11T09:00:00",
+    "opening_price": 234.0,
+    "high_price": 244.0,
+    "low_price": 228.0,
+    "trade_price": 241.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-10T09:00:00",
+    "opening_price": 247.0,
+    "high_price": 249.0,
+    "low_price": 228.0,
+    "trade_price": 233.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-09T09:00:00",
+    "opening_price": 244.0,
+    "high_price": 256.0,
+    "low_price": 240.0,
+    "trade_price": 247.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-08T09:00:00",
+    "opening_price": 239.0,
+    "high_price": 248.0,
+    "low_price": 231.0,
+    "trade_price": 243.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-07T09:00:00",
+    "opening_price": 233.0,
+    "high_price": 239.0,
+    "low_price": 230.0,
+    "trade_price": 239.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-06T09:00:00",
+    "opening_price": 231.0,
+    "high_price": 239.0,
+    "low_price": 228.0,
+    "trade_price": 235.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-05T09:00:00",
+    "opening_price": 227.0,
+    "high_price": 231.0,
+    "low_price": 225.0,
+    "trade_price": 228.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-04T09:00:00",
+    "opening_price": 235.0,
+    "high_price": 236.0,
+    "low_price": 223.0,
+    "trade_price": 227.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-03T09:00:00",
+    "opening_price": 236.0,
+    "high_price": 300.0,
+    "low_price": 226.0,
+    "trade_price": 235.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-02T09:00:00",
+    "opening_price": 220.0,
+    "high_price": 241.0,
+    "low_price": 207.0,
+    "trade_price": 236.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-11-01T09:00:00",
+    "opening_price": 229.0,
+    "high_price": 231.0,
+    "low_price": 216.0,
+    "trade_price": 219.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-31T09:00:00",
+    "opening_price": 229.0,
+    "high_price": 232.0,
+    "low_price": 224.0,
+    "trade_price": 229.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-30T09:00:00",
+    "opening_price": 229.0,
+    "high_price": 232.0,
+    "low_price": 227.0,
+    "trade_price": 229.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-29T09:00:00",
+    "opening_price": 232.0,
+    "high_price": 235.0,
+    "low_price": 224.0,
+    "trade_price": 228.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-28T09:00:00",
+    "opening_price": 232.0,
+    "high_price": 235.0,
+    "low_price": 230.0,
+    "trade_price": 232.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-27T09:00:00",
+    "opening_price": 233.0,
+    "high_price": 235.0,
+    "low_price": 229.0,
+    "trade_price": 233.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-26T09:00:00",
+    "opening_price": 233.0,
+    "high_price": 238.0,
+    "low_price": 229.0,
+    "trade_price": 231.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-25T09:00:00",
+    "opening_price": 241.0,
+    "high_price": 241.0,
+    "low_price": 228.0,
+    "trade_price": 233.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-24T09:00:00",
+    "opening_price": 233.0,
+    "high_price": 252.0,
+    "low_price": 227.0,
+    "trade_price": 239.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-20T09:00:00",
+    "opening_price": 242.0,
+    "high_price": 255.0,
+    "low_price": 237.0,
+    "trade_price": 238.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-19T09:00:00",
+    "opening_price": 248.0,
+    "high_price": 260.0,
+    "low_price": 233.0,
+    "trade_price": 245.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-18T09:00:00",
+    "opening_price": 262.0,
+    "high_price": 273.0,
+    "low_price": 235.0,
+    "trade_price": 249.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-17T09:00:00",
+    "opening_price": 292.0,
+    "high_price": 300.0,
+    "low_price": 247.0,
+    "trade_price": 261.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-16T09:00:00",
+    "opening_price": 296.0,
+    "high_price": 342.0,
+    "low_price": 281.0,
+    "trade_price": 290.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-15T09:00:00",
+    "opening_price": 290.0,
+    "high_price": 305.0,
+    "low_price": 285.0,
+    "trade_price": 299.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-14T09:00:00",
+    "opening_price": 296.0,
+    "high_price": 305.0,
+    "low_price": 287.0,
+    "trade_price": 287.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-13T09:00:00",
+    "opening_price": 285.0,
+    "high_price": 303.0,
+    "low_price": 273.0,
+    "trade_price": 294.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-12T09:00:00",
+    "opening_price": 304.0,
+    "high_price": 306.0,
+    "low_price": 282.0,
+    "trade_price": 286.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-11T09:00:00",
+    "opening_price": 300.0,
+    "high_price": 307.0,
+    "low_price": 294.0,
+    "trade_price": 303.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-10T09:00:00",
+    "opening_price": 286.0,
+    "high_price": 307.0,
+    "low_price": 276.0,
+    "trade_price": 298.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-09T09:00:00",
+    "opening_price": 318.0,
+    "high_price": 318.0,
+    "low_price": 276.0,
+    "trade_price": 286.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-08T09:00:00",
+    "opening_price": 273.0,
+    "high_price": 319.0,
+    "low_price": 269.0,
+    "trade_price": 319.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-07T09:00:00",
+    "opening_price": 270.0,
+    "high_price": 275.0,
+    "low_price": 265.0,
+    "trade_price": 273.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-06T09:00:00",
+    "opening_price": 272.0,
+    "high_price": 278.0,
+    "low_price": 265.0,
+    "trade_price": 269.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-05T09:00:00",
+    "opening_price": 248.0,
+    "high_price": 278.0,
+    "low_price": 248.0,
+    "trade_price": 271.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-04T09:00:00",
+    "opening_price": 234.0,
+    "high_price": 253.0,
+    "low_price": 231.0,
+    "trade_price": 248.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-03T09:00:00",
+    "opening_price": 232.0,
+    "high_price": 235.0,
+    "low_price": 225.0,
+    "trade_price": 235.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-02T09:00:00",
+    "opening_price": 235.0,
+    "high_price": 237.0,
+    "low_price": 227.0,
+    "trade_price": 232.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-10-01T09:00:00",
+    "opening_price": 225.0,
+    "high_price": 235.0,
+    "low_price": 220.0,
+    "trade_price": 234.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-09-30T09:00:00",
+    "opening_price": 220.0,
+    "high_price": 228.0,
+    "low_price": 219.0,
+    "trade_price": 224.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-09-29T09:00:00",
+    "opening_price": 221.0,
+    "high_price": 223.0,
+    "low_price": 212.0,
+    "trade_price": 220.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-09-28T09:00:00",
+    "opening_price": 233.0,
+    "high_price": 235.0,
+    "low_price": 215.0,
+    "trade_price": 222.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-09-27T09:00:00",
+    "opening_price": 211.0,
+    "high_price": 235.0,
+    "low_price": 209.0,
+    "trade_price": 232.0
+  },
+  {
+    "market": "KRW-XRP",
+    "candle_date_time_kst": "2017-09-26T09:00:00",
+    "opening_price": 203.0,
+    "high_price": 217.0,
+    "low_price": 203.0,
+    "trade_price": 211.0
+  }
+]

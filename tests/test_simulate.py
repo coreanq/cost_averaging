@@ -66,43 +66,63 @@ def test_rebalance_normal_simulate(UpbitObj):
 def test_rebalance_xrp_simulate(UpbitObj):
 
     price_list = []
-    with open("xrp_day_candles.json", "r") as json_file:
-        price_list = json.load(json_file)
 
-    fiat_balance = 10000000
-    crypto_balance = 0
-
-    price_histroy_info = []
-    for item_list in reversed(price_list):
-        price_histroy_info.append( item_list['opening_price'] )
-        price_histroy_info.append( item_list['high_price'] )
-        price_histroy_info.append( item_list['low_price'] )
-        price_histroy_info.append( item_list['trade_price'] )
+    target_file_name_list = [
+        'xrp_day_candles_up.json', 
+        'xrp_day_candles_down.json',  
+        'xrp_day_candles_down_part.json',  
+        'xrp_day_candles_all.json']
 
 
-    # 시작가 설정 
-    while( True ):
-        if( price_histroy_info[0] <= 2100 ):
-            break
-        price_histroy_info.pop(0)
+    for target_file_name in target_file_name_list:
+        with open(target_file_name, "r") as json_file:
+            price_list = json.load(json_file)
 
-    # open - high - low - close
-    while (len(price_histroy_info ) > 1 ):
-        iStartPrice = price_histroy_info[0]
-        iEndPrice = price_histroy_info[1]
 
-        result = UpbitObj.simulateReblance(fiat_balance, crypto_balance, int(iStartPrice), int(iEndPrice) )
-        fiat_balance = result['fiat_balance']
-        crypto_balance = result['crypto_balance']
-        price_histroy_info.pop(0)
+        init_fiat_balance = 10000000
+        start_price = price_list[-1]['opening_price']
+        end_price = price_list[0]['trade_price']
 
-    print( "shannon remain fiat {}, crypto {}, price total {}\n".format( 
-        round( fiat_balance )
-        ,round( crypto_balance )
-        ,round(iEndPrice * crypto_balance + fiat_balance)
-        )
-    )
+        # 90 차이면 5% 95% 로 19배 차이임 
+        rebalance_percent_list = [2, 5, 10]
 
+        price_histroy_info = []
+        for rebalance_percent in rebalance_percent_list:
+
+            UpbitObj.setRebalance_percent(rebalance_percent)
+            fiat_balance = 10000000
+            crypto_balance = 0
+
+            price_histroy_info.clear()
+            for item_list in reversed(price_list):
+                price_histroy_info.append( item_list['opening_price'] )
+                price_histroy_info.append( item_list['high_price'] )
+                price_histroy_info.append( item_list['low_price'] )
+                price_histroy_info.append( item_list['trade_price'] )
+
+            # open - high - low - close
+            while (len(price_histroy_info ) > 1 ):
+                iStartPrice = price_histroy_info[0]
+                iEndPrice = price_histroy_info[1]
+
+                result = UpbitObj.simulateReblance(fiat_balance, crypto_balance, int(iStartPrice), int(iEndPrice) )
+                fiat_balance = result['fiat_balance']
+                crypto_balance = result['crypto_balance']
+                price_histroy_info.pop(0)
+
+            print( "shannon demon result {}, rebalance percent: {}:\n init_fiat_balance {}, start {}, end: {}, remain fiat {}, crypto_balance {}, cyrpto_total {}, price total {}\n".format( 
+                target_file_name
+                ,rebalance_percent
+                ,round( init_fiat_balance)
+                ,round( start_price)
+                ,round( end_price)
+                ,round( fiat_balance )
+                ,round( crypto_balance )
+                ,round( crypto_balance * end_price )
+                ,round( iEndPrice * crypto_balance + fiat_balance )
+                )
+            )
+        print("\n\n\n")
 
     pass
 

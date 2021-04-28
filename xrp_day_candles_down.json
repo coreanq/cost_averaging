@@ -3,9 +3,9 @@
     "market": "KRW-XRP",
     "candle_date_time_kst": "2020-04-02T09:00:00",
     "opening_price": 212.0,
-    "high_price": 216.0,
+    "high_price": 219.0,
     "low_price": 212.0,
-    "trade_price": 216.0
+    "trade_price": 214.0
   },
   {
     "market": "KRW-XRP",
@@ -6550,13 +6550,5 @@
     "high_price": 4835.0,
     "low_price": 3670.0,
     "trade_price": 4060.0
-  },
-  {
-    "market": "KRW-XRP",
-    "candle_date_time_kst": "2018-01-04T09:00:00",
-    "opening_price": 3735.0,
-    "high_price": 4925.0,
-    "low_price": 3730.0,
-    "trade_price": 4215.0
   }
 ]
