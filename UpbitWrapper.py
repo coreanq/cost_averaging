@@ -34,7 +34,7 @@ class UpbitWrapper():
 
         self.market_code =  market_code
         self.account_info = []
-        self.rebalance_start_percent = 5 
+        self.rebalance_start_percent = 1 
 
     def setRebalance_percent(self, iPercent):
         self.rebalance_start_percent = iPercent
@@ -159,7 +159,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                print("error return")
+                print(util.whoami() + "error return")
                 return None 
             else:
                 output_list = response.json()
@@ -194,7 +194,7 @@ class UpbitWrapper():
                 'ord_type': 'limit',
             }
 
-        print(query)
+        print('{} : {}'.format( util.whoami()  , query) )
 
         query_string = urlencode(query).encode()
 
@@ -228,7 +228,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                print("\n\nerror return: \n{}\n{}".format(query, response.text ) )
+                print(util.whoami() + "\n\nerror return: \n{}\n{}".format(query, response.text ) )
                 return None 
             else:
                 output_list = response.json()
@@ -251,7 +251,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                print("error return: \n{}\n{}".format(query, response.text ) )
+                print(util.whoami() + "error return: \n{}\n{}".format(query, response.text ) )
                 return None 
             else:
                 output_list = response.json()
@@ -273,7 +273,7 @@ class UpbitWrapper():
             return None
         else:
             if( response.status_code != 200):
-                print("error return: \n{}\n{}".format(query, response.text ) )
+                print(util.whoami() + "error return: \n{}\n{}".format(query, response.text ) )
                 return None 
             else:
                 result = []
