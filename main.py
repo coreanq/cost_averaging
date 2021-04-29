@@ -52,7 +52,7 @@ class UpbitRebalancing(QObject):
 
 
     def init(self):
-        self.timerRequestOrderbook.setInterval(500)
+        self.timerRequestOrderbook.setInterval(200)
         self.timerRequestOrderbook.timeout.connect(self.onTimerRequestOrderbookTimeout) 
 
         self.timerRequestAccountInfo.setInterval(2000)

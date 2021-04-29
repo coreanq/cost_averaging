@@ -159,7 +159,9 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                print(util.whoami() + "error return")
+                printLog = util.whoami() + "error return"
+                util.save_log(printLog)
+                print(printLog)
                 return None 
             else:
                 output_list = response.json()
@@ -194,7 +196,9 @@ class UpbitWrapper():
                 'ord_type': 'limit',
             }
 
-        print('{} : {}'.format( util.whoami()  , query) )
+        printLog = '{} : {}'.format( util.whoami()  , query) 
+        util.save_log(printLog)
+        print(printLog)
 
         query_string = urlencode(query).encode()
 
@@ -228,7 +232,9 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                print(util.whoami() + "\n\nerror return: \n{}\n{}".format(query, response.text ) )
+                printLog = util.whoami() + "\n\nerror return: \n{}\n{}".format(query, response.text ) 
+                util.save_log(printLog)
+                print(printLog)
                 return None 
             else:
                 output_list = response.json()
@@ -251,7 +257,9 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                print(util.whoami() + "error return: \n{}\n{}".format(query, response.text ) )
+                printLog = util.whoami() + "error return: \n{}\n{}".format(query, response.text )
+                util.save_log(printLog)
+                print(printLog)
                 return None 
             else:
                 output_list = response.json()
