@@ -105,13 +105,27 @@ class UpbitRebalancing(QObject):
                 balance_key = 'balance'
                 locked_key  = 'locked'
 
+                isLocked = False
+
                 if( item[currency_key] == 'KRW'):
                     fiat_balance = round( float(item[balance_key]), 2 )
                     fiat_balance = fiat_balance + round( float(item[locked_key]), 2 )
+
+                    # 매수 매도 진행중이라면 리밸런싱 금지 
+                    if( round( float(item[locked_key]), 2  > 100 ) ):
+                        isLocked = True
+
                 if( item[currency_key] == 'XRP' ):
                     #낮은게 좋으므로 매수 호가 기준으로 삼음
                     crypto_balance = round( float(item[balance_key]),  2 ) + self.external_wallet_amount
                     crypto_balance = crypto_balance + round( float(item[locked_key]),  2 )
+
+                    # 매수 매도 진행중이라면 리밸런싱 금지 
+                    if( round( float(item[locked_key]), 2  > 100 ) ):
+                        isLocked = True
+
+            if( isLocked == True ):
+                return
 
             result = self.upbitIf.checkAssetInfo(fiat_balance, self.current_price, crypto_balance)
 

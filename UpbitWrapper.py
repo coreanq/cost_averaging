@@ -159,7 +159,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                printLog = '{} {} {} {}'.format( util.whoami(), response.status_code , "error return:\n", response.text ) 
+                printLog = '{} {} {} {}'.format( util.whoami(), response.status_code , "error return: ", response.text ) 
                 util.save_log(printLog)
                 print(printLog)
                 return None 
@@ -238,7 +238,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                printLog = '{} {} {} {} {} '.format( util.whoami(), response.status_code , "error return:\n\n", query, response.text ) 
+                printLog = '{} {} {} {} {} '.format( util.whoami(), response.status_code , "error return: ", query, response.text ) 
                 util.save_log(printLog)
                 print(printLog)
                 return None 
@@ -287,7 +287,7 @@ class UpbitWrapper():
             return None
         else:
             if( response.status_code != 200):
-                printLog = '{} {} {} {} {}'.format( util.whoami(), response.status_code , "error return:\n\n", query, response.text ) 
+                printLog = '{} {} {} {} {}'.format( util.whoami(), response.status_code , "error return: ", query, response.text ) 
                 print(printLog)
                 return None 
             else:
