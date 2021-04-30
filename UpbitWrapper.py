@@ -159,7 +159,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                printLog = util.whoami() + "error return"
+                printLog = '{} {} {} {}'.format( util.whoami(), response.status_code , "error return:\n", response.text ) 
                 util.save_log(printLog)
                 print(printLog)
                 return None 
@@ -197,7 +197,13 @@ class UpbitWrapper():
             }
 
         printLog = '{} : {}'.format( util.whoami()  , query) 
-        util.save_log(printLog)
+        maemaeType = ''
+        if( query['side'] == 'bid' ):
+            maemaeType = '매수'
+        else:
+            maemaeType = '매도'
+
+        util.save_log(printLog, subject=maemaeType)
         print(printLog)
 
         query_string = urlencode(query).encode()
@@ -232,7 +238,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                printLog = util.whoami() + "\n\nerror return: \n{}\n{}".format(query, response.text ) 
+                printLog = '{} {} {} {} {} '.format( util.whoami(), response.status_code , "error return:\n\n", query, response.text ) 
                 util.save_log(printLog)
                 print(printLog)
                 return None 
@@ -257,7 +263,7 @@ class UpbitWrapper():
             return None 
         else:
             if( response.status_code != 200):
-                printLog = util.whoami() + "error return: \n{}\n{}".format(query, response.text )
+                printLog = '{} {} {} {} {}'.format( util.whoami(), response.status_code , "error return:\n\n", query, response.text ) 
                 util.save_log(printLog)
                 print(printLog)
                 return None 
@@ -281,7 +287,8 @@ class UpbitWrapper():
             return None
         else:
             if( response.status_code != 200):
-                print(util.whoami() + "error return: \n{}\n{}".format(query, response.text ) )
+                printLog = '{} {} {} {} {}'.format( util.whoami(), response.status_code , "error return:\n\n", query, response.text ) 
+                print(printLog)
                 return None 
             else:
                 result = []
