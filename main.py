@@ -164,11 +164,11 @@ class UpbitRebalancing(QObject):
             #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
             # 현재 거래 진행중이면 make order 수행 금지 
             if( self.upbitIf.hasWaitInOrder() == False ):
-                print('{} {} {}'.format( order_type, order_price, order_balance ) )
+                print('\n{} {} {}'.format( order_type, order_price, order_balance ) )
                 print(self.current_account_info)
                 self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
             else:
-                print("\tmake Order pass")
+                print("\nMake Order pass {}".format( self.upbitIf.wait_order_uuids))
 
         pass
         
