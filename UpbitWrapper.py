@@ -35,6 +35,8 @@ class UpbitWrapper():
         self.market_code =  market_code
         self.account_info = []
         self.rebalance_start_percent = 1 
+        self.current_order_book = None 
+        self.wait_order_uuids = '' # 주문 후 발생하는 uuid 처리를 위함 
 
     def setRebalance_percent(self, iPercent):
         self.rebalance_start_percent = iPercent
@@ -174,37 +176,37 @@ class UpbitWrapper():
         volume = 0 # for test
         if( order_type == 'none' or order_price == 0 or order_balance == 0):
             return None
+            # 시장가 주문
 
+            # 시장가 주문은 ord_type 필드를 price or market 으로 설정해야됩니다.
+            # 매수 주문의 경우 ord_type을 price로 설정하고 volume을 null 혹은 제외해야됩니다.
+            # 매도 주문의 경우 ord_type을 market로 설정하고 price을 null 혹은 제외해야됩니다.
+
+            # price 주문 가격. (지정가, 시장가 매수 시 필수)
+            # ex) KRW-BTC 마켓에서 1BTC당 1,000 KRW로 거래할 경우, 값은 1000 이 된다.
+            # ex) KRW-BTC 마켓에서 1BTC당 매도 1호가가 500 KRW 인 경우, 시장가 매수 시 값을 1000으로 세팅하면 2BTC가 매수된다.
+            # (수수료가 존재하거나 매도 1호가의 수량에 따라 상이할 수 있음)
         if( order_type == 'bid' ):
-            # 암호화폐 지정가 limit 매수,매도호가 기준 
+            # 암호화폐 시장가 매수 
+            # 주의: 시장가 매수시 volume 정보 없이 매수하고자 하는 총 금액을 입력 한다 
+            # volume = round(order_balance / order_price, 2)
+            query = {
+                'market': self.market_code,
+                'side': order_type,
+                # 'volume': volume,
+                'price': str(int( order_balance) ),
+                'ord_type': 'price',
+            }
+        else:
+            # 암호화폐 시장가 매도
             volume = round(order_balance / order_price, 2)
             query = {
                 'market': self.market_code,
-                'side': 'bid',
+                'side': order_type,
                 'volume': volume,
-                'price': str(order_price),
-                'ord_type': 'limit',
+                # 'price': str(order_price),
+                'ord_type': 'market',
             }
-        else:
-            # 암호화폐 지정가 limit 매도,매수호가 기준
-            volume = round(order_balance / order_price, 2)
-            query = {
-                'market': self.market_code,
-                'side': 'ask',
-                'volume': volume,
-                'price': str(order_price),
-                'ord_type': 'limit',
-            }
-
-        printLog = '{} : {}'.format( util.whoami()  , query) 
-        maemaeType = ''
-        if( query['side'] == 'bid' ):
-            maemaeType = '매수'
-        else:
-            maemaeType = '매도'
-
-        util.save_log(printLog, subject=maemaeType)
-        print(printLog)
 
         query_string = urlencode(query).encode()
 
@@ -225,7 +227,6 @@ class UpbitWrapper():
 
         url = self.server_url + "/v1/orders"
         try:
-            pass
             if( test == True ):
                 query = ''
             response = requests.post( url, params=query, headers=headers)
@@ -237,16 +238,84 @@ class UpbitWrapper():
             print("except")
             return None 
         else:
+            if( response.status_code != 201):
+                result  = response.json()
+                printLog = '{} return: {} {} {} '.format( util.whoami(), response.status_code , query, result ) 
+                util.save_log(printLog, subject= ( "에러응답" ) )
+                return None 
+            else:
+                maemaeType = ''
+                if( query['side'] == 'bid' ):
+                    maemaeType = '매수'
+                else:
+                    maemaeType = '매도'
+
+                result  = response.json()
+
+                self.wait_order_uuids = result['uuid']
+
+                printLog = '{} return: {} {} {}'.format( util.whoami(), response.status_code , query, result ) 
+                print( printLog )
+                util.save_log(printLog, subject= ( maemaeType  + "요청" ) )
+        pass
+
+    def getOrder(self):
+
+        if( self.wait_order_uuids == ''):
+            return
+
+        query = {
+            'uuid': self.wait_order_uuids
+        }
+
+        query_string = urlencode(query).encode()
+
+        m = hashlib.sha512()
+        m.update(query_string)
+        query_hash = m.hexdigest()
+
+        payload = {
+            'access_key': self.access_key,
+            'nonce': str(uuid.uuid4()),
+            'query_hash': query_hash,
+            'query_hash_alg': 'SHA512',
+        }
+
+        jwt_token = jwt.encode(payload, self.secret_key)
+        authorize_token = 'Bearer {}'.format(jwt_token)
+        headers = {"Authorization": authorize_token}
+
+        url = self.server_url + "/v1/order"
+        try:
+            response = requests.get( url, params=query, headers=headers)
+            pass
+        except requests.exceptions.SSLError:
+            print("ssl error")
+            return None 
+        except:
+            print("except")
+            return None 
+        else:
             if( response.status_code != 200):
-                printLog = '{} {} {} {} {} '.format( util.whoami(), response.status_code , "error return: ", query, response.text ) 
-                util.save_log(printLog)
+                result  = response.json()
+                printLog = '{} return: {} {} {}'.format( util.whoami(), response.status_code , query, result ) 
+                # util.save_log(printLog, subject= ( "에러응답" ) )
                 print(printLog)
                 return None 
             else:
-                output_list = response.json()
-                print(json.dumps( response.json(), indent=2, sort_keys=True) )
+                result  = response.json()
+                if( result['state'] == 'done' or result['state'] == 'cancel' ):
+                    self.wait_order_uuids = ''
+
+                printLog = '{} return: {} {} {}'.format( util.whoami(), response.status_code , query, result ) 
+                print( printLog )
         pass
 
+    def hasWaitInOrder(self):
+        if( self.wait_order_uuids == '' ):
+            return False
+        else:
+            return True
 
     def getOrderbook(self):
         # 시세 조회, 호가 조회 
@@ -269,6 +338,7 @@ class UpbitWrapper():
                 return None 
             else:
                 output_list = response.json()
+                self.current_order_book = output_list
                 # print(json.dumps( output_list, indent=2, sort_keys=True) )
                 return output_list
 

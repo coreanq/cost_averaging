@@ -48,11 +48,12 @@ class UpbitRebalancing(QObject):
         self.current_ask_price = 0
         self.current_bid_price = 0
         self.external_wallet_amount = external_wallet_amount
+        self.current_account_info = 0 
 
 
 
     def init(self):
-        self.timerRequestOrderbook.setInterval(200)
+        self.timerRequestOrderbook.setInterval(300)
         self.timerRequestOrderbook.timeout.connect(self.onTimerRequestOrderbookTimeout) 
 
         self.timerRequestAccountInfo.setInterval(2000)
@@ -83,6 +84,8 @@ class UpbitRebalancing(QObject):
                 ask_price = item[orderbook_key][0][ask_price_key]
                 # 2 매도호가
                 ask_price = item[orderbook_key][1][ask_price_key]
+
+                # 현재 계좌 정보 저장
                 self.current_ask_price = ask_price
                 self.sigInitOk.emit()
             else:
@@ -92,15 +95,15 @@ class UpbitRebalancing(QObject):
 
     @pyqtSlot()
     def onTimerRequestAccountInfoTimeout(self):
-        account_info = self.upbitIf.getAccountInfo()
-        if( account_info == None ):
+        self.current_account_info = self.upbitIf.getAccountInfo()
+        if( self.current_account_info == None ):
             self.sigError.emit()
             return
 
         crypto_balance = 0
         fiat_balance = 0
-        if( len(account_info) != 0 ) :
-            for item in account_info:
+        if( len(self.current_account_info) != 0 ) :
+            for item in self.current_account_info:
                 currency_key = 'currency'
                 balance_key = 'balance'
                 locked_key  = 'locked'
@@ -148,12 +151,25 @@ class UpbitRebalancing(QObject):
             self.sigCurrentBalanceChanged.emit(fiat_balance, crypto_balance)
 
             order_price = 0
+            # 현재 거래 진행중인 거래 확인  
+            self.upbitIf.getOrder()
+            
             if( order_type == 'bid' ):
                 order_price = self.current_ask_price
             elif( order_type == 'ask' ):
                 order_price = self.current_bid_price
+            else: # none
+                return
 
-            self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
+            #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
+            # 현재 거래 진행중이면 make order 수행 금지 
+            if( self.upbitIf.hasWaitInOrder() == False ):
+                print('{} {} {}'.format( order_type, order_price, order_balance ) )
+                print(self.current_account_info)
+                self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
+            else:
+                print("\tmake Order pass")
+
         pass
         
     def createState(self):
