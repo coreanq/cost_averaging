@@ -102,19 +102,20 @@ class UpbitRebalancing(QObject):
 
         crypto_balance = 0
         fiat_balance = 0
+        isLocked = False
+
         if( len(self.current_account_info) != 0 ) :
             for item in self.current_account_info:
                 currency_key = 'currency'
                 balance_key = 'balance'
                 locked_key  = 'locked'
 
-                isLocked = False
 
                 if( item[currency_key] == 'KRW'):
                     fiat_balance = round( float(item[balance_key]), 2 )
                     fiat_balance = fiat_balance + round( float(item[locked_key]), 2 )
 
-                    # 매수 매도 진행중이라면 리밸런싱 금지 
+                    # 매수 매도 진행 중이여서 잔고 정보가 업데이트 중이라면 리밸런싱 금지 
                     if( round( float(item[locked_key]), 2  > 100 ) ):
                         isLocked = True
 
@@ -123,7 +124,7 @@ class UpbitRebalancing(QObject):
                     crypto_balance = round( float(item[balance_key]),  2 ) + self.external_wallet_amount
                     crypto_balance = crypto_balance + round( float(item[locked_key]),  2 )
 
-                    # 매수 매도 진행중이라면 리밸런싱 금지 
+                    # 매수 매도 진행 중이여서 잔고 정보가 업데이트 중이라면 리밸런싱 금지 
                     if( round( float(item[locked_key]), 2  > 100 ) ):
                         isLocked = True
 
@@ -164,8 +165,8 @@ class UpbitRebalancing(QObject):
             #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
             # 현재 거래 진행중이면 make order 수행 금지 
             if( self.upbitIf.hasWaitInOrder() == False ):
-                print('\n{} {} {}'.format( order_type, order_price, order_balance ) )
-                print(self.current_account_info)
+                print('{} {} {} {}\n'.format( util.whoami(),  order_type, order_price, order_balance ) )
+                print('{} \n{}\n'.format( util.whoami(), json.dumps( self.current_account_info, indent=2, sort_keys=True) ) )
                 self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
             else:
                 print("\nMake Order pass {}".format( self.upbitIf.wait_order_uuids))

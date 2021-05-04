@@ -240,7 +240,7 @@ class UpbitWrapper():
         else:
             if( response.status_code != 201):
                 result  = response.json()
-                printLog = '{} return: {} {} {} '.format( util.whoami(), response.status_code , query, result ) 
+                printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
                 util.save_log(printLog, subject= ( "에러응답" ) )
                 return None 
             else:
@@ -254,7 +254,7 @@ class UpbitWrapper():
 
                 self.wait_order_uuids = result['uuid']
 
-                printLog = '{} return: {} {} {}'.format( util.whoami(), response.status_code , query, result ) 
+                printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
                 print( printLog )
                 util.save_log(printLog, subject= ( maemaeType  + "요청" ) )
         pass
@@ -298,7 +298,7 @@ class UpbitWrapper():
         else:
             if( response.status_code != 200):
                 result  = response.json()
-                printLog = '{} return: {} {} {}'.format( util.whoami(), response.status_code , query, result ) 
+                printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
                 # util.save_log(printLog, subject= ( "에러응답" ) )
                 print(printLog)
                 return None 
@@ -307,7 +307,7 @@ class UpbitWrapper():
                 if( result['state'] == 'done' or result['state'] == 'cancel' ):
                     self.wait_order_uuids = ''
 
-                printLog = '{} return: {} {} {}'.format( util.whoami(), response.status_code , query, result ) 
+                printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
                 print( printLog )
         pass
 
