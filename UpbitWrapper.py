@@ -244,19 +244,13 @@ class UpbitWrapper():
                 util.save_log(printLog, subject= ( "에러응답" ) )
                 return None 
             else:
-                maemaeType = ''
-                if( query['side'] == 'bid' ):
-                    maemaeType = '매수'
-                else:
-                    maemaeType = '매도'
-
                 result  = response.json()
 
                 self.wait_order_uuids = result['uuid']
 
                 printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
-                print( printLog )
-                util.save_log(printLog, subject= ( maemaeType  + "요청" ) )
+                # print( printLog )
+                # util.save_log(printLog, subject= ( "요청" ) )
         pass
 
     def getOrder(self):
