@@ -1,120 +1,123 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'mainwindow.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'mainwindow.ui'
+##
+## Created by: Qt User Interface Compiler version 6.5.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QGridLayout, QGroupBox,
+    QLabel, QMainWindow, QMenuBar, QSizePolicy,
+    QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(626, 227)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
-        self.gridLayout.setObjectName("gridLayout")
-        self.chkShowBalance = QtWidgets.QCheckBox(self.centralwidget)
-        self.chkShowBalance.setObjectName("chkShowBalance")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout = QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.chkShowBalance = QCheckBox(self.centralwidget)
+        self.chkShowBalance.setObjectName(u"chkShowBalance")
+
         self.gridLayout.addWidget(self.chkShowBalance, 0, 0, 1, 1)
-        self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setObjectName("groupBox")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.lblFiatBalance = QtWidgets.QLabel(self.groupBox)
-        font = QtGui.QFont()
+
+        self.groupBox = QGroupBox(self.centralwidget)
+        self.groupBox.setObjectName(u"groupBox")
+        self.verticalLayout_2 = QVBoxLayout(self.groupBox)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.lblFiatBalance = QLabel(self.groupBox)
+        self.lblFiatBalance.setObjectName(u"lblFiatBalance")
+        font = QFont()
         font.setPointSize(20)
         font.setBold(True)
-        font.setWeight(75)
         self.lblFiatBalance.setFont(font)
-        self.lblFiatBalance.setObjectName("lblFiatBalance")
+
         self.verticalLayout_2.addWidget(self.lblFiatBalance)
-        self.lblFiatPercent = QtWidgets.QLabel(self.groupBox)
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
+
+        self.lblFiatPercent = QLabel(self.groupBox)
+        self.lblFiatPercent.setObjectName(u"lblFiatPercent")
         self.lblFiatPercent.setFont(font)
-        self.lblFiatPercent.setObjectName("lblFiatPercent")
+
         self.verticalLayout_2.addWidget(self.lblFiatPercent)
+
+
         self.gridLayout.addWidget(self.groupBox, 1, 0, 1, 1)
-        self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setObjectName("groupBox_2")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.groupBox_2)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.lblCryptoBalance = QtWidgets.QLabel(self.groupBox_2)
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
+
+        self.groupBox_2 = QGroupBox(self.centralwidget)
+        self.groupBox_2.setObjectName(u"groupBox_2")
+        self.verticalLayout = QVBoxLayout(self.groupBox_2)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.lblCryptoBalance = QLabel(self.groupBox_2)
+        self.lblCryptoBalance.setObjectName(u"lblCryptoBalance")
         self.lblCryptoBalance.setFont(font)
-        self.lblCryptoBalance.setObjectName("lblCryptoBalance")
+
         self.verticalLayout.addWidget(self.lblCryptoBalance)
-        self.lblCryptoPercent = QtWidgets.QLabel(self.groupBox_2)
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
+
+        self.lblCryptoPercent = QLabel(self.groupBox_2)
+        self.lblCryptoPercent.setObjectName(u"lblCryptoPercent")
         self.lblCryptoPercent.setFont(font)
-        self.lblCryptoPercent.setObjectName("lblCryptoPercent")
+
         self.verticalLayout.addWidget(self.lblCryptoPercent)
+
+
         self.gridLayout.addWidget(self.groupBox_2, 1, 1, 1, 1)
-        self.groupBox_3 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_3.setObjectName("groupBox_3")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.groupBox_3)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.lblOriBalance = QtWidgets.QLabel(self.groupBox_3)
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
+
+        self.groupBox_3 = QGroupBox(self.centralwidget)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.verticalLayout_3 = QVBoxLayout(self.groupBox_3)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.lblOriBalance = QLabel(self.groupBox_3)
+        self.lblOriBalance.setObjectName(u"lblOriBalance")
         self.lblOriBalance.setFont(font)
-        self.lblOriBalance.setObjectName("lblOriBalance")
+
         self.verticalLayout_3.addWidget(self.lblOriBalance)
-        self.lblOriPercent = QtWidgets.QLabel(self.groupBox_3)
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
+
+        self.lblOriPercent = QLabel(self.groupBox_3)
+        self.lblOriPercent.setObjectName(u"lblOriPercent")
         self.lblOriPercent.setFont(font)
-        self.lblOriPercent.setObjectName("lblOriPercent")
+
         self.verticalLayout_3.addWidget(self.lblOriPercent)
+
+
         self.gridLayout.addWidget(self.groupBox_3, 1, 2, 1, 1)
+
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 626, 26))
-        self.menubar.setObjectName("menubar")
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 626, 26))
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
 
     def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Shannon\'s demon for upbit"))
-        self.chkShowBalance.setText(_translate("MainWindow", "Show Balance?"))
-        self.groupBox.setTitle(_translate("MainWindow", "Fiat"))
-        self.lblFiatBalance.setText(_translate("MainWindow", "balance"))
-        self.lblFiatPercent.setText(_translate("MainWindow", "percent"))
-        self.groupBox_2.setTitle(_translate("MainWindow", "Crypto"))
-        self.lblCryptoBalance.setText(_translate("MainWindow", "balance"))
-        self.lblCryptoPercent.setText(_translate("MainWindow", "percent"))
-        self.groupBox_3.setTitle(_translate("MainWindow", "초기자산 대비 자산 증감율"))
-        self.lblOriBalance.setText(_translate("MainWindow", "balance"))
-        self.lblOriPercent.setText(_translate("MainWindow", "percent"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Shannon's demon for upbit", None))
+        self.chkShowBalance.setText(QCoreApplication.translate("MainWindow", u"Show Balance?", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Fiat", None))
+        self.lblFiatBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
+        self.lblFiatPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Crypto", None))
+        self.lblCryptoBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
+        self.lblCryptoPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"\ucd08\uae30\uc790\uc0b0 \ub300\ube44 \uc790\uc0b0 \uc99d\uac10\uc728", None))
+        self.lblOriBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
+        self.lblOriPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+    # retranslateUi
 

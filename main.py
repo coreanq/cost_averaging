@@ -8,26 +8,26 @@ from urllib.parse import urlencode
 import requests
 import UpbitWrapper
 
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt
-from PyQt5.QtCore import QObject, pyqtSlot, pyqtSignal, QUrl, QEvent
-from PyQt5.QtCore import QStateMachine, QState, QTimer, QFinalState
-from PyQt5.QtWidgets import QApplication
+from PySide6 import QtWidgets
+from PySide6.QtCore import Qt
+from PySide6.QtCore import QObject, Slot, Signal, QUrl, QEvent, QTimer
+from PySide6.QtStateMachine import QStateMachine, QState, QFinalState
+from PySide6.QtWidgets import QApplication
 from mainwindow_ui import Ui_MainWindow
 
 
 class UpbitRebalancing(QObject):
-    sigInitOk = pyqtSignal()
-    sigError = pyqtSignal()
-    sigStateStop = pyqtSignal()
-    sigCryptoPercentChanged = pyqtSignal(str)
-    sigFiatPercentChanged = pyqtSignal(str)
+    sigInitOk = Signal()
+    sigError = Signal()
+    sigStateStop = Signal()
+    sigCryptoPercentChanged = Signal(str)
+    sigFiatPercentChanged = Signal(str)
 
-    sigCryptoBalanceChanged = pyqtSignal(str)
-    sigFiatBalanceChanged = pyqtSignal(str)
-    sigCurrentBalanceChanged = pyqtSignal(float, float)
+    sigCryptoBalanceChanged = Signal(str)
+    sigFiatBalanceChanged = Signal(str)
+    sigCurrentBalanceChanged = Signal(float, float)
 
-    sigStyleSheetChanged = pyqtSignal(str)
+    sigStyleSheetChanged = Signal(str)
 
     def __init__(self, 
         secret_key, access_key, server_url, 
@@ -59,7 +59,7 @@ class UpbitRebalancing(QObject):
         self.timerRequestAccountInfo.setInterval(2000)
         self.timerRequestAccountInfo.timeout.connect(self.onTimerRequestAccountInfoTimeout) 
 
-    @pyqtSlot()
+    @Slot()
     def onTimerRequestOrderbookTimeout(self):
         output_list = self.upbitIf.getOrderbook()
         if( output_list == None ):
@@ -93,7 +93,7 @@ class UpbitRebalancing(QObject):
 
         pass
 
-    @pyqtSlot()
+    @Slot()
     def onTimerRequestAccountInfoTimeout(self):
         self.current_account_info = self.upbitIf.getAccountInfo()
         if( self.current_account_info == None ):
@@ -212,12 +212,12 @@ class UpbitRebalancing(QObject):
 
         pass
 
-    @pyqtSlot()
+    @Slot()
     def mainStateEntered(self):
         # print(util.whoami())
         pass
 
-    @pyqtSlot()
+    @Slot()
     def initStateEntered(self):
         print(util.whoami())
         self.timerRequestOrderbook.start()
@@ -227,7 +227,7 @@ class UpbitRebalancing(QObject):
                         " background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ff0000, stop: 1 #ffff00); "
                         "}" 
             )
-    @pyqtSlot()
+    @Slot()
     def standbyStateEntered(self):
         print(util.whoami())
         self.timerRequestAccountInfo.start()
@@ -237,7 +237,7 @@ class UpbitRebalancing(QObject):
                         "}" 
             )
 
-    @pyqtSlot()
+    @Slot()
     def finalStateEntered(self):
         print(util.whoami())
 

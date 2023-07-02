@@ -6,8 +6,11 @@
             "label": "makercc",
             "type": "shell",
             "command": [
-                "pyrcc5"
+                "bin/pyside6-rcc"
             ],
+            "windows": {
+              "command": "bin\\pyside6-rcc.exe"
+            },
             "args": [
                 "resource.qrc",
                 "-o",
@@ -24,11 +27,12 @@
             "label": "makeui",
             "type": "shell",
             "command": [
-                "pyuic5"
+                ".venv/bin/pyside6-uic"
             ],
-
+            "windows": {
+              "command": ".venv\\bin\\pyside6-uic.exe"
+            },
             "args": [
-                "-x",
                 "mainwindow.ui",
                 "-o",
                 "mainwindow_ui.py"
