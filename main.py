@@ -106,7 +106,7 @@ class UpbitRebalancing(QObject):
 
 
                 if( item[currency_key] == 'KRW'):
-                    fiat_balance = round( float(item[balance_key]), 2 )
+                    fiat_balance = round( float(item[balance_key]), 2 ) + self.external_wallet_amount
                     fiat_balance = fiat_balance + round( float(item[locked_key]), 2 )
 
                     # 매수 매도 진행 중이여서 잔고 정보가 업데이트 중이라면 리밸런싱 금지 
@@ -115,7 +115,7 @@ class UpbitRebalancing(QObject):
 
                 if( item[currency_key] == 'XRP' ):
                     #낮은게 좋으므로 매수 호가 기준으로 삼음
-                    crypto_balance = round( float(item[balance_key]),  2 ) + self.external_wallet_amount
+                    crypto_balance = round( float(item[balance_key]),  2 )
                     crypto_balance = crypto_balance + round( float(item[locked_key]),  2 )
 
                     # 매수 매도 진행 중이여서 잔고 정보가 업데이트 중이라면 리밸런싱 금지 
