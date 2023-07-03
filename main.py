@@ -1,11 +1,5 @@
 import os, sys, json, datetime
-import jwt
-import uuid
-import hashlib
 import util
-
-from urllib.parse import urlencode
-import requests
 import UpbitWrapper
 
 from PySide6 import QtWidgets
@@ -155,11 +149,13 @@ class UpbitRebalancing(QObject):
             # 현재 거래 진행중인 거래 확인  
             self.upbitIf.getOrder()
             
+
+            # 매수  
             if( order_type == 'bid' ):
                 order_price = self.current_ask_price
+            # 매도 
             elif( order_type == 'ask' ):
-                # order_price = self.current_bid_price
-                return
+                order_price = self.current_bid_price
             else: # none
                 return
 
@@ -265,7 +261,7 @@ if __name__ == "__main__":
     ui.setupUi(form)
 
     def onChkShowBalanceStateChanged(btnChkState):
-        if( btnChkState == Qt.Checked ):
+        if( Qt.CheckState(btnChkState) == Qt.CheckState.Checked ):
             ui.lblCryptoBalance.setHidden(False)
             ui.lblFiatBalance.setHidden(False)
             ui.lblOriBalance.setHidden(False)
@@ -282,14 +278,14 @@ if __name__ == "__main__":
     # access_info 의 original_fiat_balance 의 경우 추가 금액을 입금할 경우 그 금액만큼 수동으로 늘려준다 
     # 기존 투입 금액의 반보다 현재 보유한 fiatbalance 가 크다면 수익이고 아니면 손해지만 crypto balance 가 늘어난 상태임 
     def onCurrentCurrentBalanceChanged(fFiatBalance, fCryptoBalance):
-        fCurrentFiatBalance = round( fFiatBalance, 3)
-        fCurrentCryptoBalance = round( fCryptoBalance, 3)
+        # fCurrentFiatBalance = round( fFiatBalance, 3)
+        # fCurrentCryptoBalance = round( fCryptoBalance, 3)
 
-        total_balance = fCurrentFiatBalance  + fCryptoBalance * obj.current_price 
-        result = round(  total_balance / fOriginalFiatBalance * 100, 2 )  
+        # total_balance = fCurrentFiatBalance  + fCryptoBalance * obj.current_price 
+        # result = round(  total_balance / fOriginalFiatBalance * 100, 2 )  
 
-        ui.lblOriPercent.setText( '{} %'.format(result) )
-        ui.lblOriBalance.setText( '{:,.0f}'.format( total_balance - fOriginalFiatBalance ))
+        # ui.lblOriPercent.setText( '{} %'.format(result) )
+        # ui.lblOriBalance.setText( '{:,.0f}'.format( total_balance - fOriginalFiatBalance ))
         pass
 
     obj.sigCryptoBalanceChanged.connect(ui.lblCryptoBalance.setText)

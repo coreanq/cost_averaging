@@ -337,12 +337,13 @@ class UpbitWrapper():
                 return output_list
 
     # 최대 200 개까지 가능 
-    def getDayCandle(self, last_date_time_to ):
+    def getDayCandle(self, count = 200, last_date_time_to = '' ):
         url = self.server_url + "/v1/candles/days"
-        query = {"market": self.market_code, "count": 200, "to": last_date_time_to }
+        query = {"market": self.market_code, "count": count, "to": last_date_time_to }
+        headers = {"accept": "application/json"}
 
         try:
-            response = requests.get( url, params= query)
+            response = requests.get( url, headers = headers, params= query)
         except requests.exceptions.SSLError:
             print("ssl error")
             return None

@@ -6,7 +6,7 @@ import datetime
 @pytest.fixture
 def UpbitObj(MarketCode):
     import UpbitWrapper  
-    with open("access_info.json", "r") as json_file:
+    with open("auth/access_info.json", "r") as json_file:
         access_info = json.loads(json_file.read())
 
     access_key = access_info["access_key"]
@@ -40,13 +40,13 @@ def test_getOrderbook(UpbitObj ):
         assert 1
 
 def test_getDayCandle(UpbitObj):
-    count = 2
-    result = UpbitObj.getDayCandle(count)
+    test_count = 2
+    result = UpbitObj.getDayCandle(count = test_count )
 
     if( "error" in result ):
         assert 0
     else:
-        assert( len(result) == count )
+        assert( len(result) == test_count )
         result = json.dumps(result, indent=2)
         print(result)
 
@@ -93,7 +93,7 @@ def test_makeDayCandle(UpbitObj):
     isCompleted = False
 
     while (isCompleted == False):
-        result = UpbitObj.getDayCandle(str_date_time_target)
+        result = UpbitObj.getDayCandle(count = 200, last_date_time_to = str_date_time_target)
         if( result == None ):
             break
 
