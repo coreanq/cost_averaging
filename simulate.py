@@ -73,12 +73,13 @@ if __name__ == "__main__":
     from_date = datetime.date(2018, 1, 8)
     to_date = datetime.date(2022,1,31)
 
+    count = 1
+
     for item in reversed(sample_source):
         price = item['opening_price']
         date_str = item['candle_date_time_kst']
         source_date_time = datetime.datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
 
-        count = 1
         if( source_date_time.date() >= from_date and source_date_time.date() <= to_date ):
             additional_fiat = 10000 # 하루에 추가되는 금액 
 
