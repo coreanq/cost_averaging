@@ -9,12 +9,14 @@ fiat_part_value = all_fiat_value / 2
 crypto_amount = 0
 crypto_value = 0
 
-def rebalance(crypto_price : int ) -> str : 
+def rebalance(crypto_price : int, additional_fiat: int ) -> str : 
 
     global original_crypto_amount, all_fiat_value, fiat_part_value, crypto_amount, crypto_value
     # all in 했을때의 crypto 수량 
     if( original_crypto_amount == 0 ):
         original_crypto_amount = round(all_fiat_value / crypto_price, 2)
+    else:
+        original_crypto_amount = round(original_crypto_amount + additional_fiat / crypto_price, 2)
 
     isRebalance = False
 
@@ -26,6 +28,7 @@ def rebalance(crypto_price : int ) -> str :
     # 현재 가격을 통해 가치 계산 
     crypto_value = crypto_amount * crypto_price
 
+    fiat_part_value = fiat_part_value + additional_fiat
 
     if( crypto_value > fiat_part_value * rebalance_ratio ):
         # crypto 가격이 오른 경우 
@@ -40,6 +43,7 @@ def rebalance(crypto_price : int ) -> str :
         crypto_amount = round(crypto_amount + diff_value/crypto_price, 2)
         fiat_part_value = round(fiat_part_value - diff_value, 2)
         isRebalance = True
+    
 
     
     result = ''
@@ -58,16 +62,6 @@ def rebalance(crypto_price : int ) -> str :
     return result 
 
 if __name__ == "__main__":
-    print("")
-
-    # up and base
-    test_data_list = [1000, 1100, 1200, 1300, 1200, 1100, 1000]
-    # down and base
-    test_data_list = [1000, 900, 800, 700, 800, 900, 1000]
-    # down and down
-    test_data_list = [1000, 900, 800, 700, 600, 700, 500]
-    # up and up
-    test_data_list = [1000, 1100, 1200, 1300, 1400, 1500 ]
 
     all_data = ''
 
@@ -75,7 +69,6 @@ if __name__ == "__main__":
         all_data = f.read()
 
     sample_source = json.loads(all_data) 
-
 
     from_date = datetime.date(2018, 1, 8)
     to_date = datetime.date(2022,1,31)
@@ -85,13 +78,17 @@ if __name__ == "__main__":
         date_str = item['candle_date_time_kst']
         source_date_time = datetime.datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
 
+        count = 1
         if( source_date_time.date() >= from_date and source_date_time.date() <= to_date ):
-            result = rebalance(price)
-            result = '{}: crypto price {}\n{}'.format(date_str, price, result)
+            additional_fiat = 10000 # 하루에 추가되는 금액 
+
+            result = rebalance(price, additional_fiat)
+
+            result = '{:<4} day {:,} added, {}: crypto price {}\n{}'.format(
+                count, additional_fiat * count,  date_str, price, result)
+
+            count = count + 1
 
             with open("result.txt", 'a')as f:
                 f.write(result)
-
-    # for item in test_data_list:
-    #     rebalance( item )
     pass
