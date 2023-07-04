@@ -43,6 +43,7 @@ class UpbitRebalancing(QObject):
         self.current_bid_price = 0
         self.external_wallet_amount = external_wallet_amount
         self.current_account_info = 0 
+        self.tradeOn = False
 
 
 
@@ -174,7 +175,8 @@ class UpbitRebalancing(QObject):
                 util.save_log( printLog, subject= "{} 요청".format( maemaeType ) )
 
                 print('잔고: \n{}\n'.format( json.dumps( self.current_account_info, indent=2, sort_keys=True) ) )
-                self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
+                if( self.tradeOn == True ):
+                    self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
             else:
                 print("\nMake Order pass {}".format( self.upbitIf.wait_order_uuids))
 
@@ -269,6 +271,12 @@ if __name__ == "__main__":
             ui.lblCryptoBalance.setHidden(True)
             ui.lblFiatBalance.setHidden(True)
             ui.lblOriBalance.setHidden(True)
+
+    def onChkTradeOnStateChanged(btnChkState):
+        if( Qt.CheckState(btnChkState) == Qt.CheckState.Checked ):
+            obj.tradeOn = True
+        else:
+            obj.tradeOn = False
     
     def onStyleSheetChanged(strStyleSheet):
         myApp.setStyleSheet(strStyleSheet)
@@ -297,6 +305,7 @@ if __name__ == "__main__":
     ui.lblOriBalance.setHidden(True)
 
     ui.chkShowBalance.stateChanged.connect( onChkShowBalanceStateChanged )
+    ui.chkTradeOn.stateChanged.connect( onChkTradeOnStateChanged )
 
     form.show()
 

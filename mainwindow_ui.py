@@ -93,13 +93,18 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.groupBox_3, 1, 2, 1, 1)
 
+        self.chkTradeOn = QCheckBox(self.centralwidget)
+        self.chkTradeOn.setObjectName(u"chkTradeOn")
+
+        self.gridLayout.addWidget(self.chkTradeOn, 0, 1, 1, 1)
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 626, 24))
+        self.menubar.setGeometry(QRect(0, 0, 626, 22))
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
@@ -119,5 +124,6 @@ class Ui_MainWindow(object):
         self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"\ufeff\ucd1d \ufeff\uc790\uc0b0", None))
         self.lblOriBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
         self.lblOriPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+        self.chkTradeOn.setText(QCoreApplication.translate("MainWindow", u"Trade On?", None))
     # retranslateUi
 
