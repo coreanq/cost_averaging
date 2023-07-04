@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 626, 26))
+        self.menubar.setGeometry(QRect(0, 0, 626, 24))
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
@@ -116,7 +116,7 @@ class Ui_MainWindow(object):
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Crypto", None))
         self.lblCryptoBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
         self.lblCryptoPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
-        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"\ucd08\uae30\uc790\uc0b0 \ub300\ube44 \uc790\uc0b0 \uc99d\uac10\uc728", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"\ufeff\ucd1d \ufeff\uc790\uc0b0", None))
         self.lblOriBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
         self.lblOriPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
     # retranslateUi

@@ -33,7 +33,6 @@
          <property name="font">
           <font>
            <pointsize>20</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -47,7 +46,6 @@
          <property name="font">
           <font>
            <pointsize>20</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -70,7 +68,6 @@
          <property name="font">
           <font>
            <pointsize>20</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -84,7 +81,6 @@
          <property name="font">
           <font>
            <pointsize>20</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -99,7 +95,7 @@
     <item row="1" column="2">
      <widget class="QGroupBox" name="groupBox_3">
       <property name="title">
-       <string>초기자산 대비 자산 증감율</string>
+       <string>﻿총 ﻿자산</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
@@ -107,7 +103,6 @@
          <property name="font">
           <font>
            <pointsize>20</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -121,7 +116,6 @@
          <property name="font">
           <font>
            <pointsize>20</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -142,7 +136,7 @@
      <x>0</x>
      <y>0</y>
      <width>626</width>
-     <height>26</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

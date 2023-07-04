@@ -47,7 +47,7 @@ class UpbitRebalancing(QObject):
 
 
     def init(self):
-        self.timerRequestOrderbook.setInterval(300)
+        self.timerRequestOrderbook.setInterval(1000)
         self.timerRequestOrderbook.timeout.connect(self.onTimerRequestOrderbookTimeout) 
 
         self.timerRequestAccountInfo.setInterval(2000)
@@ -140,7 +140,7 @@ class UpbitRebalancing(QObject):
             self.sigCryptoPercentChanged.emit( str(crypto_percent) + "%" )
             self.sigFiatPercentChanged.emit( str(fiat_percent) + "%" )
 
-            self.sigCryptoBalanceChanged.emit('{:,.2f}'.format(crypto_balance) )
+            self.sigCryptoBalanceChanged.emit('{:,.2f}({})'.format(crypto_balance, self.current_price) )
             self.sigFiatBalanceChanged.emit( '{:,.0f}'.format(fiat_balance) )
 
             self.sigCurrentBalanceChanged.emit(fiat_balance, crypto_balance)
@@ -278,14 +278,8 @@ if __name__ == "__main__":
     # access_info 의 original_fiat_balance 의 경우 추가 금액을 입금할 경우 그 금액만큼 수동으로 늘려준다 
     # 기존 투입 금액의 반보다 현재 보유한 fiatbalance 가 크다면 수익이고 아니면 손해지만 crypto balance 가 늘어난 상태임 
     def onCurrentCurrentBalanceChanged(fFiatBalance, fCryptoBalance):
-        # fCurrentFiatBalance = round( fFiatBalance, 3)
-        # fCurrentCryptoBalance = round( fCryptoBalance, 3)
-
-        # total_balance = fCurrentFiatBalance  + fCryptoBalance * obj.current_price 
-        # result = round(  total_balance / fOriginalFiatBalance * 100, 2 )  
-
-        # ui.lblOriPercent.setText( '{} %'.format(result) )
-        # ui.lblOriBalance.setText( '{:,.0f}'.format( total_balance - fOriginalFiatBalance ))
+        total_balance = fFiatBalance  + fCryptoBalance * obj.current_price 
+        ui.lblOriBalance.setText( '{:,.0f}'.format( total_balance ))
         pass
 
     obj.sigCryptoBalanceChanged.connect(ui.lblCryptoBalance.setText)
@@ -306,4 +300,4 @@ if __name__ == "__main__":
 
     form.show()
 
-    sys.exit(myApp.exec_())
+    sys.exit(myApp.exec())
