@@ -130,4 +130,4 @@ dmypy.json
 
 .vscode/settings.json
 
-auth/**
+auth/access_info.*

@@ -253,7 +253,6 @@ if __name__ == "__main__":
 
     # 외부 개인지갑 암호화폐 보유 갯수 
     external_wallet_amount = access_info['external_wallet_amount']
-    fOriginalFiatBalance = access_info["original_fiat_balance"]
 
     myApp = QtWidgets.QApplication(sys.argv)
     obj = UpbitRebalancing(secret_key, access_key, server_url, external_wallet_amount)
@@ -281,10 +280,6 @@ if __name__ == "__main__":
     def onStyleSheetChanged(strStyleSheet):
         myApp.setStyleSheet(strStyleSheet)
 
-
-    # 기존 투입 자산 대비 현재 얼마나 가치를 가지고 있나 측정 
-    # access_info 의 original_fiat_balance 의 경우 추가 금액을 입금할 경우 그 금액만큼 수동으로 늘려준다 
-    # 기존 투입 금액의 반보다 현재 보유한 fiatbalance 가 크다면 수익이고 아니면 손해지만 crypto balance 가 늘어난 상태임 
     def onCurrentCurrentBalanceChanged(fFiatBalance, fCryptoBalance):
         total_balance = fFiatBalance  + fCryptoBalance * obj.current_price 
         ui.lblOriBalance.setText( '{:,.0f}'.format( total_balance ))
