@@ -1,13 +1,13 @@
 import json
 import datetime
 
+rebalance_ratio = 1.01
+
 all_fiat_value = 10000000
 original_crypto_amount = 0
 fiat_part_value = all_fiat_value / 2
 crypto_amount = 0
 crypto_value = 0
-
-
 
 def rebalance(crypto_price : int ) -> str : 
 
@@ -27,14 +27,14 @@ def rebalance(crypto_price : int ) -> str :
     crypto_value = crypto_amount * crypto_price
 
 
-    if( crypto_value > fiat_part_value * 1.01 ):
+    if( crypto_value > fiat_part_value * rebalance_ratio ):
         # crypto 가격이 오른 경우 
         diff_value = round((crypto_value - fiat_part_value)/2, 2)
         crypto_amount = round( crypto_amount - round(diff_value/crypto_price, 2) )
         fiat_part_value = round(fiat_part_value + diff_value, 2) 
         isRebalance = True
         pass
-    elif( fiat_part_value > crypto_value * 1.01):
+    elif( fiat_part_value > crypto_value * rebalance_ratio ):
         # crypto 가격이 내린 경우   
         diff_value = round((fiat_part_value - crypto_value)/2, 2)
         crypto_amount = round(crypto_amount + diff_value/crypto_price, 2)
@@ -46,11 +46,11 @@ def rebalance(crypto_price : int ) -> str :
 
     if( isRebalance == True ):
         # 가치를 동일시 하고 난뒤 가치 다시 계산 
-        crypto_value = crypto_amount * crypto_price
+        crypto_value = round( crypto_amount * crypto_price, 2 )
 
         result = 'rebalance: fiat value {:,}, crypto amount: {}, crypto value: {:,}, total value: {:,}\n'.format(
             fiat_part_value, crypto_amount, crypto_value, round(fiat_part_value + crypto_value, 2) )
-        result = result + 'in case of all in crypto amount {:,}, crypto value:{:,}\n\n'.format(  
+        result = result + 'in case of all in crypto amount {:,}, crypto value: {:,}\n\n'.format(  
             original_crypto_amount, round( original_crypto_amount * crypto_price, 2)  ) 
     else:
         result = 'nothing to rebalance\n\n'
@@ -77,8 +77,8 @@ if __name__ == "__main__":
     sample_source = json.loads(all_data) 
 
 
-    from_date = datetime.date(2019, 9, 1)
-    to_date = datetime.date(2020,10,1)
+    from_date = datetime.date(2018, 1, 8)
+    to_date = datetime.date(2022,1,31)
 
     for item in reversed(sample_source):
         price = item['opening_price']
