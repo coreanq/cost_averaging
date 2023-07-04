@@ -9,7 +9,7 @@
                 "bin/pyside6-rcc"
             ],
             "windows": {
-              "command": "bin\\pyside6-rcc.exe"
+                "command": "bin\\pyside6-rcc.exe"
             },
             "args": [
                 "resource.qrc",
@@ -18,7 +18,7 @@
             ],
             "presentation": {
                 "reveal": "never",
-                "echo" : true,
+                "echo": true,
                 "panel": "dedicated",
                 "showReuseMessage": false
             }
@@ -30,20 +30,20 @@
                 ".venv/bin/pyside6-uic"
             ],
             "windows": {
-              "command": ".venv\\bin\\pyside6-uic.exe"
+                "command": ".venv\\bin\\pyside6-uic.exe"
             },
             "args": [
                 "mainwindow.ui",
                 "-o",
                 "mainwindow_ui.py"
             ],
-        
             "presentation": {
                 "reveal": "never",
-                "echo" : true,
+                "echo": true,
                 "panel": "dedicated",
                 "showReuseMessage": false
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
