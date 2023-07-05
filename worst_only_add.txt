@@ -1,0 +1,2978 @@
+1    day 10,000 added, 2018-01-08T09:00:00: crypto price 4375.0
+rebalance: fiat value 5,000.0, crypto amount: 1.14, crypto value: 4,987.5, total value: 9,987.5
+in case of all in crypto amount 2.29, crypto value: 10,018.75
+
+2    day 20,000 added, 2018-01-09T09:00:00: crypto price 4000.0
+rebalance: fiat value 9,780.0, crypto amount: 2.44, crypto value: 9,760.0, total value: 19,540.0
+in case of all in crypto amount 4.79, crypto value: 19,160.0
+
+3    day 30,000 added, 2018-01-10T09:00:00: crypto price 3420.0
+rebalance: fiat value 14,062.4, crypto amount: 4.11, crypto value: 14,056.2, total value: 28,118.6
+in case of all in crypto amount 7.71, crypto value: 26,368.2
+
+4    day 40,000 added, 2018-01-11T09:00:00: crypto price 2805.0
+rebalance: fiat value 17,795.47, crypto amount: 6.34, crypto value: 17,783.7, total value: 35,579.17
+in case of all in crypto amount 11.28, crypto value: 31,640.4
+
+5    day 50,000 added, 2018-01-12T09:00:00: crypto price 2820.0
+rebalance: fiat value 22,837.13, crypto amount: 8.1, crypto value: 22,842.0, total value: 45,679.13
+in case of all in crypto amount 14.83, crypto value: 41,820.6
+
+6    day 60,000 added, 2018-01-13T09:00:00: crypto price 3050.0
+rebalance: fiat value 28,771.06, crypto amount: 9.43, crypto value: 28,761.5, total value: 57,532.56
+in case of all in crypto amount 18.11, crypto value: 55,235.5
+
+7    day 70,000 added, 2018-01-14T09:00:00: crypto price 2955.0
+rebalance: fiat value 33,318.36, crypto amount: 11.28, crypto value: 33,332.4, total value: 66,650.76
+in case of all in crypto amount 21.49, crypto value: 63,502.95
+
+8    day 80,000 added, 2018-01-15T09:00:00: crypto price 2570.0
+rebalance: fiat value 36,153.98, crypto amount: 14.07, crypto value: 36,159.9, total value: 72,313.88
+in case of all in crypto amount 25.38, crypto value: 65,226.6
+
+9    day 90,000 added, 2018-01-16T09:00:00: crypto price 2340.0
+rebalance: fiat value 39,538.89, crypto amount: 16.9, crypto value: 39,546.0, total value: 79,084.89
+in case of all in crypto amount 29.65, crypto value: 69,381.0
+
+10   day 100,000 added, 2018-01-17T09:00:00: crypto price 1465.0
+rebalance: fiat value 37,148.69, crypto amount: 25.36, crypto value: 37,152.4, total value: 74,301.09
+in case of all in crypto amount 36.48, crypto value: 53,443.2
+
+11   day 110,000 added, 2018-01-18T09:00:00: crypto price 1755.0
+rebalance: fiat value 45,827.74, crypto amount: 26.11, crypto value: 45,823.05, total value: 91,650.79
+in case of all in crypto amount 42.18, crypto value: 74,025.9
+
+12   day 120,000 added, 2018-01-19T09:00:00: crypto price 2075.0
+rebalance: fiat value 55,003.0, crypto amount: 26.51, crypto value: 55,008.25, total value: 110,011.25
+in case of all in crypto amount 47.0, crypto value: 97,525.0
+
+13   day 130,000 added, 2018-01-20T09:00:00: crypto price 2065.0
+rebalance: fiat value 59,873.08, crypto amount: 28.99, crypto value: 59,864.35, total value: 119,737.43
+in case of all in crypto amount 51.84, crypto value: 107,049.6
+
+14   day 140,000 added, 2018-01-21T09:00:00: crypto price 2070.0
+rebalance: fiat value 64,941.19, crypto amount: 31.37, crypto value: 64,935.9, total value: 129,877.09
+in case of all in crypto amount 56.67, crypto value: 117,306.9
+
+15   day 150,000 added, 2018-01-22T09:00:00: crypto price 1725.0
+rebalance: fiat value 64,527.22, crypto amount: 37.41, crypto value: 64,532.25, total value: 129,059.47
+in case of all in crypto amount 62.47, crypto value: 107,760.75
+
+16   day 160,000 added, 2018-01-23T09:00:00: crypto price 1710.0
+rebalance: fiat value 69,249.16, crypto amount: 40.5, crypto value: 69,255.0, total value: 138,504.16
+in case of all in crypto amount 68.32, crypto value: 116,827.2
+
+17   day 170,000 added, 2018-01-24T09:00:00: crypto price 1615.0
+rebalance: fiat value 72,328.33, crypto amount: 44.79, crypto value: 72,335.85, total value: 144,664.18
+in case of all in crypto amount 74.51, crypto value: 120,333.65
+
+18   day 180,000 added, 2018-01-25T09:00:00: crypto price 1595.0
+rebalance: fiat value 76,884.19, crypto amount: 48.2, crypto value: 76,879.0, total value: 153,763.19
+in case of all in crypto amount 80.78, crypto value: 128,844.1
+
+19   day 190,000 added, 2018-01-26T09:00:00: crypto price 1510.0
+rebalance: fiat value 79,833.09, crypto amount: 52.87, crypto value: 79,833.7, total value: 159,666.79
+in case of all in crypto amount 87.4, crypto value: 131,974.0
+
+20   day 200,000 added, 2018-01-27T09:00:00: crypto price 1390.0
+rebalance: fiat value 81,661.2, crypto amount: 58.75, crypto value: 81,662.5, total value: 163,323.7
+in case of all in crypto amount 94.59, crypto value: 131,480.1
+
+21   day 210,000 added, 2018-01-28T09:00:00: crypto price 1365.0
+rebalance: fiat value 85,927.48, crypto amount: 62.95, crypto value: 85,926.75, total value: 171,854.23
+in case of all in crypto amount 101.92, crypto value: 139,120.8
+
+22   day 220,000 added, 2018-01-29T09:00:00: crypto price 1540.0
+rebalance: fiat value 96,435.24, crypto amount: 63, crypto value: 97,020.0, total value: 193,455.24
+in case of all in crypto amount 108.41, crypto value: 166,951.4
+
+23   day 230,000 added, 2018-01-30T09:00:00: crypto price 1455.0
+rebalance: fiat value 99,050.12, crypto amount: 68.08, crypto value: 99,056.4, total value: 198,106.52
+in case of all in crypto amount 115.28, crypto value: 167,732.4
+
+24   day 240,000 added, 2018-01-31T09:00:00: crypto price 1270.0
+rebalance: fiat value 97,755.86, crypto amount: 76.97, crypto value: 97,751.9, total value: 195,507.76
+in case of all in crypto amount 123.15, crypto value: 156,400.5
+
+25   day 250,000 added, 2018-02-01T09:00:00: crypto price 1265.0
+rebalance: fiat value 102,561.46, crypto amount: 81.08, crypto value: 102,566.2, total value: 205,127.66
+in case of all in crypto amount 131.06, crypto value: 165,790.9
+
+26   day 260,000 added, 2018-02-02T09:00:00: crypto price 1040.0
+rebalance: fiat value 98,442.33, crypto amount: 94.66, crypto value: 98,446.4, total value: 196,888.73
+in case of all in crypto amount 140.68, crypto value: 146,307.2
+
+27   day 270,000 added, 2018-02-03T09:00:00: crypto price 957.0
+rebalance: fiat value 99,515.97, crypto amount: 103.99, crypto value: 99,518.43, total value: 199,034.4
+in case of all in crypto amount 151.13, crypto value: 144,631.41
+
+28   day 280,000 added, 2018-02-04T09:00:00: crypto price 982.0
+rebalance: fiat value 105,817.07, crypto amount: 107.76, crypto value: 105,820.32, total value: 211,637.39
+in case of all in crypto amount 161.31, crypto value: 158,406.42
+
+29   day 290,000 added, 2018-02-05T09:00:00: crypto price 889.0
+rebalance: fiat value 105,807.85, crypto amount: 119.02, crypto value: 105,808.78, total value: 211,616.63
+in case of all in crypto amount 172.56, crypto value: 153,405.84
+
+30   day 300,000 added, 2018-02-06T09:00:00: crypto price 773.0
+rebalance: fiat value 103,905.15, crypto amount: 134.42, crypto value: 103,906.66, total value: 207,811.81
+in case of all in crypto amount 185.5, crypto value: 143,391.5
+
+31   day 310,000 added, 2018-02-07T09:00:00: crypto price 848.0
+nothing to rebalance
+
+32   day 320,000 added, 2018-02-08T09:00:00: crypto price 789.0
+rebalance: fiat value 114,981.26, crypto amount: 145.73, crypto value: 114,980.97, total value: 229,962.23
+in case of all in crypto amount 209.96, crypto value: 165,658.44
+
+33   day 330,000 added, 2018-02-09T09:00:00: crypto price 898.0
+rebalance: fiat value 127,923.4, crypto amount: 142, crypto value: 127,516.0, total value: 255,439.4
+in case of all in crypto amount 221.1, crypto value: 198,547.8
+
+34   day 340,000 added, 2018-02-10T09:00:00: crypto price 1050.0
+rebalance: fiat value 143,511.7, crypto amount: 137, crypto value: 143,850.0, total value: 287,361.7
+in case of all in crypto amount 230.62, crypto value: 242,151.0
+
+35   day 350,000 added, 2018-02-11T09:00:00: crypto price 1185.0
+rebalance: fiat value 157,928.35, crypto amount: 133, crypto value: 157,605.0, total value: 315,533.35
+in case of all in crypto amount 239.06, crypto value: 283,286.1
+
+36   day 360,000 added, 2018-02-12T09:00:00: crypto price 1105.0
+rebalance: fiat value 157,446.67, crypto amount: 142.49, crypto value: 157,451.45, total value: 314,898.12
+in case of all in crypto amount 248.11, crypto value: 274,161.55
+
+37   day 370,000 added, 2018-02-13T09:00:00: crypto price 1190.0
+rebalance: fiat value 168,504.88, crypto amount: 142, crypto value: 168,980.0, total value: 337,484.88
+in case of all in crypto amount 256.51, crypto value: 305,246.9
+
+38   day 380,000 added, 2018-02-14T09:00:00: crypto price 1140.0
+rebalance: fiat value 170,192.44, crypto amount: 149.29, crypto value: 170,190.6, total value: 340,383.04
+in case of all in crypto amount 265.28, crypto value: 302,419.2
+
+39   day 390,000 added, 2018-02-15T09:00:00: crypto price 1240.0
+rebalance: fiat value 182,656.02, crypto amount: 147, crypto value: 182,280.0, total value: 364,936.02
+in case of all in crypto amount 273.34, crypto value: 338,941.6
+
+40   day 400,000 added, 2018-02-16T09:00:00: crypto price 1250.0
+rebalance: fiat value 188,203.01, crypto amount: 150.56, crypto value: 188,200.0, total value: 376,403.01
+in case of all in crypto amount 281.34, crypto value: 351,675.0
+
+41   day 410,000 added, 2018-02-17T09:00:00: crypto price 1250.0
+rebalance: fiat value 193,201.5, crypto amount: 154.56, crypto value: 193,200.0, total value: 386,401.5
+in case of all in crypto amount 289.34, crypto value: 361,675.0
+
+42   day 420,000 added, 2018-02-18T09:00:00: crypto price 1310.0
+nothing to rebalance
+
+43   day 430,000 added, 2018-02-19T09:00:00: crypto price 1225.0
+rebalance: fiat value 201,268.75, crypto amount: 164.3, crypto value: 201,267.5, total value: 402,536.25
+in case of all in crypto amount 305.13, crypto value: 373,784.25
+
+44   day 440,000 added, 2018-02-20T09:00:00: crypto price 1260.0
+rebalance: fiat value 209,143.37, crypto amount: 165.99, crypto value: 209,147.4, total value: 418,290.77
+in case of all in crypto amount 313.07, crypto value: 394,468.2
+
+45   day 450,000 added, 2018-02-21T09:00:00: crypto price 1235.0
+rebalance: fiat value 212,070.51, crypto amount: 171.72, crypto value: 212,074.2, total value: 424,144.71
+in case of all in crypto amount 321.17, crypto value: 396,644.95
+
+46   day 460,000 added, 2018-02-22T09:00:00: crypto price 1160.0
+rebalance: fiat value 210,632.86, crypto amount: 181.58, crypto value: 210,632.8, total value: 421,265.66
+in case of all in crypto amount 329.79, crypto value: 382,556.4
+
+47   day 470,000 added, 2018-02-23T09:00:00: crypto price 1060.0
+rebalance: fiat value 206,553.83, crypto amount: 194.86, crypto value: 206,551.6, total value: 413,105.43
+in case of all in crypto amount 339.22, crypto value: 359,573.2
+
+48   day 480,000 added, 2018-02-24T09:00:00: crypto price 1120.0
+nothing to rebalance
+
+49   day 490,000 added, 2018-02-25T09:00:00: crypto price 1070.0
+rebalance: fiat value 217,527.02, crypto amount: 203.3, crypto value: 217,531.0, total value: 435,058.02
+in case of all in crypto amount 357.5, crypto value: 382,525.0
+
+50   day 500,000 added, 2018-02-26T09:00:00: crypto price 1055.0
+rebalance: fiat value 221,004.26, crypto amount: 209.48, crypto value: 221,001.4, total value: 442,005.66
+in case of all in crypto amount 366.98, crypto value: 387,163.9
+
+51   day 510,000 added, 2018-02-27T09:00:00: crypto price 1060.0
+rebalance: fiat value 226,526.53, crypto amount: 213.7, crypto value: 226,522.0, total value: 453,048.53
+in case of all in crypto amount 376.41, crypto value: 398,994.6
+
+52   day 520,000 added, 2018-02-28T09:00:00: crypto price 1050.0
+rebalance: fiat value 230,455.77, crypto amount: 219.48, crypto value: 230,454.0, total value: 460,909.77
+in case of all in crypto amount 385.93, crypto value: 405,226.5
+
+53   day 530,000 added, 2018-03-01T09:00:00: crypto price 1020.0
+rebalance: fiat value 232,162.68, crypto amount: 227.61, crypto value: 232,162.2, total value: 464,324.88
+in case of all in crypto amount 395.73, crypto value: 403,644.6
+
+54   day 540,000 added, 2018-03-02T09:00:00: crypto price 1025.0
+rebalance: fiat value 237,731.47, crypto amount: 231.93, crypto value: 237,728.25, total value: 475,459.72
+in case of all in crypto amount 405.49, crypto value: 415,627.25
+
+55   day 550,000 added, 2018-03-03T09:00:00: crypto price 1005.0
+rebalance: fiat value 240,410.56, crypto amount: 239.21, crypto value: 240,406.05, total value: 480,816.61
+in case of all in crypto amount 415.44, crypto value: 417,517.2
+
+56   day 560,000 added, 2018-03-04T09:00:00: crypto price 1000.0
+rebalance: fiat value 244,810.28, crypto amount: 244.81, crypto value: 244,810.0, total value: 489,620.28
+in case of all in crypto amount 425.44, crypto value: 425,440.0
+
+57   day 570,000 added, 2018-03-05T09:00:00: crypto price 1095.0
+rebalance: fiat value 261,438.62, crypto amount: 239, crypto value: 261,705.0, total value: 523,143.62
+in case of all in crypto amount 434.57, crypto value: 475,854.15
+
+58   day 580,000 added, 2018-03-06T09:00:00: crypto price 1045.0
+rebalance: fiat value 260,596.81, crypto amount: 249.37, crypto value: 260,591.65, total value: 521,188.46
+in case of all in crypto amount 444.14, crypto value: 464,126.3
+
+59   day 590,000 added, 2018-03-07T09:00:00: crypto price 1005.0
+rebalance: fiat value 260,606.83, crypto amount: 259.31, crypto value: 260,606.55, total value: 521,213.38
+in case of all in crypto amount 454.09, crypto value: 456,360.45
+
+60   day 600,000 added, 2018-03-08T09:00:00: crypto price 958.0
+rebalance: fiat value 259,512.91, crypto amount: 270.89, crypto value: 259,512.62, total value: 519,025.53
+in case of all in crypto amount 464.53, crypto value: 445,019.74
+
+61   day 610,000 added, 2018-03-09T09:00:00: crypto price 906.0
+rebalance: fiat value 257,469.62, crypto amount: 284.18, crypto value: 257,467.08, total value: 514,936.7
+in case of all in crypto amount 475.57, crypto value: 430,866.42
+
+62   day 620,000 added, 2018-03-10T09:00:00: crypto price 925.0
+rebalance: fiat value 265,168.06, crypto amount: 286.67, crypto value: 265,169.75, total value: 530,337.81
+in case of all in crypto amount 486.38, crypto value: 449,901.5
+
+63   day 630,000 added, 2018-03-11T09:00:00: crypto price 869.0
+rebalance: fiat value 262,142.15, crypto amount: 301.66, crypto value: 262,142.54, total value: 524,284.69
+in case of all in crypto amount 497.89, crypto value: 432,666.41
+
+64   day 640,000 added, 2018-03-12T09:00:00: crypto price 896.0
+nothing to rebalance
+
+65   day 650,000 added, 2018-03-13T09:00:00: crypto price 876.0
+rebalance: fiat value 273,198.16, crypto amount: 311.87, crypto value: 273,198.12, total value: 546,396.28
+in case of all in crypto amount 520.47, crypto value: 455,931.72
+
+66   day 660,000 added, 2018-03-14T09:00:00: crypto price 863.0
+rebalance: fiat value 276,170.99, crypto amount: 320.01, crypto value: 276,168.63, total value: 552,339.62
+in case of all in crypto amount 532.06, crypto value: 459,167.78
+
+67   day 670,000 added, 2018-03-15T09:00:00: crypto price 764.0
+rebalance: fiat value 265,329.31, crypto amount: 347.29, crypto value: 265,329.56, total value: 530,658.87
+in case of all in crypto amount 545.15, crypto value: 416,494.6
+
+68   day 680,000 added, 2018-03-16T09:00:00: crypto price 753.0
+rebalance: fiat value 268,419.34, crypto amount: 356.47, crypto value: 268,421.91, total value: 536,841.25
+in case of all in crypto amount 558.43, crypto value: 420,497.79
+
+69   day 690,000 added, 2018-03-17T09:00:00: crypto price 744.0
+rebalance: fiat value 271,816.51, crypto amount: 365.34, crypto value: 271,812.96, total value: 543,629.47
+in case of all in crypto amount 571.87, crypto value: 425,471.28
+
+70   day 700,000 added, 2018-03-18T09:00:00: crypto price 688.0
+rebalance: fiat value 266,585.21, crypto amount: 387.48, crypto value: 266,586.24, total value: 533,171.45
+in case of all in crypto amount 586.4, crypto value: 403,443.2
+
+71   day 710,000 added, 2018-03-19T09:00:00: crypto price 711.0
+nothing to rebalance
+
+72   day 720,000 added, 2018-03-20T09:00:00: crypto price 814.0
+rebalance: fiat value 300,996.97, crypto amount: 370, crypto value: 301,180.0, total value: 602,176.97
+in case of all in crypto amount 612.75, crypto value: 498,778.5
+
+73   day 730,000 added, 2018-03-21T09:00:00: crypto price 772.0
+rebalance: fiat value 298,318.49, crypto amount: 386.42, crypto value: 298,316.24, total value: 596,634.73
+in case of all in crypto amount 625.7, crypto value: 483,040.4
+
+74   day 740,000 added, 2018-03-22T09:00:00: crypto price 756.0
+rebalance: fiat value 300,226.01, crypto amount: 397.12, crypto value: 300,222.72, total value: 600,448.73
+in case of all in crypto amount 638.93, crypto value: 483,031.08
+
+75   day 750,000 added, 2018-03-23T09:00:00: crypto price 733.0
+rebalance: fiat value 300,657.49, crypto amount: 410.17, crypto value: 300,654.61, total value: 601,312.1
+in case of all in crypto amount 652.57, crypto value: 478,333.81
+
+76   day 760,000 added, 2018-03-24T09:00:00: crypto price 708.0
+rebalance: fiat value 300,528.92, crypto amount: 424.48, crypto value: 300,531.84, total value: 601,060.76
+in case of all in crypto amount 666.69, crypto value: 472,016.52
+
+77   day 770,000 added, 2018-03-25T09:00:00: crypto price 703.0
+rebalance: fiat value 304,469.18, crypto amount: 433.1, crypto value: 304,469.3, total value: 608,938.48
+in case of all in crypto amount 680.91, crypto value: 478,679.73
+
+78   day 780,000 added, 2018-03-26T09:00:00: crypto price 710.0
+rebalance: fiat value 310,985.09, crypto amount: 438.01, crypto value: 310,987.1, total value: 621,972.19
+in case of all in crypto amount 694.99, crypto value: 493,442.9
+
+79   day 790,000 added, 2018-03-27T09:00:00: crypto price 655.0
+rebalance: fiat value 303,940.82, crypto amount: 464.03, crypto value: 303,939.65, total value: 607,880.47
+in case of all in crypto amount 710.26, crypto value: 465,220.3
+
+80   day 800,000 added, 2018-03-28T09:00:00: crypto price 631.0
+rebalance: fiat value 303,371.87, crypto amount: 480.78, crypto value: 303,372.18, total value: 606,744.05
+in case of all in crypto amount 726.11, crypto value: 458,175.41
+
+81   day 810,000 added, 2018-03-29T09:00:00: crypto price 630.0
+rebalance: fiat value 308,131.63, crypto amount: 489.1, crypto value: 308,133.0, total value: 616,264.63
+in case of all in crypto amount 741.98, crypto value: 467,447.4
+
+82   day 820,000 added, 2018-03-30T09:00:00: crypto price 559.0
+rebalance: fiat value 295,769.27, crypto amount: 529.1, crypto value: 295,766.9, total value: 591,536.17
+in case of all in crypto amount 759.87, crypto value: 424,767.33
+
+83   day 830,000 added, 2018-03-31T09:00:00: crypto price 554.0
+rebalance: fiat value 299,445.34, crypto amount: 540.52, crypto value: 299,448.08, total value: 598,893.42
+in case of all in crypto amount 777.92, crypto value: 430,967.68
+
+84   day 840,000 added, 2018-04-01T09:00:00: crypto price 556.0
+rebalance: fiat value 304,987.23, crypto amount: 548.54, crypto value: 304,988.24, total value: 609,975.47
+in case of all in crypto amount 795.91, crypto value: 442,525.96
+
+85   day 850,000 added, 2018-04-02T09:00:00: crypto price 526.0
+rebalance: fiat value 301,759.63, crypto amount: 573.69, crypto value: 301,760.94, total value: 603,520.57
+in case of all in crypto amount 814.92, crypto value: 428,647.92
+
+86   day 860,000 added, 2018-04-03T09:00:00: crypto price 539.0
+nothing to rebalance
+
+87   day 870,000 added, 2018-04-04T09:00:00: crypto price 599.0
+rebalance: fiat value 332,699.97, crypto amount: 555, crypto value: 332,445.0, total value: 665,144.97
+in case of all in crypto amount 850.16, crypto value: 509,245.84
+
+88   day 880,000 added, 2018-04-05T09:00:00: crypto price 542.0
+rebalance: fiat value 321,754.99, crypto amount: 593.64, crypto value: 321,752.88, total value: 643,507.87
+in case of all in crypto amount 868.61, crypto value: 470,786.62
+
+89   day 890,000 added, 2018-04-06T09:00:00: crypto price 535.0
+rebalance: fiat value 324,676.19, crypto amount: 606.87, crypto value: 324,675.45, total value: 649,351.64
+in case of all in crypto amount 887.3, crypto value: 474,705.5
+
+90   day 900,000 added, 2018-04-07T09:00:00: crypto price 520.0
+rebalance: fiat value 325,124.3, crypto amount: 625.24, crypto value: 325,124.8, total value: 650,249.1
+in case of all in crypto amount 906.53, crypto value: 471,395.6
+
+91   day 910,000 added, 2018-04-08T09:00:00: crypto price 529.0
+rebalance: fiat value 332,938.13, crypto amount: 629.37, crypto value: 332,936.73, total value: 665,874.86
+in case of all in crypto amount 925.43, crypto value: 489,552.47
+
+92   day 920,000 added, 2018-04-09T09:00:00: crypto price 539.0
+rebalance: fiat value 341,084.28, crypto amount: 632.81, crypto value: 341,084.59, total value: 682,168.87
+in case of all in crypto amount 943.98, crypto value: 508,805.22
+
+93   day 930,000 added, 2018-04-10T09:00:00: crypto price 533.0
+rebalance: fiat value 344,186.0, crypto amount: 645.75, crypto value: 344,184.75, total value: 688,370.75
+in case of all in crypto amount 962.74, crypto value: 513,140.42
+
+94   day 940,000 added, 2018-04-11T09:00:00: crypto price 531.0
+rebalance: fiat value 348,539.62, crypto amount: 656.38, crypto value: 348,537.78, total value: 697,077.4
+in case of all in crypto amount 981.57, crypto value: 521,213.67
+
+95   day 950,000 added, 2018-04-12T09:00:00: crypto price 574.0
+rebalance: fiat value 367,650.87, crypto amount: 641, crypto value: 367,934.0, total value: 735,584.87
+in case of all in crypto amount 998.99, crypto value: 573,420.26
+
+96   day 960,000 added, 2018-04-13T09:00:00: crypto price 657.0
+rebalance: fiat value 399,393.94, crypto amount: 608, crypto value: 399,456.0, total value: 798,849.94
+in case of all in crypto amount 1,014.21, crypto value: 666,335.97
+
+97   day 970,000 added, 2018-04-14T09:00:00: crypto price 682.0
+rebalance: fiat value 412,024.97, crypto amount: 604, crypto value: 411,928.0, total value: 823,952.97
+in case of all in crypto amount 1,028.87, crypto value: 701,689.34
+
+98   day 980,000 added, 2018-04-15T09:00:00: crypto price 666.0
+rebalance: fiat value 412,144.49, crypto amount: 618.84, crypto value: 412,147.44, total value: 824,291.93
+in case of all in crypto amount 1,043.89, crypto value: 695,230.74
+
+99   day 990,000 added, 2018-04-16T09:00:00: crypto price 715.0
+rebalance: fiat value 432,307.55, crypto amount: 605, crypto value: 432,575.0, total value: 864,882.55
+in case of all in crypto amount 1,057.88, crypto value: 756,384.2
+
+100  day 1,000,000 added, 2018-04-17T09:00:00: crypto price 712.0
+rebalance: fiat value 436,533.78, crypto amount: 613.11, crypto value: 436,534.32, total value: 873,068.1
+in case of all in crypto amount 1,071.92, crypto value: 763,207.04
+
+101  day 1,010,000 added, 2018-04-18T09:00:00: crypto price 702.0
+rebalance: fiat value 438,468.5, crypto amount: 624.6, crypto value: 438,469.2, total value: 876,937.7
+in case of all in crypto amount 1,086.17, crypto value: 762,491.34
+
+102  day 1,020,000 added, 2018-04-19T09:00:00: crypto price 755.0
+rebalance: fiat value 460,020.75, crypto amount: 609, crypto value: 459,795.0, total value: 919,815.75
+in case of all in crypto amount 1,099.42, crypto value: 830,062.1
+
+103  day 1,030,000 added, 2018-04-20T09:00:00: crypto price 849.0
+rebalance: fiat value 493,530.87, crypto amount: 581, crypto value: 493,269.0, total value: 986,799.87
+in case of all in crypto amount 1,111.2, crypto value: 943,408.8
+
+104  day 1,040,000 added, 2018-04-21T09:00:00: crypto price 995.0
+rebalance: fiat value 540,812.94, crypto amount: 544, crypto value: 541,280.0, total value: 1,082,092.94
+in case of all in crypto amount 1,121.25, crypto value: 1,115,643.75
+
+105  day 1,050,000 added, 2018-04-22T09:00:00: crypto price 942.0
+rebalance: fiat value 531,630.47, crypto amount: 564.36, crypto value: 531,627.12, total value: 1,063,257.59
+in case of all in crypto amount 1,131.87, crypto value: 1,066,221.54
+
+106  day 1,060,000 added, 2018-04-23T09:00:00: crypto price 940.0
+rebalance: fiat value 536,064.44, crypto amount: 570.28, crypto value: 536,063.2, total value: 1,072,127.64
+in case of all in crypto amount 1,142.51, crypto value: 1,073,959.4
+
+107  day 1,070,000 added, 2018-04-24T09:00:00: crypto price 954.0
+nothing to rebalance
+
+108  day 1,080,000 added, 2018-04-25T09:00:00: crypto price 1005.0
+rebalance: fiat value 564,597.92, crypto amount: 562, crypto value: 564,810.0, total value: 1,129,407.92
+in case of all in crypto amount 1,162.94, crypto value: 1,168,754.7
+
+109  day 1,090,000 added, 2018-04-26T09:00:00: crypto price 877.0
+rebalance: fiat value 533,735.96, crypto amount: 608.59, crypto value: 533,733.43, total value: 1,067,469.39
+in case of all in crypto amount 1,174.34, crypto value: 1,029,896.18
+
+110  day 1,100,000 added, 2018-04-27T09:00:00: crypto price 925.0
+rebalance: fiat value 553,340.86, crypto amount: 598, crypto value: 553,150.0, total value: 1,106,490.86
+in case of all in crypto amount 1,185.15, crypto value: 1,096,263.75
+
+111  day 1,110,000 added, 2018-04-28T09:00:00: crypto price 887.0
+rebalance: fiat value 546,883.43, crypto amount: 616.55, crypto value: 546,879.85, total value: 1,093,763.28
+in case of all in crypto amount 1,196.42, crypto value: 1,061,224.54
+
+112  day 1,120,000 added, 2018-04-29T09:00:00: crypto price 927.0
+rebalance: fiat value 564,212.64, crypto amount: 609, crypto value: 564,543.0, total value: 1,128,755.64
+in case of all in crypto amount 1,207.21, crypto value: 1,119,083.67
+
+113  day 1,130,000 added, 2018-04-30T09:00:00: crypto price 938.0
+nothing to rebalance
+
+114  day 1,140,000 added, 2018-05-01T09:00:00: crypto price 910.0
+rebalance: fiat value 569,201.32, crypto amount: 625.5, crypto value: 569,205.0, total value: 1,138,406.32
+in case of all in crypto amount 1,228.86, crypto value: 1,118,262.6
+
+115  day 1,150,000 added, 2018-05-02T09:00:00: crypto price 910.0
+rebalance: fiat value 574,203.16, crypto amount: 630.99, crypto value: 574,200.9, total value: 1,148,404.06
+in case of all in crypto amount 1,239.85, crypto value: 1,128,263.5
+
+116  day 1,160,000 added, 2018-05-03T09:00:00: crypto price 931.0
+nothing to rebalance
+
+117  day 1,170,000 added, 2018-05-04T09:00:00: crypto price 966.0
+rebalance: fiat value 601,869.75, crypto amount: 623, crypto value: 601,818.0, total value: 1,203,687.75
+in case of all in crypto amount 1,260.94, crypto value: 1,218,068.04
+
+118  day 1,180,000 added, 2018-05-05T09:00:00: crypto price 974.0
+nothing to rebalance
+
+119  day 1,190,000 added, 2018-05-06T09:00:00: crypto price 988.0
+rebalance: fiat value 618,696.87, crypto amount: 626.21, crypto value: 618,695.48, total value: 1,237,392.35
+in case of all in crypto amount 1,281.33, crypto value: 1,265,954.04
+
+120  day 1,200,000 added, 2018-05-07T09:00:00: crypto price 957.0
+rebalance: fiat value 613,989.92, crypto amount: 641.58, crypto value: 613,992.06, total value: 1,227,981.98
+in case of all in crypto amount 1,291.78, crypto value: 1,236,233.46
+
+121  day 1,210,000 added, 2018-05-08T09:00:00: crypto price 921.0
+rebalance: fiat value 607,442.55, crypto amount: 659.55, crypto value: 607,445.55, total value: 1,214,888.1
+in case of all in crypto amount 1,302.64, crypto value: 1,199,731.44
+
+122  day 1,220,000 added, 2018-05-09T09:00:00: crypto price 898.0
+rebalance: fiat value 604,859.22, crypto amount: 673.56, crypto value: 604,856.88, total value: 1,209,716.1
+in case of all in crypto amount 1,313.78, crypto value: 1,179,774.44
+
+123  day 1,230,000 added, 2018-05-10T09:00:00: crypto price 888.0
+rebalance: fiat value 606,490.25, crypto amount: 682.98, crypto value: 606,486.24, total value: 1,212,976.49
+in case of all in crypto amount 1,325.04, crypto value: 1,176,635.52
+
+124  day 1,240,000 added, 2018-05-11T09:00:00: crypto price 828.0
+rebalance: fiat value 590,998.85, crypto amount: 713.77, crypto value: 591,001.56, total value: 1,182,000.41
+in case of all in crypto amount 1,337.12, crypto value: 1,107,135.36
+
+125  day 1,250,000 added, 2018-05-12T09:00:00: crypto price 745.0
+rebalance: fiat value 566,378.75, crypto amount: 760.24, crypto value: 566,378.8, total value: 1,132,757.55
+in case of all in crypto amount 1,350.54, crypto value: 1,006,152.3
+
+126  day 1,260,000 added, 2018-05-13T09:00:00: crypto price 767.0
+rebalance: fiat value 579,741.41, crypto amount: 756, crypto value: 579,852.0, total value: 1,159,593.41
+in case of all in crypto amount 1,363.58, crypto value: 1,045,865.86
+
+127  day 1,270,000 added, 2018-05-14T09:00:00: crypto price 824.0
+rebalance: fiat value 606,342.7, crypto amount: 736, crypto value: 606,464.0, total value: 1,212,806.7
+in case of all in crypto amount 1,375.72, crypto value: 1,133,593.28
+
+128  day 1,280,000 added, 2018-05-15T09:00:00: crypto price 821.0
+rebalance: fiat value 610,299.35, crypto amount: 743.36, crypto value: 610,298.56, total value: 1,220,597.91
+in case of all in crypto amount 1,387.9, crypto value: 1,139,465.9
+
+129  day 1,290,000 added, 2018-05-16T09:00:00: crypto price 775.0
+rebalance: fiat value 598,201.68, crypto amount: 771.87, crypto value: 598,199.25, total value: 1,196,400.93
+in case of all in crypto amount 1,400.8, crypto value: 1,085,620.0
+
+130  day 1,300,000 added, 2018-05-17T09:00:00: crypto price 786.0
+nothing to rebalance
+
+131  day 1,310,000 added, 2018-05-18T09:00:00: crypto price 743.0
+rebalance: fiat value 595,850.54, crypto amount: 801.95, crypto value: 595,848.85, total value: 1,191,699.39
+in case of all in crypto amount 1,426.98, crypto value: 1,060,246.14
+
+132  day 1,320,000 added, 2018-05-19T09:00:00: crypto price 753.0
+nothing to rebalance
+
+133  day 1,330,000 added, 2018-05-20T09:00:00: crypto price 746.0
+rebalance: fiat value 607,052.62, crypto amount: 813.74, crypto value: 607,050.04, total value: 1,214,102.66
+in case of all in crypto amount 1,453.66, crypto value: 1,084,430.36
+
+134  day 1,340,000 added, 2018-05-21T09:00:00: crypto price 769.0
+rebalance: fiat value 621,409.34, crypto amount: 808, crypto value: 621,352.0, total value: 1,242,761.34
+in case of all in crypto amount 1,466.66, crypto value: 1,127,861.54
+
+135  day 1,350,000 added, 2018-05-22T09:00:00: crypto price 753.0
+rebalance: fiat value 619,916.67, crypto amount: 823.26, crypto value: 619,914.78, total value: 1,239,831.45
+in case of all in crypto amount 1,479.94, crypto value: 1,114,394.82
+
+136  day 1,360,000 added, 2018-05-23T09:00:00: crypto price 715.0
+rebalance: fiat value 609,273.78, crypto amount: 852.13, crypto value: 609,272.95, total value: 1,218,546.73
+in case of all in crypto amount 1,493.93, crypto value: 1,068,159.95
+
+137  day 1,370,000 added, 2018-05-24T09:00:00: crypto price 667.0
+rebalance: fiat value 593,822.24, crypto amount: 890.29, crypto value: 593,823.43, total value: 1,187,645.67
+in case of all in crypto amount 1,508.92, crypto value: 1,006,449.64
+
+138  day 1,380,000 added, 2018-05-25T09:00:00: crypto price 697.0
+rebalance: fiat value 612,177.19, crypto amount: 878, crypto value: 611,966.0, total value: 1,224,143.19
+in case of all in crypto amount 1,523.27, crypto value: 1,061,719.19
+
+139  day 1,390,000 added, 2018-05-26T09:00:00: crypto price 676.0
+rebalance: fiat value 607,852.6, crypto amount: 899.19, crypto value: 607,852.44, total value: 1,215,705.04
+in case of all in crypto amount 1,538.06, crypto value: 1,039,728.56
+
+140  day 1,400,000 added, 2018-05-27T09:00:00: crypto price 676.0
+rebalance: fiat value 612,852.52, crypto amount: 906.59, crypto value: 612,854.84, total value: 1,225,707.36
+in case of all in crypto amount 1,552.85, crypto value: 1,049,726.6
+
+141  day 1,410,000 added, 2018-05-28T09:00:00: crypto price 672.0
+rebalance: fiat value 616,040.5, crypto amount: 916.73, crypto value: 616,042.56, total value: 1,232,083.06
+in case of all in crypto amount 1,567.73, crypto value: 1,053,514.56
+
+142  day 1,420,000 added, 2018-05-29T09:00:00: crypto price 608.0
+rebalance: fiat value 591,706.17, crypto amount: 973.2, crypto value: 591,705.6, total value: 1,183,411.77
+in case of all in crypto amount 1,584.18, crypto value: 963,181.44
+
+143  day 1,430,000 added, 2018-05-30T09:00:00: crypto price 669.0
+rebalance: fiat value 626,388.49, crypto amount: 936, crypto value: 626,184.0, total value: 1,252,572.49
+in case of all in crypto amount 1,599.13, crypto value: 1,069,817.97
+
+144  day 1,440,000 added, 2018-05-31T09:00:00: crypto price 668.0
+rebalance: fiat value 630,818.25, crypto amount: 944.34, crypto value: 630,819.12, total value: 1,261,637.37
+in case of all in crypto amount 1,614.1, crypto value: 1,078,218.8
+
+145  day 1,450,000 added, 2018-06-01T09:00:00: crypto price 676.0
+nothing to rebalance
+
+146  day 1,460,000 added, 2018-06-02T09:00:00: crypto price 684.0
+nothing to rebalance
+
+147  day 1,470,000 added, 2018-06-03T09:00:00: crypto price 702.0
+nothing to rebalance
+
+148  day 1,480,000 added, 2018-06-04T09:00:00: crypto price 752.0
+rebalance: fiat value 690,480.97, crypto amount: 918, crypto value: 690,336.0, total value: 1,380,816.97
+in case of all in crypto amount 1,671.06, crypto value: 1,256,637.12
+
+149  day 1,490,000 added, 2018-06-05T09:00:00: crypto price 723.0
+rebalance: fiat value 682,097.49, crypto amount: 943.43, crypto value: 682,099.89, total value: 1,364,197.38
+in case of all in crypto amount 1,684.89, crypto value: 1,218,175.47
+
+150  day 1,500,000 added, 2018-06-06T09:00:00: crypto price 738.0
+nothing to rebalance
+
+151  day 1,510,000 added, 2018-06-07T09:00:00: crypto price 735.0
+rebalance: fiat value 697,759.27, crypto amount: 949.33, crypto value: 697,757.55, total value: 1,395,516.82
+in case of all in crypto amount 1,712.05, crypto value: 1,258,356.75
+
+152  day 1,520,000 added, 2018-06-08T09:00:00: crypto price 737.0
+rebalance: fiat value 703,707.74, crypto amount: 954.83, crypto value: 703,709.71, total value: 1,407,417.45
+in case of all in crypto amount 1,725.62, crypto value: 1,271,781.94
+
+153  day 1,530,000 added, 2018-06-09T09:00:00: crypto price 735.0
+rebalance: fiat value 707,753.9, crypto amount: 962.93, crypto value: 707,753.55, total value: 1,415,507.45
+in case of all in crypto amount 1,739.23, crypto value: 1,278,334.05
+
+154  day 1,540,000 added, 2018-06-10T09:00:00: crypto price 723.0
+rebalance: fiat value 706,976.14, crypto amount: 977.84, crypto value: 706,978.32, total value: 1,413,954.46
+in case of all in crypto amount 1,753.06, crypto value: 1,267,462.38
+
+155  day 1,550,000 added, 2018-06-11T09:00:00: crypto price 652.0
+rebalance: fiat value 677,263.91, crypto amount: 1038.75, crypto value: 677,265.0, total value: 1,354,528.91
+in case of all in crypto amount 1,768.4, crypto value: 1,152,996.8
+
+156  day 1,560,000 added, 2018-06-12T09:00:00: crypto price 665.0
+nothing to rebalance
+
+157  day 1,570,000 added, 2018-06-13T09:00:00: crypto price 625.0
+rebalance: fiat value 673,241.33, crypto amount: 1077.19, crypto value: 673,243.75, total value: 1,346,485.08
+in case of all in crypto amount 1,799.44, crypto value: 1,124,650.0
+
+158  day 1,580,000 added, 2018-06-14T09:00:00: crypto price 592.0
+rebalance: fiat value 660,468.91, crypto amount: 1115.66, crypto value: 660,470.72, total value: 1,320,939.63
+in case of all in crypto amount 1,816.33, crypto value: 1,075,267.36
+
+159  day 1,590,000 added, 2018-06-15T09:00:00: crypto price 618.0
+rebalance: fiat value 679,973.39, crypto amount: 1100, crypto value: 679,800.0, total value: 1,359,773.39
+in case of all in crypto amount 1,832.51, crypto value: 1,132,491.18
+
+160  day 1,600,000 added, 2018-06-16T09:00:00: crypto price 597.0
+rebalance: fiat value 673,336.69, crypto amount: 1127.87, crypto value: 673,338.39, total value: 1,346,675.08
+in case of all in crypto amount 1,849.26, crypto value: 1,104,008.22
+
+161  day 1,610,000 added, 2018-06-17T09:00:00: crypto price 595.0
+rebalance: fiat value 677,209.67, crypto amount: 1138.17, crypto value: 677,211.15, total value: 1,354,420.82
+in case of all in crypto amount 1,866.07, crypto value: 1,110,311.65
+
+162  day 1,620,000 added, 2018-06-18T09:00:00: crypto price 589.0
+rebalance: fiat value 678,795.9, crypto amount: 1152.45, crypto value: 678,793.05, total value: 1,357,588.95
+in case of all in crypto amount 1,883.05, crypto value: 1,109,116.45
+
+163  day 1,630,000 added, 2018-06-19T09:00:00: crypto price 599.0
+nothing to rebalance
+
+164  day 1,640,000 added, 2018-06-20T09:00:00: crypto price 615.0
+rebalance: fiat value 703,776.32, crypto amount: 1144, crypto value: 703,560.0, total value: 1,407,336.32
+in case of all in crypto amount 1,916.0, crypto value: 1,178,340.0
+
+165  day 1,650,000 added, 2018-06-21T09:00:00: crypto price 603.0
+rebalance: fiat value 701,804.16, crypto amount: 1163.85, crypto value: 701,801.55, total value: 1,403,605.71
+in case of all in crypto amount 1,932.58, crypto value: 1,165,345.74
+
+166  day 1,660,000 added, 2018-06-22T09:00:00: crypto price 600.0
+rebalance: fiat value 705,057.08, crypto amount: 1175.1, crypto value: 705,060.0, total value: 1,410,117.08
+in case of all in crypto amount 1,949.25, crypto value: 1,169,550.0
+
+167  day 1,670,000 added, 2018-06-23T09:00:00: crypto price 555.0
+rebalance: fiat value 683,618.79, crypto amount: 1231.75, crypto value: 683,621.25, total value: 1,367,240.04
+in case of all in crypto amount 1,967.27, crypto value: 1,091,834.85
+
+168  day 1,680,000 added, 2018-06-24T09:00:00: crypto price 557.0
+rebalance: fiat value 689,851.77, crypto amount: 1238.51, crypto value: 689,850.07, total value: 1,379,701.84
+in case of all in crypto amount 1,985.22, crypto value: 1,105,767.54
+
+169  day 1,690,000 added, 2018-06-25T09:00:00: crypto price 539.0
+rebalance: fiat value 683,704.33, crypto amount: 1268.47, crypto value: 683,705.33, total value: 1,367,409.66
+in case of all in crypto amount 2,003.77, crypto value: 1,080,032.03
+
+170  day 1,700,000 added, 2018-06-26T09:00:00: crypto price 540.0
+rebalance: fiat value 689,339.07, crypto amount: 1276.55, crypto value: 689,337.0, total value: 1,378,676.07
+in case of all in crypto amount 2,022.29, crypto value: 1,092,036.6
+
+171  day 1,710,000 added, 2018-06-27T09:00:00: crypto price 515.0
+rebalance: fiat value 678,381.16, crypto amount: 1317.24, crypto value: 678,378.6, total value: 1,356,759.76
+in case of all in crypto amount 2,041.71, crypto value: 1,051,480.65
+
+172  day 1,720,000 added, 2018-06-28T09:00:00: crypto price 531.0
+rebalance: fiat value 693,917.8, crypto amount: 1307, crypto value: 694,017.0, total value: 1,387,934.8
+in case of all in crypto amount 2,060.54, crypto value: 1,094,146.74
+
+173  day 1,730,000 added, 2018-06-29T09:00:00: crypto price 508.0
+rebalance: fiat value 683,936.9, crypto amount: 1346.33, crypto value: 683,935.64, total value: 1,367,872.54
+in case of all in crypto amount 2,080.23, crypto value: 1,056,756.84
+
+174  day 1,740,000 added, 2018-06-30T09:00:00: crypto price 509.0
+rebalance: fiat value 689,609.43, crypto amount: 1354.83, crypto value: 689,608.47, total value: 1,379,217.9
+in case of all in crypto amount 2,099.88, crypto value: 1,068,838.92
+
+175  day 1,750,000 added, 2018-07-01T09:00:00: crypto price 523.0
+rebalance: fiat value 704,092.76, crypto amount: 1346, crypto value: 703,958.0, total value: 1,408,050.76
+in case of all in crypto amount 2,119.0, crypto value: 1,108,237.0
+
+176  day 1,760,000 added, 2018-07-02T09:00:00: crypto price 515.0
+rebalance: fiat value 703,641.38, crypto amount: 1366.29, crypto value: 703,639.35, total value: 1,407,280.73
+in case of all in crypto amount 2,138.42, crypto value: 1,101,286.3
+
+177  day 1,770,000 added, 2018-07-03T09:00:00: crypto price 542.0
+rebalance: fiat value 727,085.28, crypto amount: 1341, crypto value: 726,822.0, total value: 1,453,907.28
+in case of all in crypto amount 2,156.87, crypto value: 1,169,023.54
+
+178  day 1,780,000 added, 2018-07-04T09:00:00: crypto price 542.0
+rebalance: fiat value 731,953.64, crypto amount: 1350.47, crypto value: 731,954.74, total value: 1,463,908.38
+in case of all in crypto amount 2,175.32, crypto value: 1,179,023.44
+
+179  day 1,790,000 added, 2018-07-05T09:00:00: crypto price 547.0
+nothing to rebalance
+
+180  day 1,800,000 added, 2018-07-06T09:00:00: crypto price 537.0
+rebalance: fiat value 738,578.02, crypto amount: 1375.38, crypto value: 738,579.06, total value: 1,477,157.08
+in case of all in crypto amount 2,212.22, crypto value: 1,187,962.14
+
+181  day 1,810,000 added, 2018-07-07T09:00:00: crypto price 539.0
+nothing to rebalance
+
+182  day 1,820,000 added, 2018-07-08T09:00:00: crypto price 541.0
+rebalance: fiat value 751,329.3, crypto amount: 1388.78, crypto value: 751,329.98, total value: 1,502,659.28
+in case of all in crypto amount 2,249.25, crypto value: 1,216,844.25
+
+183  day 1,830,000 added, 2018-07-09T09:00:00: crypto price 536.0
+rebalance: fiat value 752,857.69, crypto amount: 1404.59, crypto value: 752,860.24, total value: 1,505,717.93
+in case of all in crypto amount 2,267.91, crypto value: 1,215,599.76
+
+184  day 1,840,000 added, 2018-07-10T09:00:00: crypto price 531.0
+rebalance: fiat value 754,347.49, crypto amount: 1420.62, crypto value: 754,349.22, total value: 1,508,696.71
+in case of all in crypto amount 2,286.74, crypto value: 1,214,258.94
+
+185  day 1,850,000 added, 2018-07-11T09:00:00: crypto price 502.0
+rebalance: fiat value 738,749.37, crypto amount: 1471.61, crypto value: 738,748.22, total value: 1,477,497.59
+in case of all in crypto amount 2,306.66, crypto value: 1,157,943.32
+
+186  day 1,860,000 added, 2018-07-12T09:00:00: crypto price 508.0
+nothing to rebalance
+
+187  day 1,870,000 added, 2018-07-13T09:00:00: crypto price 497.0
+rebalance: fiat value 745,069.77, crypto amount: 1499.13, crypto value: 745,067.61, total value: 1,490,137.38
+in case of all in crypto amount 2,346.47, crypto value: 1,166,195.59
+
+188  day 1,880,000 added, 2018-07-14T09:00:00: crypto price 498.0
+rebalance: fiat value 750,818.26, crypto amount: 1507.67, crypto value: 750,819.66, total value: 1,501,637.92
+in case of all in crypto amount 2,366.55, crypto value: 1,178,541.9
+
+189  day 1,890,000 added, 2018-07-15T09:00:00: crypto price 499.0
+rebalance: fiat value 756,572.8, crypto amount: 1516.18, crypto value: 756,573.82, total value: 1,513,146.62
+in case of all in crypto amount 2,386.59, crypto value: 1,190,908.41
+
+190  day 1,900,000 added, 2018-07-16T09:00:00: crypto price 504.0
+nothing to rebalance
+
+191  day 1,910,000 added, 2018-07-17T09:00:00: crypto price 535.0
+rebalance: fiat value 793,864.55, crypto amount: 1484, crypto value: 793,940.0, total value: 1,587,804.55
+in case of all in crypto amount 2,425.12, crypto value: 1,297,439.2
+
+192  day 1,920,000 added, 2018-07-18T09:00:00: crypto price 558.0
+rebalance: fiat value 815,968.27, crypto amount: 1462, crypto value: 815,796.0, total value: 1,631,764.27
+in case of all in crypto amount 2,443.04, crypto value: 1,363,216.32
+
+193  day 1,930,000 added, 2018-07-19T09:00:00: crypto price 548.0
+rebalance: fiat value 813,572.13, crypto amount: 1484.62, crypto value: 813,571.76, total value: 1,627,143.89
+in case of all in crypto amount 2,461.29, crypto value: 1,348,786.92
+
+194  day 1,940,000 added, 2018-07-20T09:00:00: crypto price 539.0
+rebalance: fiat value 811,891.15, crypto amount: 1506.29, crypto value: 811,890.31, total value: 1,623,781.46
+in case of all in crypto amount 2,479.84, crypto value: 1,336,633.76
+
+195  day 1,950,000 added, 2018-07-21T09:00:00: crypto price 506.0
+rebalance: fiat value 792,036.94, crypto amount: 1565.29, crypto value: 792,036.74, total value: 1,584,073.68
+in case of all in crypto amount 2,499.6, crypto value: 1,264,797.6
+
+196  day 1,960,000 added, 2018-07-22T09:00:00: crypto price 514.0
+nothing to rebalance
+
+197  day 1,970,000 added, 2018-07-23T09:00:00: crypto price 507.0
+rebalance: fiat value 802,819.49, crypto amount: 1583.47, crypto value: 802,819.29, total value: 1,605,638.78
+in case of all in crypto amount 2,538.78, crypto value: 1,287,161.46
+
+198  day 1,980,000 added, 2018-07-24T09:00:00: crypto price 505.0
+rebalance: fiat value 806,235.92, crypto amount: 1596.51, crypto value: 806,237.55, total value: 1,612,473.47
+in case of all in crypto amount 2,558.58, crypto value: 1,292,082.9
+
+199  day 1,990,000 added, 2018-07-25T09:00:00: crypto price 516.0
+nothing to rebalance
+
+200  day 2,000,000 added, 2018-07-26T09:00:00: crypto price 514.0
+nothing to rebalance
+
+201  day 2,010,000 added, 2018-07-27T09:00:00: crypto price 507.0
+rebalance: fiat value 822,833.24, crypto amount: 1622.95, crypto value: 822,835.65, total value: 1,645,668.89
+in case of all in crypto amount 2,617.14, crypto value: 1,326,889.98
+
+202  day 2,020,000 added, 2018-07-28T09:00:00: crypto price 508.0
+rebalance: fiat value 828,645.92, crypto amount: 1631.19, crypto value: 828,644.52, total value: 1,657,290.44
+in case of all in crypto amount 2,636.83, crypto value: 1,339,509.64
+
+203  day 2,030,000 added, 2018-07-29T09:00:00: crypto price 512.0
+nothing to rebalance
+
+204  day 2,040,000 added, 2018-07-30T09:00:00: crypto price 510.0
+rebalance: fiat value 840,276.41, crypto amount: 1647.6, crypto value: 840,276.0, total value: 1,680,552.41
+in case of all in crypto amount 2,675.97, crypto value: 1,364,744.7
+
+205  day 2,050,000 added, 2018-07-31T09:00:00: crypto price 504.0
+rebalance: fiat value 840,333.4, crypto amount: 1667.33, crypto value: 840,334.32, total value: 1,680,667.72
+in case of all in crypto amount 2,695.81, crypto value: 1,358,688.24
+
+206  day 2,060,000 added, 2018-08-01T09:00:00: crypto price 495.0
+rebalance: fiat value 837,830.87, crypto amount: 1692.59, crypto value: 837,832.05, total value: 1,675,662.92
+in case of all in crypto amount 2,716.01, crypto value: 1,344,424.95
+
+207  day 2,070,000 added, 2018-08-02T09:00:00: crypto price 512.0
+rebalance: fiat value 857,218.47, crypto amount: 1674, crypto value: 857,088.0, total value: 1,714,306.47
+in case of all in crypto amount 2,735.54, crypto value: 1,400,596.48
+
+208  day 2,080,000 added, 2018-08-03T09:00:00: crypto price 498.0
+rebalance: fiat value 850,435.24, crypto amount: 1707.7, crypto value: 850,434.6, total value: 1,700,869.84
+in case of all in crypto amount 2,755.62, crypto value: 1,372,298.76
+
+209  day 2,090,000 added, 2018-08-04T09:00:00: crypto price 506.0
+nothing to rebalance
+
+210  day 2,100,000 added, 2018-08-05T09:00:00: crypto price 495.0
+rebalance: fiat value 857,873.37, crypto amount: 1733.08, crypto value: 857,874.6, total value: 1,715,747.97
+in case of all in crypto amount 2,795.58, crypto value: 1,383,812.1
+
+211  day 2,110,000 added, 2018-08-06T09:00:00: crypto price 498.0
+nothing to rebalance
+
+212  day 2,120,000 added, 2018-08-07T09:00:00: crypto price 476.0
+rebalance: fiat value 851,409.72, crypto amount: 1788.68, crypto value: 851,411.68, total value: 1,702,821.4
+in case of all in crypto amount 2,836.67, crypto value: 1,350,254.92
+
+213  day 2,130,000 added, 2018-08-08T09:00:00: crypto price 437.0
+rebalance: fiat value 821,531.44, crypto amount: 1879.93, crypto value: 821,529.41, total value: 1,643,060.85
+in case of all in crypto amount 2,859.55, crypto value: 1,249,623.35
+
+214  day 2,140,000 added, 2018-08-09T09:00:00: crypto price 387.0
+rebalance: fiat value 779,532.18, crypto amount: 2014.3, crypto value: 779,534.1, total value: 1,559,066.28
+in case of all in crypto amount 2,885.39, crypto value: 1,116,645.93
+
+215  day 2,150,000 added, 2018-08-10T09:00:00: crypto price 398.0
+rebalance: fiat value 795,611.79, crypto amount: 1999, crypto value: 795,602.0, total value: 1,591,213.79
+in case of all in crypto amount 2,910.52, crypto value: 1,158,386.96
+
+216  day 2,160,000 added, 2018-08-11T09:00:00: crypto price 376.0
+rebalance: fiat value 778,617.89, crypto amount: 2070.79, crypto value: 778,617.04, total value: 1,557,234.93
+in case of all in crypto amount 2,937.12, crypto value: 1,104,357.12
+
+217  day 2,170,000 added, 2018-08-12T09:00:00: crypto price 351.0
+rebalance: fiat value 757,732.59, crypto amount: 2158.78, crypto value: 757,731.78, total value: 1,515,464.37
+in case of all in crypto amount 2,965.61, crypto value: 1,040,929.11
+
+218  day 2,180,000 added, 2018-08-13T09:00:00: crypto price 346.0
+rebalance: fiat value 757,335.24, crypto amount: 2188.83, crypto value: 757,335.18, total value: 1,514,670.42
+in case of all in crypto amount 2,994.51, crypto value: 1,036,100.46
+
+219  day 2,190,000 added, 2018-08-14T09:00:00: crypto price 324.0
+rebalance: fiat value 738,258.08, crypto amount: 2278.57, crypto value: 738,256.68, total value: 1,476,514.76
+in case of all in crypto amount 3,025.37, crypto value: 980,219.88
+
+220  day 2,200,000 added, 2018-08-15T09:00:00: crypto price 319.0
+rebalance: fiat value 737,560.96, crypto amount: 2312.1, crypto value: 737,559.9, total value: 1,475,120.86
+in case of all in crypto amount 3,056.72, crypto value: 975,093.68
+
+221  day 2,210,000 added, 2018-08-16T09:00:00: crypto price 328.0
+rebalance: fiat value 752,964.88, crypto amount: 2296, crypto value: 753,088.0, total value: 1,506,052.88
+in case of all in crypto amount 3,087.21, crypto value: 1,012,604.88
+
+222  day 2,220,000 added, 2018-08-17T09:00:00: crypto price 339.0
+rebalance: fiat value 770,654.44, crypto amount: 2273, crypto value: 770,547.0, total value: 1,541,201.44
+in case of all in crypto amount 3,116.71, crypto value: 1,056,564.69
+
+223  day 2,230,000 added, 2018-08-18T09:00:00: crypto price 419.0
+rebalance: fiat value 866,520.72, crypto amount: 2068, crypto value: 866,492.0, total value: 1,733,012.72
+in case of all in crypto amount 3,140.58, crypto value: 1,315,903.02
+
+224  day 2,240,000 added, 2018-08-19T09:00:00: crypto price 381.0
+rebalance: fiat value 832,214.36, crypto amount: 2184.29, crypto value: 832,214.49, total value: 1,664,428.85
+in case of all in crypto amount 3,166.83, crypto value: 1,206,562.23
+
+225  day 2,250,000 added, 2018-08-20T09:00:00: crypto price 393.0
+rebalance: fiat value 850,320.16, crypto amount: 2164, crypto value: 850,452.0, total value: 1,700,772.16
+in case of all in crypto amount 3,192.28, crypto value: 1,254,566.04
+
+226  day 2,260,000 added, 2018-08-21T09:00:00: crypto price 365.0
+rebalance: fiat value 825,090.08, crypto amount: 2260.52, crypto value: 825,089.8, total value: 1,650,179.88
+in case of all in crypto amount 3,219.68, crypto value: 1,175,183.2
+
+227  day 2,270,000 added, 2018-08-22T09:00:00: crypto price 377.0
+rebalance: fiat value 843,653.06, crypto amount: 2238, crypto value: 843,726.0, total value: 1,687,379.06
+in case of all in crypto amount 3,246.21, crypto value: 1,223,821.17
+
+228  day 2,280,000 added, 2018-08-23T09:00:00: crypto price 365.0
+rebalance: fiat value 835,261.53, crypto amount: 2288.39, crypto value: 835,262.35, total value: 1,670,523.88
+in case of all in crypto amount 3,273.61, crypto value: 1,194,867.65
+
+229  day 2,290,000 added, 2018-08-24T09:00:00: crypto price 373.0
+nothing to rebalance
+
+230  day 2,300,000 added, 2018-08-25T09:00:00: crypto price 369.0
+rebalance: fiat value 849,838.72, crypto amount: 2303.09, crypto value: 849,840.21, total value: 1,699,678.93
+in case of all in crypto amount 3,327.52, crypto value: 1,227,854.88
+
+231  day 2,310,000 added, 2018-08-26T09:00:00: crypto price 369.0
+rebalance: fiat value 854,839.47, crypto amount: 2316.64, crypto value: 854,840.16, total value: 1,709,679.63
+in case of all in crypto amount 3,354.62, crypto value: 1,237,854.78
+
+232  day 2,320,000 added, 2018-08-27T09:00:00: crypto price 364.0
+rebalance: fiat value 854,048.21, crypto amount: 2346.29, crypto value: 854,049.56, total value: 1,708,097.77
+in case of all in crypto amount 3,382.09, crypto value: 1,231,080.76
+
+233  day 2,330,000 added, 2018-08-28T09:00:00: crypto price 378.0
+rebalance: fiat value 875,472.92, crypto amount: 2316, crypto value: 875,448.0, total value: 1,750,920.92
+in case of all in crypto amount 3,408.55, crypto value: 1,288,431.9
+
+234  day 2,340,000 added, 2018-08-29T09:00:00: crypto price 389.0
+rebalance: fiat value 893,198.46, crypto amount: 2296, crypto value: 893,144.0, total value: 1,786,342.46
+in case of all in crypto amount 3,434.26, crypto value: 1,335,927.14
+
+235  day 2,350,000 added, 2018-08-30T09:00:00: crypto price 384.0
+rebalance: fiat value 892,431.23, crypto amount: 2324.04, crypto value: 892,431.36, total value: 1,784,862.59
+in case of all in crypto amount 3,460.3, crypto value: 1,328,755.2
+
+236  day 2,360,000 added, 2018-08-31T09:00:00: crypto price 377.0
+rebalance: fiat value 889,297.15, crypto amount: 2358.88, crypto value: 889,297.76, total value: 1,778,594.91
+in case of all in crypto amount 3,486.83, crypto value: 1,314,534.91
+
+237  day 2,370,000 added, 2018-09-01T09:00:00: crypto price 376.0
+rebalance: fiat value 893,118.01, crypto amount: 2375.31, crypto value: 893,116.56, total value: 1,786,234.57
+in case of all in crypto amount 3,513.43, crypto value: 1,321,049.68
+
+238  day 2,380,000 added, 2018-09-02T09:00:00: crypto price 386.0
+rebalance: fiat value 909,993.84, crypto amount: 2358, crypto value: 910,188.0, total value: 1,820,181.84
+in case of all in crypto amount 3,539.34, crypto value: 1,366,185.24
+
+239  day 2,390,000 added, 2018-09-03T09:00:00: crypto price 380.0
+rebalance: fiat value 908,016.92, crypto amount: 2389.52, crypto value: 908,017.6, total value: 1,816,034.52
+in case of all in crypto amount 3,565.66, crypto value: 1,354,950.8
+
+240  day 2,400,000 added, 2018-09-04T09:00:00: crypto price 374.0
+rebalance: fiat value 905,848.7, crypto amount: 2422.06, crypto value: 905,850.44, total value: 1,811,699.14
+in case of all in crypto amount 3,592.4, crypto value: 1,343,557.6
+
+241  day 2,410,000 added, 2018-09-05T09:00:00: crypto price 372.0
+rebalance: fiat value 908,427.51, crypto amount: 2442.01, crypto value: 908,427.72, total value: 1,816,855.23
+in case of all in crypto amount 3,619.28, crypto value: 1,346,372.16
+
+242  day 2,420,000 added, 2018-09-06T09:00:00: crypto price 321.0
+rebalance: fiat value 851,156.36, crypto amount: 2651.58, crypto value: 851,157.18, total value: 1,702,313.54
+in case of all in crypto amount 3,650.43, crypto value: 1,171,788.03
+
+243  day 2,430,000 added, 2018-09-07T09:00:00: crypto price 348.0
+rebalance: fiat value 891,953.1, crypto amount: 2563, crypto value: 891,924.0, total value: 1,783,877.1
+in case of all in crypto amount 3,679.17, crypto value: 1,280,351.16
+
+244  day 2,440,000 added, 2018-09-08T09:00:00: crypto price 332.0
+rebalance: fiat value 876,434.55, crypto amount: 2639.86, crypto value: 876,433.52, total value: 1,752,868.07
+in case of all in crypto amount 3,709.29, crypto value: 1,231,484.28
+
+245  day 2,450,000 added, 2018-09-09T09:00:00: crypto price 322.0
+rebalance: fiat value 868,234.73, crypto amount: 2696.38, crypto value: 868,234.36, total value: 1,736,469.09
+in case of all in crypto amount 3,740.35, crypto value: 1,204,392.7
+
+246  day 2,460,000 added, 2018-09-10T09:00:00: crypto price 320.0
+rebalance: fiat value 870,538.17, crypto amount: 2720.43, crypto value: 870,537.6, total value: 1,741,075.77
+in case of all in crypto amount 3,771.6, crypto value: 1,206,912.0
+
+247  day 2,470,000 added, 2018-09-11T09:00:00: crypto price 310.0
+rebalance: fiat value 861,935.73, crypto amount: 2780.44, crypto value: 861,936.4, total value: 1,723,872.13
+in case of all in crypto amount 3,803.86, crypto value: 1,179,196.6
+
+248  day 2,480,000 added, 2018-09-12T09:00:00: crypto price 302.0
+rebalance: fiat value 855,814.31, crypto amount: 2833.82, crypto value: 855,813.64, total value: 1,711,627.95
+in case of all in crypto amount 3,836.97, crypto value: 1,158,764.94
+
+249  day 2,490,000 added, 2018-09-13T09:00:00: crypto price 307.0
+nothing to rebalance
+
+250  day 2,500,000 added, 2018-09-14T09:00:00: crypto price 316.0
+rebalance: fiat value 885,650.71, crypto amount: 2803, crypto value: 885,748.0, total value: 1,771,398.71
+in case of all in crypto amount 3,901.19, crypto value: 1,232,776.04
+
+251  day 2,510,000 added, 2018-09-15T09:00:00: crypto price 314.0
+rebalance: fiat value 887,896.36, crypto amount: 2827.7, crypto value: 887,897.8, total value: 1,775,794.16
+in case of all in crypto amount 3,933.04, crypto value: 1,234,974.56
+
+252  day 2,520,000 added, 2018-09-16T09:00:00: crypto price 317.0
+nothing to rebalance
+
+253  day 2,530,000 added, 2018-09-17T09:00:00: crypto price 318.0
+nothing to rebalance
+
+254  day 2,540,000 added, 2018-09-18T09:00:00: crypto price 311.0
+rebalance: fiat value 898,655.53, crypto amount: 2889.57, crypto value: 898,656.27, total value: 1,797,311.8
+in case of all in crypto amount 4,028.19, crypto value: 1,252,767.09
+
+255  day 2,550,000 added, 2018-09-19T09:00:00: crypto price 365.0
+rebalance: fiat value 981,674.29, crypto amount: 2690, crypto value: 981,850.0, total value: 1,963,524.29
+in case of all in crypto amount 4,055.59, crypto value: 1,480,290.35
+
+256  day 2,560,000 added, 2018-09-20T09:00:00: crypto price 371.0
+nothing to rebalance
+
+257  day 2,570,000 added, 2018-09-21T09:00:00: crypto price 506.0
+rebalance: fiat value 1,181,407.14, crypto amount: 2335, crypto value: 1,181,510.0, total value: 2,362,917.14
+in case of all in crypto amount 4,102.3, crypto value: 2,075,763.8
+
+258  day 2,580,000 added, 2018-09-22T09:00:00: crypto price 629.0
+rebalance: fiat value 1,330,061.07, crypto amount: 2115, crypto value: 1,330,335.0, total value: 2,660,396.07
+in case of all in crypto amount 4,118.2, crypto value: 2,590,347.8
+
+259  day 2,590,000 added, 2018-09-23T09:00:00: crypto price 641.0
+rebalance: fiat value 1,347,888.03, crypto amount: 2103, crypto value: 1,348,023.0, total value: 2,695,911.03
+in case of all in crypto amount 4,133.8, crypto value: 2,649,765.8
+
+260  day 2,600,000 added, 2018-09-24T09:00:00: crypto price 640.0
+nothing to rebalance
+
+261  day 2,610,000 added, 2018-09-25T09:00:00: crypto price 555.0
+rebalance: fiat value 1,267,526.51, crypto amount: 2283.83, crypto value: 1,267,525.65, total value: 2,535,052.16
+in case of all in crypto amount 4,167.45, crypto value: 2,312,934.75
+
+262  day 2,620,000 added, 2018-09-26T09:00:00: crypto price 595.0
+rebalance: fiat value 1,318,202.68, crypto amount: 2215, crypto value: 1,317,925.0, total value: 2,636,127.68
+in case of all in crypto amount 4,184.26, crypto value: 2,489,634.7
+
+263  day 2,630,000 added, 2018-09-27T09:00:00: crypto price 578.0
+rebalance: fiat value 1,304,236.34, crypto amount: 2256.46, crypto value: 1,304,233.88, total value: 2,608,470.22
+in case of all in crypto amount 4,201.56, crypto value: 2,428,501.68
+
+264  day 2,640,000 added, 2018-09-28T09:00:00: crypto price 605.0
+rebalance: fiat value 1,339,697.32, crypto amount: 2214, crypto value: 1,339,470.0, total value: 2,679,167.32
+in case of all in crypto amount 4,218.09, crypto value: 2,551,944.45
+
+265  day 2,650,000 added, 2018-09-29T09:00:00: crypto price 603.0
+rebalance: fiat value 1,342,369.66, crypto amount: 2226.15, crypto value: 1,342,368.45, total value: 2,684,738.11
+in case of all in crypto amount 4,234.67, crypto value: 2,553,506.01
+
+266  day 2,660,000 added, 2018-09-30T09:00:00: crypto price 634.0
+rebalance: fiat value 1,381,874.38, crypto amount: 2180, crypto value: 1,382,120.0, total value: 2,763,994.38
+in case of all in crypto amount 4,250.44, crypto value: 2,694,778.96
+
+267  day 2,670,000 added, 2018-10-01T09:00:00: crypto price 651.0
+rebalance: fiat value 1,405,527.19, crypto amount: 2159, crypto value: 1,405,509.0, total value: 2,811,036.19
+in case of all in crypto amount 4,265.8, crypto value: 2,777,035.8
+
+268  day 2,680,000 added, 2018-10-02T09:00:00: crypto price 644.0
+rebalance: fiat value 1,402,961.6, crypto amount: 2178.51, crypto value: 1,402,960.44, total value: 2,805,922.04
+in case of all in crypto amount 4,281.33, crypto value: 2,757,176.52
+
+269  day 2,690,000 added, 2018-10-03T09:00:00: crypto price 585.0
+rebalance: fiat value 1,343,694.98, crypto amount: 2296.91, crypto value: 1,343,692.35, total value: 2,687,387.33
+in case of all in crypto amount 4,298.42, crypto value: 2,514,575.7
+
+270  day 2,700,000 added, 2018-10-04T09:00:00: crypto price 600.0
+rebalance: fiat value 1,365,920.49, crypto amount: 2277, crypto value: 1,366,200.0, total value: 2,732,120.49
+in case of all in crypto amount 4,315.09, crypto value: 2,589,054.0
+
+271  day 2,710,000 added, 2018-10-05T09:00:00: crypto price 600.0
+nothing to rebalance
+
+272  day 2,720,000 added, 2018-10-06T09:00:00: crypto price 589.0
+rebalance: fiat value 1,363,536.75, crypto amount: 2315.0, crypto value: 1,363,535.0, total value: 2,727,071.75
+in case of all in crypto amount 4,348.74, crypto value: 2,561,407.86
+
+273  day 2,730,000 added, 2018-10-07T09:00:00: crypto price 554.0
+rebalance: fiat value 1,328,023.37, crypto amount: 2397.15, crypto value: 1,328,021.1, total value: 2,656,044.47
+in case of all in crypto amount 4,366.79, crypto value: 2,419,201.66
+
+274  day 2,740,000 added, 2018-10-08T09:00:00: crypto price 547.0
+rebalance: fiat value 1,324,632.21, crypto amount: 2421.63, crypto value: 1,324,631.61, total value: 2,649,263.82
+in case of all in crypto amount 4,385.07, crypto value: 2,398,633.29
+
+275  day 2,750,000 added, 2018-10-09T09:00:00: crypto price 557.0
+rebalance: fiat value 1,341,740.06, crypto amount: 2409, crypto value: 1,341,813.0, total value: 2,683,553.06
+in case of all in crypto amount 4,403.02, crypto value: 2,452,482.14
+
+276  day 2,760,000 added, 2018-10-10T09:00:00: crypto price 546.0
+rebalance: fiat value 1,333,527.03, crypto amount: 2442.36, crypto value: 1,333,528.56, total value: 2,667,055.59
+in case of all in crypto amount 4,421.34, crypto value: 2,414,051.64
+
+277  day 2,770,000 added, 2018-10-11T09:00:00: crypto price 525.0
+rebalance: fiat value 1,312,883.01, crypto amount: 2500.73, crypto value: 1,312,883.25, total value: 2,625,766.26
+in case of all in crypto amount 4,440.39, crypto value: 2,331,204.75
+
+278  day 2,780,000 added, 2018-10-12T09:00:00: crypto price 441.0
+rebalance: fiat value 1,212,852.47, crypto amount: 2750.23, crypto value: 1,212,851.43, total value: 2,425,703.9
+in case of all in crypto amount 4,463.07, crypto value: 1,968,213.87
+
+279  day 2,790,000 added, 2018-10-13T09:00:00: crypto price 479.0
+rebalance: fiat value 1,270,106.32, crypto amount: 2652, crypto value: 1,270,308.0, total value: 2,540,414.32
+in case of all in crypto amount 4,483.95, crypto value: 2,147,812.05
+
+280  day 2,800,000 added, 2018-10-14T09:00:00: crypto price 479.0
+nothing to rebalance
+
+281  day 2,810,000 added, 2018-10-15T09:00:00: crypto price 464.0
+rebalance: fiat value 1,260,317.16, crypto amount: 2716.2, crypto value: 1,260,316.8, total value: 2,520,633.96
+in case of all in crypto amount 4,526.38, crypto value: 2,100,240.32
+
+282  day 2,820,000 added, 2018-10-16T09:00:00: crypto price 505.0
+rebalance: fiat value 1,320,999.08, crypto amount: 2616, crypto value: 1,321,080.0, total value: 2,642,079.08
+in case of all in crypto amount 4,546.18, crypto value: 2,295,820.9
+
+283  day 2,830,000 added, 2018-10-17T09:00:00: crypto price 526.0
+rebalance: fiat value 1,353,507.54, crypto amount: 2573, crypto value: 1,353,398.0, total value: 2,706,905.54
+in case of all in crypto amount 4,565.19, crypto value: 2,401,289.94
+
+284  day 2,840,000 added, 2018-10-18T09:00:00: crypto price 526.0
+nothing to rebalance
+
+285  day 2,850,000 added, 2018-10-19T09:00:00: crypto price 519.0
+rebalance: fiat value 1,354,447.27, crypto amount: 2609.72, crypto value: 1,354,444.68, total value: 2,708,891.95
+in case of all in crypto amount 4,603.47, crypto value: 2,389,200.93
+
+286  day 2,860,000 added, 2018-10-20T09:00:00: crypto price 515.0
+rebalance: fiat value 1,354,226.53, crypto amount: 2629.57, crypto value: 1,354,228.55, total value: 2,708,455.08
+in case of all in crypto amount 4,622.89, crypto value: 2,380,788.35
+
+287  day 2,870,000 added, 2018-10-21T09:00:00: crypto price 518.0
+nothing to rebalance
+
+288  day 2,880,000 added, 2018-10-22T09:00:00: crypto price 516.0
+rebalance: fiat value 1,365,542.33, crypto amount: 2646.4, crypto value: 1,365,542.4, total value: 2,731,084.73
+in case of all in crypto amount 4,661.58, crypto value: 2,405,375.28
+
+289  day 2,890,000 added, 2018-10-23T09:00:00: crypto price 512.0
+rebalance: fiat value 1,365,249.56, crypto amount: 2666.5, crypto value: 1,365,248.0, total value: 2,730,497.56
+in case of all in crypto amount 4,681.11, crypto value: 2,396,728.32
+
+290  day 2,900,000 added, 2018-10-24T09:00:00: crypto price 520.0
+nothing to rebalance
+
+291  day 2,910,000 added, 2018-10-25T09:00:00: crypto price 514.0
+rebalance: fiat value 1,377,915.28, crypto amount: 2680.77, crypto value: 1,377,915.78, total value: 2,755,831.06
+in case of all in crypto amount 4,719.8, crypto value: 2,425,977.2
+
+292  day 2,920,000 added, 2018-10-26T09:00:00: crypto price 516.0
+nothing to rebalance
+
+293  day 2,930,000 added, 2018-10-27T09:00:00: crypto price 517.0
+nothing to rebalance
+
+294  day 2,940,000 added, 2018-10-28T09:00:00: crypto price 515.0
+rebalance: fiat value 1,394,255.92, crypto amount: 2707.29, crypto value: 1,394,254.35, total value: 2,788,510.27
+in case of all in crypto amount 4,777.94, crypto value: 2,460,639.1
+
+295  day 2,950,000 added, 2018-10-29T09:00:00: crypto price 518.0
+nothing to rebalance
+
+296  day 2,960,000 added, 2018-10-30T09:00:00: crypto price 497.0
+rebalance: fiat value 1,379,889.52, crypto amount: 2776.44, crypto value: 1,379,890.68, total value: 2,759,780.2
+in case of all in crypto amount 4,817.37, crypto value: 2,394,232.89
+
+297  day 2,970,000 added, 2018-10-31T09:00:00: crypto price 504.0
+nothing to rebalance
+
+298  day 2,980,000 added, 2018-11-01T09:00:00: crypto price 509.0
+nothing to rebalance
+
+299  day 2,990,000 added, 2018-11-02T09:00:00: crypto price 516.0
+rebalance: fiat value 1,421,266.28, crypto amount: 2754, crypto value: 1,421,064.0, total value: 2,842,330.28
+in case of all in crypto amount 4,876.24, crypto value: 2,516,139.84
+
+300  day 3,000,000 added, 2018-11-03T09:00:00: crypto price 517.0
+nothing to rebalance
+
+301  day 3,010,000 added, 2018-11-04T09:00:00: crypto price 512.0
+rebalance: fiat value 1,425,657.14, crypto amount: 2784.49, crypto value: 1,425,658.88, total value: 2,851,316.02
+in case of all in crypto amount 4,915.11, crypto value: 2,516,536.32
+
+302  day 3,020,000 added, 2018-11-05T09:00:00: crypto price 523.0
+rebalance: fiat value 1,445,972.7, crypto amount: 2765, crypto value: 1,446,095.0, total value: 2,892,067.7
+in case of all in crypto amount 4,934.23, crypto value: 2,580,602.29
+
+303  day 3,030,000 added, 2018-11-06T09:00:00: crypto price 557.0
+rebalance: fiat value 1,498,038.85, crypto amount: 2689, crypto value: 1,497,773.0, total value: 2,995,811.85
+in case of all in crypto amount 4,952.18, crypto value: 2,758,364.26
+
+304  day 3,040,000 added, 2018-11-07T09:00:00: crypto price 614.0
+rebalance: fiat value 1,579,542.42, crypto amount: 2573, crypto value: 1,579,822.0, total value: 3,159,364.42
+in case of all in crypto amount 4,968.47, crypto value: 3,050,640.58
+
+305  day 3,050,000 added, 2018-11-08T09:00:00: crypto price 599.0
+rebalance: fiat value 1,565,384.71, crypto amount: 2613.33, crypto value: 1,565,384.67, total value: 3,130,769.38
+in case of all in crypto amount 4,985.16, crypto value: 2,986,110.84
+
+306  day 3,060,000 added, 2018-11-09T09:00:00: crypto price 559.0
+rebalance: fiat value 1,518,118.09, crypto amount: 2715.77, crypto value: 1,518,115.43, total value: 3,036,233.52
+in case of all in crypto amount 5,003.05, crypto value: 2,796,704.95
+
+307  day 3,070,000 added, 2018-11-10T09:00:00: crypto price 569.0
+rebalance: fiat value 1,536,695.61, crypto amount: 2701, crypto value: 1,536,869.0, total value: 3,073,564.61
+in case of all in crypto amount 5,020.62, crypto value: 2,856,732.78
+
+308  day 3,080,000 added, 2018-11-11T09:00:00: crypto price 573.0
+nothing to rebalance
+
+309  day 3,090,000 added, 2018-11-12T09:00:00: crypto price 573.0
+nothing to rebalance
+
+310  day 3,100,000 added, 2018-11-13T09:00:00: crypto price 589.0
+rebalance: fiat value 1,578,792.3, crypto amount: 2680, crypto value: 1,578,520.0, total value: 3,157,312.3
+in case of all in crypto amount 5,072.5, crypto value: 2,987,702.5
+
+311  day 3,110,000 added, 2018-11-14T09:00:00: crypto price 581.0
+rebalance: fiat value 1,572,936.15, crypto amount: 2707.29, crypto value: 1,572,935.49, total value: 3,145,871.64
+in case of all in crypto amount 5,089.71, crypto value: 2,957,121.51
+
+312  day 3,120,000 added, 2018-11-15T09:00:00: crypto price 555.0
+rebalance: fiat value 1,542,741.05, crypto amount: 2779.71, crypto value: 1,542,739.05, total value: 3,085,480.1
+in case of all in crypto amount 5,107.73, crypto value: 2,834,790.15
+
+313  day 3,130,000 added, 2018-11-16T09:00:00: crypto price 555.0
+nothing to rebalance
+
+314  day 3,140,000 added, 2018-11-17T09:00:00: crypto price 545.0
+rebalance: fiat value 1,538,841.5, crypto amount: 2823.56, crypto value: 1,538,840.2, total value: 3,077,681.7
+in case of all in crypto amount 5,144.1, crypto value: 2,803,534.5
+
+315  day 3,150,000 added, 2018-11-18T09:00:00: crypto price 564.0
+rebalance: fiat value 1,570,664.67, crypto amount: 2785, crypto value: 1,570,740.0, total value: 3,141,404.67
+in case of all in crypto amount 5,161.83, crypto value: 2,911,272.12
+
+316  day 3,160,000 added, 2018-11-19T09:00:00: crypto price 585.0
+rebalance: fiat value 1,604,944.84, crypto amount: 2744, crypto value: 1,605,240.0, total value: 3,210,184.84
+in case of all in crypto amount 5,178.92, crypto value: 3,029,668.2
+
+317  day 3,170,000 added, 2018-11-20T09:00:00: crypto price 552.0
+rebalance: fiat value 1,564,816.42, crypto amount: 2834.81, crypto value: 1,564,815.12, total value: 3,129,631.54
+in case of all in crypto amount 5,197.04, crypto value: 2,868,766.08
+
+318  day 3,180,000 added, 2018-11-21T09:00:00: crypto price 503.0
+rebalance: fiat value 1,500,362.93, crypto amount: 2982.83, crypto value: 1,500,363.49, total value: 3,000,726.42
+in case of all in crypto amount 5,216.92, crypto value: 2,624,110.76
+
+319  day 3,190,000 added, 2018-11-22T09:00:00: crypto price 513.0
+rebalance: fiat value 1,520,277.36, crypto amount: 2964, crypto value: 1,520,532.0, total value: 3,040,809.36
+in case of all in crypto amount 5,236.41, crypto value: 2,686,278.33
+
+320  day 3,200,000 added, 2018-11-23T09:00:00: crypto price 486.0
+rebalance: fiat value 1,485,390.68, crypto amount: 3056.36, crypto value: 1,485,390.96, total value: 2,970,781.64
+in case of all in crypto amount 5,256.99, crypto value: 2,554,897.14
+
+321  day 3,210,000 added, 2018-11-24T09:00:00: crypto price 470.0
+rebalance: fiat value 1,465,939.94, crypto amount: 3119.02, crypto value: 1,465,939.4, total value: 2,931,879.34
+in case of all in crypto amount 5,278.27, crypto value: 2,480,786.9
+
+322  day 3,220,000 added, 2018-11-25T09:00:00: crypto price 434.0
+rebalance: fiat value 1,414,797.31, crypto amount: 3259.9, crypto value: 1,414,796.6, total value: 2,829,593.91
+in case of all in crypto amount 5,301.31, crypto value: 2,300,768.54
+
+323  day 3,230,000 added, 2018-11-26T09:00:00: crypto price 432.0
+rebalance: fiat value 1,416,537.05, crypto amount: 3279.02, crypto value: 1,416,536.64, total value: 2,833,073.69
+in case of all in crypto amount 5,324.46, crypto value: 2,300,166.72
+
+324  day 3,240,000 added, 2018-11-27T09:00:00: crypto price 411.0
+rebalance: fiat value 1,387,107.13, crypto amount: 3374.96, crypto value: 1,387,108.56, total value: 2,774,215.69
+in case of all in crypto amount 5,348.79, crypto value: 2,198,352.69
+
+325  day 3,250,000 added, 2018-11-28T09:00:00: crypto price 412.0
+nothing to rebalance
+
+326  day 3,260,000 added, 2018-11-29T09:00:00: crypto price 441.0
+rebalance: fiat value 1,447,732.25, crypto amount: 3283, crypto value: 1,447,803.0, total value: 2,895,535.25
+in case of all in crypto amount 5,395.74, crypto value: 2,379,521.34
+
+327  day 3,270,000 added, 2018-11-30T09:00:00: crypto price 430.0
+rebalance: fiat value 1,434,711.13, crypto amount: 3336.54, crypto value: 1,434,712.2, total value: 2,869,423.33
+in case of all in crypto amount 5,419.0, crypto value: 2,330,170.0
+
+328  day 3,280,000 added, 2018-12-01T09:00:00: crypto price 411.0
+rebalance: fiat value 1,408,014.54, crypto amount: 3425.83, crypto value: 1,408,016.13, total value: 2,816,030.67
+in case of all in crypto amount 5,443.33, crypto value: 2,237,208.63
+
+329  day 3,290,000 added, 2018-12-02T09:00:00: crypto price 419.0
+rebalance: fiat value 1,426,718.65, crypto amount: 3405, crypto value: 1,426,695.0, total value: 2,853,413.65
+in case of all in crypto amount 5,467.2, crypto value: 2,290,756.8
+
+330  day 3,300,000 added, 2018-12-03T09:00:00: crypto price 417.0
+rebalance: fiat value 1,428,301.83, crypto amount: 3425.18, crypto value: 1,428,300.06, total value: 2,856,601.89
+in case of all in crypto amount 5,491.18, crypto value: 2,289,822.06
+
+331  day 3,310,000 added, 2018-12-04T09:00:00: crypto price 395.0
+rebalance: fiat value 1,395,623.96, crypto amount: 3533.23, crypto value: 1,395,625.85, total value: 2,791,249.81
+in case of all in crypto amount 5,516.5, crypto value: 2,179,017.5
+
+332  day 3,320,000 added, 2018-12-05T09:00:00: crypto price 398.0
+nothing to rebalance
+
+333  day 3,330,000 added, 2018-12-06T09:00:00: crypto price 384.0
+rebalance: fiat value 1,386,192.14, crypto amount: 3609.88, crypto value: 1,386,193.92, total value: 2,772,386.06
+in case of all in crypto amount 5,567.67, crypto value: 2,137,985.28
+
+334  day 3,340,000 added, 2018-12-07T09:00:00: crypto price 350.0
+rebalance: fiat value 1,329,825.07, crypto amount: 3799.5, crypto value: 1,329,825.0, total value: 2,659,650.07
+in case of all in crypto amount 5,596.24, crypto value: 1,958,684.0
+
+335  day 3,350,000 added, 2018-12-08T09:00:00: crypto price 342.0
+rebalance: fiat value 1,319,627.03, crypto amount: 3858.56, crypto value: 1,319,627.52, total value: 2,639,254.55
+in case of all in crypto amount 5,625.48, crypto value: 1,923,914.16
+
+336  day 3,360,000 added, 2018-12-09T09:00:00: crypto price 344.0
+nothing to rebalance
+
+337  day 3,370,000 added, 2018-12-10T09:00:00: crypto price 350.0
+nothing to rebalance
+
+338  day 3,380,000 added, 2018-12-11T09:00:00: crypto price 339.0
+rebalance: fiat value 1,328,839.44, crypto amount: 3919.88, crypto value: 1,328,839.32, total value: 2,657,678.76
+in case of all in crypto amount 5,712.62, crypto value: 1,936,578.18
+
+339  day 3,390,000 added, 2018-12-12T09:00:00: crypto price 338.0
+rebalance: fiat value 1,331,879.44, crypto amount: 3940.47, crypto value: 1,331,878.86, total value: 2,663,758.3
+in case of all in crypto amount 5,742.21, crypto value: 1,940,866.98
+
+340  day 3,400,000 added, 2018-12-13T09:00:00: crypto price 344.0
+rebalance: fiat value 1,348,700.56, crypto amount: 3921, crypto value: 1,348,824.0, total value: 2,697,524.56
+in case of all in crypto amount 5,771.28, crypto value: 1,985,320.32
+
+341  day 3,410,000 added, 2018-12-14T09:00:00: crypto price 337.0
+rebalance: fiat value 1,340,038.78, crypto amount: 3976.38, crypto value: 1,340,040.06, total value: 2,680,078.84
+in case of all in crypto amount 5,800.95, crypto value: 1,954,920.15
+
+342  day 3,420,000 added, 2018-12-15T09:00:00: crypto price 325.0
+rebalance: fiat value 1,321,181.14, crypto amount: 4065.17, crypto value: 1,321,180.25, total value: 2,642,361.39
+in case of all in crypto amount 5,831.72, crypto value: 1,895,309.0
+
+343  day 3,430,000 added, 2018-12-16T09:00:00: crypto price 320.0
+rebalance: fiat value 1,316,017.77, crypto amount: 4112.56, crypto value: 1,316,019.2, total value: 2,632,036.97
+in case of all in crypto amount 5,862.97, crypto value: 1,876,150.4
+
+344  day 3,440,000 added, 2018-12-17T09:00:00: crypto price 323.0
+nothing to rebalance
+
+345  day 3,450,000 added, 2018-12-18T09:00:00: crypto price 365.0
+rebalance: fiat value 1,418,551.09, crypto amount: 3886, crypto value: 1,418,390.0, total value: 2,836,941.09
+in case of all in crypto amount 5,921.33, crypto value: 2,161,285.45
+
+346  day 3,460,000 added, 2018-12-19T09:00:00: crypto price 391.0
+rebalance: fiat value 1,473,988.54, crypto amount: 3770, crypto value: 1,474,070.0, total value: 2,948,058.54
+in case of all in crypto amount 5,946.91, crypto value: 2,325,241.81
+
+347  day 3,470,000 added, 2018-12-20T09:00:00: crypto price 389.0
+rebalance: fiat value 1,475,259.27, crypto amount: 3792.44, crypto value: 1,475,259.16, total value: 2,950,518.43
+in case of all in crypto amount 5,972.62, crypto value: 2,323,349.18
+
+348  day 3,480,000 added, 2018-12-21T09:00:00: crypto price 418.0
+rebalance: fiat value 1,535,249.59, crypto amount: 3673, crypto value: 1,535,314.0, total value: 3,070,563.59
+in case of all in crypto amount 5,996.54, crypto value: 2,506,553.72
+
+349  day 3,490,000 added, 2018-12-22T09:00:00: crypto price 400.0
+rebalance: fiat value 1,507,224.79, crypto amount: 3768.06, crypto value: 1,507,224.0, total value: 3,014,448.79
+in case of all in crypto amount 6,021.54, crypto value: 2,408,616.0
+
+350  day 3,500,000 added, 2018-12-23T09:00:00: crypto price 403.0
+nothing to rebalance
+
+351  day 3,510,000 added, 2018-12-24T09:00:00: crypto price 413.0
+rebalance: fiat value 1,541,716.78, crypto amount: 3733, crypto value: 1,541,729.0, total value: 3,083,445.78
+in case of all in crypto amount 6,070.56, crypto value: 2,507,141.28
+
+352  day 3,520,000 added, 2018-12-25T09:00:00: crypto price 454.0
+rebalance: fiat value 1,623,249.39, crypto amount: 3575, crypto value: 1,623,050.0, total value: 3,246,299.39
+in case of all in crypto amount 6,092.59, crypto value: 2,766,035.86
+
+353  day 3,530,000 added, 2018-12-26T09:00:00: crypto price 425.0
+rebalance: fiat value 1,576,312.2, crypto amount: 3708.97, crypto value: 1,576,312.25, total value: 3,152,624.45
+in case of all in crypto amount 6,116.12, crypto value: 2,599,351.0
+
+354  day 3,540,000 added, 2018-12-27T09:00:00: crypto price 423.0
+rebalance: fiat value 1,577,603.25, crypto amount: 3729.56, crypto value: 1,577,603.88, total value: 3,155,207.13
+in case of all in crypto amount 6,139.76, crypto value: 2,597,118.48
+
+355  day 3,550,000 added, 2018-12-28T09:00:00: crypto price 386.0
+rebalance: fiat value 1,513,606.7, crypto amount: 3921.26, crypto value: 1,513,606.36, total value: 3,027,213.06
+in case of all in crypto amount 6,165.67, crypto value: 2,379,948.62
+
+356  day 3,560,000 added, 2018-12-29T09:00:00: crypto price 419.0
+rebalance: fiat value 1,583,307.32, crypto amount: 3779, crypto value: 1,583,401.0, total value: 3,166,708.32
+in case of all in crypto amount 6,189.54, crypto value: 2,593,417.26
+
+357  day 3,570,000 added, 2018-12-30T09:00:00: crypto price 403.0
+rebalance: fiat value 1,558,122.16, crypto amount: 3866.31, crypto value: 1,558,122.93, total value: 3,116,245.09
+in case of all in crypto amount 6,214.35, crypto value: 2,504,383.05
+
+358  day 3,580,000 added, 2018-12-31T09:00:00: crypto price 412.0
+rebalance: fiat value 1,580,520.94, crypto amount: 3836, crypto value: 1,580,432.0, total value: 3,160,952.94
+in case of all in crypto amount 6,238.62, crypto value: 2,570,311.44
+
+359  day 3,590,000 added, 2019-01-01T09:00:00: crypto price 396.0
+rebalance: fiat value 1,554,788.47, crypto amount: 3926.23, crypto value: 1,554,787.08, total value: 3,109,575.55
+in case of all in crypto amount 6,263.87, crypto value: 2,480,492.52
+
+360  day 3,600,000 added, 2019-01-02T09:00:00: crypto price 407.0
+rebalance: fiat value 1,581,382.04, crypto amount: 3885, crypto value: 1,581,195.0, total value: 3,162,577.04
+in case of all in crypto amount 6,288.44, crypto value: 2,559,395.08
+
+361  day 3,610,000 added, 2019-01-03T09:00:00: crypto price 415.0
+rebalance: fiat value 1,601,828.52, crypto amount: 3860, crypto value: 1,601,900.0, total value: 3,203,728.52
+in case of all in crypto amount 6,312.54, crypto value: 2,619,704.1
+
+362  day 3,620,000 added, 2019-01-04T09:00:00: crypto price 401.0
+rebalance: fiat value 1,579,844.26, crypto amount: 3939.76, crypto value: 1,579,843.76, total value: 3,159,688.02
+in case of all in crypto amount 6,337.48, crypto value: 2,541,329.48
+
+363  day 3,630,000 added, 2019-01-05T09:00:00: crypto price 401.0
+nothing to rebalance
+
+364  day 3,640,000 added, 2019-01-06T09:00:00: crypto price 398.0
+rebalance: fiat value 1,583,934.37, crypto amount: 3979.73, crypto value: 1,583,932.54, total value: 3,167,866.91
+in case of all in crypto amount 6,387.55, crypto value: 2,542,244.9
+
+365  day 3,650,000 added, 2019-01-07T09:00:00: crypto price 408.0
+rebalance: fiat value 1,608,832.1, crypto amount: 3943, crypto value: 1,608,744.0, total value: 3,217,576.1
+in case of all in crypto amount 6,412.06, crypto value: 2,616,120.48
+
+366  day 3,660,000 added, 2019-01-08T09:00:00: crypto price 407.0
+nothing to rebalance
+
+367  day 3,670,000 added, 2019-01-09T09:00:00: crypto price 408.0
+rebalance: fiat value 1,618,788.05, crypto amount: 3967.62, crypto value: 1,618,788.96, total value: 3,237,577.01
+in case of all in crypto amount 6,461.14, crypto value: 2,636,145.12
+
+368  day 3,680,000 added, 2019-01-10T09:00:00: crypto price 411.0
+nothing to rebalance
+
+369  day 3,690,000 added, 2019-01-11T09:00:00: crypto price 370.0
+rebalance: fiat value 1,553,403.72, crypto amount: 4198.39, crypto value: 1,553,404.3, total value: 3,106,808.02
+in case of all in crypto amount 6,512.5, crypto value: 2,409,625.0
+
+370  day 3,700,000 added, 2019-01-12T09:00:00: crypto price 373.0
+nothing to rebalance
+
+371  day 3,710,000 added, 2019-01-13T09:00:00: crypto price 371.0
+rebalance: fiat value 1,565,503.21, crypto amount: 4219.69, crypto value: 1,565,504.99, total value: 3,131,008.2
+in case of all in crypto amount 6,566.26, crypto value: 2,436,082.46
+
+372  day 3,720,000 added, 2019-01-14T09:00:00: crypto price 355.0
+rebalance: fiat value 1,536,746.58, crypto amount: 4328.86, crypto value: 1,536,745.3, total value: 3,073,491.88
+in case of all in crypto amount 6,594.43, crypto value: 2,341,022.65
+
+373  day 3,730,000 added, 2019-01-15T09:00:00: crypto price 373.0
+rebalance: fiat value 1,580,705.68, crypto amount: 4238, crypto value: 1,580,774.0, total value: 3,161,479.68
+in case of all in crypto amount 6,621.24, crypto value: 2,469,722.52
+
+374  day 3,740,000 added, 2019-01-16T09:00:00: crypto price 366.0
+rebalance: fiat value 1,570,906.84, crypto amount: 4292.1, crypto value: 1,570,908.6, total value: 3,141,815.44
+in case of all in crypto amount 6,648.56, crypto value: 2,433,372.96
+
+375  day 3,750,000 added, 2019-01-17T09:00:00: crypto price 368.0
+nothing to rebalance
+
+376  day 3,760,000 added, 2019-01-18T09:00:00: crypto price 366.0
+rebalance: fiat value 1,580,907.72, crypto amount: 4319.42, crypto value: 1,580,907.72, total value: 3,161,815.44
+in case of all in crypto amount 6,703.05, crypto value: 2,453,316.3
+
+377  day 3,770,000 added, 2019-01-19T09:00:00: crypto price 361.0
+rebalance: fiat value 1,575,109.17, crypto amount: 4363.18, crypto value: 1,575,107.98, total value: 3,150,217.15
+in case of all in crypto amount 6,730.75, crypto value: 2,429,800.75
+
+378  day 3,780,000 added, 2019-01-20T09:00:00: crypto price 366.0
+nothing to rebalance
+
+379  day 3,790,000 added, 2019-01-21T09:00:00: crypto price 356.0
+rebalance: fiat value 1,574,200.63, crypto amount: 4421.91, crypto value: 1,574,199.96, total value: 3,148,400.59
+in case of all in crypto amount 6,786.16, crypto value: 2,415,872.96
+
+380  day 3,800,000 added, 2019-01-22T09:00:00: crypto price 358.0
+nothing to rebalance
+
+381  day 3,810,000 added, 2019-01-23T09:00:00: crypto price 357.0
+nothing to rebalance
+
+382  day 3,820,000 added, 2019-01-24T09:00:00: crypto price 353.0
+rebalance: fiat value 1,582,567.43, crypto amount: 4483.19, crypto value: 1,582,566.07, total value: 3,165,133.5
+in case of all in crypto amount 6,870.43, crypto value: 2,425,261.79
+
+383  day 3,830,000 added, 2019-01-25T09:00:00: crypto price 353.0
+nothing to rebalance
+
+384  day 3,840,000 added, 2019-01-26T09:00:00: crypto price 349.0
+rebalance: fiat value 1,583,600.37, crypto amount: 4537.54, crypto value: 1,583,601.46, total value: 3,167,201.83
+in case of all in crypto amount 6,927.41, crypto value: 2,417,666.09
+
+385  day 3,850,000 added, 2019-01-27T09:00:00: crypto price 348.0
+nothing to rebalance
+
+386  day 3,860,000 added, 2019-01-28T09:00:00: crypto price 341.0
+rebalance: fiat value 1,575,450.75, crypto amount: 4620.09, crypto value: 1,575,450.69, total value: 3,150,901.44
+in case of all in crypto amount 6,985.48, crypto value: 2,382,048.68
+
+387  day 3,870,000 added, 2019-01-29T09:00:00: crypto price 325.0
+rebalance: fiat value 1,543,490.0, crypto amount: 4749.2, crypto value: 1,543,490.0, total value: 3,086,980.0
+in case of all in crypto amount 7,016.25, crypto value: 2,280,281.25
+
+388  day 3,880,000 added, 2019-01-30T09:00:00: crypto price 319.0
+rebalance: fiat value 1,534,242.4, crypto amount: 4809.54, crypto value: 1,534,243.26, total value: 3,068,485.66
+in case of all in crypto amount 7,047.6, crypto value: 2,248,184.4
+
+389  day 3,890,000 added, 2019-01-31T09:00:00: crypto price 354.0
+rebalance: fiat value 1,623,409.78, crypto amount: 4586, crypto value: 1,623,444.0, total value: 3,246,853.78
+in case of all in crypto amount 7,075.85, crypto value: 2,504,850.9
+
+390  day 3,900,000 added, 2019-02-01T09:00:00: crypto price 340.0
+rebalance: fiat value 1,596,324.89, crypto amount: 4695.07, crypto value: 1,596,323.8, total value: 3,192,648.69
+in case of all in crypto amount 7,105.26, crypto value: 2,415,788.4
+
+391  day 3,910,000 added, 2019-02-02T09:00:00: crypto price 338.0
+rebalance: fiat value 1,596,629.28, crypto amount: 4723.76, crypto value: 1,596,630.88, total value: 3,193,260.16
+in case of all in crypto amount 7,134.85, crypto value: 2,411,579.3
+
+392  day 3,920,000 added, 2019-02-03T09:00:00: crypto price 342.0
+nothing to rebalance
+
+393  day 3,930,000 added, 2019-02-04T09:00:00: crypto price 334.0
+rebalance: fiat value 1,597,182.56, crypto amount: 4781.98, crypto value: 1,597,181.32, total value: 3,194,363.88
+in case of all in crypto amount 7,194.03, crypto value: 2,402,806.02
+
+394  day 3,940,000 added, 2019-02-05T09:00:00: crypto price 331.0
+rebalance: fiat value 1,595,008.97, crypto amount: 4818.76, crypto value: 1,595,009.56, total value: 3,190,018.53
+in case of all in crypto amount 7,224.24, crypto value: 2,391,223.44
+
+395  day 3,950,000 added, 2019-02-06T09:00:00: crypto price 331.0
+nothing to rebalance
+
+396  day 3,960,000 added, 2019-02-07T09:00:00: crypto price 322.0
+rebalance: fiat value 1,583,324.85, crypto amount: 4917.16, crypto value: 1,583,325.52, total value: 3,166,650.37
+in case of all in crypto amount 7,285.51, crypto value: 2,345,934.22
+
+397  day 3,970,000 added, 2019-02-08T09:00:00: crypto price 325.0
+nothing to rebalance
+
+398  day 3,980,000 added, 2019-02-09T09:00:00: crypto price 341.0
+rebalance: fiat value 1,640,038.2, crypto amount: 4810, crypto value: 1,640,210.0, total value: 3,280,248.2
+in case of all in crypto amount 7,345.61, crypto value: 2,504,853.01
+
+399  day 3,990,000 added, 2019-02-10T09:00:00: crypto price 340.0
+nothing to rebalance
+
+400  day 4,000,000 added, 2019-02-11T09:00:00: crypto price 339.0
+rebalance: fiat value 1,645,314.1, crypto amount: 4853.43, crypto value: 1,645,312.77, total value: 3,290,626.87
+in case of all in crypto amount 7,404.52, crypto value: 2,510,132.28
+
+401  day 4,010,000 added, 2019-02-12T09:00:00: crypto price 333.0
+rebalance: fiat value 1,635,753.15, crypto amount: 4912.17, crypto value: 1,635,752.61, total value: 3,271,505.76
+in case of all in crypto amount 7,434.55, crypto value: 2,475,705.15
+
+402  day 4,020,000 added, 2019-02-13T09:00:00: crypto price 335.0
+nothing to rebalance
+
+403  day 4,030,000 added, 2019-02-14T09:00:00: crypto price 335.0
+nothing to rebalance
+
+404  day 4,040,000 added, 2019-02-15T09:00:00: crypto price 335.0
+rebalance: fiat value 1,655,665.05, crypto amount: 4942.28, crypto value: 1,655,663.8, total value: 3,311,328.85
+in case of all in crypto amount 7,524.1, crypto value: 2,520,573.5
+
+405  day 4,050,000 added, 2019-02-16T09:00:00: crypto price 333.0
+rebalance: fiat value 1,655,722.14, crypto amount: 4972.14, crypto value: 1,655,722.62, total value: 3,311,444.76
+in case of all in crypto amount 7,554.13, crypto value: 2,515,525.29
+
+406  day 4,060,000 added, 2019-02-17T09:00:00: crypto price 332.0
+nothing to rebalance
+
+407  day 4,070,000 added, 2019-02-18T09:00:00: crypto price 333.0
+rebalance: fiat value 1,665,722.38, crypto amount: 5002.17, crypto value: 1,665,722.61, total value: 3,331,444.99
+in case of all in crypto amount 7,614.28, crypto value: 2,535,555.24
+
+408  day 4,080,000 added, 2019-02-19T09:00:00: crypto price 349.0
+rebalance: fiat value 1,710,739.86, crypto amount: 4902, crypto value: 1,710,798.0, total value: 3,421,537.86
+in case of all in crypto amount 7,642.93, crypto value: 2,667,382.57
+
+409  day 4,090,000 added, 2019-02-20T09:00:00: crypto price 351.0
+nothing to rebalance
+
+410  day 4,100,000 added, 2019-02-21T09:00:00: crypto price 360.0
+rebalance: fiat value 1,747,729.93, crypto amount: 4855, crypto value: 1,747,800.0, total value: 3,495,529.93
+in case of all in crypto amount 7,699.2, crypto value: 2,771,712.0
+
+411  day 4,110,000 added, 2019-02-22T09:00:00: crypto price 351.0
+rebalance: fiat value 1,730,917.47, crypto amount: 4931.39, crypto value: 1,730,917.89, total value: 3,461,835.36
+in case of all in crypto amount 7,727.69, crypto value: 2,712,419.19
+
+412  day 4,120,000 added, 2019-02-23T09:00:00: crypto price 352.0
+nothing to rebalance
+
+413  day 4,130,000 added, 2019-02-24T09:00:00: crypto price 361.0
+rebalance: fiat value 1,765,574.63, crypto amount: 4891, crypto value: 1,765,651.0, total value: 3,531,225.63
+in case of all in crypto amount 7,783.8, crypto value: 2,809,951.8
+
+414  day 4,140,000 added, 2019-02-25T09:00:00: crypto price 333.0
+rebalance: fiat value 1,702,138.82, crypto amount: 5111.53, crypto value: 1,702,139.49, total value: 3,404,278.31
+in case of all in crypto amount 7,813.83, crypto value: 2,602,005.39
+
+415  day 4,150,000 added, 2019-02-26T09:00:00: crypto price 363.0
+rebalance: fiat value 1,783,812.1, crypto amount: 4914, crypto value: 1,783,782.0, total value: 3,567,594.1
+in case of all in crypto amount 7,841.38, crypto value: 2,846,420.94
+
+416  day 4,160,000 added, 2019-02-27T09:00:00: crypto price 352.0
+rebalance: fiat value 1,761,770.05, crypto amount: 5005.03, crypto value: 1,761,770.56, total value: 3,523,540.61
+in case of all in crypto amount 7,869.79, crypto value: 2,770,166.08
+
+417  day 4,170,000 added, 2019-02-28T09:00:00: crypto price 347.0
+rebalance: fiat value 1,754,257.73, crypto amount: 5055.5, crypto value: 1,754,258.5, total value: 3,508,516.23
+in case of all in crypto amount 7,898.61, crypto value: 2,740,817.67
+
+418  day 4,180,000 added, 2019-03-01T09:00:00: crypto price 349.0
+nothing to rebalance
+
+419  day 4,190,000 added, 2019-03-02T09:00:00: crypto price 351.0
+nothing to rebalance
+
+420  day 4,200,000 added, 2019-03-03T09:00:00: crypto price 349.0
+rebalance: fiat value 1,774,313.62, crypto amount: 5083.99, crypto value: 1,774,312.51, total value: 3,548,626.13
+in case of all in crypto amount 7,984.4, crypto value: 2,786,555.6
+
+421  day 4,210,000 added, 2019-03-04T09:00:00: crypto price 346.0
+rebalance: fiat value 1,771,687.08, crypto amount: 5120.48, crypto value: 1,771,686.08, total value: 3,543,373.16
+in case of all in crypto amount 8,013.3, crypto value: 2,772,601.8
+
+422  day 4,220,000 added, 2019-03-05T09:00:00: crypto price 338.0
+rebalance: fiat value 1,756,204.66, crypto amount: 5195.87, crypto value: 1,756,204.06, total value: 3,512,408.72
+in case of all in crypto amount 8,042.89, crypto value: 2,718,496.82
+
+423  day 4,230,000 added, 2019-03-06T09:00:00: crypto price 347.0
+rebalance: fiat value 1,784,585.77, crypto amount: 5143, crypto value: 1,784,621.0, total value: 3,569,206.77
+in case of all in crypto amount 8,071.71, crypto value: 2,800,883.37
+
+424  day 4,240,000 added, 2019-03-07T09:00:00: crypto price 348.0
+nothing to rebalance
+
+425  day 4,250,000 added, 2019-03-08T09:00:00: crypto price 347.0
+rebalance: fiat value 1,794,603.38, crypto amount: 5171.77, crypto value: 1,794,604.19, total value: 3,589,207.57
+in case of all in crypto amount 8,129.27, crypto value: 2,820,856.69
+
+426  day 4,260,000 added, 2019-03-09T09:00:00: crypto price 343.0
+rebalance: fiat value 1,789,260.25, crypto amount: 5216.5, crypto value: 1,789,259.5, total value: 3,578,519.75
+in case of all in crypto amount 8,158.42, crypto value: 2,798,338.06
+
+427  day 4,270,000 added, 2019-03-10T09:00:00: crypto price 346.0
+nothing to rebalance
+
+428  day 4,280,000 added, 2019-03-11T09:00:00: crypto price 346.0
+nothing to rebalance
+
+429  day 4,290,000 added, 2019-03-12T09:00:00: crypto price 347.0
+nothing to rebalance
+
+430  day 4,300,000 added, 2019-03-13T09:00:00: crypto price 345.0
+rebalance: fiat value 1,814,476.37, crypto amount: 5259.35, crypto value: 1,814,475.75, total value: 3,628,952.12
+in case of all in crypto amount 8,274.03, crypto value: 2,854,540.35
+
+431  day 4,310,000 added, 2019-03-14T09:00:00: crypto price 349.0
+nothing to rebalance
+
+432  day 4,320,000 added, 2019-03-15T09:00:00: crypto price 348.0
+nothing to rebalance
+
+433  day 4,330,000 added, 2019-03-16T09:00:00: crypto price 350.0
+nothing to rebalance
+
+434  day 4,340,000 added, 2019-03-17T09:00:00: crypto price 353.0
+nothing to rebalance
+
+435  day 4,350,000 added, 2019-03-18T09:00:00: crypto price 350.0
+rebalance: fiat value 1,852,624.44, crypto amount: 5293.21, crypto value: 1,852,623.5, total value: 3,705,247.94
+in case of all in crypto amount 8,416.89, crypto value: 2,945,911.5
+
+436  day 4,360,000 added, 2019-03-19T09:00:00: crypto price 351.0
+nothing to rebalance
+
+437  day 4,370,000 added, 2019-03-20T09:00:00: crypto price 353.0
+nothing to rebalance
+
+438  day 4,380,000 added, 2019-03-21T09:00:00: crypto price 356.0
+nothing to rebalance
+
+439  day 4,390,000 added, 2019-03-22T09:00:00: crypto price 349.0
+rebalance: fiat value 1,869,977.37, crypto amount: 5358.1, crypto value: 1,869,976.9, total value: 3,739,954.27
+in case of all in crypto amount 8,530.45, crypto value: 2,977,127.05
+
+440  day 4,400,000 added, 2019-03-23T09:00:00: crypto price 349.0
+nothing to rebalance
+
+441  day 4,410,000 added, 2019-03-24T09:00:00: crypto price 351.0
+nothing to rebalance
+
+442  day 4,420,000 added, 2019-03-25T09:00:00: crypto price 349.0
+rebalance: fiat value 1,884,977.14, crypto amount: 5401.08, crypto value: 1,884,976.92, total value: 3,769,954.06
+in case of all in crypto amount 8,616.24, crypto value: 3,007,067.76
+
+443  day 4,430,000 added, 2019-03-26T09:00:00: crypto price 344.0
+rebalance: fiat value 1,876,474.33, crypto amount: 5454.87, crypto value: 1,876,475.28, total value: 3,752,949.61
+in case of all in crypto amount 8,645.31, crypto value: 2,973,986.64
+
+444  day 4,440,000 added, 2019-03-27T09:00:00: crypto price 345.0
+nothing to rebalance
+
+445  day 4,450,000 added, 2019-03-28T09:00:00: crypto price 348.0
+nothing to rebalance
+
+446  day 4,460,000 added, 2019-03-29T09:00:00: crypto price 346.0
+rebalance: fiat value 1,896,929.67, crypto amount: 5482.46, crypto value: 1,896,931.16, total value: 3,793,860.83
+in case of all in crypto amount 8,731.94, crypto value: 3,021,251.24
+
+447  day 4,470,000 added, 2019-03-30T09:00:00: crypto price 347.0
+nothing to rebalance
+
+448  day 4,480,000 added, 2019-03-31T09:00:00: crypto price 351.0
+nothing to rebalance
+
+449  day 4,490,000 added, 2019-04-01T09:00:00: crypto price 350.0
+nothing to rebalance
+
+450  day 4,500,000 added, 2019-04-02T09:00:00: crypto price 355.0
+nothing to rebalance
+
+451  day 4,510,000 added, 2019-04-03T09:00:00: crypto price 390.0
+rebalance: fiat value 2,042,544.53, crypto amount: 5237, crypto value: 2,042,430.0, total value: 4,084,974.53
+in case of all in crypto amount 8,871.63, crypto value: 3,459,935.7
+
+452  day 4,520,000 added, 2019-04-04T09:00:00: crypto price 388.0
+rebalance: fiat value 2,042,250.26, crypto amount: 5263.53, crypto value: 2,042,249.64, total value: 4,084,499.9
+in case of all in crypto amount 8,897.4, crypto value: 3,452,191.2
+
+453  day 4,530,000 added, 2019-04-05T09:00:00: crypto price 376.0
+rebalance: fiat value 2,015,668.77, crypto amount: 5360.82, crypto value: 2,015,668.32, total value: 4,031,337.09
+in case of all in crypto amount 8,924.0, crypto value: 3,355,424.0
+
+454  day 4,540,000 added, 2019-04-06T09:00:00: crypto price 412.0
+rebalance: fiat value 2,117,163.3, crypto amount: 5139, crypto value: 2,117,268.0, total value: 4,234,431.3
+in case of all in crypto amount 8,948.27, crypto value: 3,686,687.24
+
+455  day 4,550,000 added, 2019-04-07T09:00:00: crypto price 405.0
+rebalance: fiat value 2,104,229.15, crypto amount: 5195.63, crypto value: 2,104,230.15, total value: 4,208,459.3
+in case of all in crypto amount 8,972.96, crypto value: 3,634,048.8
+
+456  day 4,560,000 added, 2019-04-08T09:00:00: crypto price 413.0
+rebalance: fiat value 2,130,012.17, crypto amount: 5157, crypto value: 2,129,841.0, total value: 4,259,853.17
+in case of all in crypto amount 8,997.17, crypto value: 3,715,831.21
+
+457  day 4,570,000 added, 2019-04-09T09:00:00: crypto price 414.0
+nothing to rebalance
+
+458  day 4,580,000 added, 2019-04-10T09:00:00: crypto price 406.0
+rebalance: fiat value 2,121,877.09, crypto amount: 5226.3, crypto value: 2,121,877.8, total value: 4,243,754.89
+in case of all in crypto amount 9,045.95, crypto value: 3,672,655.7
+
+459  day 4,590,000 added, 2019-04-11T09:00:00: crypto price 411.0
+nothing to rebalance
+
+460  day 4,600,000 added, 2019-04-12T09:00:00: crypto price 382.0
+rebalance: fiat value 2,069,161.85, crypto amount: 5416.65, crypto value: 2,069,160.3, total value: 4,138,322.15
+in case of all in crypto amount 9,096.46, crypto value: 3,474,847.72
+
+461  day 4,610,000 added, 2019-04-13T09:00:00: crypto price 377.0
+rebalance: fiat value 2,060,619.45, crypto amount: 5465.83, crypto value: 2,060,617.91, total value: 4,121,237.36
+in case of all in crypto amount 9,122.99, crypto value: 3,439,367.23
+
+462  day 4,620,000 added, 2019-04-14T09:00:00: crypto price 378.0
+nothing to rebalance
+
+463  day 4,630,000 added, 2019-04-15T09:00:00: crypto price 381.0
+nothing to rebalance
+
+464  day 4,640,000 added, 2019-04-16T09:00:00: crypto price 371.0
+rebalance: fiat value 2,059,221.19, crypto amount: 5550.46, crypto value: 2,059,220.66, total value: 4,118,441.85
+in case of all in crypto amount 9,202.65, crypto value: 3,414,183.15
+
+465  day 4,650,000 added, 2019-04-17T09:00:00: crypto price 376.0
+nothing to rebalance
+
+466  day 4,660,000 added, 2019-04-18T09:00:00: crypto price 386.0
+rebalance: fiat value 2,110,849.38, crypto amount: 5469, crypto value: 2,111,034.0, total value: 4,221,883.38
+in case of all in crypto amount 9,255.16, crypto value: 3,572,491.76
+
+467  day 4,670,000 added, 2019-04-19T09:00:00: crypto price 386.0
+nothing to rebalance
+
+468  day 4,680,000 added, 2019-04-20T09:00:00: crypto price 381.0
+rebalance: fiat value 2,107,269.19, crypto amount: 5530.89, crypto value: 2,107,269.09, total value: 4,214,538.28
+in case of all in crypto amount 9,307.32, crypto value: 3,546,088.92
+
+469  day 4,690,000 added, 2019-04-21T09:00:00: crypto price 379.0
+rebalance: fiat value 2,106,738.25, crypto amount: 5558.68, crypto value: 2,106,739.72, total value: 4,213,477.97
+in case of all in crypto amount 9,333.71, crypto value: 3,537,476.09
+
+470  day 4,700,000 added, 2019-04-22T09:00:00: crypto price 373.0
+rebalance: fiat value 2,095,062.95, crypto amount: 5616.79, crypto value: 2,095,062.67, total value: 4,190,125.62
+in case of all in crypto amount 9,360.52, crypto value: 3,491,473.96
+
+471  day 4,710,000 added, 2019-04-23T09:00:00: crypto price 376.0
+nothing to rebalance
+
+472  day 4,720,000 added, 2019-04-24T09:00:00: crypto price 373.0
+nothing to rebalance
+
+473  day 4,730,000 added, 2019-04-25T09:00:00: crypto price 354.0
+rebalance: fiat value 2,056,703.3, crypto amount: 5809.9, crypto value: 2,056,704.6, total value: 4,113,407.9
+in case of all in crypto amount 9,442.18, crypto value: 3,342,531.72
+
+474  day 4,740,000 added, 2019-04-26T09:00:00: crypto price 341.0
+rebalance: fiat value 2,023,939.6, crypto amount: 5935.31, crypto value: 2,023,940.71, total value: 4,047,880.31
+in case of all in crypto amount 9,471.51, crypto value: 3,229,784.91
+
+475  day 4,750,000 added, 2019-04-27T09:00:00: crypto price 351.0
+rebalance: fiat value 2,058,616.7, crypto amount: 5865, crypto value: 2,058,615.0, total value: 4,117,231.7
+in case of all in crypto amount 9,500.0, crypto value: 3,334,500.0
+
+476  day 4,760,000 added, 2019-04-28T09:00:00: crypto price 344.0
+rebalance: fiat value 2,043,088.35, crypto amount: 5939.21, crypto value: 2,043,088.24, total value: 4,086,176.59
+in case of all in crypto amount 9,529.07, crypto value: 3,278,000.08
+
+477  day 4,770,000 added, 2019-04-29T09:00:00: crypto price 346.0
+nothing to rebalance
+
+478  day 4,780,000 added, 2019-04-30T09:00:00: crypto price 338.0
+rebalance: fiat value 2,035,270.66, crypto amount: 6021.51, crypto value: 2,035,270.38, total value: 4,070,541.04
+in case of all in crypto amount 9,587.56, crypto value: 3,240,595.28
+
+479  day 4,790,000 added, 2019-05-01T09:00:00: crypto price 354.0
+rebalance: fiat value 2,088,442.6, crypto amount: 5900, crypto value: 2,088,600.0, total value: 4,177,042.6
+in case of all in crypto amount 9,615.81, crypto value: 3,403,996.74
+
+480  day 4,800,000 added, 2019-05-02T09:00:00: crypto price 349.0
+rebalance: fiat value 2,078,771.3, crypto amount: 5956.36, crypto value: 2,078,769.64, total value: 4,157,540.94
+in case of all in crypto amount 9,644.46, crypto value: 3,365,916.54
+
+481  day 4,810,000 added, 2019-05-03T09:00:00: crypto price 349.0
+nothing to rebalance
+
+482  day 4,820,000 added, 2019-05-04T09:00:00: crypto price 353.0
+nothing to rebalance
+
+483  day 4,830,000 added, 2019-05-05T09:00:00: crypto price 349.0
+rebalance: fiat value 2,093,770.47, crypto amount: 5999.34, crypto value: 2,093,769.66, total value: 4,187,540.13
+in case of all in crypto amount 9,730.09, crypto value: 3,395,801.41
+
+484  day 4,840,000 added, 2019-05-06T09:00:00: crypto price 348.0
+nothing to rebalance
+
+485  day 4,850,000 added, 2019-05-07T09:00:00: crypto price 349.0
+nothing to rebalance
+
+486  day 4,860,000 added, 2019-05-08T09:00:00: crypto price 344.0
+rebalance: fiat value 2,093,771.72, crypto amount: 6086.55, crypto value: 2,093,773.2, total value: 4,187,544.92
+in case of all in crypto amount 9,816.55, crypto value: 3,376,893.2
+
+487  day 4,870,000 added, 2019-05-09T09:00:00: crypto price 348.0
+nothing to rebalance
+
+488  day 4,880,000 added, 2019-05-10T09:00:00: crypto price 346.0
+nothing to rebalance
+
+489  day 4,890,000 added, 2019-05-11T09:00:00: crypto price 350.0
+nothing to rebalance
+
+490  day 4,900,000 added, 2019-05-12T09:00:00: crypto price 375.0
+rebalance: fiat value 2,208,113.99, crypto amount: 5888, crypto value: 2,208,000.0, total value: 4,416,113.99
+in case of all in crypto amount 9,929.43, crypto value: 3,723,536.25
+
+491  day 4,910,000 added, 2019-05-13T09:00:00: crypto price 363.0
+rebalance: fiat value 2,177,728.99, crypto amount: 5999.25, crypto value: 2,177,727.75, total value: 4,355,456.74
+in case of all in crypto amount 9,956.98, crypto value: 3,614,383.74
+
+492  day 4,920,000 added, 2019-05-14T09:00:00: crypto price 381.0
+rebalance: fiat value 2,236,721.62, crypto amount: 5871, crypto value: 2,236,851.0, total value: 4,473,572.62
+in case of all in crypto amount 9,983.23, crypto value: 3,803,610.63
+
+493  day 4,930,000 added, 2019-05-15T09:00:00: crypto price 484.0
+rebalance: fiat value 2,544,142.81, crypto amount: 5256, crypto value: 2,543,904.0, total value: 5,088,046.81
+in case of all in crypto amount 10,003.89, crypto value: 4,841,882.76
+
+494  day 4,940,000 added, 2019-05-16T09:00:00: crypto price 538.0
+rebalance: fiat value 2,690,935.4, crypto amount: 5002, crypto value: 2,691,076.0, total value: 5,382,011.4
+in case of all in crypto amount 10,022.48, crypto value: 5,392,094.24
+
+495  day 4,950,000 added, 2019-05-17T09:00:00: crypto price 503.0
+rebalance: fiat value 2,608,470.7, crypto amount: 5185.83, crypto value: 2,608,472.49, total value: 5,216,943.19
+in case of all in crypto amount 10,042.36, crypto value: 5,051,307.08
+
+496  day 4,960,000 added, 2019-05-18T09:00:00: crypto price 468.0
+rebalance: fiat value 2,522,719.57, crypto amount: 5390.43, crypto value: 2,522,721.24, total value: 5,045,440.81
+in case of all in crypto amount 10,063.73, crypto value: 4,709,825.64
+
+497  day 4,970,000 added, 2019-05-19T09:00:00: crypto price 451.0
+rebalance: fiat value 2,481,901.75, crypto amount: 5503.11, crypto value: 2,481,902.61, total value: 4,963,804.36
+in case of all in crypto amount 10,085.9, crypto value: 4,548,740.9
+
+498  day 4,980,000 added, 2019-05-20T09:00:00: crypto price 497.0
+rebalance: fiat value 2,613,473.71, crypto amount: 5258, crypto value: 2,613,226.0, total value: 5,226,699.71
+in case of all in crypto amount 10,106.02, crypto value: 5,022,691.94
+
+499  day 4,990,000 added, 2019-05-21T09:00:00: crypto price 480.0
+rebalance: fiat value 2,573,656.86, crypto amount: 5361.79, crypto value: 2,573,659.2, total value: 5,147,316.06
+in case of all in crypto amount 10,126.85, crypto value: 4,860,888.0
+
+500  day 5,000,000 added, 2019-05-22T09:00:00: crypto price 475.0
+rebalance: fiat value 2,565,253.56, crypto amount: 5400.53, crypto value: 2,565,251.75, total value: 5,130,505.31
+in case of all in crypto amount 10,147.9, crypto value: 4,820,252.5
+
+501  day 5,010,000 added, 2019-05-23T09:00:00: crypto price 453.0
+rebalance: fiat value 2,510,846.82, crypto amount: 5542.71, crypto value: 2,510,847.63, total value: 5,021,694.45
+in case of all in crypto amount 10,169.98, crypto value: 4,607,000.94
+
+502  day 5,020,000 added, 2019-05-24T09:00:00: crypto price 457.0
+nothing to rebalance
+
+503  day 5,030,000 added, 2019-05-25T09:00:00: crypto price 460.0
+nothing to rebalance
+
+504  day 5,040,000 added, 2019-05-26T09:00:00: crypto price 460.0
+nothing to rebalance
+
+505  day 5,050,000 added, 2019-05-27T09:00:00: crypto price 484.0
+rebalance: fiat value 2,616,759.23, crypto amount: 5407, crypto value: 2,616,988.0, total value: 5,233,747.23
+in case of all in crypto amount 10,256.0, crypto value: 4,963,904.0
+
+506  day 5,060,000 added, 2019-05-28T09:00:00: crypto price 513.0
+rebalance: fiat value 2,700,275.12, crypto amount: 5264, crypto value: 2,700,432.0, total value: 5,400,707.12
+in case of all in crypto amount 10,275.49, crypto value: 5,271,326.37
+
+507  day 5,070,000 added, 2019-05-29T09:00:00: crypto price 531.0
+rebalance: fiat value 2,752,729.56, crypto amount: 5184, crypto value: 2,752,704.0, total value: 5,505,433.56
+in case of all in crypto amount 10,294.32, crypto value: 5,466,283.92
+
+508  day 5,080,000 added, 2019-05-30T09:00:00: crypto price 529.0
+nothing to rebalance
+
+509  day 5,090,000 added, 2019-05-31T09:00:00: crypto price 511.0
+rebalance: fiat value 2,710,876.78, crypto amount: 5305.04, crypto value: 2,710,875.44, total value: 5,421,752.22
+in case of all in crypto amount 10,332.79, crypto value: 5,280,055.69
+
+510  day 5,100,000 added, 2019-06-01T09:00:00: crypto price 531.0
+rebalance: fiat value 2,768,926.51, crypto amount: 5215, crypto value: 2,769,165.0, total value: 5,538,091.51
+in case of all in crypto amount 10,351.62, crypto value: 5,496,710.22
+
+511  day 5,110,000 added, 2019-06-02T09:00:00: crypto price 520.0
+rebalance: fiat value 2,745,363.26, crypto amount: 5279.54, crypto value: 2,745,360.8, total value: 5,490,724.06
+in case of all in crypto amount 10,370.85, crypto value: 5,392,842.0
+
+512  day 5,120,000 added, 2019-06-03T09:00:00: crypto price 534.0
+rebalance: fiat value 2,787,318.81, crypto amount: 5220, crypto value: 2,787,480.0, total value: 5,574,798.81
+in case of all in crypto amount 10,389.58, crypto value: 5,548,035.72
+
+513  day 5,130,000 added, 2019-06-04T09:00:00: crypto price 512.0
+rebalance: fiat value 2,734,979.4, crypto amount: 5341.76, crypto value: 2,734,981.12, total value: 5,469,960.52
+in case of all in crypto amount 10,409.11, crypto value: 5,329,464.32
+
+514  day 5,140,000 added, 2019-06-05T09:00:00: crypto price 491.0
+rebalance: fiat value 2,683,891.78, crypto amount: 5466.17, crypto value: 2,683,889.47, total value: 5,367,781.25
+in case of all in crypto amount 10,429.48, crypto value: 5,120,874.68
+
+515  day 5,150,000 added, 2019-06-06T09:00:00: crypto price 493.0
+nothing to rebalance
+
+516  day 5,160,000 added, 2019-06-07T09:00:00: crypto price 511.0
+rebalance: fiat value 2,748,552.33, crypto amount: 5379, crypto value: 2,748,669.0, total value: 5,497,221.33
+in case of all in crypto amount 10,469.33, crypto value: 5,349,827.63
+
+517  day 5,170,000 added, 2019-06-08T09:00:00: crypto price 512.0
+nothing to rebalance
+
+518  day 5,180,000 added, 2019-06-09T09:00:00: crypto price 503.0
+rebalance: fiat value 2,737,094.66, crypto amount: 5441.54, crypto value: 2,737,094.62, total value: 5,474,189.28
+in case of all in crypto amount 10,508.74, crypto value: 5,285,896.22
+
+519  day 5,190,000 added, 2019-06-10T09:00:00: crypto price 477.0
+rebalance: fiat value 2,671,354.62, crypto amount: 5600.32, crypto value: 2,671,352.64, total value: 5,342,707.26
+in case of all in crypto amount 10,529.7, crypto value: 5,022,666.9
+
+520  day 5,200,000 added, 2019-06-11T09:00:00: crypto price 488.0
+rebalance: fiat value 2,707,155.39, crypto amount: 5547, crypto value: 2,706,936.0, total value: 5,414,091.39
+in case of all in crypto amount 10,550.19, crypto value: 5,148,492.72
+
+521  day 5,210,000 added, 2019-06-12T09:00:00: crypto price 477.0
+rebalance: fiat value 2,681,537.19, crypto amount: 5621.67, crypto value: 2,681,536.59, total value: 5,363,073.78
+in case of all in crypto amount 10,571.15, crypto value: 5,042,438.55
+
+522  day 5,220,000 added, 2019-06-13T09:00:00: crypto price 484.0
+rebalance: fiat value 2,706,212.74, crypto amount: 5591, crypto value: 2,706,044.0, total value: 5,412,256.74
+in case of all in crypto amount 10,591.81, crypto value: 5,126,436.04
+
+523  day 5,230,000 added, 2019-06-14T09:00:00: crypto price 483.0
+nothing to rebalance
+
+524  day 5,240,000 added, 2019-06-15T09:00:00: crypto price 486.0
+nothing to rebalance
+
+525  day 5,250,000 added, 2019-06-16T09:00:00: crypto price 488.0
+nothing to rebalance
+
+526  day 5,260,000 added, 2019-06-17T09:00:00: crypto price 511.0
+rebalance: fiat value 2,801,606.87, crypto amount: 5483, crypto value: 2,801,813.0, total value: 5,603,419.87
+in case of all in crypto amount 10,673.15, crypto value: 5,453,979.65
+
+527  day 5,270,000 added, 2019-06-18T09:00:00: crypto price 531.0
+rebalance: fiat value 2,861,539.93, crypto amount: 5389, crypto value: 2,861,559.0, total value: 5,723,098.93
+in case of all in crypto amount 10,691.98, crypto value: 5,677,441.38
+
+528  day 5,280,000 added, 2019-06-19T09:00:00: crypto price 512.0
+rebalance: fiat value 2,815,353.96, crypto amount: 5498.74, crypto value: 2,815,354.88, total value: 5,630,708.84
+in case of all in crypto amount 10,711.51, crypto value: 5,484,293.12
+
+529  day 5,290,000 added, 2019-06-20T09:00:00: crypto price 518.0
+nothing to rebalance
+
+530  day 5,300,000 added, 2019-06-21T09:00:00: crypto price 512.0
+nothing to rebalance
+
+531  day 5,310,000 added, 2019-06-22T09:00:00: crypto price 524.0
+rebalance: fiat value 2,863,346.86, crypto amount: 5464, crypto value: 2,863,136.0, total value: 5,726,482.86
+in case of all in crypto amount 10,769.43, crypto value: 5,643,181.32
+
+532  day 5,320,000 added, 2019-06-23T09:00:00: crypto price 551.0
+rebalance: fiat value 2,942,005.43, crypto amount: 5339, crypto value: 2,941,789.0, total value: 5,883,794.43
+in case of all in crypto amount 10,787.58, crypto value: 5,943,956.58
+
+533  day 5,330,000 added, 2019-06-24T09:00:00: crypto price 547.0
+rebalance: fiat value 2,936,219.21, crypto amount: 5367.86, crypto value: 2,936,219.42, total value: 5,872,438.63
+in case of all in crypto amount 10,805.86, crypto value: 5,910,805.42
+
+534  day 5,340,000 added, 2019-06-25T09:00:00: crypto price 551.0
+nothing to rebalance
+
+535  day 5,350,000 added, 2019-06-26T09:00:00: crypto price 553.0
+nothing to rebalance
+
+536  day 5,360,000 added, 2019-06-27T09:00:00: crypto price 566.0
+rebalance: fiat value 3,002,213.98, crypto amount: 5304, crypto value: 3,002,064.0, total value: 6,004,277.98
+in case of all in crypto amount 10,859.76, crypto value: 6,146,624.16
+
+537  day 5,370,000 added, 2019-06-28T09:00:00: crypto price 508.0
+rebalance: fiat value 2,853,322.99, crypto amount: 5616.78, crypto value: 2,853,324.24, total value: 5,706,647.23
+in case of all in crypto amount 10,879.45, crypto value: 5,526,760.6
+
+538  day 5,380,000 added, 2019-06-29T09:00:00: crypto price 525.0
+rebalance: fiat value 2,906,066.24, crypto amount: 5535, crypto value: 2,905,875.0, total value: 5,811,941.24
+in case of all in crypto amount 10,898.5, crypto value: 5,721,712.5
+
+539  day 5,390,000 added, 2019-06-30T09:00:00: crypto price 522.0
+nothing to rebalance
+
+540  day 5,400,000 added, 2019-07-01T09:00:00: crypto price 494.0
+rebalance: fiat value 2,830,178.12, crypto amount: 5729.11, crypto value: 2,830,180.34, total value: 5,660,358.46
+in case of all in crypto amount 10,937.9, crypto value: 5,403,322.6
+
+541  day 5,410,000 added, 2019-07-02T09:00:00: crypto price 500.0
+nothing to rebalance
+
+542  day 5,420,000 added, 2019-07-03T09:00:00: crypto price 486.0
+rebalance: fiat value 2,817,262.79, crypto amount: 5796.84, crypto value: 2,817,264.24, total value: 5,634,527.03
+in case of all in crypto amount 10,978.48, crypto value: 5,335,541.28
+
+543  day 5,430,000 added, 2019-07-04T09:00:00: crypto price 490.0
+nothing to rebalance
+
+544  day 5,440,000 added, 2019-07-05T09:00:00: crypto price 469.0
+rebalance: fiat value 2,777,990.37, crypto amount: 5923.22, crypto value: 2,777,990.18, total value: 5,555,980.55
+in case of all in crypto amount 11,020.21, crypto value: 5,168,478.49
+
+545  day 5,450,000 added, 2019-07-06T09:00:00: crypto price 460.0
+rebalance: fiat value 2,756,335.79, crypto amount: 5992.03, crypto value: 2,756,333.8, total value: 5,512,669.59
+in case of all in crypto amount 11,041.95, crypto value: 5,079,297.0
+
+546  day 5,460,000 added, 2019-07-07T09:00:00: crypto price 471.0
+rebalance: fiat value 2,794,290.96, crypto amount: 5933, crypto value: 2,794,443.0, total value: 5,588,733.96
+in case of all in crypto amount 11,063.18, crypto value: 5,210,757.78
+
+547  day 5,470,000 added, 2019-07-08T09:00:00: crypto price 474.0
+nothing to rebalance
+
+548  day 5,480,000 added, 2019-07-09T09:00:00: crypto price 479.0
+nothing to rebalance
+
+549  day 5,490,000 added, 2019-07-10T09:00:00: crypto price 468.0
+rebalance: fiat value 2,800,467.48, crypto amount: 5983.9, crypto value: 2,800,465.2, total value: 5,600,932.68
+in case of all in crypto amount 11,126.53, crypto value: 5,207,216.04
+
+550  day 5,500,000 added, 2019-07-11T09:00:00: crypto price 436.0
+rebalance: fiat value 2,709,723.94, crypto amount: 6214.96, crypto value: 2,709,722.56, total value: 5,419,446.5
+in case of all in crypto amount 11,149.47, crypto value: 4,861,168.92
+
+551  day 5,510,000 added, 2019-07-12T09:00:00: crypto price 399.0
+rebalance: fiat value 2,599,746.49, crypto amount: 6515.66, crypto value: 2,599,748.34, total value: 5,199,494.83
+in case of all in crypto amount 11,174.53, crypto value: 4,458,637.47
+
+552  day 5,520,000 added, 2019-07-13T09:00:00: crypto price 415.0
+rebalance: fiat value 2,656,872.69, crypto amount: 6402, crypto value: 2,656,830.0, total value: 5,313,702.69
+in case of all in crypto amount 11,198.63, crypto value: 4,647,431.45
+
+553  day 5,530,000 added, 2019-07-14T09:00:00: crypto price 405.0
+rebalance: fiat value 2,629,841.35, crypto amount: 6493.44, crypto value: 2,629,843.2, total value: 5,259,684.55
+in case of all in crypto amount 11,223.32, crypto value: 4,545,444.6
+
+554  day 5,540,000 added, 2019-07-15T09:00:00: crypto price 372.0
+rebalance: fiat value 2,527,700.51, crypto amount: 6794.89, crypto value: 2,527,699.08, total value: 5,055,399.59
+in case of all in crypto amount 11,250.2, crypto value: 4,185,074.4
+
+555  day 5,550,000 added, 2019-07-16T09:00:00: crypto price 381.0
+rebalance: fiat value 2,563,276.8, crypto amount: 6728, crypto value: 2,563,368.0, total value: 5,126,644.8
+in case of all in crypto amount 11,276.45, crypto value: 4,296,327.45
+
+556  day 5,560,000 added, 2019-07-17T09:00:00: crypto price 359.0
+rebalance: fiat value 2,494,314.4, crypto amount: 6947.95, crypto value: 2,494,314.05, total value: 4,988,628.45
+in case of all in crypto amount 11,304.31, crypto value: 4,058,247.29
+
+557  day 5,570,000 added, 2019-07-18T09:00:00: crypto price 374.0
+rebalance: fiat value 2,551,423.85, crypto amount: 6822, crypto value: 2,551,428.0, total value: 5,102,851.85
+in case of all in crypto amount 11,331.05, crypto value: 4,237,812.7
+
+558  day 5,580,000 added, 2019-07-19T09:00:00: crypto price 382.0
+rebalance: fiat value 2,583,713.92, crypto amount: 6764, crypto value: 2,583,848.0, total value: 5,167,561.92
+in case of all in crypto amount 11,357.23, crypto value: 4,338,461.86
+
+559  day 5,590,000 added, 2019-07-20T09:00:00: crypto price 381.0
+nothing to rebalance
+
+560  day 5,600,000 added, 2019-07-21T09:00:00: crypto price 396.0
+rebalance: fiat value 2,641,128.96, crypto amount: 6670, crypto value: 2,641,320.0, total value: 5,282,448.96
+in case of all in crypto amount 11,408.73, crypto value: 4,517,857.08
+
+561  day 5,610,000 added, 2019-07-22T09:00:00: crypto price 392.0
+rebalance: fiat value 2,632,884.48, crypto amount: 6716.54, crypto value: 2,632,883.68, total value: 5,265,768.16
+in case of all in crypto amount 11,434.24, crypto value: 4,482,222.08
+
+562  day 5,620,000 added, 2019-07-23T09:00:00: crypto price 383.0
+rebalance: fiat value 2,607,659.65, crypto amount: 6808.51, crypto value: 2,607,659.33, total value: 5,215,318.98
+in case of all in crypto amount 11,460.35, crypto value: 4,389,314.05
+
+563  day 5,630,000 added, 2019-07-24T09:00:00: crypto price 370.0
+rebalance: fiat value 2,568,404.18, crypto amount: 6941.63, crypto value: 2,568,403.1, total value: 5,136,807.28
+in case of all in crypto amount 11,487.38, crypto value: 4,250,330.6
+
+564  day 5,640,000 added, 2019-07-25T09:00:00: crypto price 375.0
+nothing to rebalance
+
+565  day 5,650,000 added, 2019-07-26T09:00:00: crypto price 373.0
+nothing to rebalance
+
+566  day 5,660,000 added, 2019-07-27T09:00:00: crypto price 383.0
+rebalance: fiat value 2,628,524.23, crypto amount: 6863, crypto value: 2,628,529.0, total value: 5,257,053.23
+in case of all in crypto amount 11,566.97, crypto value: 4,430,149.51
+
+567  day 5,670,000 added, 2019-07-28T09:00:00: crypto price 370.0
+rebalance: fiat value 2,588,917.12, crypto amount: 6997.07, crypto value: 2,588,915.9, total value: 5,177,833.02
+in case of all in crypto amount 11,594.0, crypto value: 4,289,780.0
+
+568  day 5,680,000 added, 2019-07-29T09:00:00: crypto price 371.0
+nothing to rebalance
+
+569  day 5,690,000 added, 2019-07-30T09:00:00: crypto price 368.0
+rebalance: fiat value 2,591,919.44, crypto amount: 7043.26, crypto value: 2,591,919.68, total value: 5,183,839.12
+in case of all in crypto amount 11,648.12, crypto value: 4,286,508.16
+
+570  day 5,700,000 added, 2019-07-31T09:00:00: crypto price 376.0
+rebalance: fiat value 2,625,092.6, crypto amount: 6982, crypto value: 2,625,232.0, total value: 5,250,324.6
+in case of all in crypto amount 11,674.72, crypto value: 4,389,694.72
+
+571  day 5,710,000 added, 2019-08-01T09:00:00: crypto price 379.0
+nothing to rebalance
+
+572  day 5,720,000 added, 2019-08-02T09:00:00: crypto price 374.0
+rebalance: fiat value 2,628,180.3, crypto amount: 7027.22, crypto value: 2,628,180.28, total value: 5,256,360.58
+in case of all in crypto amount 11,727.85, crypto value: 4,386,215.9
+
+573  day 5,730,000 added, 2019-08-03T09:00:00: crypto price 371.0
+rebalance: fiat value 2,622,639.46, crypto amount: 7069.11, crypto value: 2,622,639.81, total value: 5,245,279.27
+in case of all in crypto amount 11,754.8, crypto value: 4,361,030.8
+
+574  day 5,740,000 added, 2019-08-04T09:00:00: crypto price 373.0
+nothing to rebalance
+
+575  day 5,750,000 added, 2019-08-05T09:00:00: crypto price 376.0
+nothing to rebalance
+
+576  day 5,760,000 added, 2019-08-06T09:00:00: crypto price 385.0
+rebalance: fiat value 2,687,123.41, crypto amount: 6980, crypto value: 2,687,300.0, total value: 5,374,423.41
+in case of all in crypto amount 11,834.18, crypto value: 4,556,159.3
+
+577  day 5,770,000 added, 2019-08-07T09:00:00: crypto price 374.0
+rebalance: fiat value 2,653,821.7, crypto amount: 7095.78, crypto value: 2,653,821.72, total value: 5,307,643.42
+in case of all in crypto amount 11,860.92, crypto value: 4,435,984.08
+
+578  day 5,780,000 added, 2019-08-08T09:00:00: crypto price 370.0
+rebalance: fiat value 2,644,630.15, crypto amount: 7147.65, crypto value: 2,644,630.5, total value: 5,289,260.65
+in case of all in crypto amount 11,887.95, crypto value: 4,398,541.5
+
+579  day 5,790,000 added, 2019-08-09T09:00:00: crypto price 367.0
+rebalance: fiat value 2,638,908.85, crypto amount: 7190.49, crypto value: 2,638,909.83, total value: 5,277,818.68
+in case of all in crypto amount 11,915.2, crypto value: 4,372,878.4
+
+580  day 5,800,000 added, 2019-08-10T09:00:00: crypto price 356.0
+rebalance: fiat value 2,604,361.64, crypto amount: 7315.62, crypto value: 2,604,360.72, total value: 5,208,722.36
+in case of all in crypto amount 11,943.29, crypto value: 4,251,811.24
+
+581  day 5,810,000 added, 2019-08-11T09:00:00: crypto price 362.0
+rebalance: fiat value 2,631,308.04, crypto amount: 7269, crypto value: 2,631,378.0, total value: 5,262,686.04
+in case of all in crypto amount 11,970.91, crypto value: 4,333,469.42
+
+582  day 5,820,000 added, 2019-08-12T09:00:00: crypto price 364.0
+nothing to rebalance
+
+583  day 5,830,000 added, 2019-08-13T09:00:00: crypto price 361.0
+rebalance: fiat value 2,637,708.52, crypto amount: 7306.67, crypto value: 2,637,707.87, total value: 5,275,416.39
+in case of all in crypto amount 12,026.08, crypto value: 4,341,414.88
+
+584  day 5,840,000 added, 2019-08-14T09:00:00: crypto price 359.0
+nothing to rebalance
+
+585  day 5,850,000 added, 2019-08-15T09:00:00: crypto price 320.0
+rebalance: fiat value 2,497,921.46, crypto amount: 7806.0, crypto value: 2,497,920.0, total value: 4,995,841.46
+in case of all in crypto amount 12,085.19, crypto value: 3,867,260.8
+
+586  day 5,860,000 added, 2019-08-16T09:00:00: crypto price 323.0
+nothing to rebalance
+
+587  day 5,870,000 added, 2019-08-17T09:00:00: crypto price 318.0
+rebalance: fiat value 2,500,114.73, crypto amount: 7862.0, crypto value: 2,500,116.0, total value: 5,000,230.73
+in case of all in crypto amount 12,147.6, crypto value: 3,862,936.8
+
+588  day 5,880,000 added, 2019-08-18T09:00:00: crypto price 322.0
+nothing to rebalance
+
+589  day 5,890,000 added, 2019-08-19T09:00:00: crypto price 343.0
+rebalance: fiat value 2,608,390.37, crypto amount: 7605, crypto value: 2,608,515.0, total value: 5,216,905.37
+in case of all in crypto amount 12,207.81, crypto value: 4,187,278.83
+
+590  day 5,900,000 added, 2019-08-20T09:00:00: crypto price 340.0
+rebalance: fiat value 2,602,045.18, crypto amount: 7653.07, crypto value: 2,602,043.8, total value: 5,204,088.98
+in case of all in crypto amount 12,237.22, crypto value: 4,160,654.8
+
+591  day 5,910,000 added, 2019-08-21T09:00:00: crypto price 331.0
+rebalance: fiat value 2,572,605.67, crypto amount: 7772.22, crypto value: 2,572,604.82, total value: 5,145,210.49
+in case of all in crypto amount 12,267.43, crypto value: 4,060,519.33
+
+592  day 5,920,000 added, 2019-08-22T09:00:00: crypto price 321.0
+rebalance: fiat value 2,538,744.15, crypto amount: 7908.86, crypto value: 2,538,744.06, total value: 5,077,488.21
+in case of all in crypto amount 12,298.58, crypto value: 3,947,844.18
+
+593  day 5,930,000 added, 2019-08-23T09:00:00: crypto price 327.0
+rebalance: fiat value 2,567,470.68, crypto amount: 7852, crypto value: 2,567,604.0, total value: 5,135,074.68
+in case of all in crypto amount 12,329.16, crypto value: 4,031,635.32
+
+594  day 5,940,000 added, 2019-08-24T09:00:00: crypto price 332.0
+rebalance: fiat value 2,592,167.34, crypto amount: 7808, crypto value: 2,592,256.0, total value: 5,184,423.34
+in case of all in crypto amount 12,359.28, crypto value: 4,103,280.96
+
+595  day 5,950,000 added, 2019-08-25T09:00:00: crypto price 328.0
+rebalance: fiat value 2,581,595.67, crypto amount: 7870.72, crypto value: 2,581,596.16, total value: 5,163,191.83
+in case of all in crypto amount 12,389.77, crypto value: 4,063,844.56
+
+596  day 5,960,000 added, 2019-08-26T09:00:00: crypto price 325.0
+rebalance: fiat value 2,574,789.84, crypto amount: 7922.43, crypto value: 2,574,789.75, total value: 5,149,579.59
+in case of all in crypto amount 12,420.54, crypto value: 4,036,675.5
+
+597  day 5,970,000 added, 2019-08-27T09:00:00: crypto price 323.0
+rebalance: fiat value 2,571,867.37, crypto amount: 7962.44, crypto value: 2,571,868.12, total value: 5,143,735.49
+in case of all in crypto amount 12,451.5, crypto value: 4,021,834.5
+
+598  day 5,980,000 added, 2019-08-28T09:00:00: crypto price 324.0
+nothing to rebalance
+
+599  day 5,990,000 added, 2019-08-29T09:00:00: crypto price 310.0
+rebalance: fiat value 2,530,111.88, crypto amount: 8161.65, crypto value: 2,530,111.5, total value: 5,060,223.38
+in case of all in crypto amount 12,514.62, crypto value: 3,879,532.2
+
+600  day 6,000,000 added, 2019-08-30T09:00:00: crypto price 312.0
+nothing to rebalance
+
+601  day 6,010,000 added, 2019-08-31T09:00:00: crypto price 310.0
+nothing to rebalance
+
+602  day 6,020,000 added, 2019-09-01T09:00:00: crypto price 312.0
+nothing to rebalance
+
+603  day 6,030,000 added, 2019-09-02T09:00:00: crypto price 310.0
+rebalance: fiat value 2,550,111.69, crypto amount: 8226.17, crypto value: 2,550,112.7, total value: 5,100,224.39
+in case of all in crypto amount 12,643.24, crypto value: 3,919,404.4
+
+604  day 6,040,000 added, 2019-09-03T09:00:00: crypto price 314.0
+nothing to rebalance
+
+605  day 6,050,000 added, 2019-09-04T09:00:00: crypto price 314.0
+nothing to rebalance
+
+606  day 6,060,000 added, 2019-09-05T09:00:00: crypto price 310.0
+rebalance: fiat value 2,565,112.2, crypto amount: 8274.56, crypto value: 2,565,113.6, total value: 5,130,225.8
+in case of all in crypto amount 12,739.2, crypto value: 3,949,152.0
+
+607  day 6,070,000 added, 2019-09-06T09:00:00: crypto price 307.0
+rebalance: fiat value 2,557,701.06, crypto amount: 8331.27, crypto value: 2,557,699.89, total value: 5,115,400.95
+in case of all in crypto amount 12,771.77, crypto value: 3,920,933.39
+
+608  day 6,080,000 added, 2019-09-07T09:00:00: crypto price 301.0
+rebalance: fiat value 2,537,706.66, crypto amount: 8430.92, crypto value: 2,537,706.92, total value: 5,075,413.58
+in case of all in crypto amount 12,804.99, crypto value: 3,854,301.99
+
+609  day 6,090,000 added, 2019-09-08T09:00:00: crypto price 309.0
+rebalance: fiat value 2,576,430.47, crypto amount: 8338, crypto value: 2,576,442.0, total value: 5,152,872.47
+in case of all in crypto amount 12,837.35, crypto value: 3,966,741.15
+
+610  day 6,100,000 added, 2019-09-09T09:00:00: crypto price 311.0
+nothing to rebalance
+
+611  day 6,110,000 added, 2019-09-10T09:00:00: crypto price 308.0
+rebalance: fiat value 2,582,267.23, crypto amount: 8383.98, crypto value: 2,582,265.84, total value: 5,164,533.07
+in case of all in crypto amount 12,901.97, crypto value: 3,973,806.76
+
+612  day 6,120,000 added, 2019-09-11T09:00:00: crypto price 308.0
+nothing to rebalance
+
+613  day 6,130,000 added, 2019-09-12T09:00:00: crypto price 306.0
+rebalance: fiat value 2,583,882.55, crypto amount: 8444.06, crypto value: 2,583,882.36, total value: 5,167,764.91
+in case of all in crypto amount 12,967.12, crypto value: 3,967,938.72
+
+614  day 6,140,000 added, 2019-09-13T09:00:00: crypto price 304.0
+rebalance: fiat value 2,580,438.39, crypto amount: 8488.28, crypto value: 2,580,437.12, total value: 5,160,875.51
+in case of all in crypto amount 13,000.01, crypto value: 3,952,003.04
+
+615  day 6,150,000 added, 2019-09-14T09:00:00: crypto price 304.0
+nothing to rebalance
+
+616  day 6,160,000 added, 2019-09-15T09:00:00: crypto price 310.0
+rebalance: fiat value 2,615,902.6, crypto amount: 8438, crypto value: 2,615,780.0, total value: 5,231,682.6
+in case of all in crypto amount 13,065.16, crypto value: 4,050,199.6
+
+617  day 6,170,000 added, 2019-09-16T09:00:00: crypto price 307.0
+rebalance: fiat value 2,608,184.3, crypto amount: 8495.71, crypto value: 2,608,182.97, total value: 5,216,367.27
+in case of all in crypto amount 13,097.73, crypto value: 4,021,003.11
+
+618  day 6,180,000 added, 2019-09-17T09:00:00: crypto price 308.0
+nothing to rebalance
+
+619  day 6,190,000 added, 2019-09-18T09:00:00: crypto price 338.0
+rebalance: fiat value 2,749,867.14, crypto amount: 8136, crypto value: 2,749,968.0, total value: 5,499,835.14
+in case of all in crypto amount 13,159.79, crypto value: 4,448,009.02
+
+620  day 6,200,000 added, 2019-09-19T09:00:00: crypto price 371.0
+rebalance: fiat value 2,889,161.57, crypto amount: 7788, crypto value: 2,889,348.0, total value: 5,778,509.57
+in case of all in crypto amount 13,186.74, crypto value: 4,892,280.54
+
+621  day 6,210,000 added, 2019-09-20T09:00:00: crypto price 357.0
+rebalance: fiat value 2,839,738.79, crypto amount: 7954.45, crypto value: 2,839,738.65, total value: 5,679,477.44
+in case of all in crypto amount 13,214.75, crypto value: 4,717,665.75
+
+622  day 6,220,000 added, 2019-09-21T09:00:00: crypto price 348.0
+rebalance: fiat value 2,808,943.7, crypto amount: 8071.68, crypto value: 2,808,944.64, total value: 5,617,888.34
+in case of all in crypto amount 13,243.49, crypto value: 4,608,734.52
+
+623  day 6,230,000 added, 2019-09-22T09:00:00: crypto price 344.0
+rebalance: fiat value 2,797,800.81, crypto amount: 8133.14, crypto value: 2,797,800.16, total value: 5,595,600.97
+in case of all in crypto amount 13,272.56, crypto value: 4,565,760.64
+
+624  day 6,240,000 added, 2019-09-23T09:00:00: crypto price 328.0
+rebalance: fiat value 2,737,735.36, crypto amount: 8346.75, crypto value: 2,737,734.0, total value: 5,475,469.36
+in case of all in crypto amount 13,303.05, crypto value: 4,363,400.4
+
+625  day 6,250,000 added, 2019-09-24T09:00:00: crypto price 319.0
+rebalance: fiat value 2,705,174.31, crypto amount: 8480.17, crypto value: 2,705,174.23, total value: 5,410,348.54
+in case of all in crypto amount 13,334.4, crypto value: 4,253,673.6
+
+626  day 6,260,000 added, 2019-09-25T09:00:00: crypto price 280.0
+rebalance: fiat value 2,544,810.96, crypto amount: 9088.61, crypto value: 2,544,810.8, total value: 5,089,621.76
+in case of all in crypto amount 13,370.11, crypto value: 3,743,630.8
+
+627  day 6,270,000 added, 2019-09-26T09:00:00: crypto price 295.0
+rebalance: fiat value 2,617,975.46, crypto amount: 8874, crypto value: 2,617,830.0, total value: 5,235,805.46
+in case of all in crypto amount 13,404.01, crypto value: 3,954,182.95
+
+628  day 6,280,000 added, 2019-09-27T09:00:00: crypto price 291.0
+rebalance: fiat value 2,605,154.73, crypto amount: 8952.42, crypto value: 2,605,154.22, total value: 5,210,308.95
+in case of all in crypto amount 13,438.37, crypto value: 3,910,565.67
+
+629  day 6,290,000 added, 2019-09-28T09:00:00: crypto price 292.0
+nothing to rebalance
+
+630  day 6,300,000 added, 2019-09-29T09:00:00: crypto price 292.0
+nothing to rebalance
+
+631  day 6,310,000 added, 2019-09-30T09:00:00: crypto price 289.0
+rebalance: fiat value 2,611,202.05, crypto amount: 9035.3, crypto value: 2,611,201.7, total value: 5,222,403.75
+in case of all in crypto amount 13,541.47, crypto value: 3,913,484.83
+
+632  day 6,320,000 added, 2019-10-01T09:00:00: crypto price 308.0
+rebalance: fiat value 2,702,037.23, crypto amount: 8773, crypto value: 2,702,084.0, total value: 5,404,121.23
+in case of all in crypto amount 13,573.94, crypto value: 4,180,773.52
+
+633  day 6,330,000 added, 2019-10-02T09:00:00: crypto price 299.0
+rebalance: fiat value 2,667,582.12, crypto amount: 8921.68, crypto value: 2,667,582.32, total value: 5,335,164.44
+in case of all in crypto amount 13,607.38, crypto value: 4,068,606.62
+
+634  day 6,340,000 added, 2019-10-03T09:00:00: crypto price 304.0
+rebalance: fiat value 2,694,886.42, crypto amount: 8865, crypto value: 2,694,960.0, total value: 5,389,846.42
+in case of all in crypto amount 13,640.27, crypto value: 4,146,642.08
+
+635  day 6,350,000 added, 2019-10-04T09:00:00: crypto price 297.0
+rebalance: fiat value 2,668,895.71, crypto amount: 8986.18, crypto value: 2,668,895.46, total value: 5,337,791.17
+in case of all in crypto amount 13,673.94, crypto value: 4,061,160.18
+
+636  day 6,360,000 added, 2019-10-05T09:00:00: crypto price 302.0
+rebalance: fiat value 2,696,361.03, crypto amount: 8928, crypto value: 2,696,256.0, total value: 5,392,617.03
+in case of all in crypto amount 13,707.05, crypto value: 4,139,529.1
+
+637  day 6,370,000 added, 2019-10-06T09:00:00: crypto price 302.0
+nothing to rebalance
+
+638  day 6,380,000 added, 2019-10-07T09:00:00: crypto price 307.0
+nothing to rebalance
+
+639  day 6,390,000 added, 2019-10-08T09:00:00: crypto price 328.0
+rebalance: fiat value 2,827,372.52, crypto amount: 8620, crypto value: 2,827,360.0, total value: 5,654,732.52
+in case of all in crypto amount 13,803.22, crypto value: 4,527,456.16
+
+640  day 6,400,000 added, 2019-10-09T09:00:00: crypto price 330.0
+nothing to rebalance
+
+641  day 6,410,000 added, 2019-10-10T09:00:00: crypto price 334.0
+rebalance: fiat value 2,863,226.26, crypto amount: 8573, crypto value: 2,863,382.0, total value: 5,726,608.26
+in case of all in crypto amount 13,863.46, crypto value: 4,630,395.64
+
+642  day 6,420,000 added, 2019-10-11T09:00:00: crypto price 322.0
+rebalance: fiat value 2,816,866.13, crypto amount: 8748.03, crypto value: 2,816,865.66, total value: 5,633,731.79
+in case of all in crypto amount 13,894.52, crypto value: 4,474,035.44
+
+643  day 6,430,000 added, 2019-10-12T09:00:00: crypto price 318.0
+rebalance: fiat value 2,804,369.84, crypto amount: 8818.77, crypto value: 2,804,368.86, total value: 5,608,738.7
+in case of all in crypto amount 13,925.97, crypto value: 4,428,458.46
+
+644  day 6,440,000 added, 2019-10-13T09:00:00: crypto price 323.0
+rebalance: fiat value 2,831,416.28, crypto amount: 8766, crypto value: 2,831,418.0, total value: 5,662,834.28
+in case of all in crypto amount 13,956.93, crypto value: 4,508,088.39
+
+645  day 6,450,000 added, 2019-10-14T09:00:00: crypto price 329.0
+rebalance: fiat value 2,862,715.14, crypto amount: 8701, crypto value: 2,862,629.0, total value: 5,725,344.14
+in case of all in crypto amount 13,987.33, crypto value: 4,601,831.57
+
+646  day 6,460,000 added, 2019-10-15T09:00:00: crypto price 352.0
+rebalance: fiat value 2,967,733.57, crypto amount: 8431, crypto value: 2,967,712.0, total value: 5,935,445.57
+in case of all in crypto amount 14,015.74, crypto value: 4,933,540.48
+
+647  day 6,470,000 added, 2019-10-16T09:00:00: crypto price 343.0
+rebalance: fiat value 2,934,783.29, crypto amount: 8556.22, crypto value: 2,934,783.46, total value: 5,869,566.75
+in case of all in crypto amount 14,044.89, crypto value: 4,817,397.27
+
+648  day 6,480,000 added, 2019-10-17T09:00:00: crypto price 338.0
+rebalance: fiat value 2,918,392.82, crypto amount: 8634.3, crypto value: 2,918,393.4, total value: 5,836,786.22
+in case of all in crypto amount 14,074.48, crypto value: 4,757,174.24
+
+649  day 6,490,000 added, 2019-10-18T09:00:00: crypto price 358.0
+rebalance: fiat value 3,009,736.11, crypto amount: 8407, crypto value: 3,009,706.0, total value: 6,019,442.11
+in case of all in crypto amount 14,102.41, crypto value: 5,048,662.78
+
+650  day 6,500,000 added, 2019-10-19T09:00:00: crypto price 349.0
+rebalance: fiat value 2,976,889.56, crypto amount: 8529.77, crypto value: 2,976,889.73, total value: 5,953,779.29
+in case of all in crypto amount 14,131.06, crypto value: 4,931,739.94
+
+651  day 6,510,000 added, 2019-10-20T09:00:00: crypto price 347.0
+nothing to rebalance
+
+652  day 6,520,000 added, 2019-10-21T09:00:00: crypto price 348.0
+nothing to rebalance
+
+653  day 6,530,000 added, 2019-10-22T09:00:00: crypto price 344.0
+rebalance: fiat value 2,970,565.22, crypto amount: 8635.36, crypto value: 2,970,563.84, total value: 5,941,129.06
+in case of all in crypto amount 14,217.69, crypto value: 4,890,885.36
+
+654  day 6,540,000 added, 2019-10-23T09:00:00: crypto price 342.0
+nothing to rebalance
+
+655  day 6,550,000 added, 2019-10-24T09:00:00: crypto price 323.0
+rebalance: fiat value 2,889,893.25, crypto amount: 8947.04, crypto value: 2,889,893.92, total value: 5,779,787.17
+in case of all in crypto amount 14,277.89, crypto value: 4,611,758.47
+
+656  day 6,560,000 added, 2019-10-25T09:00:00: crypto price 325.0
+nothing to rebalance
+
+657  day 6,570,000 added, 2019-10-26T09:00:00: crypto price 347.0
+rebalance: fiat value 3,007,258.07, crypto amount: 8666, crypto value: 3,007,102.0, total value: 6,014,360.07
+in case of all in crypto amount 14,337.48, crypto value: 4,975,105.56
+
+658  day 6,580,000 added, 2019-10-27T09:00:00: crypto price 341.0
+rebalance: fiat value 2,986,182.04, crypto amount: 8757.13, crypto value: 2,986,181.33, total value: 5,972,363.37
+in case of all in crypto amount 14,366.81, crypto value: 4,899,082.21
+
+659  day 6,590,000 added, 2019-10-28T09:00:00: crypto price 344.0
+nothing to rebalance
+
+660  day 6,600,000 added, 2019-10-29T09:00:00: crypto price 343.0
+nothing to rebalance
+
+661  day 6,610,000 added, 2019-10-30T09:00:00: crypto price 349.0
+rebalance: fiat value 3,036,210.2, crypto amount: 8700, crypto value: 3,036,300.0, total value: 6,072,510.2
+in case of all in crypto amount 14,453.68, crypto value: 5,044,334.32
+
+662  day 6,620,000 added, 2019-10-31T09:00:00: crypto price 344.0
+rebalance: fiat value 3,019,505.1, crypto amount: 8777.63, crypto value: 3,019,504.72, total value: 6,039,009.82
+in case of all in crypto amount 14,482.75, crypto value: 4,982,066.0
+
+663  day 6,630,000 added, 2019-11-01T09:00:00: crypto price 345.0
+nothing to rebalance
+
+664  day 6,640,000 added, 2019-11-02T09:00:00: crypto price 342.0
+rebalance: fiat value 3,020,727.28, crypto amount: 8832.54, crypto value: 3,020,728.68, total value: 6,041,455.96
+in case of all in crypto amount 14,540.98, crypto value: 4,973,015.16
+
+665  day 6,650,000 added, 2019-11-03T09:00:00: crypto price 344.0
+nothing to rebalance
+
+666  day 6,660,000 added, 2019-11-04T09:00:00: crypto price 341.0
+nothing to rebalance
+
+667  day 6,670,000 added, 2019-11-05T09:00:00: crypto price 345.0
+nothing to rebalance
+
+668  day 6,680,000 added, 2019-11-06T09:00:00: crypto price 347.0
+nothing to rebalance
+
+669  day 6,690,000 added, 2019-11-07T09:00:00: crypto price 357.0
+rebalance: fiat value 3,111,972.03, crypto amount: 8717, crypto value: 3,111,969.0, total value: 6,223,941.03
+in case of all in crypto amount 14,685.2, crypto value: 5,242,616.4
+
+670  day 6,700,000 added, 2019-11-08T09:00:00: crypto price 338.0
+rebalance: fiat value 3,034,159.02, crypto amount: 8976.8, crypto value: 3,034,158.4, total value: 6,068,317.42
+in case of all in crypto amount 14,714.79, crypto value: 4,973,599.02
+
+671  day 6,710,000 added, 2019-11-09T09:00:00: crypto price 321.0
+rebalance: fiat value 2,962,855.91, crypto amount: 9230.08, crypto value: 2,962,855.68, total value: 5,925,711.59
+in case of all in crypto amount 14,745.94, crypto value: 4,733,446.74
+
+672  day 6,720,000 added, 2019-11-10T09:00:00: crypto price 326.0
+rebalance: fiat value 2,990,930.99, crypto amount: 9175, crypto value: 2,991,050.0, total value: 5,981,980.99
+in case of all in crypto amount 14,776.61, crypto value: 4,817,174.86
+
+673  day 6,730,000 added, 2019-11-11T09:00:00: crypto price 325.0
+nothing to rebalance
+
+674  day 6,740,000 added, 2019-11-12T09:00:00: crypto price 319.0
+rebalance: fiat value 2,968,877.99, crypto amount: 9306.83, crypto value: 2,968,878.77, total value: 5,937,756.76
+in case of all in crypto amount 14,838.73, crypto value: 4,733,554.87
+
+675  day 6,750,000 added, 2019-11-13T09:00:00: crypto price 317.0
+nothing to rebalance
+
+676  day 6,760,000 added, 2019-11-14T09:00:00: crypto price 317.0
+rebalance: fiat value 2,969,571.55, crypto amount: 9367.73, crypto value: 2,969,570.41, total value: 5,939,141.96
+in case of all in crypto amount 14,901.83, crypto value: 4,723,880.11
+
+677  day 6,770,000 added, 2019-11-15T09:00:00: crypto price 312.0
+rebalance: fiat value 2,951,151.65, crypto amount: 9458.82, crypto value: 2,951,151.84, total value: 5,902,303.49
+in case of all in crypto amount 14,933.88, crypto value: 4,659,370.56
+
+678  day 6,780,000 added, 2019-11-16T09:00:00: crypto price 304.0
+rebalance: fiat value 2,918,316.46, crypto amount: 9599.73, crypto value: 2,918,317.92, total value: 5,836,634.38
+in case of all in crypto amount 14,966.77, crypto value: 4,549,898.08
+
+679  day 6,790,000 added, 2019-11-17T09:00:00: crypto price 307.0
+nothing to rebalance
+
+680  day 6,800,000 added, 2019-11-18T09:00:00: crypto price 307.0
+nothing to rebalance
+
+681  day 6,810,000 added, 2019-11-19T09:00:00: crypto price 295.0
+rebalance: fiat value 2,890,118.41, crypto amount: 9797.01, crypto value: 2,890,117.95, total value: 5,780,236.36
+in case of all in crypto amount 15,065.81, crypto value: 4,444,413.95
+
+682  day 6,820,000 added, 2019-11-20T09:00:00: crypto price 297.0
+nothing to rebalance
+
+683  day 6,830,000 added, 2019-11-21T09:00:00: crypto price 294.0
+rebalance: fiat value 2,895,219.67, crypto amount: 9847.69, crypto value: 2,895,220.86, total value: 5,790,440.53
+in case of all in crypto amount 15,133.49, crypto value: 4,449,246.06
+
+684  day 6,840,000 added, 2019-11-22T09:00:00: crypto price 287.0
+rebalance: fiat value 2,865,753.35, crypto amount: 9985.2, crypto value: 2,865,752.4, total value: 5,731,505.75
+in case of all in crypto amount 15,168.33, crypto value: 4,353,310.71
+
+685  day 6,850,000 added, 2019-11-23T09:00:00: crypto price 276.0
+rebalance: fiat value 2,815,834.28, crypto amount: 10202.3, crypto value: 2,815,834.8, total value: 5,631,669.08
+in case of all in crypto amount 15,204.56, crypto value: 4,196,458.56
+
+686  day 6,860,000 added, 2019-11-24T09:00:00: crypto price 277.0
+nothing to rebalance
+
+687  day 6,870,000 added, 2019-11-25T09:00:00: crypto price 262.0
+rebalance: fiat value 2,754,418.44, crypto amount: 10513.05, crypto value: 2,754,419.1, total value: 5,508,837.54
+in case of all in crypto amount 15,278.83, crypto value: 4,003,053.46
+
+688  day 6,880,000 added, 2019-11-26T09:00:00: crypto price 256.0
+rebalance: fiat value 2,727,879.62, crypto amount: 10655.78, crypto value: 2,727,879.68, total value: 5,455,759.3
+in case of all in crypto amount 15,317.89, crypto value: 3,921,379.84
+
+689  day 6,890,000 added, 2019-11-27T09:00:00: crypto price 259.0
+nothing to rebalance
+
+690  day 6,900,000 added, 2019-11-28T09:00:00: crypto price 262.0
+rebalance: fiat value 2,769,846.99, crypto amount: 10572, crypto value: 2,769,864.0, total value: 5,539,710.99
+in case of all in crypto amount 15,394.67, crypto value: 4,033,403.54
+
+691  day 6,910,000 added, 2019-11-29T09:00:00: crypto price 262.0
+nothing to rebalance
+
+692  day 6,920,000 added, 2019-11-30T09:00:00: crypto price 268.0
+rebalance: fiat value 2,811,571.49, crypto amount: 10491, crypto value: 2,811,588.0, total value: 5,623,159.49
+in case of all in crypto amount 15,470.15, crypto value: 4,146,000.2
+
+693  day 6,930,000 added, 2019-12-01T09:00:00: crypto price 264.0
+rebalance: fiat value 2,795,597.74, crypto amount: 10589.39, crypto value: 2,795,598.96, total value: 5,591,196.7
+in case of all in crypto amount 15,508.03, crypto value: 4,094,119.92
+
+694  day 6,940,000 added, 2019-12-02T09:00:00: crypto price 262.0
+rebalance: fiat value 2,790,008.96, crypto amount: 10648.89, crypto value: 2,790,009.18, total value: 5,580,018.14
+in case of all in crypto amount 15,546.2, crypto value: 4,073,104.4
+
+695  day 6,950,000 added, 2019-12-03T09:00:00: crypto price 260.0
+rebalance: fiat value 2,784,360.18, crypto amount: 10709.08, crypto value: 2,784,360.8, total value: 5,568,720.98
+in case of all in crypto amount 15,584.66, crypto value: 4,052,011.6
+
+696  day 6,960,000 added, 2019-12-04T09:00:00: crypto price 260.0
+nothing to rebalance
+
+697  day 6,970,000 added, 2019-12-05T09:00:00: crypto price 253.0
+rebalance: fiat value 2,756,878.71, crypto amount: 10896.75, crypto value: 2,756,877.75, total value: 5,513,756.46
+in case of all in crypto amount 15,662.65, crypto value: 3,962,650.45
+
+698  day 6,980,000 added, 2019-12-06T09:00:00: crypto price 260.0
+rebalance: fiat value 2,800,016.86, crypto amount: 10769, crypto value: 2,799,940.0, total value: 5,599,956.86
+in case of all in crypto amount 15,701.11, crypto value: 4,082,288.6
+
+699  day 6,990,000 added, 2019-12-07T09:00:00: crypto price 263.0
+nothing to rebalance
+
+700  day 7,000,000 added, 2019-12-08T09:00:00: crypto price 266.0
+rebalance: fiat value 2,842,285.43, crypto amount: 10685, crypto value: 2,842,210.0, total value: 5,684,495.43
+in case of all in crypto amount 15,776.72, crypto value: 4,196,607.52
+
+701  day 7,010,000 added, 2019-12-09T09:00:00: crypto price 266.0
+nothing to rebalance
+
+702  day 7,020,000 added, 2019-12-10T09:00:00: crypto price 264.0
+rebalance: fiat value 2,841,562.71, crypto amount: 10763.5, crypto value: 2,841,564.0, total value: 5,683,126.71
+in case of all in crypto amount 15,852.19, crypto value: 4,184,978.16
+
+703  day 7,030,000 added, 2019-12-11T09:00:00: crypto price 261.0
+rebalance: fiat value 2,830,418.11, crypto amount: 10844.51, crypto value: 2,830,417.11, total value: 5,660,835.22
+in case of all in crypto amount 15,890.5, crypto value: 4,147,420.5
+
+704  day 7,040,000 added, 2019-12-12T09:00:00: crypto price 260.0
+nothing to rebalance
+
+705  day 7,050,000 added, 2019-12-13T09:00:00: crypto price 256.0
+rebalance: fiat value 2,813,306.34, crypto amount: 10989.48, crypto value: 2,813,306.88, total value: 5,626,613.22
+in case of all in crypto amount 15,968.02, crypto value: 4,087,813.12
+
+706  day 7,060,000 added, 2019-12-14T09:00:00: crypto price 258.0
+nothing to rebalance
+
+707  day 7,070,000 added, 2019-12-15T09:00:00: crypto price 253.0
+rebalance: fiat value 2,806,822.39, crypto amount: 11094.16, crypto value: 2,806,822.48, total value: 5,613,644.87
+in case of all in crypto amount 16,046.31, crypto value: 4,059,716.43
+
+708  day 7,080,000 added, 2019-12-16T09:00:00: crypto price 254.0
+nothing to rebalance
+
+709  day 7,090,000 added, 2019-12-17T09:00:00: crypto price 242.0
+rebalance: fiat value 2,755,804.55, crypto amount: 11387.62, crypto value: 2,755,804.04, total value: 5,511,608.59
+in case of all in crypto amount 16,127.0, crypto value: 3,902,734.0
+
+710  day 7,100,000 added, 2019-12-18T09:00:00: crypto price 218.0
+rebalance: fiat value 2,624,152.86, crypto amount: 12037.4, crypto value: 2,624,153.2, total value: 5,248,306.06
+in case of all in crypto amount 16,172.87, crypto value: 3,525,685.66
+
+711  day 7,110,000 added, 2019-12-19T09:00:00: crypto price 228.0
+rebalance: fiat value 2,689,340.03, crypto amount: 11795, crypto value: 2,689,260.0, total value: 5,378,600.03
+in case of all in crypto amount 16,216.73, crypto value: 3,697,414.44
+
+712  day 7,120,000 added, 2019-12-20T09:00:00: crypto price 222.0
+rebalance: fiat value 2,658,915.02, crypto amount: 11977.09, crypto value: 2,658,913.98, total value: 5,317,829.0
+in case of all in crypto amount 16,261.78, crypto value: 3,610,115.16
+
+713  day 7,130,000 added, 2019-12-21T09:00:00: crypto price 228.0
+rebalance: fiat value 2,699,845.77, crypto amount: 11841, crypto value: 2,699,748.0, total value: 5,399,593.77
+in case of all in crypto amount 16,305.64, crypto value: 3,717,685.92
+
+714  day 7,140,000 added, 2019-12-22T09:00:00: crypto price 225.0
+rebalance: fiat value 2,687,035.38, crypto amount: 11942.38, crypto value: 2,687,035.5, total value: 5,374,070.88
+in case of all in crypto amount 16,350.08, crypto value: 3,678,768.0
+
+715  day 7,150,000 added, 2019-12-23T09:00:00: crypto price 230.0
+rebalance: fiat value 2,721,891.39, crypto amount: 11834, crypto value: 2,721,820.0, total value: 5,443,711.39
+in case of all in crypto amount 16,393.56, crypto value: 3,770,518.8
+
+716  day 7,160,000 added, 2019-12-24T09:00:00: crypto price 223.0
+rebalance: fiat value 2,685,436.69, crypto amount: 12042.32, crypto value: 2,685,437.36, total value: 5,370,874.05
+in case of all in crypto amount 16,438.4, crypto value: 3,665,763.2
+
+717  day 7,170,000 added, 2019-12-25T09:00:00: crypto price 224.0
+nothing to rebalance
+
+718  day 7,180,000 added, 2019-12-26T09:00:00: crypto price 221.0
+rebalance: fiat value 2,683,394.7, crypto amount: 12142.06, crypto value: 2,683,395.26, total value: 5,366,789.96
+in case of all in crypto amount 16,528.29, crypto value: 3,652,752.09
+
+719  day 7,190,000 added, 2019-12-27T09:00:00: crypto price 222.0
+nothing to rebalance
+
+720  day 7,200,000 added, 2019-12-28T09:00:00: crypto price 221.0
+nothing to rebalance
+
+721  day 7,210,000 added, 2019-12-29T09:00:00: crypto price 224.0
+nothing to rebalance
+
+722  day 7,220,000 added, 2019-12-30T09:00:00: crypto price 226.0
+nothing to rebalance
+
+723  day 7,230,000 added, 2019-12-31T09:00:00: crypto price 222.0
+rebalance: fiat value 2,714,466.01, crypto amount: 12227.32, crypto value: 2,714,465.04, total value: 5,428,931.05
+in case of all in crypto amount 16,752.53, crypto value: 3,719,061.66
+
+724  day 7,240,000 added, 2020-01-01T09:00:00: crypto price 223.0
+nothing to rebalance
+
+725  day 7,250,000 added, 2020-01-02T09:00:00: crypto price 222.0
+nothing to rebalance
+
+726  day 7,260,000 added, 2020-01-03T09:00:00: crypto price 215.0
+rebalance: fiat value 2,686,669.91, crypto amount: 12496.14, crypto value: 2,686,670.1, total value: 5,373,340.01
+in case of all in crypto amount 16,888.93, crypto value: 3,631,119.95
+
+727  day 7,270,000 added, 2020-01-04T09:00:00: crypto price 222.0
+rebalance: fiat value 2,735,406.49, crypto amount: 12322, crypto value: 2,735,484.0, total value: 5,470,890.49
+in case of all in crypto amount 16,933.98, crypto value: 3,759,343.56
+
+728  day 7,280,000 added, 2020-01-05T09:00:00: crypto price 222.0
+nothing to rebalance
+
+729  day 7,290,000 added, 2020-01-06T09:00:00: crypto price 223.0
+nothing to rebalance
+
+730  day 7,300,000 added, 2020-01-07T09:00:00: crypto price 251.0
+rebalance: fiat value 2,929,114.24, crypto amount: 11670, crypto value: 2,929,170.0, total value: 5,858,284.24
+in case of all in crypto amount 17,063.71, crypto value: 4,282,991.21
+
+731  day 7,310,000 added, 2020-01-08T09:00:00: crypto price 246.0
+rebalance: fiat value 2,904,967.12, crypto amount: 11808.81, crypto value: 2,904,967.26, total value: 5,809,934.38
+in case of all in crypto amount 17,104.36, crypto value: 4,207,672.56
+
+732  day 7,320,000 added, 2020-01-09T09:00:00: crypto price 234.0
+rebalance: fiat value 2,839,114.33, crypto amount: 12132.97, crypto value: 2,839,114.98, total value: 5,678,229.31
+in case of all in crypto amount 17,147.1, crypto value: 4,012,421.4
+
+733  day 7,330,000 added, 2020-01-10T09:00:00: crypto price 234.0
+nothing to rebalance
+
+734  day 7,340,000 added, 2020-01-11T09:00:00: crypto price 241.0
+rebalance: fiat value 2,891,580.05, crypto amount: 11998, crypto value: 2,891,518.0, total value: 5,783,098.05
+in case of all in crypto amount 17,231.33, crypto value: 4,152,750.53
+
+735  day 7,350,000 added, 2020-01-12T09:00:00: crypto price 239.0
+rebalance: fiat value 2,884,551.03, crypto amount: 12069.25, crypto value: 2,884,550.75, total value: 5,769,101.78
+in case of all in crypto amount 17,273.17, crypto value: 4,128,287.63
+
+736  day 7,360,000 added, 2020-01-13T09:00:00: crypto price 241.0
+nothing to rebalance
+
+737  day 7,370,000 added, 2020-01-14T09:00:00: crypto price 239.0
+nothing to rebalance
+
+738  day 7,380,000 added, 2020-01-15T09:00:00: crypto price 258.0
+rebalance: fiat value 3,014,208.77, crypto amount: 11683, crypto value: 3,014,214.0, total value: 6,028,422.77
+in case of all in crypto amount 17,395.26, crypto value: 4,487,977.08
+
+739  day 7,390,000 added, 2020-01-16T09:00:00: crypto price 257.0
+nothing to rebalance
+
+740  day 7,400,000 added, 2020-01-17T09:00:00: crypto price 256.0
+rebalance: fiat value 3,012,528.38, crypto amount: 11767.69, crypto value: 3,012,528.64, total value: 6,025,057.02
+in case of all in crypto amount 17,473.23, crypto value: 4,473,146.88
+
+741  day 7,410,000 added, 2020-01-18T09:00:00: crypto price 267.0
+rebalance: fiat value 3,082,250.81, crypto amount: 11544, crypto value: 3,082,248.0, total value: 6,164,498.81
+in case of all in crypto amount 17,510.68, crypto value: 4,675,351.56
+
+742  day 7,420,000 added, 2020-01-19T09:00:00: crypto price 276.0
+rebalance: fiat value 3,139,197.4, crypto amount: 11374, crypto value: 3,139,224.0, total value: 6,278,421.4
+in case of all in crypto amount 17,546.91, crypto value: 4,842,947.16
+
+743  day 7,430,000 added, 2020-01-20T09:00:00: crypto price 268.0
+rebalance: fiat value 3,098,714.7, crypto amount: 11562.37, crypto value: 3,098,715.16, total value: 6,197,429.86
+in case of all in crypto amount 17,584.22, crypto value: 4,712,570.96
+
+744  day 7,440,000 added, 2020-01-21T09:00:00: crypto price 266.0
+rebalance: fiat value 3,092,152.56, crypto amount: 11624.63, crypto value: 3,092,151.58, total value: 6,184,304.14
+in case of all in crypto amount 17,621.81, crypto value: 4,687,401.46
+
+745  day 7,450,000 added, 2020-01-22T09:00:00: crypto price 271.0
+rebalance: fiat value 3,126,213.64, crypto amount: 11536, crypto value: 3,126,256.0, total value: 6,252,469.64
+in case of all in crypto amount 17,658.71, crypto value: 4,785,510.41
+
+746  day 7,460,000 added, 2020-01-23T09:00:00: crypto price 271.0
+nothing to rebalance
+
+747  day 7,470,000 added, 2020-01-24T09:00:00: crypto price 261.0
+rebalance: fiat value 3,078,554.82, crypto amount: 11795.23, crypto value: 3,078,555.03, total value: 6,157,109.85
+in case of all in crypto amount 17,733.92, crypto value: 4,628,553.12
+
+748  day 7,480,000 added, 2020-01-25T09:00:00: crypto price 259.0
+rebalance: fiat value 3,071,759.7, crypto amount: 11860.08, crypto value: 3,071,760.72, total value: 6,143,520.42
+in case of all in crypto amount 17,772.53, crypto value: 4,603,085.27
+
+749  day 7,490,000 added, 2020-01-26T09:00:00: crypto price 256.0
+rebalance: fiat value 3,058,970.09, crypto amount: 11949.1, crypto value: 3,058,969.6, total value: 6,117,939.69
+in case of all in crypto amount 17,811.59, crypto value: 4,559,767.04
+
+750  day 7,500,000 added, 2020-01-27T09:00:00: crypto price 268.0
+rebalance: fiat value 3,135,664.45, crypto amount: 11700, crypto value: 3,135,600.0, total value: 6,271,264.45
+in case of all in crypto amount 17,848.9, crypto value: 4,783,505.2
+
+751  day 7,510,000 added, 2020-01-28T09:00:00: crypto price 263.0
+rebalance: fiat value 3,111,382.22, crypto amount: 11830.35, crypto value: 3,111,382.05, total value: 6,222,764.27
+in case of all in crypto amount 17,886.92, crypto value: 4,704,259.96
+
+752  day 7,520,000 added, 2020-01-29T09:00:00: crypto price 270.0
+rebalance: fiat value 3,157,788.36, crypto amount: 11696, crypto value: 3,157,920.0, total value: 6,315,708.36
+in case of all in crypto amount 17,923.96, crypto value: 4,839,469.2
+
+753  day 7,530,000 added, 2020-01-30T09:00:00: crypto price 271.0
+nothing to rebalance
+
+754  day 7,540,000 added, 2020-01-31T09:00:00: crypto price 276.0
+rebalance: fiat value 3,202,942.18, crypto amount: 11605, crypto value: 3,202,980.0, total value: 6,405,922.18
+in case of all in crypto amount 17,997.09, crypto value: 4,967,196.84
+
+755  day 7,550,000 added, 2020-02-01T09:00:00: crypto price 276.0
+nothing to rebalance
+
+756  day 7,560,000 added, 2020-02-02T09:00:00: crypto price 278.0
+nothing to rebalance
+
+757  day 7,570,000 added, 2020-02-03T09:00:00: crypto price 290.0
+rebalance: fiat value 3,299,196.09, crypto amount: 11377, crypto value: 3,299,330.0, total value: 6,598,526.09
+in case of all in crypto amount 18,103.77, crypto value: 5,250,093.3
+
+758  day 7,580,000 added, 2020-02-04T09:00:00: crypto price 294.0
+rebalance: fiat value 3,327,017.05, crypto amount: 11316, crypto value: 3,326,904.0, total value: 6,653,921.05
+in case of all in crypto amount 18,137.78, crypto value: 5,332,507.32
+
+759  day 7,590,000 added, 2020-02-05T09:00:00: crypto price 308.0
+rebalance: fiat value 3,411,172.53, crypto amount: 11075, crypto value: 3,411,100.0, total value: 6,822,272.53
+in case of all in crypto amount 18,170.25, crypto value: 5,596,437.0
+
+760  day 7,600,000 added, 2020-02-06T09:00:00: crypto price 319.0
+rebalance: fiat value 3,477,048.77, crypto amount: 10900, crypto value: 3,477,100.0, total value: 6,954,148.77
+in case of all in crypto amount 18,201.6, crypto value: 5,806,310.4
+
+761  day 7,610,000 added, 2020-02-07T09:00:00: crypto price 326.0
+rebalance: fiat value 3,520,224.38, crypto amount: 10798, crypto value: 3,520,148.0, total value: 7,040,372.38
+in case of all in crypto amount 18,232.27, crypto value: 5,943,720.02
+
+762  day 7,620,000 added, 2020-02-08T09:00:00: crypto price 328.0
+nothing to rebalance
+
+763  day 7,630,000 added, 2020-02-09T09:00:00: crypto price 325.0
+nothing to rebalance
+
+764  day 7,640,000 added, 2020-02-10T09:00:00: crypto price 330.0
+nothing to rebalance
+
+765  day 7,650,000 added, 2020-02-11T09:00:00: crypto price 321.0
+rebalance: fiat value 3,513,191.19, crypto amount: 10944.52, crypto value: 3,513,190.92, total value: 7,026,382.11
+in case of all in crypto amount 18,354.98, crypto value: 5,891,948.58
+
+766  day 7,660,000 added, 2020-02-12T09:00:00: crypto price 325.0
+nothing to rebalance
+
+767  day 7,670,000 added, 2020-02-13T09:00:00: crypto price 347.0
+rebalance: fiat value 3,665,469.81, crypto amount: 10563, crypto value: 3,665,361.0, total value: 7,330,830.81
+in case of all in crypto amount 18,414.57, crypto value: 6,389,855.79
+
+768  day 7,680,000 added, 2020-02-14T09:00:00: crypto price 378.0
+rebalance: fiat value 3,834,141.9, crypto amount: 10143, crypto value: 3,834,054.0, total value: 7,668,195.9
+in case of all in crypto amount 18,441.03, crypto value: 6,970,709.34
+
+769  day 7,690,000 added, 2020-02-15T09:00:00: crypto price 385.0
+rebalance: fiat value 3,874,598.45, crypto amount: 10064, crypto value: 3,874,640.0, total value: 7,749,238.45
+in case of all in crypto amount 18,467.0, crypto value: 7,109,795.0
+
+770  day 7,700,000 added, 2020-02-16T09:00:00: crypto price 357.0
+rebalance: fiat value 3,738,723.22, crypto amount: 10472.61, crypto value: 3,738,721.77, total value: 7,477,444.99
+in case of all in crypto amount 18,495.01, crypto value: 6,602,718.57
+
+771  day 7,710,000 added, 2020-02-17T09:00:00: crypto price 344.0
+rebalance: fiat value 3,675,650.53, crypto amount: 10685.03, crypto value: 3,675,650.32, total value: 7,351,300.85
+in case of all in crypto amount 18,524.08, crypto value: 6,372,283.52
+
+772  day 7,720,000 added, 2020-02-18T09:00:00: crypto price 338.0
+rebalance: fiat value 3,648,595.34, crypto amount: 10794.66, crypto value: 3,648,595.08, total value: 7,297,190.42
+in case of all in crypto amount 18,553.67, crypto value: 6,271,140.46
+
+773  day 7,730,000 added, 2020-02-19T09:00:00: crypto price 347.0
+rebalance: fiat value 3,702,171.18, crypto amount: 10669, crypto value: 3,702,143.0, total value: 7,404,314.18
+in case of all in crypto amount 18,582.49, crypto value: 6,448,124.03
+
+774  day 7,740,000 added, 2020-02-20T09:00:00: crypto price 327.0
+rebalance: fiat value 3,600,467.09, crypto amount: 11010.6, crypto value: 3,600,466.2, total value: 7,200,933.29
+in case of all in crypto amount 18,613.07, crypto value: 6,086,473.89
+
+775  day 7,750,000 added, 2020-02-21T09:00:00: crypto price 326.0
+nothing to rebalance
+
+776  day 7,760,000 added, 2020-02-22T09:00:00: crypto price 326.0
+nothing to rebalance
+
+777  day 7,770,000 added, 2020-02-23T09:00:00: crypto price 326.0
+rebalance: fiat value 3,609,961.35, crypto amount: 11073.5, crypto value: 3,609,961.0, total value: 7,219,922.35
+in case of all in crypto amount 18,705.08, crypto value: 6,097,856.08
+
+778  day 7,780,000 added, 2020-02-24T09:00:00: crypto price 334.0
+rebalance: fiat value 3,659,255.17, crypto amount: 10956, crypto value: 3,659,304.0, total value: 7,318,559.17
+in case of all in crypto amount 18,735.02, crypto value: 6,257,496.68
+
+779  day 7,790,000 added, 2020-02-25T09:00:00: crypto price 326.0
+rebalance: fiat value 3,620,455.59, crypto amount: 11105.69, crypto value: 3,620,454.94, total value: 7,240,910.53
+in case of all in crypto amount 18,765.69, crypto value: 6,117,614.94
+
+780  day 7,800,000 added, 2020-02-26T09:00:00: crypto price 307.0
+rebalance: fiat value 3,519,951.21, crypto amount: 11465.64, crypto value: 3,519,951.48, total value: 7,039,902.69
+in case of all in crypto amount 18,798.26, crypto value: 5,771,065.82
+
+781  day 7,810,000 added, 2020-02-27T09:00:00: crypto price 281.0
+rebalance: fiat value 3,375,898.02, crypto amount: 12013.87, crypto value: 3,375,897.47, total value: 6,751,795.49
+in case of all in crypto amount 18,833.85, crypto value: 5,292,311.85
+
+782  day 7,820,000 added, 2020-02-28T09:00:00: crypto price 289.0
+rebalance: fiat value 3,428,953.23, crypto amount: 11865, crypto value: 3,428,985.0, total value: 6,857,938.23
+in case of all in crypto amount 18,868.45, crypto value: 5,452,982.05
+
+783  day 7,830,000 added, 2020-02-29T09:00:00: crypto price 288.0
+nothing to rebalance
+
+784  day 7,840,000 added, 2020-03-01T09:00:00: crypto price 278.0
+rebalance: fiat value 3,373,711.62, crypto amount: 12135.65, crypto value: 3,373,710.7, total value: 6,747,422.32
+in case of all in crypto amount 18,939.14, crypto value: 5,265,080.92
+
+785  day 7,850,000 added, 2020-03-02T09:00:00: crypto price 276.0
+rebalance: fiat value 3,366,575.51, crypto amount: 12197.74, crypto value: 3,366,576.24, total value: 6,733,151.75
+in case of all in crypto amount 18,975.37, crypto value: 5,237,202.12
+
+786  day 7,860,000 added, 2020-03-03T09:00:00: crypto price 287.0
+rebalance: fiat value 3,438,663.45, crypto amount: 11981, crypto value: 3,438,547.0, total value: 6,877,210.45
+in case of all in crypto amount 19,010.21, crypto value: 5,455,930.27
+
+787  day 7,870,000 added, 2020-03-04T09:00:00: crypto price 281.0
+rebalance: fiat value 3,407,662.22, crypto amount: 12126.91, crypto value: 3,407,661.71, total value: 6,815,323.93
+in case of all in crypto amount 19,045.8, crypto value: 5,351,869.8
+
+788  day 7,880,000 added, 2020-03-05T09:00:00: crypto price 281.0
+nothing to rebalance
+
+789  day 7,890,000 added, 2020-03-06T09:00:00: crypto price 285.0
+nothing to rebalance
+
+790  day 7,900,000 added, 2020-03-07T09:00:00: crypto price 291.0
+rebalance: fiat value 3,483,296.51, crypto amount: 11970, crypto value: 3,483,270.0, total value: 6,966,566.51
+in case of all in crypto amount 19,150.84, crypto value: 5,572,894.44
+
+791  day 7,910,000 added, 2020-03-08T09:00:00: crypto price 283.0
+rebalance: fiat value 3,440,403.26, crypto amount: 12156.9, crypto value: 3,440,402.7, total value: 6,880,805.96
+in case of all in crypto amount 19,186.18, crypto value: 5,429,688.94
+
+792  day 7,920,000 added, 2020-03-09T09:00:00: crypto price 251.0
+rebalance: fiat value 3,250,892.58, crypto amount: 12951.76, crypto value: 3,250,891.76, total value: 6,501,784.34
+in case of all in crypto amount 19,226.02, crypto value: 4,825,731.02
+
+793  day 7,930,000 added, 2020-03-10T09:00:00: crypto price 257.0
+rebalance: fiat value 3,294,747.45, crypto amount: 12820, crypto value: 3,294,740.0, total value: 6,589,487.45
+in case of all in crypto amount 19,264.93, crypto value: 4,951,087.01
+
+794  day 7,940,000 added, 2020-03-11T09:00:00: crypto price 257.0
+nothing to rebalance
+
+795  day 7,950,000 added, 2020-03-12T09:00:00: crypto price 250.0
+rebalance: fiat value 3,259,873.72, crypto amount: 13039.49, crypto value: 3,259,872.5, total value: 6,519,746.22
+in case of all in crypto amount 19,343.84, crypto value: 4,835,960.0
+
+796  day 7,960,000 added, 2020-03-13T09:00:00: crypto price 179.0
+rebalance: fiat value 2,801,971.21, crypto amount: 15653.47, crypto value: 2,801,971.13, total value: 5,603,942.34
+in case of all in crypto amount 19,399.71, crypto value: 3,472,548.09
+
