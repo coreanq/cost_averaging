@@ -3,20 +3,41 @@ import datetime
 
 rebalance_ratio = 1.01
 
-all_fiat_value = 10000000
-original_crypto_amount = 0
-fiat_part_value = all_fiat_value / 2
+init_fiat_value = 0
+additional_fiat = 10000 # 하루에 추가되는 금액 
+
+buy_and_hold_crypto_amount = 0
+fiat_part_value = init_fiat_value / 2
 crypto_amount = 0
 crypto_value = 0
 
+isInit = True
+
+def init():
+    global buy_and_hold_crypto_amount, init_fiat_value, fiat_part_value, crypto_amount, crypto_value, isInit
+
+    rebalance_ratio = 1.01
+
+    init_fiat_value = 0
+    additional_fiat = 10000 # 하루에 추가되는 금액 
+
+    buy_and_hold_crypto_amount = 0
+    fiat_part_value = init_fiat_value / 2
+    crypto_amount = 0
+    crypto_value = 0
+
+    isInit = True
+
+
 def rebalance(crypto_price : int, additional_fiat: int ) -> str : 
 
-    global original_crypto_amount, all_fiat_value, fiat_part_value, crypto_amount, crypto_value
+    global buy_and_hold_crypto_amount, init_fiat_value, fiat_part_value, crypto_amount, crypto_value, isInit
     # all in 했을때의 crypto 수량 
-    if( original_crypto_amount == 0 ):
-        original_crypto_amount = round(all_fiat_value / crypto_price, 2)
-    else:
-        original_crypto_amount = round(original_crypto_amount + additional_fiat / crypto_price, 2)
+    if( isInit == True ):
+        buy_and_hold_crypto_amount = round(init_fiat_value / crypto_price, 2)
+        isInit = False
+
+    buy_and_hold_crypto_amount = round(buy_and_hold_crypto_amount + additional_fiat / crypto_price, 2)
 
     isRebalance = False
 
@@ -55,7 +76,7 @@ def rebalance(crypto_price : int, additional_fiat: int ) -> str :
         result = 'rebalance: fiat value {:,}, crypto amount: {}, crypto value: {:,}, total value: {:,}\n'.format(
             fiat_part_value, crypto_amount, crypto_value, round(fiat_part_value + crypto_value, 2) )
         result = result + 'in case of all in crypto amount {:,}, crypto value: {:,}\n\n'.format(  
-            original_crypto_amount, round( original_crypto_amount * crypto_price, 2)  ) 
+            buy_and_hold_crypto_amount, round( buy_and_hold_crypto_amount * crypto_price, 2)  ) 
     else:
         result = 'nothing to rebalance\n\n'
 
@@ -70,8 +91,10 @@ if __name__ == "__main__":
 
     sample_source = json.loads(all_data) 
 
-    from_date = datetime.date(2018, 1, 8)
-    to_date = datetime.date(2022,1,31)
+
+    # best case
+    from_date = datetime.date(2020, 3, 13)
+    to_date = datetime.date(2021,4,15)
 
     count = 1
 
@@ -81,7 +104,6 @@ if __name__ == "__main__":
         source_date_time = datetime.datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
 
         if( source_date_time.date() >= from_date and source_date_time.date() <= to_date ):
-            additional_fiat = 10000 # 하루에 추가되는 금액 
 
             result = rebalance(price, additional_fiat)
 
@@ -90,6 +112,29 @@ if __name__ == "__main__":
 
             count = count + 1
 
-            with open("result.txt", 'a')as f:
+            with open("_best_result.txt", 'a')as f:
                 f.write(result)
+
+    init()
+    # worst case
+    from_date = datetime.date(2018, 1, 8)
+    to_date = datetime.date(2020,3,13)
+
+    for item in reversed(sample_source):
+        price = item['opening_price']
+        date_str = item['candle_date_time_kst']
+        source_date_time = datetime.datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
+
+        if( source_date_time.date() >= from_date and source_date_time.date() <= to_date ):
+
+            result = rebalance(price, additional_fiat)
+
+            result = '{:<4} day {:,} added, {}: crypto price {}\n{}'.format(
+                count, additional_fiat * count,  date_str, price, result)
+
+            count = count + 1
+
+            with open("_worst_result.txt", 'a')as f:
+                f.write(result)
+
     pass
