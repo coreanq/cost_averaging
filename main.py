@@ -141,25 +141,25 @@ class UpbitRebalancing(QObject):
             self.sigCurrentBalanceChanged.emit(fiat_balance, crypto_balance)
 
 
-            #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
-            # 현재 거래 진행중이면 make order 수행 금지 
-            if( self.upbitIf.hasWaitInOrder() == False ):
                 
-                if( fiat_balance > self.current_bid_price and fiat_balance > 5000 ): # 최소 주문 금액 충족 확인 
-                    maemae_type = "매수"
-                    order_type = 'bid'
-                    order_price = self.current_bid_price
-                    order_balance = fiat_balance * 0.9995  # 수수료 고려 제외 시킴 
+            if( fiat_balance > self.current_bid_price and fiat_balance > 5000 * 1.005): # 최소 주문 금액 충족 확인 
+                maemae_type = "매수"
+                order_type = 'bid'
+                order_price = self.current_bid_price
+                order_balance = fiat_balance * 0.9995  # 수수료 고려 제외 시킴 
 
-                    if( self.tradeOn == True ):
+                if( self.tradeOn == True ):
+                    #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
+                    # 현재 거래 진행중이면 make order 수행 금지 
+                    if( self.upbitIf.hasWaitInOrder() == False ):
                         printLog = '{} {} {} {}\n'.format( util.cur_time_msec(), maemae_type, order_price, order_balance ) 
                         print( printLog )
                         util.save_log( printLog, subject= "{} 요청".format( maemae_type ) )
 
                         print('잔고: \n{}\n'.format( json.dumps( self.current_account_info, indent=2, sort_keys=True) ) )
                         self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
-            else:
-                print("\nMake Order avaliable {}".format( self.upbitIf.wait_order_uuids))
+                else:
+                    print("\nMake Order avaliable {}".format( self.upbitIf.wait_order_uuids))
 
         pass
 
@@ -186,9 +186,6 @@ class UpbitRebalancing(QObject):
         self.sigCurrentBalanceChanged.emit(fiat_balance, crypto_balance)
 
         order_price = 0
-        # 현재 거래 진행중인 거래 확인  
-        self.upbitIf.getOrder()
-        
 
         # 매수  
         if( order_type == 'bid' ):
@@ -199,17 +196,16 @@ class UpbitRebalancing(QObject):
         else: # none
             return
 
-        #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
-        # 현재 거래 진행중이면 make order 수행 금지 
-        if( self.upbitIf.hasWaitInOrder() == False ):
+        maemaeType = ''
+        if( order_type == 'bid' ):
+            maemaeType = '매수'
+        else:
+            maemaeType = '매도'
 
-            maemaeType = ''
-            if( order_type == 'bid' ):
-                maemaeType = '매수'
-            else:
-                maemaeType = '매도'
-
-            if( self.tradeOn == True ):
+        if( self.tradeOn == True ):
+            #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
+            # 현재 거래 진행중이면 make order 수행 금지 
+            if( self.upbitIf.hasWaitInOrder() == False ):
                 self.upbitIf.makeOrder(order_type, order_price, order_balance, False)
 
                 printLog = '{} {} {} {}\n'.format( util.cur_time_msec(), maemaeType, order_price, order_balance ) 
@@ -217,8 +213,9 @@ class UpbitRebalancing(QObject):
                 util.save_log( printLog, subject= "{} 요청".format( maemaeType ) )
 
                 print('잔고: \n{}\n'.format( json.dumps( self.current_account_info, indent=2, sort_keys=True) ) )
-        else:
-            print("\nMake Order avaliable {}".format( self.upbitIf.wait_order_uuids))
+
+            else:
+                print("\nMake Order avaliable {}".format( self.upbitIf.wait_order_uuids))
         pass
         
     def createState(self):

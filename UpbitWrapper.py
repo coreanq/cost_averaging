@@ -208,6 +208,7 @@ class UpbitWrapper():
             if( response.status_code != 201):
                 result  = response.json()
                 printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
+                print(printLog)
                 util.save_log(printLog, subject= ( "에러응답" ) )
                 return None 
             else:
@@ -292,6 +293,7 @@ class UpbitWrapper():
                 result  = response.json()
                 printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
                 util.save_log(printLog, subject= ( "에러응답" ) )
+                print(printLog)
                 return None 
             else:
                 result  = response.json()
@@ -345,6 +347,11 @@ class UpbitWrapper():
                 printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
                 # util.save_log(printLog, subject= ( "에러응답" ) )
                 print(printLog)
+
+                if( 'error' in result ):
+                    err_name = result['error'].get('name', '') 
+                    if( err_name == 'order_not_found'):
+                        self.wait_order_uuids = ''
                 return None 
             else:
                 result  = response.json()
@@ -356,6 +363,7 @@ class UpbitWrapper():
         pass
 
     def hasWaitInOrder(self):
+        self.getOrder()
         if( self.wait_order_uuids == '' ):
             return False
         else:
