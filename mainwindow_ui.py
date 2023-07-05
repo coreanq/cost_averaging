@@ -16,23 +16,19 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QGridLayout, QGroupBox,
-    QLabel, QMainWindow, QMenuBar, QSizePolicy,
+    QHBoxLayout, QLabel, QLayout, QMainWindow,
+    QMenuBar, QPlainTextEdit, QPushButton, QSizePolicy,
     QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(626, 227)
+        MainWindow.resize(803, 254)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.chkShowBalance = QCheckBox(self.centralwidget)
-        self.chkShowBalance.setObjectName(u"chkShowBalance")
-
-        self.gridLayout.addWidget(self.chkShowBalance, 0, 0, 1, 1)
-
         self.groupBox = QGroupBox(self.centralwidget)
         self.groupBox.setObjectName(u"groupBox")
         self.verticalLayout_2 = QVBoxLayout(self.groupBox)
@@ -55,6 +51,16 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.groupBox, 1, 0, 1, 1)
 
+        self.chkTradeOn = QCheckBox(self.centralwidget)
+        self.chkTradeOn.setObjectName(u"chkTradeOn")
+
+        self.gridLayout.addWidget(self.chkTradeOn, 0, 1, 1, 1)
+
+        self.chkShowBalance = QCheckBox(self.centralwidget)
+        self.chkShowBalance.setObjectName(u"chkShowBalance")
+
+        self.gridLayout.addWidget(self.chkShowBalance, 0, 0, 1, 1)
+
         self.groupBox_2 = QGroupBox(self.centralwidget)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.verticalLayout = QVBoxLayout(self.groupBox_2)
@@ -72,7 +78,34 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.lblCryptoPercent)
 
 
-        self.gridLayout.addWidget(self.groupBox_2, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.groupBox_2, 1, 1, 1, 2)
+
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setSizeConstraint(QLayout.SetDefaultConstraint)
+        self.btnDeposit = QPushButton(self.centralwidget)
+        self.btnDeposit.setObjectName(u"btnDeposit")
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnDeposit.sizePolicy().hasHeightForWidth())
+        self.btnDeposit.setSizePolicy(sizePolicy)
+
+        self.horizontalLayout.addWidget(self.btnDeposit)
+
+        self.txtDepositAmount = QPlainTextEdit(self.centralwidget)
+        self.txtDepositAmount.setObjectName(u"txtDepositAmount")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.txtDepositAmount.sizePolicy().hasHeightForWidth())
+        self.txtDepositAmount.setSizePolicy(sizePolicy1)
+        self.txtDepositAmount.setBackgroundVisible(False)
+
+        self.horizontalLayout.addWidget(self.txtDepositAmount)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 2, 1, 2)
 
         self.groupBox_3 = QGroupBox(self.centralwidget)
         self.groupBox_3.setObjectName(u"groupBox_3")
@@ -91,12 +124,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.lblOriPercent)
 
 
-        self.gridLayout.addWidget(self.groupBox_3, 1, 2, 1, 1)
-
-        self.chkTradeOn = QCheckBox(self.centralwidget)
-        self.chkTradeOn.setObjectName(u"chkTradeOn")
-
-        self.gridLayout.addWidget(self.chkTradeOn, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.groupBox_3, 1, 3, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QStatusBar(MainWindow)
@@ -104,7 +132,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 626, 22))
+        self.menubar.setGeometry(QRect(0, 0, 803, 22))
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
@@ -114,16 +142,18 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Shannon's demon for upbit", None))
-        self.chkShowBalance.setText(QCoreApplication.translate("MainWindow", u"Show Balance?", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Fiat", None))
         self.lblFiatBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
         self.lblFiatPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+        self.chkTradeOn.setText(QCoreApplication.translate("MainWindow", u"Trade On?", None))
+        self.chkShowBalance.setText(QCoreApplication.translate("MainWindow", u"Show Balance?", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Crypto", None))
         self.lblCryptoBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
         self.lblCryptoPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+        self.btnDeposit.setText(QCoreApplication.translate("MainWindow", u"Deposit", None))
+        self.txtDepositAmount.setPlainText(QCoreApplication.translate("MainWindow", u"220000", None))
         self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"\ufeff\ucd1d \ufeff\uc790\uc0b0", None))
         self.lblOriBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
         self.lblOriPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
-        self.chkTradeOn.setText(QCoreApplication.translate("MainWindow", u"Trade On?", None))
     # retranslateUi
 

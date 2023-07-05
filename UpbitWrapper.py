@@ -170,6 +170,56 @@ class UpbitWrapper():
                 return output_list
 
 
+    def requestDeposit(self, order_balance, two_factor_type = 'naver'):
+
+        query = {
+            'amount': str(order_balance),
+            'two_factor_type': two_factor_type,
+        }
+
+        query_string = urlencode(query).encode()
+
+        m = hashlib.sha512()
+        m.update(query_string)
+        query_hash = m.hexdigest()
+
+        payload = {
+            'access_key': self.access_key,
+            'nonce': str(uuid.uuid4()),
+            'query_hash': query_hash,
+            'query_hash_alg': 'SHA512',
+        }
+
+        jwt_token = jwt.encode(payload, self.secret_key)
+        authorize_token = 'Bearer {}'.format(jwt_token)
+        headers = {"Authorization": authorize_token}
+
+        url = self.server_url + "/v1/deposits/krw"
+        try:
+            response = requests.post( url, params=query, headers=headers)
+            pass
+        except requests.exceptions.SSLError:
+            print("ssl error")
+            return None 
+        except:
+            print("except")
+            return None 
+        else:
+            if( response.status_code != 201):
+                result  = response.json()
+                printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
+                util.save_log(printLog, subject= ( "에러응답" ) )
+                return None 
+            else:
+                result  = response.json()
+
+                self.wait_order_uuids = result['uuid']
+
+                printLog = '{} return: {} \n{} \n{}\n'.format( util.whoami(), response.status_code , query, json.dumps( result, indent=2, sort_keys=True)  ) 
+                # print( printLog )
+                # util.save_log(printLog, subject= ( "요청" ) )
+        pass
+
 
     def makeOrder(self, order_type, order_price, order_balance, test = True):
         query = ''

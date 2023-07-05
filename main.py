@@ -128,6 +128,18 @@ class UpbitRebalancing(QObject):
 
             # self.processShannonsDemonRebalance(fiat_balance, crypto_balance)
 
+            balance_sum = fiat_balance + crypto_balance * self.current_price
+            fiat_percent = round(fiat_balance/balance_sum * 100, 2)
+            crypto_percent = round( (crypto_balance * self.current_price )/balance_sum * 100, 2) 
+
+            self.sigCryptoPercentChanged.emit( str(crypto_percent) + "%" )
+            self.sigFiatPercentChanged.emit( str(fiat_percent) + "%" )
+
+            self.sigCryptoBalanceChanged.emit('{:,.2f}({})'.format(crypto_balance, self.current_price) )
+            self.sigFiatBalanceChanged.emit( '{:,.0f}'.format(fiat_balance) )
+
+            self.sigCurrentBalanceChanged.emit(fiat_balance, crypto_balance)
+
 
             #WARNING: 현금으로 매수 후 잔고 정보 조회시 crypto 잔고가 바로 업데이트 되지 않느 오류가 있으므로 주의 
             # 현재 거래 진행중이면 make order 수행 금지 
@@ -206,7 +218,7 @@ class UpbitRebalancing(QObject):
 
                 print('잔고: \n{}\n'.format( json.dumps( self.current_account_info, indent=2, sort_keys=True) ) )
         else:
-            print("\nMake Order pass {}".format( self.upbitIf.wait_order_uuids))
+            print("\nMake Order avaliable {}".format( self.upbitIf.wait_order_uuids))
         pass
         
     def createState(self):
@@ -303,6 +315,11 @@ if __name__ == "__main__":
             obj.tradeOn = True
         else:
             obj.tradeOn = False
+    def onBtnDepositClicked():
+        deposit_amout = ui.txtDepositAmount.toPlainText() 
+        obj.upbitIf.requestDeposit(deposit_amout)
+
+
     
     def onStyleSheetChanged(strStyleSheet):
         myApp.setStyleSheet(strStyleSheet)
@@ -328,6 +345,7 @@ if __name__ == "__main__":
 
     ui.chkShowBalance.stateChanged.connect( onChkShowBalanceStateChanged )
     ui.chkTradeOn.stateChanged.connect( onChkTradeOnStateChanged )
+    ui.btnDeposit.clicked.connect( onBtnDepositClicked )
 
     form.show()
 
