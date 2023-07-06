@@ -424,6 +424,38 @@ class UpbitWrapper():
 
                 return result
 
+    # 최대 200 개까지 가능 
+    def getMinuteCandle(self, count = 200, last_date_time_to = '', minute_unit = '60' ):
+
+        url = self.server_url + "/v1/candles/minutes/{}".format( minute_unit)
+
+        query = {"market": self.market_code, "count": count, "to": last_date_time_to }
+        headers = {"accept": "application/json"}
+
+        try:
+            response = requests.get( url, headers = headers, params= query)
+        except requests.exceptions.SSLError:
+            print("ssl error")
+            return None
+        except:
+            print("except")
+            return None
+        else:
+            if( response.status_code != 200):
+                printLog = '{} {} {} {} {}'.format( util.whoami(), response.status_code , "error return: ", query, response.text ) 
+                print(printLog)
+                return None 
+            else:
+                result = []
+                output_list = response.json()
+                del_key = ['timestamp', 'candle_acc_trade_price', 'candle_acc_trade_volume',  'candle_date_time_utc']
+
+                for item in output_list:
+                    list( map(item.pop, del_key) )
+                    result.append( item )
+
+                return result
+
     def isValidPrice(self, price):
             '''
             원화 마켓 주문 가격 단위

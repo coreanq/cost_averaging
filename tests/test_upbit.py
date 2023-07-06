@@ -1,6 +1,7 @@
 import pytest
 import json
 import datetime
+import time
 
 
 @pytest.fixture
@@ -80,7 +81,7 @@ def test_makeOrder(UpbitObj):
 
 def test_makeDayCandle(UpbitObj):
 # @pytest.mark.skip(reason="no test make json file purpose")
-    str_date_time_target = '2017-01-03T01:00:00'
+    str_date_time_target = '2018-01-08T01:00:00'
     date_time_format = "%Y-%m-%dT%H:%M:%S"
 
     date_time_target =  datetime.datetime.strptime(str_date_time_target, date_time_format)
@@ -112,4 +113,58 @@ def test_makeDayCandle(UpbitObj):
     with open("xrp_day_candles.json", "w") as json_file:
         json.dump(output_list, json_file, indent= 2)
 
+def test_makeMinuteCandle(UpbitObj, minute_unit = '60'):
 
+    str_date_time_target = '2018-01-07T00:00:00'
+    date_time_format = "%Y-%m-%dT%H:%M:%S"
+
+    date_time_target =  datetime.datetime.strptime(str_date_time_target, date_time_format)
+
+    str_date_time_target = ''
+
+    output_list = []
+
+
+    isCompleted = False
+
+    while (isCompleted == False):
+        result = UpbitObj.getMinuteCandle(count = 200, last_date_time_to = str_date_time_target, minute_unit = minute_unit)
+        if( result == None ):
+            break
+
+        for item in result :
+            str_candle_date_time = item['candle_date_time_kst']
+            candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
+            if( date_time_target <= candle_date_time ):
+                output_list.append(item)
+            else:
+                isCompleted = True
+                break
+        str_date_time_target = output_list[-1]['candle_date_time_kst'].replace('T', ' ' )
+        output_list.pop(-1)
+        time.sleep(0.1) # 시세 조회 제약 회피 
+
+
+
+        
+    # print(result)
+    with open("xrp_{}_minute_candles.json".format(minute_unit), "w") as json_file:
+        json.dump(output_list, json_file, indent= 2)
+
+
+
+if __name__ == "__main__":
+    import sys
+    sys.path.append('D:\\1git\\upbit_cost_averaging')
+    # setting path
+    # print(sys.path)
+
+    import UpbitWrapper
+    with open("auth/access_info.json", "r") as json_file:
+        access_info = json.loads(json_file.read())
+
+    access_key = access_info["access_key"]
+    secret_key = access_info["secret_key"]
+    server_url = "https://api.upbit.com"
+    obj = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, 'KRW-XRP')
+    test_makeMinuteCandle(obj)
