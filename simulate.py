@@ -53,10 +53,10 @@ def rebalance(crypto_price : int, additional_fiat: int ) -> str :
 
     if( crypto_value > fiat_part_value * rebalance_ratio ):
         # crypto 가격이 오른 경우 
-        diff_value = round((crypto_value - fiat_part_value)/2, 2)
-        crypto_amount = round( crypto_amount - round(diff_value/crypto_price, 2) )
-        fiat_part_value = round(fiat_part_value + diff_value, 2) 
-        isRebalance = True
+        # diff_value = round((crypto_value - fiat_part_value)/2, 2)
+        # crypto_amount = round( crypto_amount - round(diff_value/crypto_price, 2) )
+        # fiat_part_value = round(fiat_part_value + diff_value, 2) 
+        # isRebalance = True
         pass
     elif( fiat_part_value > crypto_value * rebalance_ratio ):
         # crypto 가격이 내린 경우   
@@ -78,7 +78,11 @@ def rebalance(crypto_price : int, additional_fiat: int ) -> str :
         result = result + 'in case of all in crypto amount {:,}, crypto value: {:,}\n\n'.format(  
             buy_and_hold_crypto_amount, round( buy_and_hold_crypto_amount * crypto_price, 2)  ) 
     else:
-        result = 'nothing to rebalance\n\n'
+        result = 'nothing: fiat value {:,}, crypto amount: {}, crypto value: {:,}, total value: {:,}\n'.format(
+            fiat_part_value, crypto_amount, crypto_value, round(fiat_part_value + crypto_value, 2) )
+        result = result + 'in case of all in crypto amount {:,}, crypto value: {:,}\n\n'.format(  
+            buy_and_hold_crypto_amount, round( buy_and_hold_crypto_amount * crypto_price, 2)  ) 
+
 
     return result 
 
@@ -86,11 +90,11 @@ if __name__ == "__main__":
 
     all_data = ''
 
-    # with open("xrp_day_candles_all.json", 'r') as f:
-    #     all_data = f.read()
-
-    with open("xrp_60_minute_candles.json", 'r') as f:
+    with open("xrp_day_candles_all.json", 'r') as f:
         all_data = f.read()
+
+    # with open("xrp_60_minute_candles.json", 'r') as f:
+    #     all_data = f.read()
 
     sample_source = json.loads(all_data) 
 
@@ -100,7 +104,6 @@ if __name__ == "__main__":
     to_date = datetime.date(2021,4,15)
 
     count = 1
-
     result_all = '' 
 
     for item in reversed(sample_source):
@@ -125,6 +128,8 @@ if __name__ == "__main__":
     # worst case
     from_date = datetime.date(2018, 1, 8)
     to_date = datetime.date(2020,3,13)
+    result_all = ''
+    count = 1
 
     for item in reversed(sample_source):
         price = item['opening_price']
@@ -144,6 +149,8 @@ if __name__ == "__main__":
         f.write(result_all)
 
     init()
+    result_all = ''
+    count = 1
     # nomal case
     from_date = datetime.date(2019, 1, 1)
     to_date = datetime.date(2023,10,30)
