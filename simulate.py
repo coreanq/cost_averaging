@@ -86,7 +86,10 @@ if __name__ == "__main__":
 
     all_data = ''
 
-    with open("xrp_day_candles_all.json", 'r') as f:
+    # with open("xrp_day_candles_all.json", 'r') as f:
+    #     all_data = f.read()
+
+    with open("xrp_60_minute_candles.json", 'r') as f:
         all_data = f.read()
 
     sample_source = json.loads(all_data) 
@@ -98,22 +101,25 @@ if __name__ == "__main__":
 
     count = 1
 
+    result_all = '' 
+
     for item in reversed(sample_source):
         price = item['opening_price']
         date_str = item['candle_date_time_kst']
         source_date_time = datetime.datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
 
+
         if( source_date_time.date() >= from_date and source_date_time.date() <= to_date ):
 
             result = rebalance(price, additional_fiat)
 
-            result = '{:<4} day {:,} added, {}: crypto price {}\n{}'.format(
+            result_all = result_all + '{:<4} th {:,} added, {}: crypto price {}\n{}\n'.format(
                 count, additional_fiat * count,  date_str, price, result)
 
             count = count + 1
 
-            with open("_best_result.txt", 'a')as f:
-                f.write(result)
+    with open("_best_result.txt", 'w') as f:
+        f.write(result_all)
 
     init()
     # worst case
@@ -129,12 +135,34 @@ if __name__ == "__main__":
 
             result = rebalance(price, additional_fiat)
 
-            result = '{:<4} day {:,} added, {}: crypto price {}\n{}'.format(
+            result_all = result_all + '{:<4} th {:,} added, {}: crypto price {}\n{}\n'.format(
                 count, additional_fiat * count,  date_str, price, result)
 
             count = count + 1
 
-            with open("_worst_result.txt", 'a')as f:
-                f.write(result)
+    with open("_worst_result.txt", 'w')as f:
+        f.write(result_all)
+
+    init()
+    # nomal case
+    from_date = datetime.date(2019, 1, 1)
+    to_date = datetime.date(2023,10,30)
+
+    for item in reversed(sample_source):
+        price = item['opening_price']
+        date_str = item['candle_date_time_kst']
+        source_date_time = datetime.datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
+
+        if( source_date_time.date() >= from_date and source_date_time.date() <= to_date ):
+
+            result = rebalance(price, additional_fiat)
+
+            result_all = result_all + '{:<4} th {:,} added, {}: crypto price {}\n{}\n'.format(
+                count, additional_fiat * count,  date_str, price, result)
+
+            count = count + 1
+
+    with open("_nomal_result.txt", 'w')as f:
+        f.write(result_all)
 
     pass
