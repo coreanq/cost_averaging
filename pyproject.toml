@@ -1,10 +1,9 @@
 [tool.poetry]
-name = "shannon-for-upbit"
+name = "cost averaging"
 version = "0.1.0"
 description = ""
 authors = ["Charles 박 <coreanq@gmail.com>"]
 readme = "README.md"
-packages = [{include = "shannon_for_upbit"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"

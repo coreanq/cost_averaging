@@ -9,7 +9,7 @@
                 "bin/pyside6-rcc"
             ],
             "windows": {
-                "command": "bin\\pyside6-rcc.exe"
+                "command": ".venv\\Scripts\\pyside6-rcc.exe"
             },
             "args": [
                 "resource.qrc",
@@ -30,7 +30,7 @@
                 ".venv/bin/pyside6-uic"
             ],
             "windows": {
-                "command": ".venv\\bin\\pyside6-uic.exe"
+                "command": ".venv\\Scripts\\pyside6-uic.exe"
             },
             "args": [
                 "mainwindow.ui",

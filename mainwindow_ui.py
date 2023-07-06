@@ -141,7 +141,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Shannon's demon for upbit", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"unit cost averaging using upbit openapi", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Fiat", None))
         self.lblFiatBalance.setText(QCoreApplication.translate("MainWindow", u"balance", None))
         self.lblFiatPercent.setText(QCoreApplication.translate("MainWindow", u"percent", None))
