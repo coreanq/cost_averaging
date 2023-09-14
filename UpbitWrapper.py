@@ -416,7 +416,7 @@ class UpbitWrapper():
             else:
                 result = []
                 output_list = response.json()
-                del_key = ['timestamp', 'candle_acc_trade_price', 'candle_acc_trade_volume', 'candle_date_time_utc']
+                del_key = ['timestamp', 'candle_acc_trade_price', 'candle_acc_trade_volume', 'candle_date_time_utc', 'first_day_of_period']
 
                 for item in output_list:
                     list( map(item.pop, del_key) )

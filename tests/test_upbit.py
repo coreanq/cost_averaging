@@ -136,7 +136,11 @@ def test_makeWeekCandle(UpbitObj):
 
         for item in result :
             str_candle_date_time = item['candle_date_time_kst']
+            high_price = item['high_price']
+            low_price = item['low_price']
+            ratio_of_high_low =  round( ((high_price - low_price) / low_price) * 100, 2)
             candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
+            item['ratio'] = ratio_of_high_low
             if( date_time_target <= candle_date_time ):
                 output_list.append(item)
             else:
@@ -147,8 +151,29 @@ def test_makeWeekCandle(UpbitObj):
         time.sleep(0.1) # 시세 조회 제약 회피 
         
     # print(result)
-    with open("{}_week_candles.json".format( UpbitObj.market_code ), "w") as json_file:
-        json.dump(output_list, json_file, indent= 2)
+    file_name = "{}_week_candles".format( UpbitObj.market_code )
+    wb = openpyxl.Workbook()
+    sheet = wb.active
+
+    count = 1
+    sheet['A{}'.format( count) ] = "기준날짜"
+    sheet['B{}'.format( count) ] = '시가'
+    sheet['C{}'.format( count) ] = '고가'
+    sheet['D{}'.format( count) ] = '저가'
+    sheet['E{}'.format( count) ] = '종가'
+    sheet['F{}'.format( count) ] = '등락률'
+
+    for count, item in enumerate(output_list):
+        sheet['A{}'.format( count + 2)] = item['candle_date_time_kst']
+        sheet['B{}'.format( count + 2)] = item['opening_price']
+        sheet['C{}'.format( count + 2)] = item['high_price']
+        sheet['D{}'.format( count + 2)] = item['low_price']
+        sheet['E{}'.format( count + 2)] = item['trade_price']
+        sheet['F{}'.format( count + 2)] = item['ratio']
+
+    wb.save(file_name + '.xlsx' )
+    # with open( file_name + '.json' ), "w") as json_file:
+    #     json.dump(output_list, json_file, indent= 2)
 
 def test_makeMinuteCandle(UpbitObj, minute_unit = '60'):
 
