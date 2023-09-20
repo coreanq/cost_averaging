@@ -136,11 +136,11 @@ def test_makeWeekCandle(UpbitObj):
 
         for item in result :
             str_candle_date_time = item['candle_date_time_kst']
-            high_price = item['high_price']
-            low_price = item['low_price']
-            ratio_of_high_low =  round( ((high_price - low_price) / low_price) * 100, 2)
+            open_price = item['opening_price']
+            close_price = item['trade_price']
+            ratio_of_open_close =  round( ((close_price - open_price) / open_price) * 100, 2)
             candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
-            item['ratio'] = ratio_of_high_low
+            item['ratio'] = ratio_of_open_close
             if( date_time_target <= candle_date_time ):
                 output_list.append(item)
             else:
