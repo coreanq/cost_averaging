@@ -80,42 +80,9 @@ def test_makeOrder(UpbitObj):
 
     result = UpbitObj.makeOrder(result['order_type'], current_crypto_price, result['order_balance'], test = True )
 
-def test_makeDayCandle(UpbitObj):
-# @pytest.mark.skip(reason="no test make json file purpose")
-    str_date_time_target = '2018-01-08T01:00:00'
-    date_time_format = "%Y-%m-%dT%H:%M:%S"
-
-    date_time_target =  datetime.datetime.strptime(str_date_time_target, date_time_format)
-
-    str_date_time_target = ''
-
-    output_list = []
 
 
-    isCompleted = False
-
-    while (isCompleted == False):
-        result = UpbitObj.getDayCandle(count = 200, last_date_time_to = str_date_time_target)
-        if( result == None ):
-            break
-
-        for item in result :
-            str_candle_date_time = item['candle_date_time_kst']
-            candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
-            if( date_time_target <= candle_date_time ):
-                output_list.append(item)
-            else:
-                isCompleted = True
-                break
-        str_date_time_target = output_list[-1]['candle_date_time_kst'].replace('T', ' ' )
-        output_list.pop(-1)
-        time.sleep(0.1) # 시세 조회 제약 회피 
-        
-    # print(result)
-    with open("{}_day_candles.json".format( UpbitObj.market_coede ), "w") as json_file:
-        json.dump(output_list, json_file, indent= 2)
-
-def test_makeWeekCandle(UpbitObj):
+def test_makeCandle(UpbitObj, time_type = 'week'):
 # @pytest.mark.skip(reason="no test make json file purpose")
     str_date_time_target = '2017-11-01T01:00:00'
     date_time_format = "%Y-%m-%dT%H:%M:%S"
@@ -130,7 +97,15 @@ def test_makeWeekCandle(UpbitObj):
     isCompleted = False
 
     while (isCompleted == False):
-        result = UpbitObj.getWeekCandle(count = 200, last_date_time_to = str_date_time_target)
+
+        result = None
+        if( time_type == 'week'):
+            result = UpbitObj.getWeekCandle(count = 200, last_date_time_to = str_date_time_target)
+        elif( time_type == 'day'):
+            result = UpbitObj.getDayCandle(count = 200, last_date_time_to = str_date_time_target)
+        elif( time_type == 'minute'):
+            result = UpbitObj.getMinuteCandle(count = 200, last_date_time_to = str_date_time_target)
+
         if( result == None ):
             break
 
@@ -141,77 +116,23 @@ def test_makeWeekCandle(UpbitObj):
             ratio_of_open_close =  round( ((close_price - open_price) / open_price) * 100, 2)
             candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
             item['ratio'] = ratio_of_open_close
-            if( date_time_target <= candle_date_time ):
+
+            last_candle_date_time_kst = ''
+            if( len(output_list) != 0 ):
+                last_candle_date_time_kst  =  output_list[-1]['candle_date_time_kst']
+
+            if( date_time_target < candle_date_time and last_candle_date_time_kst != str_candle_date_time):
                 output_list.append(item)
             else:
                 isCompleted = True
                 break
         str_date_time_target = output_list[-1]['candle_date_time_kst'].replace('T', ' ' )
-        output_list.pop(-1)
-        time.sleep(0.1) # 시세 조회 제약 회피 
-        
-    # print(result)
-    file_name = "{}_week_candles".format( UpbitObj.market_code )
-    wb = openpyxl.Workbook()
-    sheet = wb.active
 
-    count = 1
-    sheet['A{}'.format( count) ] = "기준날짜"
-    sheet['B{}'.format( count) ] = '시가'
-    sheet['C{}'.format( count) ] = '고가'
-    sheet['D{}'.format( count) ] = '저가'
-    sheet['E{}'.format( count) ] = '종가'
-    sheet['F{}'.format( count) ] = '등락률'
-
-    for count, item in enumerate(output_list):
-        sheet['A{}'.format( count + 2)] = item['candle_date_time_kst']
-        sheet['B{}'.format( count + 2)] = item['opening_price']
-        sheet['C{}'.format( count + 2)] = item['high_price']
-        sheet['D{}'.format( count + 2)] = item['low_price']
-        sheet['E{}'.format( count + 2)] = item['trade_price']
-        sheet['F{}'.format( count + 2)] = item['ratio']
-
-    wb.save(file_name + '.xlsx' )
-    # with open( file_name + '.json' ), "w") as json_file:
-    #     json.dump(output_list, json_file, indent= 2)
-
-def test_makeMinuteCandle(UpbitObj, minute_unit = '60'):
-
-    str_date_time_target = '2018-01-07T00:00:00'
-    date_time_format = "%Y-%m-%dT%H:%M:%S"
-
-    date_time_target =  datetime.datetime.strptime(str_date_time_target, date_time_format)
-
-    str_date_time_target = ''
-
-    output_list = []
-
-
-    isCompleted = False
-
-    while (isCompleted == False):
-        result = UpbitObj.getMinuteCandle(count = 200, last_date_time_to = str_date_time_target, minute_unit = minute_unit)
-        if( result == None ):
-            break
-
-        for item in result :
-            str_candle_date_time = item['candle_date_time_kst']
-            candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
-            if( date_time_target <= candle_date_time ):
-                output_list.append(item)
-            else:
-                isCompleted = True
-                break
-        str_date_time_target = output_list[-1]['candle_date_time_kst'].replace('T', ' ' )
-        output_list.pop(-1)
         time.sleep(0.1) # 시세 조회 제약 회피 
 
-
-
-        
     # print(result)
-    with open("{}_{}_minute_candles.json".format(UpbitObj.market_code, minute_unit), "w") as json_file:
-        json.dump(output_list, json_file, indent= 2)
+    with open("{}_{}_candles.json".format( UpbitObj.market_code, time_type ), "w") as json_file:
+        json.dump(output_list[::-1], json_file, indent= 2)
 
 
 
@@ -228,6 +149,8 @@ if __name__ == "__main__":
     access_key = access_info["access_key"]
     secret_key = access_info["secret_key"]
     server_url = "https://api.upbit.com"
-    # obj = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, 'KRW-XRP')
-    obj = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, 'KRW-ETH')
-    test_makeWeekCandle(obj)
+
+    coin_pair_list = [ 'KRW-BTC', 'KRW-ETH', 'KRW-XRP', 'KRW-SOL', 'KRW-DOGE', 'KRW-ADA']
+    for coin_pair in coin_pair_list:
+        obj = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, coin_pair)
+        test_makeCandle(obj, 'week')
