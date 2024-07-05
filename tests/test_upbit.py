@@ -121,11 +121,11 @@ def test_makeCandle(UpbitObj, time_type = 'week'):
             if( len(output_list) != 0 ):
                 last_candle_date_time_kst  =  output_list[-1]['candle_date_time_kst']
 
-            if( date_time_target < candle_date_time and last_candle_date_time_kst != str_candle_date_time):
+            if( last_candle_date_time_kst != str_candle_date_time):
                 output_list.append(item)
-            else:
+            elif( len(result) == 1): # 마지막 데이터
                 isCompleted = True
-                break
+
         str_date_time_target = output_list[-1]['candle_date_time_kst'].replace('T', ' ' )
 
         time.sleep(0.1) # 시세 조회 제약 회피 
