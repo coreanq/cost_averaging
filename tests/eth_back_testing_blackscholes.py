@@ -4,8 +4,22 @@ import json
 from datetime import datetime, timedelta
 import math
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
 
 data = json.load(open('KRW-ETH_day_candles.json', 'r'))
+
+# 다양한 포맷팅 함수들
+def format_plain(x, pos):
+    return f'{int(x)}'  # 기본 정수
+
+def format_thousands(x, pos):
+    return f'{int(x):,}'  # 천단위 구분기호
+
+def format_millions(x, pos):
+    return f'{x/1e6:.1f}M'  # 백만 단위
+
+def format_billions(x, pos):
+    return f'{x/1e9:.1f}B'  # 십억 단위
 
 def black_scholes(S, K, T, r, sigma, option_type='call'):
     d1 = (np.log(S/K) + (r + sigma**2/2)*T) / (sigma*np.sqrt(T))
@@ -43,12 +57,15 @@ start_date = '2017-10-01'
 end_date = '2024-12-31'
 
 # bear
-# start_date = '2018-07-01'
-# end_date = '2020-10-31'
+start_date = '2018-07-01'
+end_date = '2020-10-31'
 
 # bull
 # start_date = '2020-11-01'
 # end_date = '2021-12-31'
+
+# start_date = '2017-11-01'
+# end_date = '2018-02-01'
 
 # 시작일자와 종료일자 사이의 데이터 선택
 df = df.loc[(df['date'] >= start_date) & (df['date'] <= end_date)]
@@ -166,7 +183,7 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
 
     info : str =  f"{investment_ratio*100:.2f}%_ {first_result['date']} ~ {final_result['date']}"
 
-    with open("result_{info}.txt", 'w') as f:
+    with open(f"result_{info}.txt", 'w') as f:
         json.dump(results, f, indent=4)
 
 
@@ -181,10 +198,18 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
 
 # capital 데이터 그래프화
 plt.figure(figsize=(12, 6))
+fig, ((ax1, ax2)) = plt.subplots(1, 2, figsize=(12, 10))
 for df in extracted_df:
-    plt.plot(df['date'], df['capital'], label=df.iloc[0]['investment_ratio'])
-plt.legend(loc='upper left')
-# plt.title(f'{info}')
-plt.xlabel('Date')
-plt.ylabel('Capital')
+    ax1.plot(df['date'], df['capital'], label=df.iloc[0]['investment_ratio'])
+    ax1.yaxis.set_major_formatter(FuncFormatter(format_millions))
+    ax1.set_xlabel('Date')
+    ax1.title.set_text('Capital')
+    ax1.legend(loc='upper left')
+
+    ax2.plot(df['date'], df['total_investment'], label=df.iloc[0]['investment_ratio'])
+    ax2.yaxis.set_major_formatter(FuncFormatter(format_millions))
+    ax2.set_xlabel('Date')
+    ax2.set_title('total_investment')
+    ax2.legend(loc='upper left')
+
 plt.show()
