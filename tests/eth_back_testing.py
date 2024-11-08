@@ -43,8 +43,8 @@ start_date = '2017-10-01'
 end_date = '2024-12-31'
 
 # bear
-start_date = '2018-07-01'
-end_date = '2020-10-31'
+# start_date = '2018-07-01'
+# end_date = '2020-10-31'
 
 # bull
 # start_date = '2020-11-01'
@@ -57,6 +57,8 @@ df['returns'] = df['close'].pct_change()
 df['volatility'] = df['returns'].rolling(30).std() * np.sqrt(252)
 df['volatility'] = df['volatility'].fillna(0.5)
 
+# extracted dataframese
+extracted_df = []
 # Run backtest
 # investment_ratio =  # 전체 자본금에서 투자 비율 
 for investment_ratio in np.arange(0.1, 0.8, 0.1):
@@ -124,6 +126,7 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
             results.append({
                 'date': df.iloc[i]['date'].strftime('%Y-%m-%d'),
                 'capital': round(capital),
+                'investment_ratio': round(investment_ratio, 2),
                 'eth_price': current_price,
                 'eth_next_week_price': expiry_price,
                 'volatility': '{:.2f}%'.format(round((expiry_price - current_price) / current_price * 100, 2)),
@@ -173,12 +176,15 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
     # print(f"손실 거래: {loss_trades}")
     # print(f"승률: {(profitable_trades/total_trades)*100:.2f}%")
 
-    df_for_graph = pd.DataFrame(results)
+    extracted_df.append(pd.DataFrame(results))
 
-    # capital 데이터 그래프화
-    plt.figure(figsize=(12, 6))
-    plt.plot(df_for_graph['date'], df_for_graph['capital'])
-    plt.title(f'{info}')
-    plt.xlabel('Date')
-    plt.ylabel('Capital')
-    plt.show()
+
+# capital 데이터 그래프화
+plt.figure(figsize=(12, 6))
+for df in extracted_df:
+    plt.plot(df['date'], df['capital'], label=df.iloc[0]['investment_ratio'])
+plt.legend(loc='upper left')
+# plt.title(f'{info}')
+plt.xlabel('Date')
+plt.ylabel('Capital')
+plt.show()
