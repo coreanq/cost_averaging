@@ -148,7 +148,7 @@ def test_makeCandle(UpbitObj, time_type = 'week'):
 
 if __name__ == "__main__":
     import sys
-    sys.path.append('D:\\1git\\cost_averaging')
+    sys.path.append('.')
     # setting path
     # print(sys.path)
 
