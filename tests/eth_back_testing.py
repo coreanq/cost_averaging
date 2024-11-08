@@ -3,6 +3,7 @@ import numpy as np
 import json
 from datetime import datetime, timedelta
 import math
+import matplotlib.pyplot as plt
 
 data = json.load(open('KRW-ETH_day_candles.json', 'r'))
 
@@ -42,8 +43,8 @@ start_date = '2017-10-01'
 end_date = '2024-12-31'
 
 # bear
-# start_date = '2018-07-01'
-# end_date = '2020-10-31'
+start_date = '2018-07-01'
+end_date = '2020-10-31'
 
 # bull
 # start_date = '2020-11-01'
@@ -58,7 +59,7 @@ df['volatility'] = df['volatility'].fillna(0.5)
 
 # Run backtest
 # investment_ratio =  # 전체 자본금에서 투자 비율 
-for investment_ratio in np.arange(0.1, 1, 0.1):
+for investment_ratio in np.arange(0.1, 0.8, 0.1):
     results = []
     capital = initial_capital
 
@@ -160,8 +161,9 @@ for investment_ratio in np.arange(0.1, 1, 0.1):
     profitable_trades = sum(1 for r in results if r['total_pnl'] > 0)
     loss_trades = sum(1 for r in results if r['total_pnl'] < 0)
 
-    file_path: str = f"result_{investment_ratio*100:.2f}%_ {first_result['date']} ~ {final_result['date']}.txt"
-    with open(file_path, 'w') as f:
+    info : str =  f"{investment_ratio*100:.2f}%_ {first_result['date']} ~ {final_result['date']}"
+
+    with open("result_{info}.txt", 'w') as f:
         json.dump(results, f, indent=4)
 
 
@@ -170,3 +172,13 @@ for investment_ratio in np.arange(0.1, 1, 0.1):
     # print(f"수익 거래: {profitable_trades}")
     # print(f"손실 거래: {loss_trades}")
     # print(f"승률: {(profitable_trades/total_trades)*100:.2f}%")
+
+    df_for_graph = pd.DataFrame(results)
+
+    # capital 데이터 그래프화
+    plt.figure(figsize=(12, 6))
+    plt.plot(df_for_graph['date'], df_for_graph['capital'])
+    plt.title(f'{info}')
+    plt.xlabel('Date')
+    plt.ylabel('Capital')
+    plt.show()
