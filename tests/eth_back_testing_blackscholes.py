@@ -53,25 +53,28 @@ df = pd.DataFrame([{
 
 # 특정 기간 데이터 선택하기
 # all
-start_date = '2017-10-01'
-end_date = '2024-12-31'
+# start_date = '2017-10-01'
+# end_date = '2024-12-31'
 
 # bear
-start_date = '2018-07-01'
-end_date = '2020-10-31'
+# start_date = '2018-07-01'
+# end_date = '2020-10-31'
 
 # bull
 # start_date = '2020-11-01'
 # end_date = '2021-12-31'
 
-# start_date = '2017-11-01'
-# end_date = '2018-02-01'
+# hell
+start_date = '2021-10-01'
+end_date = '2023-12-01'
 
 # 시작일자와 종료일자 사이의 데이터 선택
 df = df.loc[(df['date'] >= start_date) & (df['date'] <= end_date)]
 
 df['returns'] = df['close'].pct_change()
-df['volatility'] = df['returns'].rolling(30).std() * np.sqrt(252)
+
+# 만기와 비슷한 기간을 사용하여 HV 계산
+df['volatility'] = df['returns'].rolling(7).std() * np.sqrt(365)
 df['volatility'] = df['volatility'].fillna(0.5)
 
 # extracted dataframese
@@ -106,6 +109,12 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
 
             call_price = int( round(call_price, -2) )
             put_price = int( round(put_price, -2) )
+
+            if( capital < current_price):
+                continue
+
+            if( call_price == 0 or put_price == 0 ):
+                continue
 
             call_contracts = calculate_contracts(investment_per_side, call_price)
             put_contracts = calculate_contracts(investment_per_side, put_price)
@@ -146,7 +155,7 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
                 'investment_ratio': round(investment_ratio, 2),
                 'eth_price': current_price,
                 'eth_next_week_price': expiry_price,
-                'volatility': '{:.2f}%'.format(round((expiry_price - current_price) / current_price * 100, 2)),
+                'volatility': volatility * 100,
                 'expiry_price': expiry_price,
                 'call_strike': call_strike,
                 'put_strike': put_strike,
@@ -197,19 +206,28 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
 
 
 # capital 데이터 그래프화
-plt.figure(figsize=(12, 6))
-fig, ((ax1, ax2)) = plt.subplots(1, 2, figsize=(12, 10))
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
 for df in extracted_df:
-    ax1.plot(df['date'], df['capital'], label=df.iloc[0]['investment_ratio'])
+    ax1.plot(df['date'], df['capital'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
     ax1.yaxis.set_major_formatter(FuncFormatter(format_millions))
     ax1.set_xlabel('Date')
     ax1.title.set_text('Capital')
     ax1.legend(loc='upper left')
 
-    ax2.plot(df['date'], df['total_investment'], label=df.iloc[0]['investment_ratio'])
-    ax2.yaxis.set_major_formatter(FuncFormatter(format_millions))
+    # 변동성 추이
+    ax2.plot(df['date'], df['volatility'])
+    ax2.title.set_text('Historical Volatility')
     ax2.set_xlabel('Date')
-    ax2.set_title('total_investment')
-    ax2.legend(loc='upper left')
+
+    # 손익 분포
+    ax3.hist(df['total_pnl'], bins=50)
+    ax3.xaxis.set_major_formatter(FuncFormatter(format_millions))
+    ax3.title.set_text('PnL Distribution')
+    ax3.set_title('total_pnl Distribution')
+
+    ax4.plot(df['date'], df['call_price'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
+    ax4.yaxis.set_major_formatter(FuncFormatter(format_plain))
+    ax4.set_xlabel('Date')
+    ax4.set_title('Option Prices')
 
 plt.show()

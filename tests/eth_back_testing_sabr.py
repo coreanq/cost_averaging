@@ -4,6 +4,20 @@ import json
 from datetime import datetime
 from scipy.stats import norm
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+# 다양한 포맷팅 함수들
+def format_plain(x, pos):
+    return f'{int(x)}'  # 기본 정수
+
+def format_thousands(x, pos):
+    return f'{int(x):,}'  # 천단위 구분기호
+
+def format_millions(x, pos):
+    return f'{x/1e6:.1f}M'  # 백만 단위
+
+def format_billions(x, pos):
+    return f'{x/1e9:.1f}B'  # 십억 단위
 
 class ETHSABRAnalyzer:
     def __init__(self, data):
@@ -116,6 +130,9 @@ class ETHSABRAnalyzer:
                 current_price = self.df.iloc[i]['close']
                 expiry_price = self.df.iloc[i + 7]['close']
                 current_vol = self.df.iloc[i]['volatility']
+
+                if( capital < current_price):
+                    continue
                 
                 total_investment = capital * investment_ratio
                 investment_per_side = total_investment / 2
@@ -138,7 +155,10 @@ class ETHSABRAnalyzer:
                 min_price = max(1000, current_price * 0.001)  # 최소 1000원 또는 현재가의 0.1%
                 call_price = max(min_price, call_price)
                 put_price = max(min_price, put_price)
-                
+
+                call_price = int( round(call_price, -2) )
+                put_price = int( round(put_price, -2) )
+
                 # 계약수 계산 (최소 1계약 보장)
                 call_contracts = max(1, min(300, int(investment_per_side / call_price)))
                 put_contracts = max(1, min(300, int(investment_per_side / put_price)))
@@ -146,6 +166,8 @@ class ETHSABRAnalyzer:
                 # 수수료 계산
                 call_fee = min(call_strike * 0.0002, call_price * 0.125) * call_contracts
                 put_fee = min(put_strike * 0.0002, put_price * 0.125) * put_contracts
+
+                total_investment = call_contracts * call_price + put_contracts * put_price
                 
                 # 손익 계산
                 call_pnl = call_contracts * (max(0, expiry_price - call_strike) - call_price) - call_fee
@@ -170,6 +192,7 @@ class ETHSABRAnalyzer:
                     'call_contracts': call_contracts,
                     'put_contracts': put_contracts,
                     'total_pnl': round(total_pnl),
+                    'total_investment': round(total_investment),
                     'implied_vol': round(self.safe_sabr_vol(
                         call_strike, current_price, time_to_expiry,
                         self.alpha, self.beta, self.rho, self.nu
@@ -212,15 +235,16 @@ class ETHSABRAnalyzer:
         #     print(f"평균 내재변동성: {results_df['implied_vol'].mean():.4f}")
 
         # 결과 시각화
-        # self.plot_results(results_df)
+        self.plot_results(results_df, ratio)
 
-    def plot_results(self, results_df):
-        plt.figure(figsize=(15, 10))
+    def plot_results(self, results_df, ratio):
+        plt.figure(figsize=(15, 10), num = f'ETH SABR {ratio*100}% Analysis')
         
         # 자본금 추이
         plt.subplot(2, 2, 1)
         plt.plot(results_df['date'], results_df['capital'])
         plt.title('Capital Growth')
+        plt.gca().yaxis.set_major_formatter(FuncFormatter(format_millions))
         plt.xticks(rotation=45)
         
         # 변동성 추이
@@ -234,12 +258,14 @@ class ETHSABRAnalyzer:
         # 손익 분포
         plt.subplot(2, 2, 3)
         plt.hist(results_df['total_pnl'], bins=50)
+        plt.gca().xaxis.set_major_formatter(FuncFormatter(format_millions))
         plt.title('PnL Distribution')
         
         # 옵션 가격
         plt.subplot(2, 2, 4)
         plt.plot(results_df['date'], results_df['call_price'])
         plt.plot(results_df['date'], results_df['put_price'])
+        plt.gca().yaxis.set_major_formatter(FuncFormatter(format_plain))
         plt.title('Option Prices')
         plt.legend(['Call', 'Put'])
         plt.xticks(rotation=45)
@@ -289,9 +315,9 @@ def main():
     # start_date = '2020-11-01'
     # end_date = '2021-12-31'
 
-    # bull
-    # start_date = '2017-11-01'
-    # end_date = '2018-02-01'
+    # hard core
+    start_date = '2023-10-01'
+    end_date = '2024-12-01'
 
 
     filtered_result = filter_json_by_date(data, start_date, end_date)   
