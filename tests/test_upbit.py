@@ -130,6 +130,16 @@ def test_makeCandle(UpbitObj, time_type = 'week'):
 
         time.sleep(0.1) # 시세 조회 제약 회피 
 
+
+    # 기존 키 값의 용량 문제로 다른 키 값으로 변경 
+    for item in output_list:
+        item['time'] = item.pop('candle_date_time_kst')
+        item['close'] = item.pop('trade_price')
+        item.pop('market')
+        item.pop('opening_price')
+        item.pop('high_price')
+        item.pop('low_price')
+
     # print(result)
     with open("{}_{}_candles.json".format( UpbitObj.market_code, time_type ), "w") as json_file:
         json.dump(output_list[::-1], json_file, indent= 2)
@@ -150,7 +160,7 @@ if __name__ == "__main__":
     secret_key = access_info["secret_key"]
     server_url = "https://api.upbit.com"
 
-    coin_pair_list = [ 'KRW-BTC', 'KRW-ETH', 'KRW-XRP', 'KRW-SOL', 'KRW-DOGE', 'KRW-ADA']
+    coin_pair_list = [ 'KRW-BTC', 'KRW-ETH', 'KRW-XRP', 'KRW-SOL' ]
     for coin_pair in coin_pair_list:
         obj = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, coin_pair)
-        test_makeCandle(obj, 'week')
+        test_makeCandle(obj, 'day')
