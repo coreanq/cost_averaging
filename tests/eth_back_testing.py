@@ -37,8 +37,17 @@ df = pd.DataFrame([{
 
 
 # 특정 기간 데이터 선택하기
+# all
 start_date = '2017-10-01'
-end_date = '2021-12-31'
+end_date = '2024-12-31'
+
+# bear
+# start_date = '2018-07-01'
+# end_date = '2020-10-31'
+
+# bull
+# start_date = '2020-11-01'
+# end_date = '2021-12-31'
 
 # 시작일자와 종료일자 사이의 데이터 선택
 df = df.loc[(df['date'] >= start_date) & (df['date'] <= end_date)]
@@ -65,7 +74,6 @@ for investment_ratio in np.arange(0.1, 1, 0.1):
             total_investment = capital * investment_ratio
             investment_per_side = total_investment / 2
             
-            # 둘째자리서 반올림 
             call_strike = math.ceil((current_price)/10000)*10000
             put_strike = math.floor((current_price)/10000)*10000
 
@@ -81,12 +89,33 @@ for investment_ratio in np.arange(0.1, 1, 0.1):
 
             call_contracts = calculate_contracts(investment_per_side, call_price)
             put_contracts = calculate_contracts(investment_per_side, put_price)
+
+            # 콜옵션 풋옵션 계약수 최대치로 동일하게 맞춤
+            # if( call_contracts > put_contracts ):
+            #     put_contracts = call_contracts
+            # else:   
+            #     call_contracts = put_contracts
+
             
             call_investment = call_contracts * call_price
             put_investment = put_contracts * put_price
+
+            # 매수시 행사가 0.02 % or 프리미엄 12.5% 중 작은값이 수수료
+            call_fee = min( call_strike * 0.02 / 100,  call_price * 0.125) * call_contracts
+            put_fee  = min( put_strike * 0.02 / 100,  put_price * 0.125) * put_contracts
             
-            call_pnl = call_contracts * (max(0, expiry_price - call_strike) - call_price)
-            put_pnl = put_contracts * (max(0, put_strike - expiry_price) - put_price)
+            
+            call_pnl = call_contracts * (max(0, expiry_price - call_strike) - call_price) - call_fee
+            put_pnl = put_contracts * (max(0, put_strike - expiry_price) - put_price) - put_fee
+
+
+            # 수익인 경우 delivery rate 0.015%
+            # 청산인 경우 0.2% (청산은 하지 않으므로 고려 안함)
+            if( call_pnl > 0 ):
+                call_pnl = call_pnl * (1 - 0.00015)
+            if( put_pnl > 0 ):  
+                put_pnl = put_pnl * (1 - 0.00015)
+
             total_pnl = call_pnl + put_pnl
             
             capital += total_pnl
