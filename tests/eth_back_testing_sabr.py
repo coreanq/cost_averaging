@@ -42,7 +42,7 @@ class ETHSABRAnalyzer:
         df['volatility'] = df['volatility'].fillna(method='bfill').fillna(0.8)   # 기본값 증가
         
         # 최소 변동성 설정
-        df['volatility'] = df['volatility'].clip(lower=0.5)  # 최소 50% 변동성 보장
+        df['volatility'] = df['volatility'].clip(lower=0.35)  # ETH IV history from 35%
         
         return df
 

@@ -76,7 +76,7 @@ df['volatility'] = df['returns'].rolling(7).std() * np.sqrt(365)
 df['volatility'] = df['volatility'].fillna(0.8)
 
 # 최소 변동성 설정
-df['volatility'] = df['volatility'].clip(lower=0.5)  # 최소 50% 변동성 보장
+df['volatility'] = df['volatility'].clip(lower=0.35)  # ETH IV history from 35%
 
 # extracted dataframese
 all_results_df = []
