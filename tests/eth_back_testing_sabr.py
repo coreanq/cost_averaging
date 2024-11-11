@@ -201,13 +201,31 @@ class ETHSABRAnalyzer:
                     ), 4)
                 })
                 
-                # 디버깅 정보 출력
-                # print(f"\nDate: {results[-1]['date']}")
-                # print(f"ETH Price: {current_price:,}")
-                # print(f"Call Price: {call_price:,.0f} (Vol: {current_vol:.4f})")
-                # print(f"Put Price: {put_price:,.0f} (IV: {results[-1]['implied_vol']:.4f})")
-                # print(f"PnL: {total_pnl:,.0f}")
-        
+        # Get final results
+        final_result = results[-1]
+        first_result = results[0]
+
+        print("\n=== 최종 백테스팅 결과 ===")
+        print(f"투자비율: {investment_ratio*100:.2f}% | 거래일: {first_result['date']} ~ {final_result['date']}")
+        print(f"최종 자본금: {final_result['capital']:,} KRW")
+        print(f"초기 자본금 대비 수익률: {((final_result['capital']/initial_capital)-1)*100:.2f}%")
+
+        # 전체 거래 통계
+        total_trades = len(results)
+        profitable_trades = sum(1 for r in results if r['total_pnl'] > 0)
+        loss_trades = sum(1 for r in results if r['total_pnl'] < 0)
+
+        info : str =  f"{investment_ratio*100:.2f}%_ {first_result['date']} ~ {final_result['date']}"
+
+        with open(f"sabr_result_{info}.txt", 'w') as f:
+            json.dump(results, f, indent=4)
+
+        # print("\n=== 전체 거래 통계 ===")
+        # print(f"총 거래 횟수: {total_trades}")
+        # print(f"수익 거래: {profitable_trades}")
+        # print(f"손실 거래: {loss_trades}")
+        # print(f"승률: {(profitable_trades/total_trades)*100:.2f}%")
+    
         return pd.DataFrame(results)
 
     def analyze_results(self, results_df, ratio):
@@ -275,12 +293,12 @@ def main():
     # end_date = '2020-10-31'
 
     # bull
-    start_date = '2020-11-01'
-    end_date = '2021-12-31'
+    # start_date = '2020-11-01'
+    # end_date = '2021-12-31'
 
     # hard core
-    # start_date = '2022-10-01'
-    # end_date = '2023-12-01'
+    start_date = '2022-10-01'
+    end_date = '2023-12-01'
 
 
     filtered_result = filter_json_by_date(data, start_date, end_date)   
@@ -292,14 +310,12 @@ def main():
     all_results_df = []
     for ratio in [round(x*0.1, 1) for x in range(1, 8)]:
         results = analyzer.run_backtest(investment_ratio=ratio)
-        results.to_excel(f'results_sabr{ratio}.xlsx', index=False)
-        analyzer.analyze_results(results, ratio)
         all_results_df.append(results)
     
 
     # capital 데이터 그래프화
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
-    for df in all_results_df:
+    for idx, df in enumerate(all_results_df):
         ax1.plot(df['date'], df['capital'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
         ax1.yaxis.set_major_formatter(FuncFormatter(format_millions))
         ax1.set_xlabel('Date')
@@ -307,11 +323,12 @@ def main():
         ax1.legend(loc='upper left')
 
         # 변동성 추이
-        ax2.plot(df['date'], df['volatility'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
-        ax2.plot(df['date'], df['implied_vol'])
-        ax2.title.set_text('Historical Volatility')
-        ax2.set_xlabel('Date')
-        ax2.legend(loc='upper left')
+        if( idx == 0 ):
+            ax2.plot(df['date'], df['volatility'], label='historical_vol')
+            ax2.plot(df['date'], df['implied_vol'], label='implied_vol')
+            ax2.title.set_text('Historical Volatility')
+            ax2.set_xlabel('Date')
+            ax2.legend(loc='upper left')
 
         # 손익 분포
         ax3.hist(df['total_pnl'], bins=50, label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
@@ -320,10 +337,12 @@ def main():
         ax3.set_title('total_pnl Distribution')
         ax3.legend(loc='upper left')
 
-        ax4.plot(df['date'], df['call_price'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
-        ax4.yaxis.set_major_formatter(FuncFormatter(format_plain))
-        ax4.set_xlabel('Date')
-        ax4.set_title('Option Prices')
+        if( idx == 0):
+            ax4.plot(df['date'], df['call_price'], label= 'call price')
+            ax4.plot(df['date'], df['put_price'], label= 'put_price')
+            ax4.yaxis.set_major_formatter(FuncFormatter(format_plain))
+            ax4.set_xlabel('Date')
+            ax4.set_title('Option Prices')
 
     plt.show()
 

@@ -59,13 +59,11 @@ df = pd.DataFrame([{
 # bear
 # start_date = '2018-07-01'
 # end_date = '2020-10-31'
-
-# bull
 # start_date = '2020-11-01'
 # end_date = '2021-12-31'
 
-# hell
-start_date = '2021-10-01'
+# hard core
+start_date = '2022-10-01'
 end_date = '2023-12-01'
 
 # 시작일자와 종료일자 사이의 데이터 선택
@@ -75,7 +73,7 @@ df['returns'] = df['close'].pct_change()
 
 # 만기와 비슷한 기간을 사용하여 HV 계산
 df['volatility'] = df['returns'].rolling(7).std() * np.sqrt(365)
-df['volatility'] = df['volatility'].fillna(0.5)
+df['volatility'] = df['volatility'].fillna(0.8)
 
 # extracted dataframese
 all_results_df = []
@@ -155,7 +153,7 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
                 'investment_ratio': round(investment_ratio, 2),
                 'eth_price': current_price,
                 'eth_next_week_price': expiry_price,
-                'volatility': volatility * 100,
+                'volatility': volatility,
                 'expiry_price': expiry_price,
                 'call_strike': call_strike,
                 'put_strike': put_strike,
@@ -177,13 +175,6 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
     print(f"투자비율: {investment_ratio*100:.2f}% | 거래일: {first_result['date']} ~ {final_result['date']}")
     print(f"최종 자본금: {final_result['capital']:,} KRW")
     print(f"초기 자본금 대비 수익률: {((final_result['capital']/initial_capital)-1)*100:.2f}%")
-    # print("\n=== 마지막 거래 상세 ===")
-    # print(f"ETH 가격: {final_result['eth_price']:,} KRW")
-    # print(f"만기 가격: {final_result['expiry_price']:,} KRW")
-    # print(f"콜옵션 계약수: {final_result['call_contracts']} (투자금: {final_result['call_investment']:,} KRW)")
-    # print(f"풋옵션 계약수: {final_result['put_contracts']} (투자금: {final_result['put_investment']:,} KRW)")
-    # print(f"총 투자금액: {final_result['total_investment']:,} KRW")
-    # print(f"손익: {final_result['total_pnl']:,} KRW")
 
     # 전체 거래 통계
     total_trades = len(results)
@@ -204,10 +195,9 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
 
     all_results_df.append(pd.DataFrame(results))
 
-
 # capital 데이터 그래프화
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
-for df in all_results_df:
+for idx, df in enumerate(all_results_df):
     ax1.plot(df['date'], df['capital'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
     ax1.yaxis.set_major_formatter(FuncFormatter(format_millions))
     ax1.set_xlabel('Date')
@@ -215,19 +205,24 @@ for df in all_results_df:
     ax1.legend(loc='upper left')
 
     # 변동성 추이
-    ax2.plot(df['date'], df['volatility'])
-    ax2.title.set_text('Historical Volatility')
-    ax2.set_xlabel('Date')
+    if( idx == 0 ):
+        ax2.plot(df['date'], df['volatility'], label='historical_vol')
+        ax2.title.set_text('Historical Volatility')
+        ax2.set_xlabel('Date')
+        ax2.legend(loc='upper left')
 
     # 손익 분포
-    ax3.hist(df['total_pnl'], bins=50)
+    ax3.hist(df['total_pnl'], bins=50, label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
     ax3.xaxis.set_major_formatter(FuncFormatter(format_millions))
     ax3.title.set_text('PnL Distribution')
     ax3.set_title('total_pnl Distribution')
+    ax3.legend(loc='upper left')
 
-    ax4.plot(df['date'], df['call_price'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
-    ax4.yaxis.set_major_formatter(FuncFormatter(format_plain))
-    ax4.set_xlabel('Date')
-    ax4.set_title('Option Prices')
+    if( idx == 0):
+        ax4.plot(df['date'], df['call_price'], label= 'call price')
+        ax4.plot(df['date'], df['put_price'], label= 'put_price')
+        ax4.yaxis.set_major_formatter(FuncFormatter(format_plain))
+        ax4.set_xlabel('Date')
+        ax4.set_title('Option Prices')
 
 plt.show()
