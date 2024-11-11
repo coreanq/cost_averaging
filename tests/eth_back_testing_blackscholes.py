@@ -75,6 +75,9 @@ df['returns'] = df['close'].pct_change()
 df['volatility'] = df['returns'].rolling(7).std() * np.sqrt(365)
 df['volatility'] = df['volatility'].fillna(0.8)
 
+# 최소 변동성 설정
+df['volatility'] = df['volatility'].clip(lower=0.5)  # 최소 50% 변동성 보장
+
 # extracted dataframese
 all_results_df = []
 # Run backtest
@@ -153,8 +156,7 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
                 'investment_ratio': round(investment_ratio, 2),
                 'eth_price': current_price,
                 'eth_next_week_price': expiry_price,
-                'volatility': volatility,
-                'expiry_price': expiry_price,
+                'volatility':round(volatility, 4),
                 'call_strike': call_strike,
                 'put_strike': put_strike,
                 'call_price': round(call_price),

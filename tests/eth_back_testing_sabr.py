@@ -163,6 +163,9 @@ class ETHSABRAnalyzer:
                 # 계약수 계산 (최소 1계약 보장)
                 call_contracts = max(1, min(300, int(investment_per_side / call_price)))
                 put_contracts = max(1, min(300, int(investment_per_side / put_price)))
+
+                call_investment = call_contracts * call_price
+                put_investment = put_contracts * put_price
                 
                 # 수수료 계산
                 call_fee = min(call_strike * 0.0002, call_price * 0.125) * call_contracts
@@ -182,10 +185,10 @@ class ETHSABRAnalyzer:
                 
                 results.append({
                     'date': self.df.iloc[i]['time'].strftime('%Y-%m-%d'),
-                    'investment_ratio': round(investment_ratio, 2),
                     'capital': round(capital),
+                    'investment_ratio': round(investment_ratio, 2),
                     'eth_price': current_price,
-                    'expiry_price': expiry_price,
+                    'eth_next_week_price': expiry_price,
                     'volatility': round(current_vol, 4),
                     'call_strike': call_strike,
                     'put_strike': put_strike,
@@ -193,6 +196,8 @@ class ETHSABRAnalyzer:
                     'put_price': round(put_price),
                     'call_contracts': call_contracts,
                     'put_contracts': put_contracts,
+                    'call_investment': round(call_investment),
+                    'put_investment': round(put_investment),
                     'total_pnl': round(total_pnl),
                     'total_investment': round(total_investment),
                     'implied_vol': round(self.safe_sabr_vol(
