@@ -182,6 +182,7 @@ class ETHSABRAnalyzer:
                 
                 results.append({
                     'date': self.df.iloc[i]['time'].strftime('%Y-%m-%d'),
+                    'investment_ratio': round(investment_ratio, 2),
                     'capital': round(capital),
                     'eth_price': current_price,
                     'expiry_price': expiry_price,
@@ -235,45 +236,6 @@ class ETHSABRAnalyzer:
         #     print(f"평균 풋옵션 가격: {results_df['put_price'].mean():,.0f}")
         #     print(f"평균 내재변동성: {results_df['implied_vol'].mean():.4f}")
 
-        # 결과 시각화
-        self.plot_results(results_df, ratio)
-
-    def plot_results(self, results_df, ratio):
-        plt.figure(figsize=(15, 10), num = f'ETH SABR {ratio*100}% Analysis')
-        
-        # 자본금 추이
-        plt.subplot(2, 2, 1)
-        plt.plot(results_df['date'], results_df['capital'])
-        plt.title('Capital Growth')
-        plt.gca().yaxis.set_major_formatter(FuncFormatter(format_millions))
-        plt.xticks(rotation=45)
-        
-        # 변동성 추이
-        plt.subplot(2, 2, 2)
-        plt.plot(results_df['date'], results_df['volatility'])
-        plt.plot(results_df['date'], results_df['implied_vol'])
-        plt.title('Historical vs Implied Volatility')
-        plt.legend(['Historical', 'Implied'])
-        plt.xticks(rotation=45)
-        
-        # 손익 분포
-        plt.subplot(2, 2, 3)
-        plt.hist(results_df['total_pnl'], bins=50)
-        plt.gca().xaxis.set_major_formatter(FuncFormatter(format_millions))
-        plt.title('PnL Distribution')
-        
-        # 옵션 가격
-        plt.subplot(2, 2, 4)
-        plt.plot(results_df['date'], results_df['call_price'])
-        plt.plot(results_df['date'], results_df['put_price'])
-        plt.gca().yaxis.set_major_formatter(FuncFormatter(format_plain))
-        plt.title('Option Prices')
-        plt.legend(['Call', 'Put'])
-        plt.xticks(rotation=45)
-        
-        plt.tight_layout()
-        plt.show()
-
 def filter_json_by_date(data, start_date, end_date):
     """
     Filter JSON data based on start and end dates.
@@ -305,8 +267,8 @@ def main():
 
     # 특정 기간 데이터 선택하기
     # all
-    start_date = '2017-10-01'
-    end_date = '2024-12-31'
+    # start_date = '2017-10-01'
+    # end_date = '2024-12-31'
 
     # bear
     # start_date = '2018-07-01'
@@ -327,10 +289,43 @@ def main():
     
     # 백테스팅 실행
 
+    all_results_df = []
     for ratio in [round(x*0.1, 1) for x in range(1, 8)]:
         results = analyzer.run_backtest(investment_ratio=ratio)
         results.to_excel(f'results_sabr{ratio}.xlsx', index=False)
         analyzer.analyze_results(results, ratio)
+        all_results_df.append(results)
+    
+
+    # capital 데이터 그래프화
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
+    for df in all_results_df:
+        ax1.plot(df['date'], df['capital'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
+        ax1.yaxis.set_major_formatter(FuncFormatter(format_millions))
+        ax1.set_xlabel('Date')
+        ax1.title.set_text('Capital')
+        ax1.legend(loc='upper left')
+
+        # 변동성 추이
+        ax2.plot(df['date'], df['volatility'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
+        ax2.plot(df['date'], df['implied_vol'])
+        ax2.title.set_text('Historical Volatility')
+        ax2.set_xlabel('Date')
+        ax2.legend(loc='upper left')
+
+        # 손익 분포
+        ax3.hist(df['total_pnl'], bins=50, label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
+        ax3.xaxis.set_major_formatter(FuncFormatter(format_millions))
+        ax3.title.set_text('PnL Distribution')
+        ax3.set_title('total_pnl Distribution')
+        ax3.legend(loc='upper left')
+
+        ax4.plot(df['date'], df['call_price'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
+        ax4.yaxis.set_major_formatter(FuncFormatter(format_plain))
+        ax4.set_xlabel('Date')
+        ax4.set_title('Option Prices')
+
+    plt.show()
 
 if __name__ == "__main__":
     main()

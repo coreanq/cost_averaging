@@ -78,7 +78,7 @@ df['volatility'] = df['returns'].rolling(7).std() * np.sqrt(365)
 df['volatility'] = df['volatility'].fillna(0.5)
 
 # extracted dataframese
-extracted_df = []
+all_results_df = []
 # Run backtest
 # investment_ratio =  # 전체 자본금에서 투자 비율 
 for investment_ratio in np.arange(0.1, 0.8, 0.1):
@@ -202,12 +202,12 @@ for investment_ratio in np.arange(0.1, 0.8, 0.1):
     # print(f"손실 거래: {loss_trades}")
     # print(f"승률: {(profitable_trades/total_trades)*100:.2f}%")
 
-    extracted_df.append(pd.DataFrame(results))
+    all_results_df.append(pd.DataFrame(results))
 
 
 # capital 데이터 그래프화
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
-for df in extracted_df:
+for df in all_results_df:
     ax1.plot(df['date'], df['capital'], label='{}%'.format(df.iloc[0]['investment_ratio'] * 100) )
     ax1.yaxis.set_major_formatter(FuncFormatter(format_millions))
     ax1.set_xlabel('Date')
