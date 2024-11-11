@@ -37,7 +37,8 @@ class ETHSABRAnalyzer:
         
         # 변동성 계산 강화
         df['returns'] = df['close'].pct_change()
-        df['volatility'] = df['returns'].rolling(window=14).std() * np.sqrt(365)  # 기간 단축
+        # 만기와 비슷한 기간을 사용하여 HV 계산
+        df['volatility'] = df['returns'].rolling(window=7).std() * np.sqrt(365)  # 기간 단축
         df['volatility'] = df['volatility'].fillna(method='bfill').fillna(0.8)   # 기본값 증가
         
         # 최소 변동성 설정
@@ -304,20 +305,20 @@ def main():
 
     # 특정 기간 데이터 선택하기
     # all
-    # start_date = '2017-10-01'
-    # end_date = '2024-12-31'
+    start_date = '2017-10-01'
+    end_date = '2024-12-31'
 
     # bear
-    start_date = '2018-07-01'
-    end_date = '2020-10-31'
+    # start_date = '2018-07-01'
+    # end_date = '2020-10-31'
 
     # bull
-    # start_date = '2020-11-01'
-    # end_date = '2021-12-31'
+    start_date = '2020-11-01'
+    end_date = '2021-12-31'
 
     # hard core
-    start_date = '2023-10-01'
-    end_date = '2024-12-01'
+    # start_date = '2022-10-01'
+    # end_date = '2023-12-01'
 
 
     filtered_result = filter_json_by_date(data, start_date, end_date)   
