@@ -84,11 +84,8 @@ def test_makeOrder(UpbitObj):
 
 def test_makeCandle(UpbitObj, time_type = 'week'):
 # @pytest.mark.skip(reason="no test make json file purpose")
-    str_date_time_target = '2017-11-01T01:00:00'
     date_time_format = "%Y-%m-%dT%H:%M:%S"
-
-    date_time_target =  datetime.datetime.strptime(str_date_time_target, date_time_format)
-
+    # str_date_time_target = '2017-11-01T01:00:00'
     str_date_time_target = ''
 
     output_list = []
@@ -104,7 +101,7 @@ def test_makeCandle(UpbitObj, time_type = 'week'):
         elif( time_type == 'day'):
             result = UpbitObj.getDayCandle(count = 200, last_date_time_to = str_date_time_target)
         elif( time_type == 'minute'):
-            result = UpbitObj.getMinuteCandle(count = 200, last_date_time_to = str_date_time_target)
+            result = UpbitObj.getMinuteCandle(count = 200, last_date_time_to = str_date_time_target, minute_unit='240')
 
         if( result == None ):
             break
@@ -115,19 +112,25 @@ def test_makeCandle(UpbitObj, time_type = 'week'):
             close_price = item['trade_price']
             ratio_of_open_close =  round( ((close_price - open_price) / open_price) * 100, 2)
             candle_date_time = datetime.datetime.strptime(str_candle_date_time, date_time_format)
+            last_candle_date_time = None
             item['ratio'] = ratio_of_open_close
 
             last_candle_date_time_kst = ''
             if( len(output_list) != 0 ):
                 last_candle_date_time_kst  =  output_list[-1]['candle_date_time_kst']
+                last_candle_date_time = datetime.datetime.strptime(last_candle_date_time_kst, date_time_format)
 
-            if( last_candle_date_time_kst != str_candle_date_time):
-                output_list.append(item)
-            elif( len(result) == 1): # 마지막 데이터
+
+            if( len(result) != 200): # 마지막 데이터
                 isCompleted = True
 
-        str_date_time_target = output_list[-1]['candle_date_time_kst'].replace('T', ' ' )
+            if( last_candle_date_time == None ):
+                output_list.append(item)
+            elif( last_candle_date_time > candle_date_time):
+                output_list.append(item)
+                str_date_time_target = item['candle_date_time_kst'].replace('T', ' ' )
 
+        print(f'200_target: {str_date_time_target}, {UpbitObj.market_code}')
         time.sleep(0.1) # 시세 조회 제약 회피 
 
 
@@ -136,9 +139,9 @@ def test_makeCandle(UpbitObj, time_type = 'week'):
         item['time'] = item.pop('candle_date_time_kst')
         item['close'] = item.pop('trade_price')
         item.pop('market')
-        item.pop('opening_price')
-        item.pop('high_price')
-        item.pop('low_price')
+        # item.pop('opening_price')
+        # item.pop('high_price')
+        # item.pop('low_price')
 
     # print(result)
     with open("{}_{}_candles.json".format( UpbitObj.market_code, time_type ), "w") as json_file:
@@ -163,4 +166,4 @@ if __name__ == "__main__":
     coin_pair_list = [ 'KRW-BTC', 'KRW-ETH', 'KRW-XRP', 'KRW-SOL' ]
     for coin_pair in coin_pair_list:
         obj = UpbitWrapper.UpbitWrapper(secret_key, access_key, server_url, coin_pair)
-        test_makeCandle(obj, 'day')
+        test_makeCandle(obj, 'minute')
